@@ -1,1 +1,0 @@
-{"ast":null,"code":"export default {\n  title: '标题'\n};","map":{"version":3,"sources":["/Users/lihao/Desktop/中和物联网/new-website/locales/zh.js"],"names":["title"],"mappings":"AAAA,eAAe;AACbA,EAAAA,KAAK,EAAC;AADO,CAAf","sourcesContent":["export default {\n  title:'标题'\n};\n"]},"metadata":{},"sourceType":"module"}
