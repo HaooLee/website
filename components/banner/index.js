@@ -30,7 +30,7 @@ export default class Banner extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       // pauseOnFocus: true,
-      dotsClass: 'slick-dots hhb-dot',
+      dotsClass: 'slick-dots td-dot',
       // beforeChange: (oi, ni) => {
       //   this.setState({
       //     carouselBgColor: banners[ni].color
@@ -41,18 +41,18 @@ export default class Banner extends React.Component {
     const {banners} = this.state
     return (
       <div className="carousel">
-          <div className="banner-wrap">
-            <Slider {...settings}>
-              {
-                banners.map(i => {
-                  return (
-                    <div className="banner-item" style={{background: `url(${i.src}) no-repeat center center`}} key={i}>
-
-                    </div>
-                  )
-                })
-              }
-            </Slider>
+        <div className="banner-wrap">
+          <Slider {...settings}>
+            {
+              banners.map(i => {
+                return (
+                  <div className="banner-item" key={i}>
+                    < img src={i.src} alt=""/>
+                  </div>
+                )
+              })
+            }
+          </Slider>
         </div>
         <style lang="less" jsx>{styles}</style>
       </div>
