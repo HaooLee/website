@@ -1,0 +1,75 @@
+.footer-wrap {
+  background-color: #262626;
+  height: 601px;
+  box-sizing: border-box;
+  padding-top: 113px;
+  .company-info {
+
+    ul {
+      width: 170px;
+      height: 267px;
+      display: inline-block;
+      vertical-align: top;
+
+      li {
+        position: relative;
+        font-size:15px;
+        font-family:Source Han Sans CN;
+        font-weight:400;
+        color:rgba(254,254,254,1);
+        line-height:30px;
+        img {
+          width: 143px;
+          height: 143px;
+          margin-bottom: 24px;
+        }
+      }
+
+    }
+    ul:last-child{
+      width: 100px;
+    }
+    ul:not(:last-child){
+      margin-right: 130px;
+    }
+
+    ul:not(:first-child){
+      padding-top: 68px;
+      li:first-child {
+        margin-bottom: 40px;
+        height: 40px;
+        font-size:16px;
+        font-family:Source Han Sans CN;
+        font-weight:bold;
+        color:rgba(254,254,254,1);
+        line-height:30px;
+      }
+      li:first-child:after{
+        display: block;
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 19px;
+        height: 1px;
+        background-color: #fff;
+
+      }
+    }
+    .info{
+      width: 370px;
+    }
+  }
+
+  .registered-NO{
+    margin-top: 22px;
+    span,a{
+      height:16px;
+      font-size:16px;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(254,254,254,1);
+      line-height:30px;
+    }
+  }
+}

@@ -3,6 +3,10 @@ import Banner from '@/components/banner'
 import styles from './index.less'
 import SectionCard from '@/components/sectionCard'
 import SolutionCard from '@/components/solutionCard'
+import CompanyLogo from '@/components/companyLogo'
+import NewsCard from '@/components/newsCard'
+import Footer from '@/components/footer'
+
 // import {FormattedMessage} from 'react-intl'
 
 export default class Index extends React.Component {
@@ -90,12 +94,21 @@ export default class Index extends React.Component {
           <img className="cp" src="/static/images/合作厂商@2x.png" alt=""/>
         </SectionCard>
         <SectionCard title={'这些成功的企业正在使用泰迪熊移动'} desc={'泰迪熊移动成立于2014年，已为京东、淘宝、苏宁、携程、屈臣氏、建设银行、招商银行、百度等国内百家企业提供大数据和场景服务，\n' +
-        '覆盖快消、电商、零售、互联网、手机厂商、金融、旅游、教育等数十个行业，助力客户建设场景生态。'}>
+        '覆盖快消、电商、零售、互联网、手机厂商、金融、旅游、教育等数十个行业，助力客户建设场景生态。'} overflow={true} >
+          <div className="company-card-wrap">
+            {
+              Array(12).fill({src:'/static/images/京东@2x.png'}).map((i,idx)=><CompanyLogo styleNum={idx} logoSrc={i.src} key={idx} />)
+            }
+          </div>
         </SectionCard>
 
-        <SectionCard title={'热点资讯'} >
+        <SectionCard title={'热点资讯'} bgc={'#F7F7F7'}>
+          <div className="news-wrap">
+            <NewsCard company={"泰迪资讯"} date={'2020年2月14日'} logoSrc={"/static/images/图层 18@2x.png"} desc={"这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动"} />
 
+          </div>
         </SectionCard>
+        <Footer />
 
         <style jsx>{styles}</style>
       </>
