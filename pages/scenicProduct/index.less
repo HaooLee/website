@@ -32,3 +32,84 @@
     float: right;
   }
 }
+.problem {
+  margin-bottom: 90px;
+}
+
+.core-content {
+  &__list {
+    float: left;
+    margin-top: 30px;
+  }
+  &>img {
+    width: 296px;
+    height: 600px;
+    float: left;
+  }
+  &__item {
+    margin-left: 89px;
+    &.active {
+      background:rgba(255,255,255,1);
+      box-shadow:0px 4px 15px 0px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      padding: 15px;
+      img {
+        height: 59px;
+        width: 59px;
+      }
+      p {
+        line-height: 59px;
+      }
+    }
+    img {
+      width: 45px;
+      height: 45px;
+      float: left;
+    }
+    &__text {
+      margin-left: 39px;
+      width: 445px;
+      float: left;
+      color: #333;
+      font-size: 18px;
+    }
+  }
+}
+.product {
+  margin-right: -30px;
+}
+.product__item {
+  width:380px;
+  height:222px;
+  background:rgba(255,255,255,1);
+  border-radius:3px;
+  text-align: center;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  display: table;
+  &-content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  img {
+    width: 47px;
+    height: 47px;
+    // display: block;
+  }
+  &__title {
+    margin-top: 20px;
+    color: #333;
+    font-size: 20px;
+    width: 306px;
+    display: inline-block;
+  }
+  &__desc {
+    margin-top: 20px;
+    color: #666;
+    font-size: 16px;
+    width: 306px;
+    display: inline-block;
+    line-height: 30px;
+  }
+}
