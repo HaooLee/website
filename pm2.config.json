@@ -2,17 +2,10 @@
   "apps": [
     {
       "name": "new-website",
-      "script": "next start",
-      "env": {
-        "NODE_ENV": "production",
-      },
-      "env_production" : {
-        "NODE_ENV": "production",
-      },
+      "script": "server.js",
       "max_restarts": 10,
-      "instances": "max",
+      "instances": 3,
       "log_date_format" : "YYYY-MM-DD HH:mm:ss",
-      "exec_mode": "cluster"
     }
   ]
 }
