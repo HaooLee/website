@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e7c6348-ff0b-441b-a7d3-ceac642b26c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/intelligenceSms/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/intelligenceSms/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/intelligenceSms/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/intelligenceSms/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/scenicProduct/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/scenicProduct/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/scenicProduct/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/scenicProduct/index.less" afterDir="false" />
@@ -68,11 +64,23 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/intelligenceSms/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="346">
+                <state relative-caret-position="100">
                   <caret line="159" column="28" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
+                  <folding>
+                    <element signature="e#0#25#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pages/scenicProduct/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="445">
+                  <caret line="165" lean-forward="true" selection-start-line="165" selection-end-line="165" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
@@ -153,8 +161,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/scenicProduct/index.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="261">
-                  <caret line="35" selection-start-line="35" selection-end-line="35" />
+                <state relative-caret-position="184">
+                  <caret line="135" column="1" selection-start-line="135" selection-start-column="1" selection-end-line="135" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -276,8 +284,8 @@
         <option value="$PROJECT_DIR$/pages/_app.js" />
         <option value="$PROJECT_DIR$/pages/intelligenceSms/index.js" />
         <option value="$PROJECT_DIR$/pages/intelligenceSms/index.less" />
-        <option value="$PROJECT_DIR$/pages/scenicProduct/index.js" />
         <option value="$PROJECT_DIR$/pages/scenicProduct/index.less" />
+        <option value="$PROJECT_DIR$/pages/scenicProduct/index.js" />
       </list>
     </option>
   </component>
@@ -407,12 +415,12 @@
       <option name="presentableId" value="Default" />
       <updated>1583738566459</updated>
       <workItem from="1583738569336" duration="3714000" />
-      <workItem from="1583812257903" duration="43658000" />
+      <workItem from="1583812257903" duration="43831000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47372000" />
+    <option name="totallyTimeSpent" value="47545000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -720,9 +728,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/scenicProduct/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="135" column="1" selection-start-line="135" selection-start-column="1" selection-end-line="135" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/intelligenceSms/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
+        <state relative-caret-position="100">
           <caret line="159" column="28" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
@@ -732,18 +747,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/scenicProduct/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="98" column="48" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="48" />
+        <state relative-caret-position="445">
+          <caret line="165" lean-forward="true" selection-start-line="165" selection-end-line="165" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/scenicProduct/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
