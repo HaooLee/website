@@ -75,11 +75,33 @@ export default class IntelligenceSms extends React.Component {
           title: '提升转化率',
           desc: '一键直达，缩短用户办理路径，提升转化率。'
         }
+      ],
+      coreList: [
+        {
+          src: '/static/images/intelligenceSms/icon-duanxinyanzheng.png',
+          title: '短信来源号码进行可信认证'
+        },
+        {
+          src: '/static/images/intelligenceSms/icon-kapian.png',
+          title: '核心内容可进行卡片化展示，简洁清晰'
+        },
+        {
+          src: '/static/images/intelligenceSms/icon-zhineng.png',
+          title: '根据场景可智能匹配按钮一键跳转后续服务'
+        },
+        {
+          src: '/static/images/intelligenceSms/icon-service3.png',
+          title: '短信公众号短信页面享受更多服务'
+        },
+        {
+          src: '/static/images/intelligenceSms/icon-shape.png',
+          title: '支持跳转 H5、APP、快应用一键拨号、验证码复制'
+        }
       ]
     }
   }
   render () {
-    const {problems, products} = this.state
+    const {problems, products, coreList} = this.state
     return (
       <>
         <section className="banner">
@@ -94,7 +116,7 @@ export default class IntelligenceSms extends React.Component {
         <SectionCard title={'你的场景消息通常会遇到的问题'} bgc={"#fff"} >
           <div className="w clearfix problem">
             {
-              problems.map((item, index) => <ProblemItem src={item.src} num={problems.length} title={item.title}></ProblemItem>)
+              problems.map((item, index) => <ProblemItem src={item.src} num={problems.length} title={item.title} key={index}></ProblemItem>)
             }
           </div>
         </SectionCard>
@@ -102,32 +124,53 @@ export default class IntelligenceSms extends React.Component {
           <div className="core-content w clearfix">
             <img src="/static/images/sms.png" />
             <div className="core-content__list">
-              <div className="core-content__item active clearfix">
-                <img src="/static/images/scenicProduct/icon-changshang.png"/>
-                <p className="core-content__item__text">厂商网络OTT通道发送：发送成本更低，降低投诉风险</p>
-              </div>
-              <div className="core-content__item clearfix">
-                <img src="/static/images/scenicProduct/icon-xiaoxi.png"/>
-                <p className="core-content__item__text">富媒体消息 ：快应用、视频、音频、语音、多图文、位置等多原画形态，提高用户体验的同时能够促进营销短信的效果转化。 </p>
-              </div>
-              <div className="core-content__item clearfix">
-                <img src="/static/images/scenicProduct/icon-chufa.png"/>
-                <p className="core-content__item__text">基于用户使用场景触发消息推送 ：精准营销，效率提升</p>
-              </div>
-              <div className="core-content__item clearfix">
-                <img src="/static/images/scenicProduct/icon-zhineng.png"/>
-                <p className="core-content__item__text">支持 chatbot：智能客服 ，智能推送消息</p>
-              </div>
+              {
+                coreList.map((item, index) => (
+                  <div key={index} className={`core-content__item clearfix ${index === 0 ? 'active' : ''}`}>
+                    <div className="core-content__item__img-wrap">
+                      <img src={item.src} />
+                    </div>
+                    <p className="core-content__item__text">{item.title}</p>
+                  </div>
+                ))
+              }
             </div>
           </div>
         </SectionCard>
         <SectionCard title={'应用形态'} bgc={'#fff'}>
-
+            <div>
+              <ul className="tab-bar clearfix">
+                <li className="tab-bar__item active">企业认证</li>
+                <li className="tab-bar__item">短信卡片</li>
+                <li className="tab-bar__item">场景按钮</li>
+                <li className="tab-bar__item">短信菜单</li>
+              </ul>
+              <div className="tab-content clearfix">
+                  <div className="tab-content__left">
+                    <div>
+                      <p>本地解析智能识别企业名称、LOGO 每条成功触达用户的短信提供品牌展示效果 企业认证区别长串数字 提升用户信任度 提高短信打开阅读率</p>
+                      <div className="tab-content__left__btn">马上合作</div></div>
+                  </div>
+                  <div className="tab-content__right clearfix">
+                    <div className="tab-content__right__item">
+                      <img src="/static/images/intelligenceSms/zhaohang.png" />
+                      <p>其他样例</p>
+                    </div>
+                    <div className="tab-content__right__item">
+                      <img src="/static/images/intelligenceSms/jianhang.png" />
+                      <p>企业认证</p>
+                    </div>
+                    <div  className="tab-content__right__img">
+                      <img src="/static/images/intelligenceSms/jianhang-scale.png" />
+                    </div>
+                  </div>
+              </div>
+            </div>
         </SectionCard>
         <SectionCard title={'产品优势'} bgc={'#F8FAFF'}>
             <div className="product clearfix">
-              {products.map(item => (
-                <div className="product__item">
+              {products.map((item, index) => (
+                <div className="product__item" key={index}>
                   <div className="product__item-content">
                     <div><img src={item.src} /></div>
                     <p className="product__item__title">{item.title}</p>
