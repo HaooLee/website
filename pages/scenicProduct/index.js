@@ -61,11 +61,29 @@ export default class ScenicProduct extends React.Component {
           title: '体验提升',
           desc: '富媒体消息，营销短信多元化， 用户体验提升，功能承载更多。'
         }
+      ],
+      coreList: [
+        {
+          src: '/static/images/scenicProduct/icon-changshang.png',
+          title: '厂商网络OTT通道发送：发送成本更低，降低投诉风险'
+        },
+        {
+          src: '/static/images/scenicProduct/icon-xiaoxi.png',
+          title: '富媒体消息 ：快应用、视频、音频、语音、多图文、位置等多原画形态，提高用户体验的同时能够促进营销短信的效果转化。 '
+        },
+        {
+          src: '/static/images/scenicProduct/icon-chufa.png',
+          title: '基于用户使用场景触发消息推送 ：精准营销，效率提升'
+        },
+        {
+          src: '/static/images/scenicProduct/icon-zhineng.png',
+          title: '支持 chatbot：智能客服 ，智能推送消息'
+        }
       ]
     }
   }
   render () {
-    const {problems, products} = this.state
+    const {problems, products, coreList} = this.state
     return (
       <>
         <section className="banner">
@@ -88,27 +106,49 @@ export default class ScenicProduct extends React.Component {
           <div className="core-content w clearfix">
             <img src="/static/images/sms.png" />
             <div className="core-content__list">
-              <div className="core-content__item active clearfix">
-                <img src="/static/images/scenicProduct/icon-changshang.png"/>
-                <p className="core-content__item__text">厂商网络OTT通道发送：发送成本更低，降低投诉风险</p>
-              </div>
-              <div className="core-content__item clearfix">
-                <img src="/static/images/scenicProduct/icon-xiaoxi.png"/>
-                <p className="core-content__item__text">富媒体消息 ：快应用、视频、音频、语音、多图文、位置等多原画形态，提高用户体验的同时能够促进营销短信的效果转化。 </p>
-              </div>
-              <div className="core-content__item clearfix">
-                <img src="/static/images/scenicProduct/icon-chufa.png"/>
-                <p className="core-content__item__text">基于用户使用场景触发消息推送 ：精准营销，效率提升</p>
-              </div>
-              <div className="core-content__item clearfix">
-                <img src="/static/images/scenicProduct/icon-zhineng.png"/>
-                <p className="core-content__item__text">支持 chatbot：智能客服 ，智能推送消息</p>
-              </div>
+              {
+                coreList.map((item, index) => (
+                  <div key={index} className={`core-content__item clearfix ${index === 0 ? 'active' : ''}`}>
+                    <div className="core-content__item__img-wrap">
+                      <img src={item.src} />
+                    </div>
+                    <p className="core-content__item__text">{item.title}</p>
+                  </div>
+                ))
+              }
             </div>
           </div>
         </SectionCard>
         <SectionCard title={'应用形态'} bgc={'#fff'}>
-
+          <div>
+              <ul className="tab-bar clearfix">
+                <li className="tab-bar__item active">卡片</li>
+                <li className="tab-bar__item">多图文</li>
+                <li className="tab-bar__item">视频</li>
+                <li className="tab-bar__item">音频</li>
+                <li className="tab-bar__item">位置快应用</li>
+              </ul>
+              <div className="tab-content clearfix">
+                  <div className="tab-content__left">
+                    <div>
+                      <p>文案文案文案文案文案文案 文案文案文案文案文案文案文案文 文案文案文案文案文案文案文案文案文 文案文案文案文案文案文案文案 文案文案文案文案文案文案文案文案文 </p>
+                      <div className="tab-content__left__btn">马上合作</div></div>
+                  </div>
+                  <div className="tab-content__right clearfix">
+                    <div className="tab-content__right__item">
+                      <img src="/static/images/intelligenceSms/zhaohang.png" />
+                      <p>其他样例</p>
+                    </div>
+                    <div className="tab-content__right__item">
+                      <img src="/static/images/intelligenceSms/jianhang.png" />
+                      <p>卡片</p>
+                    </div>
+                    <div  className="tab-content__right__img">
+                      <img src="/static/images/intelligenceSms/jianhang-scale.png" />
+                    </div>
+                  </div>
+              </div>
+            </div>
         </SectionCard>
         <SectionCard title={'产品优势'} bgc={'#F8FAFF'}>
             <div className="product">

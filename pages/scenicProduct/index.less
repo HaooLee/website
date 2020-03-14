@@ -48,11 +48,13 @@
   }
   &__item {
     margin-left: 89px;
+    margin-bottom: 70px;
     &.active {
       background:rgba(255,255,255,1);
       box-shadow:0px 4px 15px 0px rgba(0,0,0,0.1);
       border-radius: 10px;
-      padding: 15px;
+      margin-bottom: 55px;
+      padding: 15px 15px 15px 0px;
       img {
         height: 59px;
         width: 59px;
@@ -61,10 +63,14 @@
         line-height: 59px;
       }
     }
+    &__img-wrap {
+      float: left;
+      width: 114px;
+      text-align: center;
+    }
     img {
       width: 45px;
       height: 45px;
-      float: left;
     }
     &__text {
       margin-left: 39px;
@@ -72,6 +78,16 @@
       float: left;
       color: #333;
       font-size: 18px;
+      line-height: 45px;
+    }
+
+  }
+  &__item:nth-child(2) {
+    .core-content__item__text {
+      line-height: 1.6;
+    }
+    .core-content__item__img-wrap {
+      margin-top: 20px;
     }
   }
 }
@@ -111,5 +127,96 @@
     width: 306px;
     display: inline-block;
     line-height: 30px;
+  }
+}
+
+.tab-bar {
+  width:1020;
+  height:50px;
+  padding: 5px;
+  background:rgba(247,247,247,1);
+  margin: 0 auto;
+  border-radius:6px;
+  &__item {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    width: 20%;
+    text-align: center;
+    color: #999999;
+    font-size: 24px;
+    &.active {
+      background: #fff;
+      border-radius: 6px;
+      color: #355EA6;
+    }
+  }
+}
+
+.tab-content {
+  margin: 90px 0;
+  position: relative;
+  &__left {
+    float: left;
+    width: 342px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    p {
+      color: #666;
+      font-size: 18px;
+      line-height: 2;
+    }
+    &__btn {
+      width:187px;
+      height:46px;
+      background:rgba(53,94,166,1);
+      border-radius:28px;
+      line-height: 46px;
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+      margin-top: 50px;
+    }
+  }
+  &__right{
+    float: right;
+    position: relative;
+    &__img {
+      position: absolute;
+      right: -36px;
+      top: 57px;
+      padding: 18px 13px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow:0px 4px 15px 0px rgba(0,0,0,0.1);
+      img {
+        width: 357px;
+        height: 68px;
+      }
+    }
+    &__item {
+      float: left;
+      p {
+        text-align: center;
+        font-size: 22px;
+        color: #333;
+        margin-top: 20px;
+      }
+    }
+    &__item:nth-child(1) {
+      margin-right: 17px;
+      img {
+        width: 298px;
+        height: 630px;
+        margin-top: 9px;
+      }
+    }
+    &__item:nth-child(2) {
+      img {
+        width: 303px;
+        height: 639px;
+      }
+    }
   }
 }
