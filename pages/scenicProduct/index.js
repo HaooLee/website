@@ -69,7 +69,7 @@ export default class ScenicProduct extends React.Component {
     return (
       <>
         <section className="banner">
-            <div className="banner-content">
+            <div className="banner-content w">
               <div className="banner__desc">
                 <h1 className="banner__desc__title">场景消息</h1>
                 <p className="banner__desc__content">场景消息——千人千面的智慧场景营销服务</p>

@@ -105,7 +105,7 @@ export default class IntelligenceSms extends React.Component {
     return (
       <>
         <section className="banner">
-            <div className="banner-content">
+            <div className="banner-content w">
               <div className="banner__desc">
                 <h1 className="banner__desc__title">智能短信</h1>
                 <p className="banner__desc__content">带你了解短信新形态，体验营销新玩法</p>
@@ -180,7 +180,6 @@ export default class IntelligenceSms extends React.Component {
               ))}
             </div>
         </SectionCard>
-        <Footer />
 
         <style jsx>{styles}</style>
       </>

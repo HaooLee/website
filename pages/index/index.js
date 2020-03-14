@@ -5,7 +5,6 @@ import SectionCard from '@/components/sectionCard'
 import SolutionCard from '@/components/solutionCard'
 import CompanyLogo from '@/components/companyLogo'
 import NewsCard from '@/components/newsCard'
-import Footer from '@/components/footer'
 
 // import {FormattedMessage} from 'react-intl'
 
@@ -108,8 +107,6 @@ export default class Index extends React.Component {
 
           </div>
         </SectionCard>
-        <Footer />
-
         <style jsx>{styles}</style>
       </>
     )

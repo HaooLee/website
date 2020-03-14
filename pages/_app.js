@@ -2,6 +2,8 @@ import App, {Container} from 'next/app'
 import React from 'react'
 import globalStyles from './global.less'
 import Header from '@/components/header'
+import Footer from '@/components/footer'
+
 // import { addLocaleData, IntlProvider } from 'react-intl';
 
 //导入中英文对象
@@ -55,6 +57,8 @@ export default class MyApp extends App {
       {/*>*/}
         <Header/>
         <Component {...pageProps} />
+      <Footer />
+
       {/*</IntlProvider>,*/}
 
       <style global jsx>
