@@ -2,6 +2,7 @@ import React from 'react'
 import SectionCard from '@/components/sectionCard'
 import ProblemItem from '@/components/problemItem'
 import TabBarCard from '@/components/tabBarCard'
+import ProductBanner from '@/components/productBanner'
 import styles from './index.less'
 
 export default class IntelligenceSms extends React.Component {
@@ -122,15 +123,7 @@ export default class IntelligenceSms extends React.Component {
     const {problems, products, coreList, tabBarList} = this.state
     return (
       <>
-        <section className="banner">
-            <div className="banner-content w">
-              <div className="banner__desc">
-                <h1 className="banner__desc__title">智能短信</h1>
-                <p className="banner__desc__content">带你了解短信新形态，体验营销新玩法</p>
-              </div>
-              <img className="banner__img" src="/static/images/intelligenceSms/banner.png" />
-            </div>
-        </section>
+        <ProductBanner title={'智能短信'} desc={'带你了解短信新形态，体验营销新玩法'} src={'/static/images/intelligenceSms/banner.png'}></ProductBanner>
         <SectionCard title={'你的场景消息通常会遇到的问题'} bgc={"#fff"} >
           <div className="w clearfix problem">
             {

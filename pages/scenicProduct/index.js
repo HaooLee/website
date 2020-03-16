@@ -2,6 +2,7 @@ import React from 'react'
 import SectionCard from '@/components/sectionCard'
 import ProblemItem from '@/components/problemItem'
 import TabBarCard from '@/components/TabBarCard'
+import ProductBanner from '@/components/productBanner'
 import styles from './index.less'
 
 export default class ScenicProduct extends React.Component {
@@ -102,15 +103,7 @@ export default class ScenicProduct extends React.Component {
     const {problems, products, coreList, tabBarList} = this.state
     return (
       <>
-        <section className="banner">
-            <div className="banner-content w">
-              <div className="banner__desc">
-                <h1 className="banner__desc__title">场景消息</h1>
-                <p className="banner__desc__content">场景消息——千人千面的智慧场景营销服务</p>
-              </div>
-              <img className="banner__img" src="/static/images/scenicProduct/banner.png" />
-            </div>
-        </section>
+        <ProductBanner title={'场景消息'} desc={'场景消息——千人千面的智慧场景营销服务'} src={'/static/images/scenicProduct/banner.png'}></ProductBanner>
         <SectionCard title={'你的场景消息通常会遇到的问题'} bgc={"#fff"} >
           <div className="w clearfix problem">
             {
