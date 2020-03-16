@@ -127,11 +127,7 @@ export default class IntelligenceSms extends React.Component {
       <>
         <ProductBanner title={'智能短信'} desc={'带你了解短信新形态，体验营销新玩法'} src={'/static/images/intelligenceSms/banner.png'}></ProductBanner>
         <SectionCard title={'你的场景消息通常会遇到的问题'} bgc={"#fff"} >
-          <div className="w clearfix problem">
-            {
-              problems.map((item, index) => <ProblemItem src={item.src} num={problems.length} title={item.title} key={index}></ProblemItem>)
-            }
-          </div>
+          <ProblemItem problems={problems}></ProblemItem>
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
           <CoreContent 

@@ -6,17 +6,17 @@ export default class CoreContent extends React.Component {
     super(props)
   }
   render() {
-    const {coreList = [], src, customStyle={}, imgCustomStyle={}} = this.props
+    const {coreList = [], src, customStyle={}, imgCustomStyle={}, listStyle={}} = this.props
     return (
       <>
         <div className="core-content w clearfix">
           <img src={src} style={imgCustomStyle} />
-          <div className="core-content__list">
+          <div className="core-content__list" style={listStyle}>
             {
               coreList.map((item, index) => (
                 <div key={index} className={`core-content__item clearfix ${index === 0 ? 'active' : ''}`} style={customStyle}>
                   <div className="core-content__item__img-wrap">
-                    <img src={item.src} />
+                    <img src={item.src} style={item.imgStyle || {}} />
                   </div>
                   <p className="core-content__item__text">{item.title}</p>
                 </div>

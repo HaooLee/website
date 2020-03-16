@@ -5,17 +5,23 @@ export default class ProblemItem extends React.Component {
     super(props)
   }
   render () {
-    const {src, title, num = 5} = this.props
+    const {problems=[]} = this.props
     return (
       <>
-        <div className="problem-item" style={{width: (100 / num) + '%'}}>
-          <div className="problem-item__content">
-            <img src={src} />
+          <div className="w clearfix problem">
+            {
+              problems.map((item, index) => (
+                <div key={index} className="problem-item" style={{width: (100 / problems.length) + '%'}}>
+                  <div className="problem-item__content">
+                    <img src={item.src} />
+                  </div>
+                  <p className="problem-item__text">
+                    <span>{item.title}</span>
+                  </p>
+                </div>
+              ))
+            }
           </div>
-          <p className="problem-item__text">
-            <span>{title}</span>
-          </p>
-        </div>
         <style jsx>{styles}</style>
       </>
     )

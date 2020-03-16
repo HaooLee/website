@@ -9,7 +9,7 @@ export default class ProductAdvantage extends React.Component {
     const {products = [], customStyle={}} = this.props
     return (
       <>
-        <div className="product clearfix w">
+        <div className="product clearfix">
           {products.map((item, index) => (
             <div className="product__item" key={index} style={customStyle}>
               <div className="product__item-content">

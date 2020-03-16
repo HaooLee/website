@@ -107,11 +107,7 @@ export default class ScenicProduct extends React.Component {
       <>
         <ProductBanner title={'场景消息'} desc={'场景消息——千人千面的智慧场景营销服务'} src={'/static/images/scenicProduct/banner.png'}></ProductBanner>
         <SectionCard title={'你的场景消息通常会遇到的问题'} bgc={"#fff"} >
-          <div className="w clearfix problem">
-            {
-              problems.map((item, index) => <ProblemItem src={item.src} title={item.title} key={index}></ProblemItem>)
-            }
-          </div>
+          <ProblemItem problems={problems}></ProblemItem>
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
           <CoreContent 
