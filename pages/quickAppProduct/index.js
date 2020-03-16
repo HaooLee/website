@@ -92,7 +92,7 @@ export default class QuickAppProduct extends React.Component {
           <CoreContent 
             src={'/static/images/quickAppProduct/phone.png'} 
             coreList={coreList} 
-            customStyle={{background: '#fff', 'marginBottom': '60px', 'padding': '25px 25px 25px 0', borderRadius: '10px', width: '516px'}}
+            customStyle={{background: '#fff', 'marginBottom': '60px', borderRadius: '10px'}}
             imgCustomStyle={{width: '358px', height: '726px', marginTop: '60px', marginRight: '115px'}}
           ></CoreContent>
         </SectionCard>

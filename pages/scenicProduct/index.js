@@ -3,6 +3,8 @@ import SectionCard from '@/components/sectionCard'
 import ProblemItem from '@/components/problemItem'
 import TabBarCard from '@/components/TabBarCard'
 import ProductBanner from '@/components/productBanner'
+import CoreContent from '@/components/coreContent'
+import ProductAdvantage from '@/components/productAdvantage'
 import styles from './index.less'
 
 export default class ScenicProduct extends React.Component {
@@ -112,21 +114,16 @@ export default class ScenicProduct extends React.Component {
           </div>
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
-          <div className="core-content w clearfix">
-            <img src="/static/images/sms.png" />
-            <div className="core-content__list">
-              {
-                coreList.map((item, index) => (
-                  <div key={index} className={`core-content__item clearfix ${index === 0 ? 'active' : ''}`}>
-                    <div className="core-content__item__img-wrap">
-                      <img src={item.src} />
-                    </div>
-                    <p className="core-content__item__text">{item.title}</p>
-                  </div>
-                ))
-              }
-            </div>
-          </div>
+          <CoreContent 
+            src={'/static/images/sms.png'} 
+            coreList={coreList} 
+            customStyle={{
+              marginBottom: '70px'
+            }}
+            imgCustomStyle={{
+              marginRight: '89px'
+            }}
+          ></CoreContent>
         </SectionCard>
         <SectionCard title={'应用形态'} bgc={'#fff'}>
           <div>
@@ -154,17 +151,13 @@ export default class ScenicProduct extends React.Component {
             </div>
         </SectionCard>
         <SectionCard title={'产品优势'} bgc={'#F8FAFF'}>
-            <div className="product">
-              {products.map((item, index) => (
-                <div className="product__item" key={index}>
-                  <div className="product__item-content">
-                    <div><img src={item.src} /></div>
-                    <p className="product__item__title">{item.title}</p>
-                    <p className="product__item__desc">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <ProductAdvantage 
+            products={products} 
+            customStyle={{
+              width: '330px',
+              height: '222px'
+            }}
+          ></ProductAdvantage>
         </SectionCard>
 
         <style jsx>{styles}</style>
