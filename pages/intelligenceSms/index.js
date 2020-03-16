@@ -1,7 +1,7 @@
 import React from 'react'
-import Footer from '@/components/footer'
 import SectionCard from '@/components/sectionCard'
 import ProblemItem from '@/components/problemItem'
+import TabBarCard from '@/components/tabBarCard'
 import styles from './index.less'
 
 export default class IntelligenceSms extends React.Component {
@@ -97,11 +97,29 @@ export default class IntelligenceSms extends React.Component {
           src: '/static/images/intelligenceSms/icon-shape.png',
           title: '支持跳转 H5、APP、快应用一键拨号、验证码复制'
         }
+      ],
+      tabBarList: [
+        {
+          id: 1,
+          name: '企业认证'
+        },
+        {
+          id: 2,
+          name: '短信卡片'
+        },
+        {
+          id: '3',
+          name: '场景按钮'
+        },
+        {
+          id: '4',
+          name: '短信菜单'
+        }
       ]
     }
   }
   render () {
-    const {problems, products, coreList} = this.state
+    const {problems, products, coreList, tabBarList} = this.state
     return (
       <>
         <section className="banner">
@@ -139,12 +157,7 @@ export default class IntelligenceSms extends React.Component {
         </SectionCard>
         <SectionCard title={'应用形态'} bgc={'#fff'}>
             <div>
-              <ul className="tab-bar clearfix">
-                <li className="tab-bar__item active">企业认证</li>
-                <li className="tab-bar__item">短信卡片</li>
-                <li className="tab-bar__item">场景按钮</li>
-                <li className="tab-bar__item">短信菜单</li>
-              </ul>
+              <TabBarCard list={tabBarList} width={'815px'}></TabBarCard>
               <div className="tab-content clearfix">
                   <div className="tab-content__left">
                     <div>

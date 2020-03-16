@@ -1,7 +1,7 @@
 import React from 'react'
-import Footer from '@/components/footer'
 import SectionCard from '@/components/sectionCard'
 import ProblemItem from '@/components/problemItem'
+import TabBarCard from '@/components/TabBarCard'
 import styles from './index.less'
 
 export default class ScenicProduct extends React.Component {
@@ -79,11 +79,27 @@ export default class ScenicProduct extends React.Component {
           src: '/static/images/scenicProduct/icon-zhineng.png',
           title: '支持 chatbot：智能客服 ，智能推送消息'
         }
-      ]
+      ],
+      tabBarList: [{
+        id: 1,
+        name: '卡片'
+      }, {
+        id: 2,
+        name: '多图文'
+      }, {
+        id: 3,
+        name: '视频'
+      }, {
+        id: 4,
+        name: '音频'
+      }, {
+        id: 5,
+        name: '位置快应用'
+      }]
     }
   }
   render () {
-    const {problems, products, coreList} = this.state
+    const {problems, products, coreList, tabBarList} = this.state
     return (
       <>
         <section className="banner">
@@ -121,13 +137,7 @@ export default class ScenicProduct extends React.Component {
         </SectionCard>
         <SectionCard title={'应用形态'} bgc={'#fff'}>
           <div>
-              <ul className="tab-bar clearfix">
-                <li className="tab-bar__item active">卡片</li>
-                <li className="tab-bar__item">多图文</li>
-                <li className="tab-bar__item">视频</li>
-                <li className="tab-bar__item">音频</li>
-                <li className="tab-bar__item">位置快应用</li>
-              </ul>
+              <TabBarCard list={tabBarList} width={'1200px'}></TabBarCard>
               <div className="tab-content clearfix">
                   <div className="tab-content__left">
                     <div>
@@ -152,8 +162,8 @@ export default class ScenicProduct extends React.Component {
         </SectionCard>
         <SectionCard title={'产品优势'} bgc={'#F8FAFF'}>
             <div className="product">
-              {products.map(item => (
-                <div className="product__item">
+              {products.map((item, index) => (
+                <div className="product__item" key={index}>
                   <div className="product__item-content">
                     <div><img src={item.src} /></div>
                     <p className="product__item__title">{item.title}</p>
