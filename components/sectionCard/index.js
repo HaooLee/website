@@ -8,12 +8,12 @@ export default class SectionCard extends React.Component{
   }
 
   render() {
-    const {title, bgc, desc, children, overflow} =  this.props
+    const {title, bgc, desc, children, overflow, titleClass=''} =  this.props
     return (
       <>
         <section className="clearfix" style={{backgroundColor:bgc || '#fff'}}>
           <div className="w">
-            <h2>{title}</h2>
+            <h2 className={titleClass}>{title}</h2>
             <p className="desc">{desc}</p>
             {!overflow && children}
           </div>

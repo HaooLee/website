@@ -1,0 +1,124 @@
+.banner {
+  height: 450px;
+  background: url(/static/images/about/banner.png) no-repeat;
+  background-size: 100% 450px;
+  &__text {
+    font-size: 40px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 450px;
+  }
+}
+.intro {
+  color: #666;
+  font-size: 18px;
+  line-height: 2;
+  margin-bottom: 60px;
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.technology-advantage {
+  &__title {
+    font-size: 18px;
+    color: #fff;
+    line-height: 36px;
+    margin-bottom: 60px;
+  }
+  &__list {
+    margin-bottom: 85px;
+    &__item {
+      color: #fff;
+      width: 269px;
+      text-align: center;
+      float: left;
+      img {
+        width: 65px;
+        height: 49px;
+      }
+      &__title {
+        font-size: 18px;
+        margin-bottom: 20px;
+        margin-top: 28px;
+      }
+      &__desc {
+        text-align: center;
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+    &__item:nth-child(2) {
+      width: 232px;
+      margin-left: 212px;
+      margin-right: 280px;
+    }
+    &__item:nth-child(3) {
+      width: 204px;
+    }
+  }
+}
+
+.contact-list {
+  &__item {
+    text-align: center;
+    float: left;
+    margin-bottom: 90px;
+    &__img {
+      width: 125px;
+      height: 125px;
+      background: rgba(255,255,255,1);
+      box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.1);
+      border-radius: 50%;
+      position: relative;
+      display: inline-block;
+      img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+    &__info {
+      &__name {
+        color: #333333;
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+      }
+      &__address {
+        color: #999999;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+.honor-list {
+  margin-bottom: 90px;
+  padding-right: 8px;
+  &__item {
+    height: 263px;
+    width: 276px !important;
+    background-color: #fff;
+    margin-right: 8px;
+    img {
+      width: 100%;
+      height: 183px;
+    }
+    &__info {
+      padding: 20px 14px;
+      &__time {
+        font-size: 18px;
+        color: #333;
+      }
+      &__title {
+        color: #999;
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+}
