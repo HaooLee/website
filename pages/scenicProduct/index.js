@@ -1,7 +1,7 @@
 import React from 'react'
 import SectionCard from '@/components/sectionCard'
 import ProblemItem from '@/components/problemItem'
-import TabBarCard from '@/components/TabBarCard'
+import TabBarCard from '@/components/tabBarCard'
 import ProductBanner from '@/components/productBanner'
 import CoreContent from '@/components/coreContent'
 import ProductAdvantage from '@/components/productAdvantage'
@@ -110,9 +110,9 @@ export default class ScenicProduct extends React.Component {
           <ProblemItem problems={problems}></ProblemItem>
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
-          <CoreContent 
-            src={'/static/images/sms.png'} 
-            coreList={coreList} 
+          <CoreContent
+            src={'/static/images/sms.png'}
+            coreList={coreList}
             customStyle={{
               marginBottom: '70px'
             }}
@@ -147,8 +147,8 @@ export default class ScenicProduct extends React.Component {
             </div>
         </SectionCard>
         <SectionCard title={'产品优势'} bgc={'#F8FAFF'}>
-          <ProductAdvantage 
-            products={products} 
+          <ProductAdvantage
+            products={products}
             customStyle={{
               width: '330px',
               height: '222px'
