@@ -1,4 +1,6 @@
 import {Component} from 'react'
+import SectionCard from '@/components/sectionCard'
+import ProductAdvantage from '@/components/productAdvantage'
 import styles from './index.less'
 
 export default class Join extends Component {
@@ -36,6 +38,23 @@ export default class Join extends Component {
           active: false,
           id: 5
         }
+      ],
+      products: [
+        {
+          title: '使命',
+          desc: '智能连接人与服务',
+          src: '/static/images/dspProduct/icon-chanpin.png'
+        },
+        {
+          title: '愿景',
+          desc: '服务世界大多数人',
+          src: '/static/images/dspProduct/icon-ziyuan.png'
+        },
+        {
+          title: '价值观',
+          desc: '客户第一、团队合作、激情、敬业',
+          src: '/static/images/dspProduct/icon-fuwu.png'
+        }
       ]
     }
   }
@@ -53,7 +72,7 @@ export default class Join extends Component {
     })
   }
   render() {
-    const {tabBar} = this.state
+    const {tabBar, products} = this.state
     return (
       <>
         <div className="banner">
@@ -73,8 +92,30 @@ export default class Join extends Component {
           <div className="positions__content">
             <div className="w">
               <ul className="tab-bar__content clearfix">
-                <li>
+                <li className="tab-bar__content__item">
                   <a>高级销售经理（运营商板块）</a>
+                  {/* <div className="tab-bar__content__item__detail">
+                    <div>
+                      <p>工作地点：</p>
+                      <p>工作地点：北京市</p>
+                    </div>
+                    <div>
+                      <p>岗位职责：</p>
+                      <ol>
+                        <li>负责三大运营商智能短信的整体营销，指定周期性的营销方案</li>
+                        <li>负责三大运营商智能短信的整体营销，指定周期性的营销方案</li>
+                        <li>负责三大运营商智能短信的整体营销，指定周期性的营销方案</li>
+                      </ol>
+                    </div>
+                    <div>
+                      <p>应职要求：</p>
+                      <ol>
+                        <li>负责三大运营商智能短信的整体营销，指定周期性的营销方案</li>
+                        <li>负责三大运营商智能短信的整体营销，指定周期性的营销方案</li>
+                        <li>负责三大运营商智能短信的整体营销，指定周期性的营销方案</li>
+                      </ol>
+                    </div>
+                  </div> */}
                 </li>
                 <li>
                   <a>渠道经理</a>
@@ -100,6 +141,15 @@ export default class Join extends Component {
               </ul>
             </div>
           </div>
+          <SectionCard title={'企业文化'} bgc={'#F8FAFF'}>
+            <ProductAdvantage 
+              products={products} 
+              customStyle={{
+                width: '330px',
+                height: '222px'
+              }}
+            ></ProductAdvantage>
+          </SectionCard>
         </div>
         <style jsx>{styles}</style>
       </>
