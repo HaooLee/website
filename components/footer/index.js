@@ -37,7 +37,7 @@ export default class Footer extends React.Component {
                     <a href="/quickAppProduct">快应用</a>
                   </li>
                   <li>
-                    <a href="/scenicProduct">快应用</a>
+                    <a href="/scenicProduct">场景消息</a>
                   </li>
                   <li>
                     <a href="/dspProduct">DSP(全域场景营销平台)</a>
