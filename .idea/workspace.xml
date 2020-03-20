@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e7c6348-ff0b-441b-a7d3-ceac642b26c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/components/productBanner/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/productBanner/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sectionCard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/sectionCard/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/agent/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/agent/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/footer/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -76,11 +74,14 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/.gitignore">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/components/footer/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+                <state relative-caret-position="464">
+                  <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
+                  <folding>
+                    <element signature="e#0#25#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -94,7 +95,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/components/productBanner/index.less">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="345">
@@ -119,7 +120,7 @@
             <entry file="file://$PROJECT_DIR$/pages/agent/index.less">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="150">
-                  <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+                  <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -262,11 +263,11 @@
         <option value="$PROJECT_DIR$/components/footer/index.less" />
         <option value="$PROJECT_DIR$/pages/auth/index.less" />
         <option value="$PROJECT_DIR$/pages/auth/index.js" />
-        <option value="$PROJECT_DIR$/components/footer/index.js" />
         <option value="$PROJECT_DIR$/components/header/index.js" />
         <option value="$PROJECT_DIR$/components/sectionCard/index.less" />
         <option value="$PROJECT_DIR$/pages/agent/index.less" />
         <option value="$PROJECT_DIR$/components/productBanner/index.less" />
+        <option value="$PROJECT_DIR$/components/footer/index.js" />
       </list>
     </option>
   </component>
@@ -396,12 +397,12 @@
       <option name="presentableId" value="Default" />
       <updated>1583738566459</updated>
       <workItem from="1583738569336" duration="3714000" />
-      <workItem from="1583812257903" duration="60564000" />
+      <workItem from="1583812257903" duration="61164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64278000" />
+    <option name="totallyTimeSpent" value="64878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -717,16 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/footer/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -801,7 +792,7 @@
     <entry file="file://$PROJECT_DIR$/pages/agent/index.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -809,6 +800,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/footer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

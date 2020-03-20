@@ -46,7 +46,9 @@ export default class Footer extends React.Component {
                <ul >
                   <li>关于我们</li>
                   <li>公司介绍</li>
-                  <li>加入我们</li>
+                  <li>
+                    <a href="/join">加入我们</a>
+                  </li>
                   <li>隐私申明</li>
                   <li>申诉通道</li>
                </ul>
