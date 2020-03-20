@@ -44,7 +44,7 @@ export default class Index extends React.Component {
             <div className="text">
               <h2>智能短信</h2>
               <h3>新短信、新营销</h3>
-              <p>马上通过 <a href="">智能短信</a> 了解更多效果转化新玩法</p>
+              <p>马上通过 <a href="/intelligenceSms">智能短信</a> 了解更多效果转化新玩法</p>
             </div>
           </div>
         </section>
@@ -53,7 +53,7 @@ export default class Index extends React.Component {
             <div className="text">
               <h2>场景消息</h2>
               <h3>多形式、效率高、全场景、 省成本</h3>
-              <p>马上通过 <a href="">场景消息</a> 了解更多效果转化新玩法</p>
+              <p>马上通过 <a href="/scenicProduct">场景消息</a> 了解更多效果转化新玩法</p>
             </div>
             <img src="/static/images/senceMsg.png" alt=""/>
           </div>
@@ -73,13 +73,13 @@ export default class Index extends React.Component {
             <div className="text">
               <h2>快应用</h2>
               <h3>免安装、免存储、一键直达、更新直接推送</h3>
-              <p>马上通过 <a href="">智能短信</a> 解锁更多营销新玩法</p>
+              <p>马上通过 <a href="/quickAppProduct">快应用</a> 解锁更多营销新玩法</p>
             </div>
             <img src="/static/images/sms.png" alt=""/>
           </div>
         </section>
         <SectionCard title={'为不同行业提供专业的全场景营销解决方案'} bgc={"#F8FAFF"} >
-          <div className="sloution-card-wrap">
+          <div className="solution-card-wrap">
             <SolutionCard src={'/static/images/jr.png'} title={'金融'}/>
             <SolutionCard src={'/static/images/jr.png'} title={'互联网金融'}/>
             <SolutionCard src={'/static/images/jr.png'} title={'运营商'}/>

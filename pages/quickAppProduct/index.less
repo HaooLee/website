@@ -6,7 +6,6 @@
 }
 
 .industry-list {
-  margin-left: -20px;
   margin-bottom: 90px;
   &__item {
     width: 285px;
@@ -15,7 +14,9 @@
     border-radius: 1px;
     background: #F8FAFF;
     float: left;
-    margin-left: 20px;
+    &:not(:last-child){
+      margin-right: 20px;
+    }
     img {
       width: 100%;
       height: 118px;

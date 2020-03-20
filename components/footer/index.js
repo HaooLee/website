@@ -27,11 +27,21 @@ export default class Footer extends React.Component {
                </ul>
                <ul >
                   <li>产品</li>
-                  <li>智能短信</li>
-                  <li>号码识别</li>
-                  <li>快应用</li>
-                  <li>网络消息</li>
-                  <li>DSP(全域场景营销平台）</li>
+                  <li>
+                    <a href="/intelligenceSms">智能短信</a>
+                  </li>
+                  <li>
+                    <a href="/auth">号码识别</a>
+                  </li>
+                  <li>
+                    <a href="/quickAppProduct">快应用</a>
+                  </li>
+                  <li>
+                    <a href="/scenicProduct">快应用</a>
+                  </li>
+                  <li>
+                    <a href="/dspProduct">DSP(全域场景营销平台)</a>
+                  </li>
                </ul>
                <ul >
                   <li>关于我们</li>

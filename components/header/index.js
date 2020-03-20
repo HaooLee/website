@@ -2,34 +2,65 @@ import React from 'react'
 import styles from './index.less'
 
 export default class Header extends React.Component {
+
+  state = {
+    routers:[
+      {
+        title:"首页",
+        link:"/",
+        enable:true,
+        routers:[]
+      },
+      {
+        title:'产品',
+        link:'/',
+        enable:true
+      },
+      {
+        title:'解决方案',
+        link:'/',
+        enable:true
+      },
+      {
+        title:'案例',
+        link:'/case',
+        enable:true
+      },
+      {
+        title:'代理加盟',
+        link:'/agent',
+        enable:true
+      },
+      {
+        title:'认证通道',
+        link:'/auth',
+        enable:true
+      },
+      {
+        title:'关于我们',
+        link:'/about',
+        enable:true
+      }
+      ]
+  }
+
   render() {
+    const {routers} =  this.state
     return (
       <>
         <header>
           <div className="w header-content">
             <a href="https://www.teddymobile.cn/" className="logo" title="泰迪熊移动">泰迪熊移动</a>
             <ul className="nav">
-              <li className="nav-item">
-                <a href="">首页</a>
-              </li>
-              <li className="nav-item">
-                <a href="">产品</a>
-              </li>
-              <li className="nav-item">
-                <a href="">解决方案</a>
-              </li>
-              <li className="nav-item">
-                <a href="">案例</a>
-              </li>
-              <li className="nav-item">
-                <a href="">代理加盟</a>
-              </li>
-              <li className="nav-item">
-                <a href="">认证通道</a>
-              </li>
-              <li className="nav-item">
-                <a href="">关于我们</a>
-              </li>
+              {
+                routers.map((i,idx)=>{
+                  return (
+                    <li className="nav-item" key={idx}>
+                        <a href={i.link}>{i.title}</a>
+                    </li>
+                  )
+                })
+              }
             </ul>
           </div>
         </header>
