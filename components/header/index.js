@@ -33,7 +33,7 @@ export default class Header extends React.Component {
       },
       {
         title:'认证通道',
-        link:'/auth',
+        link:'/',
         enable:true
       },
       {
