@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import SliderList from '@/components/sliderList'
 import styles from './index.less'
 
 export default class News extends Component {
@@ -36,11 +37,42 @@ export default class News extends Component {
           title: '开发者大会',
           desc: '开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会'
         }
+      ],
+      list: [
+        {
+          name: '资讯列表',
+          active: true
+        },
+        {
+          name: '专题区',
+          active: false
+        },
+        {
+          name: '荣誉',
+          active: false
+        },
+        {
+          name: '疫情',
+          active: false
+        }
       ]
     }
   }
+  clickCallback = (index) => {
+    const {list} = this.state 
+    list.forEach((item, idx) => {
+      if(index === idx) {
+        item.active = true
+      } else {
+        item.active = false
+      }
+    })
+    this.setState({
+      list: [...list]
+    })
+  }
   render() {
-    const {news} = this.state
+    const {news, list} = this.state
     return (
       <>
         <div className="banner">
@@ -49,12 +81,7 @@ export default class News extends Component {
           </div>
         </div>
         <div className="w news clearfix">
-          <ul className="news__tab-bar">
-            <li className="news__tab-bar__item active">资讯列表</li>
-            <li className="news__tab-bar__item">专题区</li>
-            <li className="news__tab-bar__item">荣誉</li>
-            <li className="news__tab-bar__item">疫情</li>
-          </ul>
+          <SliderList list={list} clickCallback={this.clickCallback}></SliderList>
           <ul className="news__content">
             {news.map((item, idx) => (
               <li className="news__content__item clearfix" key={idx}>
