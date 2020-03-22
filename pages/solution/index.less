@@ -15,6 +15,59 @@
   &__tab-bar {
     margin: 0 auto;
   }
+  &__content {
+    margin-top: 90px;
+    &__slider{
+      width: 520px;
+      float: left;
+    }
+    &__img {
+      width: 253px !important;
+      height: 511px;
+      // float: left;
+      margin-right: 14px;
+    }
+    &__img:last-child {
+      margin-right: 0;
+    }
+
+    &__info {
+      float: left;
+      margin-left: 65px;
+      width: 463px;
+      .info__list {
+        &__item {
+          margin-bottom: 40px;
+          &__img {
+            font-size: 20px;
+            color: #355EA6;
+            margin-bottom: 30px;
+            img {
+              width: 36px;
+              height: 35px;
+              vertical-align: middle;
+              margin-right: 10px;
+            }
+          }
+          &__desc {
+            color: #666;
+            font-size: 16px;
+            line-height: 26px;
+          }
+        }
+      }
+      &__btn {
+        width: 187px;
+        height: 46px;
+        background: rgba(53,94,166,1);
+        border-radius: 28px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 46px;
+        text-align: center;
+      }
+    }
+  }
 }
 
 .partner {
