@@ -35,28 +35,112 @@ export default class Solution extends Component {
     super(props)
     this.state = {
       tabBarList: [{
-        id: 1,
-        name: '银行/保险'
+        active: true,
+        name: '银行/保险',
+        type: 'bank'
       }, {
-        id: 2,
-        name: '运营商'
+        active: false,
+        name: '运营商',
+        type: 'operator'
       }, {
-        id: 3,
-        name: '互联网'
+        active: false,
+        name: '互联网',
+        type: 'net'
       }, {
-        id: 4,
-        name: '新零售'
+        active: false,
+        name: '新零售',
+        type: 'new-retail'
       }, {
-        id: 5,
-        name: '快消品'
+        active: false,
+        name: '快消品',
+        type: 'FMCG'
       }, {
-        id: 6,
-        name: '电商'
-      }]
+        active: false,
+        name: '电商',
+        type: 'e-commerce'
+      }],
+      solutions: {
+        'bank': {
+          images: [
+            '/static/images/solution/teddy-bank.png',
+            '/static/images/solution/teddy-bank2.png',
+            '/static/images/solution/teddy-bank.png',
+            '/static/images/solution/teddy-bank2.png'
+          ],
+          industryDesc: '依托泰迪熊移动自研核心技术产品，赋能银行/保险业，升级传统短信，如为金融企业提供品牌认证、短信菜单等功能，助推金融机构提高普惠金融效率。',
+          worthDesc: '为金融企业解决传统短信功能单一、触达即结束等问题； 为银行/保险企业提供品牌认证服务； 符合GDPR要求，保护用户隐私； 一键直达，缩短用户办理路径，提升转化率。'
+        },
+        'operator': {
+          images: [
+            '/static/images/solution/teddy-bank.png',
+            '/static/images/solution/teddy-bank2.png',
+            '/static/images/solution/teddy-bank.png',
+            '/static/images/solution/teddy-bank2.png'
+          ],
+          industryDesc: '泰迪熊移动自研智能短信产品，通过短信卡片功能打破70个字符限制，为运营商提供用户服务赋能，降低用户阅读成本，提升用户体验。',
+          worthDesc: '通过短信卡片功能，打破传统短信70个字符限制； 提升用户体验； 卡片、内容精准识别、高效覆盖； 保护用户隐私。'
+        },
+        'net': {
+          images: [
+            '/static/images/solution/teddy-bank.png',
+            '/static/images/solution/teddy-bank2.png',
+            '/static/images/solution/teddy-bank.png',
+            '/static/images/solution/teddy-bank2.png'
+          ],
+          industryDesc: '赋能电商行业短信营销，打破传统短信字数限制的同时，降低电商企业营销短信拦截率，专业的技术运营团队实时响应，保障客户服务质量。',
+          worthDesc: '打破传统短信70个字符限制； 投放可控、稳定、快速； 文案、模板预审流程，降低拦截率； 专业运营团队根据数据报告，优化菜单文案、链接配置，提升用户体验；'
+        },
+        'new-retail': {
+          images: [
+            '/static/images/solution/teddy-bank.png',
+            '/static/images/solution/teddy-bank2.png',
+            '/static/images/solution/teddy-bank.png',
+            '/static/images/solution/teddy-bank2.png'
+          ],
+          industryDesc: '赋能新零售企业，打通线上线下营销，在传统短信的基础上进行升级，为新零售企业提供线上营销渠道，同时通过场景营销，助力新零售企业线下营销。',
+          worthDesc: '产品功能手机终端出厂自带，无需下载、关注； 为新零售企业提供品牌认证服务； 号码、卡片、内容精准识别、高效覆盖。'
+        },
+        'FMCG': {
+          images: [
+            '/static/images/solution/teddy-bank.png',
+            '/static/images/solution/teddy-bank2.png',
+            '/static/images/solution/teddy-bank.png',
+            '/static/images/solution/teddy-bank2.png'
+          ],
+          industryDesc: '通过泰迪熊移动自研产品技术，赋能快消品行业，为快消品行业提供高效粉丝维护及用户需求收集渠道，一键链接企业与用户。',
+          worthDesc: '解决传统短信功能单一、触达即结束等问题； 海量流量，覆盖OPPO、vivo全量机型；70%主流手机厂商； 提升用户体验，保护用户隐私。'
+        },
+        'e-commerce': {
+          images: [
+            '/static/images/solution/teddy-bank.png',
+            '/static/images/solution/teddy-bank2.png',
+            '/static/images/solution/teddy-bank.png',
+            '/static/images/solution/teddy-bank2.png'
+          ],
+          industryDesc: '赋能电商行业短信营销，打破传统短信字数限制的同时，降低电商企业营销短信拦截率，专业的技术运营团队实时响应，保障客户服务质量。',
+          worthDesc: '打破传统短信70个字符限制； 投放可控、稳定、快速； 文案、模板预审流程，降低拦截率； 专业运营团队根据数据报告，优化菜单文案、链接配置，提升用户体验；'
+        }
+      },
+      activeType: 'bank'
     }
   }
+  tabBarClick = (idx, row) => {
+    const {tabBarList} = this.state 
+    tabBarList.forEach((item, index) => {
+      if(idx === index) {
+        item.active = true
+      } else {
+        item.active = false
+      }
+    })
+    let activeType = row.type
+    this.setState({
+      tabBarList: [...tabBarList],
+      activeType: activeType
+    })
+  }
   render() {
-    const {tabBarList} = this.state
+    const {tabBarList, solutions, activeType} = this.state
     const settings = {
       dots: false,
       infinite: true,
@@ -77,15 +161,14 @@ export default class Solution extends Component {
         <div className="solution">
           <div className="w">
             <div className="solution__tab-bar">
-              <TabBarCard list={tabBarList} width={'1193px'}></TabBarCard>
+              <TabBarCard list={tabBarList} width={'1193px'} clickCallback={this.tabBarClick}></TabBarCard>
             </div>
             <div className="solution__content clearfix">
               <div className="solution__content__slider">
                 <Slider {...settings}>
-                  <img src="/static/images/solution/teddy-bank.png" className="solution__content__img" />
-                  <img src="/static/images/solution/teddy-bank2.png" className="solution__content__img" />
-                  <img src="/static/images/solution/teddy-bank.png" className="solution__content__img" />
-                  <img src="/static/images/solution/teddy-bank2.png" className="solution__content__img" />
+                  {solutions[activeType] && solutions[activeType].images.map(item => (
+                    <img src={item} className="solution__content__img" />
+                  ))}
                 </Slider>
               </div>
               <div className="solution__content__info">
@@ -95,14 +178,14 @@ export default class Solution extends Component {
                       <img src="/static/images/solution/icon-hangyefuneng.png" />
                       <span>行业赋能</span>
                     </div>
-                    <p className="info__list__item__desc">依托泰迪熊移动自研核心技术产品，赋能银行/保险业，升级传统短信，如为金融企业提供品牌认证、短信菜单等功能，助推金融机构提高普惠金融效率。</p>
+                    <p className="info__list__item__desc">{solutions[activeType] && solutions[activeType]['industryDesc']}</p>
                   </li>
                   <li className="info__list__item">
                     <div className="info__list__item__img">
                       <img src="/static/images/solution/icon-jiazhidian.png" />
                       <span>价值点</span>
                     </div>
-                    <p className="info__list__item__desc">为金融企业解决传统短信功能单一、触达即结束等问题； 为银行/保险企业提供品牌认证服务； 符合GDPR要求，保护用户隐私； 一键直达，缩短用户办理路径，提升转化率。</p>
+                    <p className="info__list__item__desc">{solutions[activeType] && solutions[activeType]['worthDesc']}</p>
                   </li>
                 </ul>
                 <div className="solution__content__info__btn">马上合作</div>
