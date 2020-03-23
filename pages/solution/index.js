@@ -166,8 +166,8 @@ export default class Solution extends Component {
             <div className="solution__content clearfix">
               <div className="solution__content__slider">
                 <Slider {...settings}>
-                  {solutions[activeType] && solutions[activeType].images.map(item => (
-                    <img src={item} className="solution__content__img" />
+                  {solutions[activeType] && solutions[activeType].images.map((item, index) => (
+                    <img key={index} src={item} className="solution__content__img" />
                   ))}
                 </Slider>
               </div>
