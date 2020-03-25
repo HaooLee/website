@@ -1,28 +1,52 @@
-.header-content{
+header {
+  position: fixed;
+  z-index: 1000;
+  background-color: #fff;
   height: 60px;
-  line-height: 60px;
-  .logo {
-    display: inline-block;
-    font-size: 0px;
-    width: 134px;
-    height: 33px;
-    /* margin: 18px 0; */
-    background: url(/static/images/logo.png) no-repeat center center;
-    background-size: 100%;
-    vertical-align: middle;
-  }
-  .nav {
-    float: right;
-    .nav-item {
-      float: left;
-      margin-left: 50px;
-      a {
-        color: rgb(51,51,51);
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: 400;
-        font-family: Source Han Sans CN;
+  width: 100%;
+  .header-content{
+    height: 60px;
+    line-height: 60px;
+
+    .logo {
+      display: inline-block;
+      font-size: 0px;
+      width: 134px;
+      height: 33px;
+      /* margin: 18px 0; */
+      background: url(/static/images/logo.png) no-repeat center center;
+      background-size: 100%;
+      vertical-align: middle;
+    }
+    .nav {
+      float: right;
+      .nav-item {
+        float: left;
+        margin-left: 50px;
+        a {
+          color: rgb(51,51,51);
+          text-decoration: none;
+          font-size: 15px;
+          font-weight: 400;
+          font-family: Source Han Sans CN;
+        }
       }
     }
   }
+  .header-content-sec{
+    width: 100%;
+    background-color: #fff;
+    transition: height linear .5s;
+  }
+
+
+  @media screen and (max-width: 980px) {
+    .header-content{
+      .nav {
+        display: none;
+      }
+
+    }
+  }
+
 }

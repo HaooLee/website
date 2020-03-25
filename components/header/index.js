@@ -14,7 +14,14 @@ export default class Header extends React.Component {
       {
         title:'产品',
         link:'/',
-        enable:true
+        enable:true,
+        routers:[
+          {
+            title:"DSP",
+            link:"/",
+            enable:true
+          }
+        ]
       },
       {
         title:'解决方案',
@@ -41,11 +48,18 @@ export default class Header extends React.Component {
         link:'/about',
         enable:true
       }
-      ]
+      ],
+    secEle:[]
+  }
+
+  mouseenterHandler = (routers)=>{
+    this.setState({
+      secEle:routers.map((i, idx)=><div key={idx} style={{height:30}}>{i.title}</div>)
+    })
   }
 
   render() {
-    const {routers} =  this.state
+    const {routers, secEle} =  this.state
     return (
       <>
         <header>
@@ -55,13 +69,18 @@ export default class Header extends React.Component {
               {
                 routers.map((i,idx)=>{
                   return (
-                    <li className="nav-item" key={idx}>
+                    <li className="nav-item" key={idx} onMouseEnter={e => this.mouseenterHandler(i.routers || [])}>
                         <a href={i.link}>{i.title}</a>
                     </li>
                   )
                 })
               }
             </ul>
+          </div>
+          <div className="header-content-sec">
+            {
+              secEle
+            }
           </div>
         </header>
         <style jsx>
