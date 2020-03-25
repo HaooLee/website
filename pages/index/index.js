@@ -80,16 +80,15 @@ export default class Index extends React.Component {
         </section>
         <SectionCard title={'为不同行业提供专业的全场景营销解决方案'} bgc={"#F8FAFF"} >
           <div className="solution-card-wrap">
-            <SolutionCard src={'/static/images/jr.png'} title={'金融'}/>
-            <SolutionCard src={'/static/images/jr.png'} title={'互联网金融'}/>
-            <SolutionCard src={'/static/images/jr.png'} title={'运营商'}/>
-            <SolutionCard src={'/static/images/jr.png'} title={'金融'}/>
-            <SolutionCard src={'/static/images/jr.png'} title={'互联网金融'}/>
-            <SolutionCard src={'/static/images/jr.png'} title={'运营商'}/>
+            <SolutionCard src={'/static/images/jr.png'} title={'银行/保险'}/>
+            <SolutionCard src={'/static/images/运营商@2x.png'} title={'运营商'}/>
+            <SolutionCard src={'/static/images/互联网@2x.png'} title={'互联网'}/>
+            <SolutionCard src={'/static/images/新零售@2x.png'} title={'快消品'}/>
+            <SolutionCard src={'/static/images/互联网金融@2x.png'} title={'新零售'}/>
+            <SolutionCard src={'/static/images/电商@2x.png'} title={'电商'}/>
           </div>
         </SectionCard>
-        <SectionCard title={'覆盖主流手机厂商'} desc={'泰迪熊移动利用自身强大的技术优势，与OPPO、vivo、魅族、金立、联想、乐视、酷派、阿里YunOS等国内主流手机厂商进行了深度合\n' +
-        '作，累计覆盖终端7亿+，日活用户4亿。'}>
+        <SectionCard title={'覆盖主流手机厂商'} desc={'泰迪熊移动利用自身强大的技术优势，与OPPO、vivo、魅族、金立、联想、乐视、酷派、阿里YunOS等国内主流手机厂商\n进行了深度合作，累计覆盖终端7亿+，日活用户4亿。'}>
           <img className="cp" src="/static/images/合作厂商@2x.png" alt=""/>
         </SectionCard>
         <SectionCard title={'这些成功的企业正在使用泰迪熊移动'} desc={'泰迪熊移动成立于2014年，已为京东、淘宝、苏宁、携程、屈臣氏、建设银行、招商银行、百度等国内百家企业提供大数据和场景服务，\n' +

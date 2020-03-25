@@ -41,42 +41,42 @@ export default class IntelligenceSms extends React.Component {
         {
           src: '/static/images/intelligenceSms/icon-accurate.png',
           title: '精确度高',
-          desc: '拥有独创的短信语义识别引擎。'
+          desc: '拥有独创的短信语义识别引擎'
         },
         {
           src: '/static/images/intelligenceSms/icon-sample.png',
           title: '样本丰富',
-          desc: '每天解析32亿条短信。'
+          desc: '每天解析32亿条短信'
         },
         {
           src: '/static/images/intelligenceSms/icon-service.png',
           title: '精准提供服务',
-          desc: '能够基于自然语义解析技术，根据用户场景，精准提供服务。'
+          desc: '能够基于自然语义解析技术，根据用户场景，精准提供服务'
         },
         {
           src: '/static/images/intelligenceSms/icon-cover.png',
           title: '高效覆盖',
-          desc: '号码、卡片、内容精准识别。'
+          desc: '号码、卡片、内容精准识别'
         },
         {
           src: '/static/images/intelligenceSms/icon-put-in.png',
           title: '投放可控',
-          desc: '投放可控、稳定、快速。'
+          desc: '投放可控、稳定、快速'
         },
         {
           src: '/static/images/intelligenceSms/icon-private.png',
           title: '隐私保护',
-          desc: '符合GDPR要求，保护用户隐私。'
+          desc: '符合GDPR要求，保护用户隐私'
         },
         {
           src: '/static/images/intelligenceSms/icon-intercept.png',
           title: '降低拦截率',
-          desc: '文案、模板预审流程，降低拦截率。'
+          desc: '文案、模板预审流程，降低拦截率'
         },
         {
           src: '/static/images/intelligenceSms/icon-change.png',
           title: '提升转化率',
-          desc: '一键直达，缩短用户办理路径，提升转化率。'
+          desc: '一键直达，缩短用户办理路径，提升转化率'
         }
       ],
       coreList: [
@@ -125,14 +125,14 @@ export default class IntelligenceSms extends React.Component {
     const {problems, products, coreList, tabBarList} = this.state
     return (
       <>
-        <ProductBanner title={'智能短信'} desc={'带你了解短信新形态，体验营销新玩法'} src={'/static/images/intelligenceSms/banner.png'}></ProductBanner>
+        <ProductBanner title={'智能短信'} desc={'带你了解短信新形态,体验营销新玩法'} src={'/static/images/intelligenceSms/banner.png'}></ProductBanner>
         <SectionCard title={'你的场景消息通常会遇到的问题'} bgc={"#fff"} >
           <ProblemItem problems={problems}></ProblemItem>
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
-          <CoreContent 
-            src={'/static/images/sms.png'} 
-            coreList={coreList} 
+          <CoreContent
+            src={'/static/images/sms.png'}
+            coreList={coreList}
             customStyle={{
               marginBottom: '70px'
             }}
@@ -168,8 +168,8 @@ export default class IntelligenceSms extends React.Component {
         </SectionCard>
         <SectionCard title={'产品优势'} bgc={'#F8FAFF'}>
             <div style={{marginBottom: '60px'}}>
-              <ProductAdvantage 
-                products={products} 
+              <ProductAdvantage
+                products={products}
                 customStyle={{
                   width: '228px',
                   height: '222px',

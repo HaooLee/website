@@ -31,20 +31,20 @@ export default class Footer extends React.Component {
                     <a href="/intelligenceSms">智能短信</a>
                   </li>
                   <li>
-                    <a href="/auth">号码识别</a>
+                    <a href="/scenicProduct">场景消息</a>
+                  </li>
+                  <li>
+                    <a href="/numberProduct">号码认证</a>
                   </li>
                   <li>
                     <a href="/quickAppProduct">快应用</a>
                   </li>
                   <li>
-                    <a href="/scenicProduct">场景消息</a>
-                  </li>
-                  <li>
-                    <a href="/dspProduct">DSP(全域场景营销平台)</a>
+                    <a href="/dspProduct">全域场景增量营销平台</a>
                   </li>
                </ul>
                <ul >
-                  <li>关于我们</li>
+                  <li>关于泰迪熊移动</li>
                   <li>公司介绍</li>
                   <li>
                     <a href="/join">加入我们</a>
@@ -54,16 +54,16 @@ export default class Footer extends React.Component {
                </ul>
                <ul >
                  <li>友情链接</li>
-                 <li>公司介绍</li>
-                 <li>加入我们</li>
-                 <li>隐私申明</li>
-                 <li>申诉通道</li>
+                 <li>OPPO</li>
+                 <li>vivo</li>
+                 <li>联想</li>
+                 <li>魅族</li>
                </ul>
 
              </div>
             <hr/>
             <div className="registered-NO">
-              <span>备案号：</span><a href="http://www.beian.miit.gov.cn" target="_blank" rel="nofollow">京ICP备14051668号-2</a>
+              <span>Copyright &copy; 2014-2020 北京泰迪熊移动科技有限公司 </span><a href="http://www.beian.miit.gov.cn" target="_blank" rel="nofollow">京ICP备14051668号-2</a>
             </div>
 
           </div>

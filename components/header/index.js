@@ -17,19 +17,40 @@ export default class Header extends React.Component {
         enable:true,
         routers:[
           {
-            title:"DSP",
-            link:"/",
+            title:"智能短信",
+            link:"/intelligenceSms",
+            enable:true
+          },
+          {
+            title:"场景消息",
+            link:"/scenicProduct",
+            enable:true
+          },
+          {
+            title:"号码认证",
+            link:"/numberProduct",
+            enable:true
+          },
+          {
+            title:"快应用",
+            link:"/quickAppProduct",
+            enable:true
+          },
+          {
+            title:"全域场景增量营销平台",
+            link:"/dspProduct",
             enable:true
           }
+
         ]
       },
       {
         title:'解决方案',
-        link:'/',
+        link:'/solution',
         enable:true
       },
       {
-        title:'案例',
+        title:'客户成功故事',
         link:'/case',
         enable:true
       },
@@ -40,11 +61,11 @@ export default class Header extends React.Component {
       },
       {
         title:'认证通道',
-        link:'/',
+        link:'/numberAuth',
         enable:true
       },
       {
-        title:'关于我们',
+        title:'关于泰迪熊移动',
         link:'/about',
         enable:true
       }
@@ -54,7 +75,15 @@ export default class Header extends React.Component {
 
   mouseenterHandler = (routers)=>{
     this.setState({
-      secEle:routers.map((i, idx)=><div key={idx} style={{height:30}}>{i.title}</div>)
+      secEle:routers.map((i, idx)=><div style={{padding:20}} key={idx}>
+        <a href={i.link}>{i.title}</a>
+      </div>)
+    })
+  }
+
+  mouseLeaveHandler = ()=>{
+    this.setState({
+      secEle:[]
     })
   }
 
@@ -77,10 +106,12 @@ export default class Header extends React.Component {
               }
             </ul>
           </div>
-          <div className="header-content-sec">
-            {
-              secEle
-            }
+          <div className="header-content-sec" onMouseLeave={e=> this.mouseLeaveHandler()}>
+            <div className="w sec-wrap">
+              {
+                secEle
+              }
+            </div>
           </div>
         </header>
         <style jsx>

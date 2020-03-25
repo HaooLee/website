@@ -37,17 +37,17 @@ export default class ScenicProduct extends React.Component {
         {
           src: '/static/images/scenicProduct/cost.png',
           title: '节省成本',
-          desc: '消息升级，价格更低，节省短信成本。'
+          desc: '消息升级，价格更低，节省短信成本'
         },
         {
           src: '/static/images/scenicProduct/limit.png',
           title: '突破限制',
-          desc: '突破传统短信字符限制。'
+          desc: '突破传统短信字符限制'
         },
         {
           src: '/static/images/scenicProduct/effect.png',
           title: '提高效率',
-          desc: '降低短信拦截率、投诉率。'
+          desc: '降低短信拦截率、投诉率'
         },
         {
           src: '/static/images/scenicProduct/remain.png',
@@ -57,12 +57,12 @@ export default class ScenicProduct extends React.Component {
         {
           src: '/static/images/scenicProduct/marketing.png',
           title: '精准营销',
-          desc: '场景触发，营销更精准。'
+          desc: '场景触发，营销更精准'
         },
         {
           src: '/static/images/scenicProduct/experience.png',
           title: '体验提升',
-          desc: '富媒体消息，营销短信多元化， 用户体验提升，功能承载更多。'
+          desc: '富媒体消息，营销短信多元化， 用户体验提升，功能承载更多'
         }
       ],
       coreList: [
@@ -105,7 +105,7 @@ export default class ScenicProduct extends React.Component {
     const {problems, products, coreList, tabBarList} = this.state
     return (
       <>
-        <ProductBanner title={'场景消息'} desc={'场景消息——千人千面的智慧场景营销服务'} src={'/static/images/scenicProduct/banner.png'}></ProductBanner>
+        <ProductBanner title={'场景消息'} desc={'千人千面的智慧场景营销服务'} src={'/static/images/scenicProduct/banner.png'}></ProductBanner>
         <SectionCard title={'你的场景消息通常会遇到的问题'} bgc={"#fff"} >
           <ProblemItem problems={problems}></ProblemItem>
         </SectionCard>
