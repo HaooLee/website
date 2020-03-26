@@ -1,3 +1,4 @@
+@import '../var.less';
 .submit-success {
   text-align: center;
   margin-top: 345px;
@@ -14,15 +15,42 @@
     color: #333333;
     font-size: 30px;
     margin-top: 30px;
+    margin-bottom: 30px;
   }
   &__feedback {
     color: #333333;
     font-size: 20px;
-    margin-top: 30px;
     margin-bottom: 60px;
   }
   &__back {
     color: #355EA6;
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: @MATCH_WIDTH) {
+  .submit-success {
+    margin-top: 3.28rem;
+    margin-bottom: 3.28rem;
+    &__img-wrap {
+      width: 1.07rem;
+    }
+    &__img {
+      width: 1.07rem;
+      height: 1.07rem;
+    }
+    &__text {
+      font-size: 0.43rem;
+      margin: 0.72rem 0;
+    }
+    &__feedback {
+      width: 6.4rem;
+      margin: 0 auto;
+      line-height: 2;
+      margin-bottom: 0.72rem;
+    }
+    &__feedback, &__back {
+      font-size: 0.32rem;
+    }
   }
 }
