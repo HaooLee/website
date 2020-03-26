@@ -40,7 +40,7 @@ export default class NumberComplain extends Component {
       <>
         <div className="banner">
           <div className="banner__text w">
-            {/* 认证通道 */}
+            认证通道
           </div>
         </div>
         <div className="complain-wrap">
@@ -100,7 +100,7 @@ export default class NumberComplain extends Component {
                     </div>
                   </div>  
                 </div>
-                <div className="form__item">
+                <div className="form__item form__item--no-margin">
                   <div className="form__item__label">申诉企业全称</div>
                   <div className="form__item__input">
                     <input placeholder="请输入您的企业全称" type="text" />
