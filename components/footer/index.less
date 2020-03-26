@@ -1,8 +1,9 @@
 .footer-wrap {
   background-color: #262626;
-  height: 601px;
+  // height: 601px;
   box-sizing: border-box;
   padding-top: 113px;
+  padding-bottom: 126px;
   .company-info {
 
     ul {
@@ -28,42 +29,42 @@
           margin-bottom: 24px;
         }
       }
-
     }
-    ul:last-child{
-      width: 100px;
-    }
-    ul:not(:last-child){
-      margin-right: 130px;
-    }
-
-    ul:not(:first-child){
+    .company__content {
       padding-top: 68px;
-      li:first-child {
-        margin-bottom: 40px;
-        height: 40px;
-        font-size:16px;
-        font-family:Source Han Sans CN;
-        font-weight:bold;
-        color:rgba(254,254,254,1);
-        line-height:30px;
-
-      }
-      li:first-child:after{
-        display: block;
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 19px;
-        height: 1px;
-        background-color: #fff;
-
-
+      float: left;
+      .company__item {
+        position: relative;
+        li:first-child {
+          margin-bottom: 40px;
+          height: 40px;
+          font-size:16px;
+          font-family:Source Han Sans CN;
+          font-weight:bold;
+          color:rgba(254,254,254,1);
+          line-height:30px;
+        }
+        li:first-child:after{
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 19px;
+          height: 1px;
+          background-color: #fff;
+        }
+        &:not(:last-child){
+          margin-right: 130px;
+        }
+        &:last-child {
+          width: 100px;
+        }
       }
     }
     .info{
       width: 370px;
+      float: left;
+      margin-right: 130px;
     }
   }
 
@@ -76,6 +77,64 @@
       font-weight:400;
       color:rgba(254,254,254,1);
       line-height:30px;
+    }
+  }
+}
+@media screen and (max-width: 980px) {
+  .footer-wrap {
+    padding: 0.85rem 0.43rem;
+    .company-info {
+      display: flex;
+      flex-direction: column-reverse;
+      .company__content {
+        display: flex;
+        flex-direction: row;
+        padding-top: 0;
+        border-bottom: 0.03rem solid #fff;
+        padding-bottom: 0.85rem;
+        .company__item {
+          flex: 1;
+          height: auto;
+          li {
+            font-size: 0.32rem;
+            white-space: nowrap;
+            a {
+              font-size: 0.32rem;
+            }
+          }
+          &:not(:last-child) {
+            margin-right: 0;
+          }
+          li:first-child {
+            font-size: 0.37rem;
+            margin-bottom: 0.83rem;
+          }
+          li:first-child:after{
+            width: 100%;
+          }
+        }
+      }
+      .info {
+        margin-top: 0.64rem;
+        height: auto;
+        margin-bottom: 0.61rem;
+        width: auto;
+        margin-right: 0;
+        li {
+          font-size: 0.32rem;
+          line-height: 0.64rem;
+          img {
+            width: 2.13rem;
+            height: 2.13rem;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .registered-NO {
+      span, a {
+        font-size: 0.32rem;
+      }
     }
   }
 }

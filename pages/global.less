@@ -1,3 +1,4 @@
+@import './var.less';
 :global(.clearfix:after,.clearfix:before){
   content:".";
   display:block;
@@ -14,4 +15,11 @@
 
 ol, ul, dl, p {
   margin-bottom: 0;
+}
+
+@media screen and (max-width: @MATCH_WIDTH) {
+  :global(.w) {
+    max-width: none;
+    min-width: auto;
+  }
 }

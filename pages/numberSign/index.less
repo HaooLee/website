@@ -1,3 +1,4 @@
+@import '../var.less';
 .banner {
   height: 450px;
   background: url(/static/images/numberSign/banner.png) no-repeat;
@@ -5,7 +6,6 @@
   &__text {
     font-size: 40px;
     color: #fff;
-    font-weight: bold;
     line-height: 450px;
   }
 }
@@ -54,6 +54,62 @@
       color: #fff;
       font-size: 18px;
       background: #355EA6;
+    }
+  }
+}
+
+@media screen and (max-width: @MATCH_WIDTH) {
+  .banner {
+    height: 5.53rem;
+    background-size: 100% 5.53rem;
+    &__text {
+      line-height: 5.53rem;
+      font-size: 0.53rem;
+      margin-left: 1.15rem;
+    }
+  }
+  .sign {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.09rem 0 2.83rem 0;
+    &__item {
+      width: 9.12rem;
+      height: 4.64rem;
+      border-radius: 0.08rem;
+      border: 0.03rem solid rgba(216,216,216,1);
+      padding: 0;
+      position: relative;
+      margin-bottom: 0.53rem;
+      margin-right: 0;
+      &__img {
+        width: 1.33rem;
+        height: 1.33rem;
+        margin-left: 0.51rem;
+      }
+      &__info {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        margin: 0.64rem 0.58rem 0 0.58rem;
+        &__title {
+          font-size: 0.43rem;
+        }
+        &__desc {
+          font-size: 0.32rem;
+          line-height: 0.53rem;
+          margin-top: 0.32rem;
+        }
+      }
+      &__btn {
+        width: 2.72rem;
+        height: 0.69rem;
+        line-height: 0.69rem;
+        font-size: 0.43rem;
+        position: absolute;
+        bottom: 0.64rem;
+        left: 2.48rem;
+      }
     }
   }
 }
