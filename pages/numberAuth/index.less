@@ -1,3 +1,4 @@
+@import '../var.less';
 .banner {
   height: 450px;
   background: url(/static/images/numberSign/banner.png) no-repeat;
@@ -113,5 +114,18 @@
       font-size: 20px;
       margin: 0 auto;
     }
+  }
+}
+@import '../numberComplain/form.less';
+@media screen and (max-width: @MATCH_WIDTH) {
+  .complain-wrap {
+    .complain {
+      &__header {
+        &__item {
+          width: 100%;
+        }
+      }
+    }
+    
   }
 }

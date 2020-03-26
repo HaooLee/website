@@ -1,4 +1,3 @@
-@import '../var.less';
 .banner {
   height: 450px;
   background: url(/static/images/numberSign/banner.png) no-repeat;
@@ -117,83 +116,4 @@
   }
 }
 
-@media screen and (max-width: @MATCH_WIDTH) {
-  .banner {
-    height: 5.53rem;
-    background-size: 100% 5.53rem;
-    &__text {
-      line-height: 5.53rem;
-      font-size: 0.53rem;
-      margin-left: 1.15rem;
-    }
-  }
-  .complain-wrap {
-    .complain {
-      margin-top: 0;
-      &-bg {
-        display: none;
-      }
-      &__header {
-        width: 100%;
-        background-color: #F7F7F7;
-        &__item {
-          height: 1.09rem;
-          line-height: 1.09rem;
-          font-size: 0.37rem;
-        }
-      }
-    }
-  }
-  .form {
-    width: 100%;
-    box-sizing: border-box;
-    &__item {
-      padding-right: 0.72rem;
-      margin-top: 0.8rem;
-      &:last-child {
-        padding-right: 0;
-      }
-      &--no-margin {
-        margin-top: 0;
-      }
-      &__label {
-        padding-right: 0.21rem;
-        font-size: 0.32rem;
-        width: 2.53rem;
-        box-sizing: border-box;
-        line-height: 0.91rem;
-      }
-      &__input {
-        input {
-          font-size: 0.32rem;
-          height: 0.91rem;
-          padding: 0.2rem;
-          box-sizing: border-box;
-        }
-        &__code {
-          width: 2.67rem;
-          font-size: 0.32rem;
-          height: 0.91rem;
-          line-height: 0.91rem;
-          margin-left: 0.27rem;
-        }
-      }
-      .upload {
-        margin: 0.4rem 0;
-        img {
-          width: 0.4rem;
-          height: 0.4rem;
-        }
-        span {
-          font-size: 0.32rem;
-        }
-      }
-      &__btn {
-        width: 8rem;
-        height: 0.99rem;
-        font-size: 0.37rem;
-        line-height: 0.99rem;
-      }
-    }
-  }
-}
+@import './form.less';
