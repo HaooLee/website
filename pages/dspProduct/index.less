@@ -8,9 +8,17 @@
 }
 .core-content-wrap {
   padding-bottom: 90px;
+  .core-content__img {
+    float: left;
+    width: 296px; 
+    height: 600px; 
+    margin-right: 133px;
+  }
 }
-
-@import '../../pages/var.less';
+.icon-test {
+  width: 0;
+}
+@import '../var.less';
 
 @media screen and (max-width: @MATCH_WIDTH) {
   .intro {
@@ -21,6 +29,14 @@
     img {
       width: 8.88rem;
       height: 6.43rem;
+    }
+  }
+  .core-content-wrap {
+    padding-bottom: 1.19rem;
+    .core-content__img {
+      width: 4rem; 
+      height: 8.13rem; 
+      margin-right: 0;
     }
   }
 }

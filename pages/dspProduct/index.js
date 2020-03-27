@@ -14,27 +14,27 @@ export default class DspProduct extends Component {
         {
           title: '平台：科技+负能广告投放管理',
           src: '/static/images/dspProduct/icon-pingtai.png',
-          imgStyle: {
-            width: '52px',
-            height: '34px',
-            marginTop: '10px'
-          }
+          // imgStyle: {
+          //   width: '52px',
+          //   height: '34px',
+          //   marginTop: '10px'
+          // }
         },
         {
           title: '效果：以人为核心的全域场景覆盖',
           src: '/static/images/dspProduct/icon-xiaoguo.png',
-          imgStyle: {
-            width: '39px',
-            height: '39px'
-          }
+          // imgStyle: {
+          //   width: '39px',
+          //   height: '39px'
+          // }
         },
         {
           title: '资源：合作市场主流厂商，覆盖用户7亿',
           src: '/static/images/dspProduct/icon-changshang.png',
-          imgStyle: {
-            width: '37px',
-            height: '33px'
-          }
+          // imgStyle: {
+          //   width: '37px',
+          //   height: '33px'
+          // }
         }
       ],
       products: [
@@ -93,14 +93,14 @@ export default class DspProduct extends Component {
           </div>
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
-          <div className="core-content-wrap">
+          <div className="core-content-wrap" id="core-content">
             <CoreContent 
-              src={'/static/images/quickAppProduct/phone.png'} 
               coreList={coreList} 
-              customStyle={{'marginBottom': '75px'}}
-              imgCustomStyle={{width: '296px', height: '600px', marginRight: '133px'}}
               listStyle={{marginTop: '105px'}}
-            ></CoreContent>
+              iconClassName={'core-content__item__icon'}
+            >
+              <img src={'/static/images/quickAppProduct/phone.png'} className="core-content__img" />
+            </CoreContent>
           </div>
         </SectionCard>
         <SectionCard title={'产品优势'} bgc={'#fff'}>
@@ -118,6 +118,7 @@ export default class DspProduct extends Component {
           <ProblemItem problems={problems}></ProblemItem>
         </SectionCard>
         <style jsx>{styles}</style>
+        <style global jsx></style>
       </>
     )
   }
