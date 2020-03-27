@@ -2,7 +2,6 @@
   margin-bottom: 90px;
 }
 .problem-item {
-  // width: 20%;
   text-align: center;
   float: left;
   &__content {
@@ -27,6 +26,38 @@
       display: inline-block;
       max-width: 130px;
       line-height: 1.3;
+    }
+  }
+}
+@import '../../pages/var.less';
+
+@media screen and (max-width: @MATCH_WIDTH) {
+  .problem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 0.77rem;
+    margin-bottom: 1.07rem;
+    &:after {
+      display: none;
+    }
+    &:before {
+      display: none;
+    }
+  }
+  .problem-item {
+    width: 100% !important;
+    &__content {
+      width: 1.39rem;
+      height: 1.39rem;
+      line-height: 1.39rem;
+      img {
+        width: 0.75rem;
+        height: 0.75rem;
+      }
+    }
+    &__text {
+      font-size: 0.32rem;
+      margin-top: 0.45rem;
     }
   }
 }

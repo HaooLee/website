@@ -97,7 +97,7 @@ export default class DspProduct extends Component {
             <CoreContent 
               coreList={coreList} 
               listStyle={{marginTop: '105px'}}
-              iconClassName={'core-content__item__icon'}
+              coreClassName={'dsp-core'}
             >
               <img src={'/static/images/quickAppProduct/phone.png'} className="core-content__img" />
             </CoreContent>
@@ -106,12 +106,13 @@ export default class DspProduct extends Component {
         <SectionCard title={'产品优势'} bgc={'#fff'}>
           <ProductAdvantage 
             products={products} 
-            customStyle={{
-              boxShadow: '0px 4px 15px 0px rgba(0,0,0,0.15)',
-              width: '330px',
-              height: '222px',
-              borderRadius: '3px'
-            }}
+            // customStyle={{
+            //   boxShadow: '0px 4px 15px 0px rgba(0,0,0,0.15)',
+            //   width: '330px',
+            //   height: '222px',
+            //   borderRadius: '3px'
+            // }}
+            customClassName={'dsp-product__item'}
           ></ProductAdvantage>
         </SectionCard>
         <SectionCard title={'帮你解决'} bgc={"#F8FAFF"} >
