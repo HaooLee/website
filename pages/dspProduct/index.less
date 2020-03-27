@@ -9,3 +9,18 @@
 .core-content-wrap {
   padding-bottom: 90px;
 }
+
+@import '../../pages/var.less';
+
+@media screen and (max-width: @MATCH_WIDTH) {
+  .intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 0.91rem;
+    img {
+      width: 8.88rem;
+      height: 6.43rem;
+    }
+  }
+}

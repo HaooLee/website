@@ -39,3 +39,11 @@ h2 {
   line-height:30px;
   letter-spacing: 2px;
 }
+
+@import '../../pages/var.less';
+@media screen and (max-width: @MATCH_WIDTH) {
+  h2 {
+    font-size: 0.48rem;
+    margin: 1.07rem 0;
+  }
+}
