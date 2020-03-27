@@ -118,7 +118,6 @@ export default class DspProduct extends Component {
           <ProblemItem problems={problems}></ProblemItem>
         </SectionCard>
         <style jsx>{styles}</style>
-        <style global jsx></style>
       </>
     )
   }
