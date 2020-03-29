@@ -25,17 +25,19 @@
 .scenic-tab-bar {
   width: 1200px;
 }
-
+.sms-tab-bar {
+  width: 815px;
+}
 @import '../../pages/var.less';
 
 @media screen and (max-width: @MATCH_WIDTH) {
-  .scenic-tab-bar {
-    width: 8.75rem;
-    height: 0.96rem;
-    padding: 0.08rem;
+  .tab-bar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    box-sizing: border-box;
+    height: 0.96rem;
+    padding: 0.08rem;
     &::before {
       display: none;
     }
@@ -43,11 +45,23 @@
       display: none;
     }
     .tab-bar__item {
-      padding: 0 0.29rem;
       font-size: 0.37rem;
       height: 0.8rem;
       line-height: 0.8rem;
       width: auto !important;
+    }
+  }
+  .scenic-tab-bar {
+    width: 8.75rem;
+    .tab-bar__item {
+      padding: 0 0.29rem;
+    }
+  }
+
+  .sms-tab-bar {
+    width: 7.89rem;
+    .tab-bar__item {
+      padding: 0 0.21rem;
     }
   }
 }

@@ -103,47 +103,55 @@ export default class IntelligenceSms extends React.Component {
       ],
       tabBarList: [
         {
-          id: 1,
-          name: '企业认证'
+          name: '企业认证',
+          active: true
         },
         {
-          id: 2,
+          active: false,
           name: '短信卡片'
         },
         {
-          id: '3',
+          active: false,
           name: '场景按钮'
         },
         {
-          id: '4',
+          active: false,
           name: '短信菜单'
         }
       ]
     }
   }
+  clickCallback = (index) => {
+    const {tabBarList} = this.state 
+    tabBarList.forEach((item, idx) => {
+      if(index === idx) {
+        item.active = true
+      } else {
+        item.active = false
+      }
+    })
+    this.setState({
+      tabBarList: [...tabBarList]
+    })
+  }
   render () {
     const {problems, products, coreList, tabBarList} = this.state
     return (
       <>
-        <ProductBanner title={'智能短信'} desc={'带你了解短信新形态,体验营销新玩法'} src={'/static/images/intelligenceSms/banner.png'}></ProductBanner>
+        <ProductBanner title={'智能短信'} desc={'带你了解短信新形态,体验营销新玩法'} src={'/static/images/intelligenceSms/banner.png'} customClassName={'sms-banner'}></ProductBanner>
         <SectionCard title={'你的场景消息通常会遇到的问题'} bgc={"#fff"} >
-          <ProblemItem problems={problems}></ProblemItem>
+          <ProblemItem problems={problems} customClassName={'sms-problem'}></ProblemItem>
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
           <CoreContent
             src={'/static/images/sms.png'}
             coreList={coreList}
-            customStyle={{
-              marginBottom: '70px'
-            }}
-            imgCustomStyle={{
-              marginRight: '89px'
-            }}
+            coreClassName={'sms-core'}
           ></CoreContent>
         </SectionCard>
         <SectionCard title={'应用形态'} bgc={'#fff'}>
             <div>
-              <TabBarCard list={tabBarList} width={'815px'}></TabBarCard>
+              <TabBarCard list={tabBarList} customClassName={'sms-tab-bar'} clickCallback={this.clickCallback}></TabBarCard>
               <div className="tab-content clearfix">
                   <div className="tab-content__left">
                     <div>
@@ -167,17 +175,10 @@ export default class IntelligenceSms extends React.Component {
             </div>
         </SectionCard>
         <SectionCard title={'产品优势'} bgc={'#F8FAFF'}>
-            <div style={{marginBottom: '60px'}}>
-              <ProductAdvantage
-                products={products}
-                customStyle={{
-                  width: '228px',
-                  height: '222px',
-                  textAlign: 'left',
-                  marginRight: '29px'
-                }}
-              ></ProductAdvantage>
-            </div>
+            <ProductAdvantage
+              products={products}
+              customClassName={'sms-product__item'}
+            ></ProductAdvantage>
         </SectionCard>
 
         <style jsx>{styles}</style>
