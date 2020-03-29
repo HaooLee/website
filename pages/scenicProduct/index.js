@@ -84,46 +84,55 @@ export default class ScenicProduct extends React.Component {
         }
       ],
       tabBarList: [{
-        id: 1,
-        name: '卡片'
+        name: '卡片',
+        active: true
       }, {
-        id: 2,
-        name: '多图文'
+        name: '多图文',
+        active: false
       }, {
-        id: 3,
-        name: '视频'
+        name: '视频',
+        active: false
       }, {
-        id: 4,
-        name: '音频'
+        name: '音频',
+        active: false
       }, {
-        id: 5,
-        name: '位置快应用'
+        name: '位置快应用',
+        active: false
       }]
     }
+  }
+  clickCallback = (index) => {
+    const {tabBarList} = this.state 
+    tabBarList.forEach((item, idx) => {
+      if(index === idx) {
+        item.active = true
+      } else {
+        item.active = false
+      }
+    })
+    this.setState({
+      tabBarList: [...tabBarList]
+    })
   }
   render () {
     const {problems, products, coreList, tabBarList} = this.state
     return (
       <>
-        <ProductBanner title={'场景消息'} desc={'千人千面的智慧场景营销服务'} src={'/static/images/scenicProduct/banner.png'}></ProductBanner>
+        <ProductBanner customClassName={'scenic-banner'} title={'场景消息'} desc={'千人千面的智慧场景营销服务'} src={'/static/images/scenicProduct/banner.png'}></ProductBanner>
         <SectionCard title={'你的场景消息通常会遇到的问题'} bgc={"#fff"} >
-          <ProblemItem problems={problems}></ProblemItem>
+          <ProblemItem customClassName={'scenic-problem'} problems={problems}></ProblemItem>
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
           <CoreContent
             src={'/static/images/sms.png'}
             coreList={coreList}
-            customStyle={{
-              marginBottom: '70px'
-            }}
-            imgCustomStyle={{
-              marginRight: '89px'
-            }}
-          ></CoreContent>
+            coreClassName={'scenic-core'}
+          >
+          </CoreContent>
         </SectionCard>
         <SectionCard title={'应用形态'} bgc={'#fff'}>
           <div>
-              <TabBarCard list={tabBarList} width={'1200px'}></TabBarCard>
+              <TabBarCard list={tabBarList} customClassName={'scenic-tab-bar'} clickCallback={this.clickCallback}></TabBarCard>
               <div className="tab-content clearfix">
                   <div className="tab-content__left">
                     <div>
@@ -149,10 +158,7 @@ export default class ScenicProduct extends React.Component {
         <SectionCard title={'产品优势'} bgc={'#F8FAFF'}>
           <ProductAdvantage
             products={products}
-            customStyle={{
-              width: '330px',
-              height: '222px'
-            }}
+            customClassName={'scenic-product__item'}
           ></ProductAdvantage>
         </SectionCard>
 

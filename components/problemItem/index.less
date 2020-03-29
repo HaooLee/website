@@ -60,4 +60,28 @@
       margin-top: 0.45rem;
     }
   }
+
+  .scenic-problem {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'a a b b c c'
+                          'd e';
+    .problem-item{
+      &:first-child {
+        grid-column-start: span 2;
+      }
+      &:nth-child(2) {
+        grid-column-start: span 2;
+      }
+      &:nth-child(3) {
+        grid-column-start: span 2;
+      }
+      &:nth-child(4) {
+        grid-column-start: span 3;
+      }
+      &:nth-child(5) {
+        grid-column-start: span 3;
+      }
+    }
+  }
 }

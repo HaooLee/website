@@ -5,10 +5,11 @@
   background:rgba(247,247,247,1);
   margin: 0 auto;
   border-radius:6px;
+  box-sizing: border-box;
   &__item {
     float: left;
-    height: 50px;
-    line-height: 50px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
     color: #999999;
     font-size: 24px;
@@ -17,6 +18,36 @@
       background: #fff;
       border-radius: 6px;
       color: #355EA6;
+    }
+  }
+}
+
+.scenic-tab-bar {
+  width: 1200px;
+}
+
+@import '../../pages/var.less';
+
+@media screen and (max-width: @MATCH_WIDTH) {
+  .scenic-tab-bar {
+    width: 8.75rem;
+    height: 0.96rem;
+    padding: 0.08rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
+    .tab-bar__item {
+      padding: 0 0.29rem;
+      font-size: 0.37rem;
+      height: 0.8rem;
+      line-height: 0.8rem;
+      width: auto !important;
     }
   }
 }
