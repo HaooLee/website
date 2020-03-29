@@ -78,9 +78,9 @@ export default class DspProduct extends Component {
     const {coreList, products, problems} = this.state
     return (
       <>
-        <ProductBanner 
-          title={'全域场景营销平台'} 
-          desc={'提供全场景人群覆盖、优质丰富的媒体资源、 最具创意的呈现形式，以及一站式、全流程的投放及优化服务。'} 
+        <ProductBanner
+          title={'全域场景营销平台'}
+          desc={'提供全场景人群覆盖、优质丰富的媒体资源、 最具创意的呈现形式，以及一站式、全流程的投放及优化服务。'}
           src={'/static/images/dspProduct/banner.png'}
           imgCustomStyle={{
             width: '397px',
@@ -94,8 +94,8 @@ export default class DspProduct extends Component {
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
           <div className="core-content-wrap" id="core-content">
-            <CoreContent 
-              coreList={coreList} 
+            <CoreContent
+              coreList={coreList}
               listStyle={{marginTop: '105px'}}
               coreClassName={'dsp-core'}
             >
@@ -103,9 +103,9 @@ export default class DspProduct extends Component {
             </CoreContent>
           </div>
         </SectionCard>
-        <SectionCard title={'产品优势'} bgc={'#fff'}>
-          <ProductAdvantage 
-            products={products} 
+        <SectionCard title={'平台优势'} bgc={'#fff'}>
+          <ProductAdvantage
+            products={products}
             // customStyle={{
             //   boxShadow: '0px 4px 15px 0px rgba(0,0,0,0.15)',
             //   width: '330px',

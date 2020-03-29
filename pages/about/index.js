@@ -7,26 +7,14 @@ import styles from './index.less'
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    >
-      <img />
-    </div>
+    <img className={className} onClick={onClick} style={{width:18,height:30}} src="/static/images/right.png"/>
   )
 }
 
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "green" }}
-      onClick={onClick}
-    >
-      <img />
-    </div>
+    <img className={className} onClick={onClick} style={{width:18,height:30}} src="/static/images/left.png"/>
   )
 }
 
@@ -88,24 +76,104 @@ export default class About extends Component {
       ],
       honorList: [
         {
-          src: '/static/images/about/honor-1.png',
+          src: '/static/images/about/2016互联网周刊人物奖.jpg',
+          time: '2016年',
+          title: '互联网周刊人物奖'
+        },
+        {
+          src: '/static/images/about/2016极客网最具潜力大数据和智能化服务商.jpg',
+          time: '2016年',
+          title: '极客网最具潜力大数据和智能化服务商'
+        },
+        {
+          src: '/static/images/about/2017创业邦创新成长100强奖牌.jpg',
+          time: '2017年',
+          title: '创业邦创新成长100强奖牌.jpg'
+        },
+        {
+          src: '/static/images/about/2017创业黑马”企业服务成长组TOP20“.jpg',
+          time: '2017年',
+          title: '创业黑马”企业服务成长组TOP20“'
+        },
+        {
+          src: '/static/images/about/2017品途人工智能领域 最具创新企业TOP5.jpg',
           time: '2017年',
           title: '品途人工智能领域 最具创新企业TOP5'
         },
         {
-          src: '/static/images/about/honor-2.png',
+          src: '/static/images/about/2017年金触点奖杯.jpg',
           time: '2017年',
-          title: '手机天鹅奖'
+          title: '金触点奖杯'
         },
         {
-          src: '/static/images/about/honor-3.png',
+          src: '/static/images/about/2017手机天鹅奖.jpg',
+          time: '2017年',
+          title: '2017手机天鹅奖'
+        },
+        {
+          src: '/static/images/about/2018不凡商业”最具商业价值创业公司“.jpg',
+          time: '2018年',
+          title: '不凡商业”最具商业价值创业公司“'
+        },
+        {
+          src: '/static/images/about/2018亿欧”中国智能企业服务年度创新力企业“奖杯.jpg',
+          time: '2018年',
+          title: '亿欧”中国智能企业服务年度创新力企业“奖杯'
+        },
+        {
+          src: '/static/images/about/2018创业邦”创新成长100强“奖杯.jpg',
           time: '2018年',
           title: '创业邦”创新成长100强“奖杯'
         },
         {
-          src: '/static/images/about/honor-4.png',
+          src: '/static/images/about/2018创业黑马”中国大数据准独角兽“.jpg',
           time: '2018年',
-          title: '创业黑马“中国大数据准独角兽”'
+          title: '创业黑马”中国大数据准独角兽“'
+        },
+        {
+          src: '/static/images/about/2018年创业黑马”企业服务独角兽“+”企业服务产品TOP50“.jpg',
+          time: '2018年',
+          title: '创业黑马”企业服务独角兽“+”企业服务产品TOP50“'
+        },
+        {
+          src: '/static/images/about/2018甲子20”最具商业潜力成长型企业TOP20“.jpg',
+          time: '2018年',
+          title: '甲子20”最具商业潜力成长型企业TOP20“'
+        },
+        {
+          src: '/static/images/about/2018码号卫士奖杯.jpg',
+          time: '2018年',
+          title: '码号卫士奖杯'
+        },
+        {
+          src: '/static/images/about/2018金比特 最佳智能营销平台&效果案例标杆奖.jpg',
+          time: '2018年',
+          title: '金比特 最佳智能营销平台&效果案例标杆奖'
+        },
+        {
+          src: '/static/images/about/2018金触点最佳具技术创新力营销产品+技术营销案例.jpg',
+          time: '2018年',
+          title: '金触点最佳具技术创新力营销产品+技术营销案例'
+        },
+        {
+          src: '/static/images/about/2019 爱分析 中国数据智能创新企业50强.jpg',
+          time: '2019年',
+          title: '2019 爱分析 中国数据智能创新企业50强'
+        },
+        {
+          src: '/static/images/about/2019快应用获手机天鹅奖“2019最佳手机应用”.jpg',
+          time: '2019年',
+          title: '快应用获手机天鹅奖“2019最佳手机应用”'
+        },
+        {
+          src: '/static/images/about/2019证券时报中国创业企业新苗榜-年度高成长企业.jpg',
+          time: '2019年',
+          title: '证券时报中国创业企业新苗榜-年度高成长企业'
+        },
+        {
+          src: '/static/images/about/2019金瑞奖“最佳AI创新营销案例奖”.jpg',
+          time: '2019年',
+          title: '金瑞奖“最佳AI创新营销案例奖”'
         }
       ]
     }
@@ -117,7 +185,7 @@ export default class About extends Component {
       infinite: true,
       speed: 500,
       slidesToShow: 4,
-      slidesToScroll: 4,
+      slidesToScroll: 1,
       autoplay: true,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />

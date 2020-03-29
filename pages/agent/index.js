@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import SectionCard from '@/components/sectionCard'
+import Router from 'next/router'
 import styles from './index.less'
 
 export default class Agent extends Component {
@@ -9,6 +10,7 @@ export default class Agent extends Component {
       products: [
         {
           src: '/static/images/agent/message-icon.png',
+          linkTo:'/intelligenceSms',
           name: '智能短信',
           imgStyle: {
             width: '64px',
@@ -17,6 +19,7 @@ export default class Agent extends Component {
         },
         {
           src: '/static/images/agent/scenic-icon.png',
+          linkTo:'/scenicProduct',
           name: '场景消息',
           imgStyle: {
             width: '64px',
@@ -25,6 +28,7 @@ export default class Agent extends Component {
         },
         {
           src: '/static/images/agent/auth-icon.png',
+          linkTo:'/numberProduct',
           name: '号码认证',
           imgStyle: {
             width: '58px',
@@ -35,6 +39,7 @@ export default class Agent extends Component {
       footerProducts: [
         {
           src: '/static/images/agent/quickApp-icon.png',
+          linkTo:'/quickAppProduct',
           name: '快应用',
           imgStyle: {
             width: '59px',
@@ -43,6 +48,7 @@ export default class Agent extends Component {
         },
         {
           src: '/static/images/agent/platform-icon.png',
+          linkTo:'/dspProduct',
           name: '全场景营销平台',
           imgStyle: {
             width: '59px',
@@ -160,7 +166,7 @@ export default class Agent extends Component {
             <div className="product clearfix">
               {
                 products.map((item, idx) => (
-                  <div className="product__item" key={idx} >
+                  <div className="product__item" key={idx} onClick={e=>Router.push({pathname: item.linkTo})}>
                     <div className="product__item__content">
                       <img className="product__item__content__img" style={item.imgStyle||{}} src={item.src} />
                       <p className="product__item__content__name">{item.name}</p>

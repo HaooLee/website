@@ -21,6 +21,7 @@
 .product {
   margin-right: -25px;
   margin-bottom: 65px;
+
   .footer-product {
     width: 625px;
     margin: 0 auto;
@@ -37,6 +38,12 @@
     margin-right: 25px;
     margin-bottom: 25px;
     position: relative;
+    cursor: pointer;
+    transition: all .3s linear;
+    &:hover {
+      box-shadow: 0px 0px 32px -24px;
+      transform: scale(1.02);
+    }
     &__content {
       position: absolute;
       bottom: 50px;

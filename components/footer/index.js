@@ -52,7 +52,7 @@ export default class Footer extends React.Component {
                   </li>
                </ul>
                <ul className="company__item company__intro">
-                  <li>关于我们</li>
+                  <li>关于泰迪熊移动</li>
                   <li>
                     <a href="/about">公司介绍</a>
                   </li>
