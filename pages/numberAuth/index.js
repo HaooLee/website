@@ -16,7 +16,7 @@ export default class NumberAuth extends Component {
     }
   }
   headerItemClick = (idx, row) => {
-    const {headers} = this.state 
+    const {headers} = this.state
     headers.forEach((item, index) => {
       if(index === idx) {
         item.active = true
@@ -57,18 +57,18 @@ export default class NumberAuth extends Component {
                   </div>
                 </div>
                 <div className="form__item">
-                  <div className="form__item__label">申诉人姓名</div>
+                  <div className="form__item__label">认证人姓名</div>
                   <div className="form__item__input">
                     <input placeholder="请填写您的姓名" type="text" />
                   </div>
                 </div>
                 <div className="form__item">
-                  <div className="form__item__label">申诉企业全称</div>
+                  <div className="form__item__label">认证企业全称</div>
                   <div className="form__item__input">
                     <input placeholder="请输入您的企业全称" type="text" />
                   </div>
                 </div>
-                
+
                 <div className="form__item">
                   <div className="form__item__label">联系电话</div>
                   <div className="form__item__input">

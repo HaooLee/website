@@ -99,17 +99,12 @@ export default class About extends Component {
         },
         {
           src: '/static/images/about/honor-3.png',
-          time: '2017年',
+          time: '2018年',
           title: '创业邦”创新成长100强“奖杯'
         },
         {
           src: '/static/images/about/honor-4.png',
-          time: '2017年',
-          title: '创业黑马“中国大数据准独角兽”'
-        },
-        {
-          src: '/static/images/about/honor-4.png',
-          time: '2017年',
+          time: '2018年',
           title: '创业黑马“中国大数据准独角兽”'
         }
       ]
@@ -142,7 +137,7 @@ export default class About extends Component {
           </div>
         </SectionCard>
         <SectionCard title={'发展历程'} bgc={'#F8FAFF'}>
-          
+
         </SectionCard>
         <SectionCard title={'技术优势'} bgc={'#355EA6'} titleClass={'title-white'}>
           <div className="technology-advantage">

@@ -16,7 +16,9 @@ export default class ProblemItem extends React.Component {
                     <img src={item.src} />
                   </div>
                   <p className="problem-item__text">
-                    <span>{item.title}</span>
+                    {
+                      Array.isArray(item.title)?item.title.map((i, idx)=><span key={idx}>{i}</span>):<span>{item.title}</span>
+                    }
                   </p>
                 </div>
               ))

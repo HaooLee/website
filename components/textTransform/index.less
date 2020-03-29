@@ -1,0 +1,51 @@
+.text-transform-wrap{
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  color:#fff;
+  font-size:24px;
+  font-family:Source Han Sans CN;
+  font-weight:400;
+  span {
+    display: inline-block;
+    opacity: 0;
+  }
+}
+
+.in {
+  animation: scale-in .6s forwards;
+}
+.out {
+  animation: scale-out .6s forwards;
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60%{
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-out {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60%{
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
