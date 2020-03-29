@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import React from "react";
 import styles from './index.less'
+import TextTransform from '@/components/textTransform'
 
 export default class Banner extends React.Component {
   constructor(props) {
@@ -23,36 +24,45 @@ export default class Banner extends React.Component {
   }
 
   render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      autoplay: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      // pauseOnFocus: true,
-      dotsClass: 'slick-dots td-dot',
-      // beforeChange: (oi, ni) => {
-      //   this.setState({
-      //     carouselBgColor: banners[ni].color
-      //   })
-      // }
-    }
+    // const settings = {
+    //   dots: true,
+    //   infinite: true,
+    //   autoplay: true,
+    //   slidesToShow: 1,
+    //   slidesToScroll: 1,
+    //   // pauseOnFocus: true,
+    //   dotsClass: 'slick-dots td-dot',
+    //   // beforeChange: (oi, ni) => {
+    //   //   this.setState({
+    //   //     carouselBgColor: banners[ni].color
+    //   //   })
+    //   // }
+    // }
 
     const {banners} = this.state
     return (
       <div className="carousel">
-        <div className="banner-wrap">
-          <Slider {...settings}>
-            {
-              banners.map(i => {
-                return (
-                  <div className="banner-item" key={i}>
-                    < img src={i.src} alt=""/>
-                  </div>
-                )
-              })
-            }
-          </Slider>
+        <div className="w banner-wrap clearfix">
+          <h1>国内专业的智慧场景生态服务商</h1>
+          <p className="we-can">我们可以帮助您</p>
+          <TextTransform texts={['提升转化效果','增加品牌曝光']}/>
+
+          <div className="buttons clearfix">
+            <a href="" className="watch-video">观看视频</a>
+            <a href="" className="more">了解更多</a>
+          </div>
+
+          {/*<Slider {...settings}>*/}
+            {/*{*/}
+              {/*banners.map(i => {*/}
+                {/*return (*/}
+                  {/*<div className="banner-item" key={i}>*/}
+                    {/*< img src={i.src} alt=""/>*/}
+                  {/*</div>*/}
+                {/*)*/}
+              {/*})*/}
+            {/*}*/}
+          {/*</Slider>*/}
         </div>
         <style lang="less" jsx>{styles}</style>
       </div>

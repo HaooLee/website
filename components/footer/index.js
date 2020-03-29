@@ -2,6 +2,13 @@ import React from 'react'
 import styles from './index.less'
 
 export default class Footer extends React.Component {
+
+  privacyStatementShow(){
+    this.setState({
+
+    })
+  }
+
   render() {
     return (
       <>
@@ -46,19 +53,36 @@ export default class Footer extends React.Component {
                </ul>
                <ul className="company__item company__intro">
                   <li>关于我们</li>
-                  <li>公司介绍</li>
+                  <li>
+                    <a href="/about">公司介绍</a>
+                  </li>
                   <li>
                     <a href="/join">加入我们</a>
                   </li>
-                  <li>隐私申明</li>
-                  <li>申诉通道</li>
+                  <li onClick={e=> this.privacyStatementShow()}>隐私申明</li>
+                  <li>
+                    <a href="/numberSign">申诉通道</a>
+                  </li>
                </ul>
                <ul className="company__item company__link">
-                 <li>友情链接</li>
-                 <li>OPPO</li>
-                 <li>vivo</li>
-                 <li>联想</li>
-                 <li>魅族</li>
+                 <ul>
+                   <li>友情链接</li>
+                   <li>
+                      <div className="friendly">OPPO</div>
+                      <div className="friendly">VIVO</div>
+                      <div className="friendly">联想</div>
+                      <div className="friendly">魅族</div>
+                      <div className="friendly">小米</div>
+                      <div className="friendly">一加</div>
+                      <div className="friendly">Alios</div>
+                      <div className="friendly">乐视</div>
+                      <div className="friendly">金立</div>
+                      <div className="friendly">中国移动</div>
+                      <div className="friendly">中国联通</div>
+                      <div className="friendly">中国电信</div>
+
+                   </li>
+                 </ul>
                </ul>
                </div>
              </div>

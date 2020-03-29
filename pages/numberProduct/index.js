@@ -12,15 +12,15 @@ export default class NumberProduct extends Component {
       problems: [
         {
           src: '/static/images/numberProduct/icon-saoraodianhua.png',
-          title: '骚扰电话不胜其烦'
+          title: ['骚扰电话','不胜其烦']
         },
         {
           src: '/static/images/numberProduct/icon-qiyedianhua.png',
-          title: '企业电话频频被拒接'
+          title: ['企业电话','频频被拒接']
         },
         {
           src: '/static/images/numberProduct/icon-biaoji.png',
-          title: '号码被恶意标注'
+          title: ['电话号码','被恶意标注']
         }
       ],
       coreList: [
@@ -50,9 +50,9 @@ export default class NumberProduct extends Component {
           </div>
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
-          <CoreContent 
-            src={'/static/images/sms.png'} 
-            coreList={coreList} 
+          <CoreContent
+            src={'/static/images/sms.png'}
+            coreList={coreList}
             customStyle={{
               marginBottom: '70px'
             }}

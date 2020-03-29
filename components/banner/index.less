@@ -1,14 +1,81 @@
 .carousel{
-
+  background: url(/static/images/left-bottom-tech.png) left bottom/395px 505px no-repeat,url(/static/images/right-top-tech.png) right top/contain no-repeat;
+  background-color: #355EA6;
   .banner-wrap{
+    height: 640px;
+    width: 1200px;
+    h1 {
+      margin-top: 193px;
+      height:48px;
+      font-size:48px;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(255,255,255,1);
+    }
+    .we-can {
+      width: 185px;
+      height:35px;
+      margin-top: 36px;
+      line-height: 35px;
+      font-size:23px;
+      font-family:Source Han Sans CN;
+      margin-bottom: 14px;
+      font-weight:400;
+      color:rgba(255,255,255,1);
+      text-align: center;
+      background-color: rgba(0,0,0,.8);
+    }
+    .buttons{
+      margin-top: 30px;
+      a{
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        width:158px;
+        height:54px;
+        border-radius:27px;
+        font-size:24px;
+        font-family:Source Han Sans CN;
+        font-weight:bold;
+        text-align: center;
+        line-height: 54px;
+        text-decoration: none;
+      }
 
-    .banner-item{
-      height: 640px;
-      width: 1200px;
+      a:before{
+        position: absolute;
+        background-color: #fff;
+        content: '.';
+        height: 100%;
+        width: 6px;
+        left: -10px;
+        top: 0px;
+        font-size: 0px;
+        transform: skew(-20deg, 0);
+        transition: all .2s ease-in-out;
+      }
+
+      a:hover:before{
+        left: 120%;
+      }
+
+      .watch-video {
+        background-color: #fff;
+        color:rgba(60,141,210,1);
+      }
+      .more {
+        border:2px solid rgba(255,255,255,1);
+        color: #fff;
+        margin-left: 26px;
+      }
     }
-    :global(.slick-list){
-      width: 100%;
-    }
+
+    //.banner-item{
+    //
+    //}
+    //:global(.slick-list){
+    //  width: 100%;
+    //}
   }
 
   :global(.td-dot){
