@@ -137,7 +137,8 @@ export default class ScenicProduct extends React.Component {
                   <div className="tab-content__left">
                     <div>
                       <p>文案文案文案文案文案文案 文案文案文案文案文案文案文案文 文案文案文案文案文案文案文案文案文 文案文案文案文案文案文案文案 文案文案文案文案文案文案文案文案文 </p>
-                      <div className="tab-content__left__btn">马上合作</div></div>
+                      <div className="tab-content__left__btn">马上合作</div>
+                    </div>
                   </div>
                   <div className="tab-content__right clearfix">
                     <div className="tab-content__right__item">
