@@ -29,3 +29,43 @@
     }
   }
 }
+
+@import '../var.less';
+@media screen and (max-width: @MATCH_WIDTH) {
+  .intro {
+    font-size: 0.32rem;
+    width: 8.93rem;
+    margin: 0 auto;
+    margin-bottom: 0.75rem;
+    line-height: 0.64rem;
+  }
+  .industry-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.07rem;
+    &__item {
+      width: 8.13rem;
+      height: 2.93rem;
+      display: flex;
+      flex-direction: row;
+      margin-right: 0;
+      margin-bottom: 0.43rem;
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &__text {
+        font-size: 0.48rem;
+        padding-left: 0.43rem;
+        line-height: 2.93rem;
+      }
+      img {
+        width: 3.25rem;
+        height: 100%;
+      }
+    }
+  }
+}

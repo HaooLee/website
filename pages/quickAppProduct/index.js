@@ -82,7 +82,7 @@ export default class QuickAppProduct extends React.Component {
     const {coreList, products, industryList} = this.state
     return (
       <>
-        <ProductBanner title={'快应用'} desc={'无需下载安装，即点即用，享受原生应用的性能体验'} src={'/static/images/quickAppProduct/banner.png'}></ProductBanner>
+        <ProductBanner title={'快应用'} desc={'无需下载安装，即点即用，享受原生应用的性能体验'} src={'/static/images/quickAppProduct/banner.png'} customClassName={'quick-app-banner'}></ProductBanner>
         <SectionCard title={'平台介绍'} bgc={"#fff"} >
           <div className="intro w">
             泰迪熊移动科技快应用场景营销解决方案致力于打造多流量入口以及场景化的快应用生态建设。泰迪熊移动的快应用解决方案深度集成进各厂商手机系统中，具有“免安装、免存储、一键直达、更新直接推送”四大体验优势，泰迪熊移动的快应用凭借自身独有的近场服务能力，在精准位置识别下通过合适的产品通道和界面向用户提供更便捷的服务，让用户通过手机更容易获取到自己所需的服务。可以在操作系统层面实现用户需求与应用服务间的无缝连接，提升用户的使用体验的同时，还能够助力企业自身产品的传播和留存，为后续提供更高效的服务打下用户基础。
@@ -92,20 +92,13 @@ export default class QuickAppProduct extends React.Component {
           <CoreContent 
             src={'/static/images/quickAppProduct/phone.png'} 
             coreList={coreList} 
-            customStyle={{background: '#fff', 'marginBottom': '60px', borderRadius: '10px'}}
-            imgCustomStyle={{width: '358px', height: '726px', marginTop: '60px', marginRight: '115px'}}
+            coreClassName={'quick-app-core'}
           ></CoreContent>
         </SectionCard>
         <SectionCard title={'产品优势'} bgc={'#fff'}>
           <ProductAdvantage 
             products={products} 
-            customStyle={{
-              boxShadow: '0px 4px 15px 0px rgba(0,0,0,0.15)',
-              width: '228px',
-              height: '222px',
-              borderRadius: '3px',
-              textAlign: 'left'
-            }}
+            customClassName={'quick-app-product__item'}
           ></ProductAdvantage>
         </SectionCard>
         <SectionCard title={'覆盖行业'} bgc={"#F8FAFF"} >
