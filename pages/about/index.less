@@ -60,6 +60,51 @@
 }
 
 .contact-list {
+  .contact-list__address, .concact-list__concact {
+    display: flex;
+    flex-direction: row;
+    .contact-list__item {
+      flex: 1;
+    }
+  }
+  .contact-list__address {
+    .contact-list__item {
+      &:first-child {
+        img {
+          width: 79px;
+          height: 58px;
+        }
+      }
+      &:nth-child(2) {
+        img {
+          width: 46px;
+          height: 66px;
+        }
+      } 
+      &:last-child {
+        img {
+          width: 45px;
+          height: 77px;
+        }
+      }
+    }
+  }
+  .concact-list__concact {
+    .contact-list__item {
+      &:first-child {
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      &:last-child {
+        img {
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+  }
   &__item {
     text-align: center;
     float: left;
@@ -116,6 +161,177 @@
         color: #999;
         font-size: 14px;
         line-height: 18px;
+      }
+    }
+  }
+  &--match {
+    display: none;
+  }
+}
+
+@import '../var.less';
+
+@media screen and (max-width: @MATCH_WIDTH) {
+  .banner {
+    height: 5.54rem;
+    background-size: 100% 5.54rem;
+    &__text {
+      line-height: 5.54rem;
+      font-size: 0.53rem;
+      margin-left: 1.15rem;
+    }
+  }
+  .intro {
+    font-size: 0.32rem;
+    padding: 0 0.48rem;
+    margin-bottom: 1.07rem;
+    p {
+      margin-bottom: 0.1rem;
+    }
+  }
+  .technology-advantage {
+    padding: 0 0.48rem;
+    &__title {
+      font-size: 0.32rem;
+      line-height: 0.64rem;
+      margin-bottom: 1.33rem;
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1.07rem;
+      &__item {
+        margin-bottom: 0.91rem;
+        img {
+          width: 1.09rem;
+          height: 0.83rem;
+        }
+        &:nth-child(2) {
+          margin-left: 0;
+          margin-right: 0;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &__title {
+          font-size: 0.37rem;
+          margin-top: 0.45rem;
+          margin-bottom: 0.59rem;
+        }
+        &__desc {
+          font-size: 0.32rem;
+          line-height: 0.69rem;
+        }
+      }
+    }
+  }
+
+  .honor-list {
+    display: none;
+    &--match {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1.07rem;
+      .honor-list__item {
+        width: 7.36rem;
+        height: 7.01rem;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.53rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        img {
+          height: 4.88rem;
+        }
+        &__info {
+          flex: 1;
+          padding: 0 0.37rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          &__time {
+            font-size: 0.43rem;
+            margin-bottom: 0.1rem;
+          }
+          &__title {
+            font-size: 0.32rem;
+          }
+        }
+      }
+    }
+  }
+  .contact-list {
+    margin-bottom: 1.07rem;
+    .contact-list__address, .concact-list__concact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .contact-list__address {
+      .contact-list__item {
+        &:first-child {
+          img {
+            width: 1.01rem;
+            height: 0.77rem;
+          }
+        }
+        &:nth-child(2) {
+          img {
+            width: 0.61rem;
+            height: 0.88rem;
+          }
+        } 
+        &:last-child {
+          img {
+            width: 0.61rem;
+            height: 1.07rem;
+          }
+        }
+      }
+    }
+    .concact-list__concact {
+      .contact-list__item {
+        &:first-child {
+          img {
+            width: 0.64rem;
+            height: 0.64rem;
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
+          img {
+            width: 0.64rem;
+            height: 0.64rem;
+          }
+        }
+      }
+    }
+    &__item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      
+      &__img {
+        width: 1.65rem;
+        height: 1.65rem;
+        margin-right: 0.53rem;
+      }
+      &__info {
+        &__name {
+          font-size: 0.43rem;
+          margin-top: 0;
+          margin-bottom: 0.4rem;
+          text-align: left;
+        }
+        &__address {
+          font-size: 0.32rem;
+          text-align: left;
+        }
       }
     }
   }

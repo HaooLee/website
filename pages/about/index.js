@@ -27,29 +27,17 @@ export default class About extends Component {
         {
           src: '/static/images/about/icon-beijing.png',
           name: '北京 | 总部',
-          address: '北京市朝阳区酒仙桥南路5号院',
-          imgStyle: {
-            width: '79px',
-            height: '58px'
-          }
+          address: '北京市朝阳区酒仙桥南路5号院'
         },
         {
           src: '/static/images/about/icon-shenzheng.png',
           name: '深圳',
-          address: '北京市朝阳区酒仙桥南路5号院',
-          imgStyle: {
-            width: '46px',
-            height: '66px'
-          }
+          address: '北京市朝阳区酒仙桥南路5号院'
         },
         {
           src: '/static/images/about/icon-shanghai.png',
           name: '上海',
-          address: '北京市朝阳区酒仙桥南路5号院',
-          imgStyle: {
-            width: '45px',
-            height: '77px'
-          }
+          address: '北京市朝阳区酒仙桥南路5号院'
         }
       ],
       contactList: [
@@ -57,21 +45,13 @@ export default class About extends Component {
           src: '/static/images/about/icon-jishu.png',
           name: '技术及问题反馈',
           email: '邮箱：123456@teddymobile',
-          phone: '电话：010-234521',
-          imgStyle: {
-            width: '50px',
-            height: '50px'
-          }
+          phone: '电话：010-234521'
         },
         {
           src: '/static/images/about/icon-shangwu.png',
           name: '商务合作',
           email: '邮箱：123456@teddymobile',
-          phone: '电话：010-234521',
-          imgStyle: {
-            width: '48px',
-            height: '48px'
-          }
+          phone: '电话：010-234521'
         }
       ],
       honorList: [
@@ -245,16 +225,28 @@ export default class About extends Component {
               }
             </Slider>
           </div>
+          <div className="honor-list--match">
+            {
+              honorList.map((item, index) => (
+                <div key={index} className="honor-list__item">
+                  <img src={item.src} />
+                  <div className="honor-list__item__info">
+                    <p className="honor-list__item__info__time">{item.time}</p>
+                    <p className="honor-list__item__info__title">{item.title}</p>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
         </SectionCard>
         <SectionCard title={'联系我们'} bgc={'#FFFFFF'}>
           <div className="contact-list clearfix">
+            <div className="contact-list__address">
             {
               addressList.map((item, index) => (
-                <div className="contact-list__item" style={{
-                  width: `${100 / 3}%`
-                }} key={index}>
+                <div className="contact-list__item" key={index}>
                   <div className="contact-list__item__img">
-                    <img src={item.src} style={item.imgStyle || {}} />
+                    <img src={item.src} />
                   </div>
                   <div className="contact-list__item__info">
                     <p className="contact-list__item__info__name">{item.name}</p>
@@ -263,14 +255,13 @@ export default class About extends Component {
                 </div>
               ))
             }
-
+            </div>
+            <div className="concact-list__concact">
             {
               contactList.map((item, index) => (
-                <div className="contact-list__item" style={{
-                  width: `${100 / 2}%`
-                }} key={index}>
+                <div className="contact-list__item" key={index}>
                   <div className="contact-list__item__img">
-                    <img src={item.src} style={item.imgStyle || {}} />
+                    <img src={item.src} />
                   </div>
                   <div className="contact-list__item__info">
                     <p className="contact-list__item__info__name">{item.name}</p>
@@ -282,6 +273,7 @@ export default class About extends Component {
                 </div>
               ))
             }
+            </div>
           </div>
         </SectionCard>
         <style jsx>{styles}</style>
