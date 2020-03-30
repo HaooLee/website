@@ -144,10 +144,7 @@ export default class Join extends Component {
           <SectionCard title={'企业文化'} bgc={'#F8FAFF'}>
             <ProductAdvantage 
               products={products} 
-              customStyle={{
-                width: '330px',
-                height: '222px'
-              }}
+              customClassName={'join-product__item'}
             ></ProductAdvantage>
           </SectionCard>
         </div>

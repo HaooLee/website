@@ -14,6 +14,7 @@
   &__header {
     height: 64px;
     background: #F7F7F7;
+    box-sizing: border-box;
     .tab-bar {
       &__item {
         float: left;
@@ -27,7 +28,7 @@
         &.active {
           background-color: #fff;
           border-bottom: 4px solid #355EA6;
-          height: 60px;
+          line-height: 60px;
         }
       }
     }
@@ -50,13 +51,80 @@
           color: #999999;
           line-height: 56px;
           height: 56px;
-          width: 380px;
+          width: 100%;
           text-align: center;
           display: inline-block;
           cursor: pointer;
           &:active {
             color: #355EA6;
             box-shadow: 1px 0px 10px rgba(0, 0, 0, .2);
+          }
+        }
+      }
+    }
+  }
+}
+
+@import '../var.less';
+
+@media screen and (max-width: @MATCH_WIDTH) {
+  .banner {
+    height: 5.54rem;
+    background-size: 100% 5.54rem;
+    &__text {
+      margin-left: 1.15rem;
+      font-size: 0.53rem;
+      line-height: 5.54rem;
+    }
+  }
+  .positions {
+    &__header {
+      height: auto;
+      .tab-bar {
+        &__item {
+          padding: 0 0.51rem;
+          background-color: #fff;
+          width: 100%;
+          line-height: 1.33rem;
+          font-size: 0.43rem;
+          text-align: left;
+          border-bottom: 0.05rem solid #D8D8D8;
+          &.active {
+            border-bottom: none;
+            line-height: 1.33rem;
+            background-color: #F7F7F7;
+          }
+        }
+
+      }
+    }
+    &__content {
+      padding: 0.91rem 0;
+      .tab-bar__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 0.53rem;
+        padding: 0 0.51rem;
+        margin-right: 0;
+        margin-bottom: 0;
+        &:before {
+          display: none;
+        }
+        &:after {
+          display: none;
+        }
+        li {
+          width: 4.32rem;
+          height: 1.17rem;
+          margin-bottom: 0;
+          margin-right: 0;
+          &:nth-of-type(even) {
+            justify-self: end;
+          }
+          a {
+            font-size: 0.32rem;
+            line-height: 1.17rem;
+            height: 1.17rem;
           }
         }
       }
