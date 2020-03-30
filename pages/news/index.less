@@ -1,12 +1,6 @@
+
 .banner {
-  height: 450px;
   background: url(/static/images/news/banner.png) no-repeat;
-  background-size: 100% 450px;
-  &__text {
-    font-size: 40px;
-    color: #fff;
-    line-height: 450px;
-  }
 }
 
 .news {
@@ -45,6 +39,9 @@
           color: #999999;
           font-size: 16px;
           margin-top: 112px;
+          &--match {
+            display: none;
+          }
           img {
             width: 29px;
             height: 24px;
@@ -62,4 +59,85 @@
   font-size: 18px;
   text-align: center;
   margin-bottom: 172px;
+}
+
+@import '../common.less';
+@import '../var.less';
+
+@media screen and (max-width: @MATCH_WIDTH) {
+  .news {
+    margin-top: 0;
+    &__content {
+      margin-top: 0.72rem;
+      width: 100%;
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__item {
+        &:before {
+          display: none;
+        }
+        &:after {
+          display: none;
+        }
+        width: 9.15rem;
+        height: 3.36rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 0.43rem;
+        margin-bottom: 0.53rem;
+        position: relative;
+        &__img {
+          width: 1.33rem;
+          height: 1.33rem;
+          position: absolute;
+          bottom: 0.43rem;
+        }
+        &__info {
+          width: auto;
+          margin-left: 0;
+          flex: 1;
+          display: flex;
+          flex-direction: column-reverse;
+          &__title {
+            margin-bottom: 0;
+            font-size: 0.37rem;
+            margin-bottom: auto;
+          }
+          &__desc {
+            display: none;
+          }
+          &__footer {
+            display: none;
+            &--match {
+              margin-bottom: auto;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              font-size: 0.32rem;
+              img {
+                width: 0.61rem;
+                height: 0.51rem;
+                margin-right: 0.3rem;
+              }
+              &__teddy {
+                color: #355EA6;
+              }
+              &__time {
+                margin-left: auto;
+                color: #999999;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .load-more {
+    font-size: 0.37rem;
+    margin-bottom: 1.32rem;
+  }
 }

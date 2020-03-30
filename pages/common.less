@@ -1,0 +1,21 @@
+@import './var.less';
+.banner {
+  height: 450px;
+  background-size: 100% 450px;
+  &__text {
+    font-size: 40px;
+    color: #fff;
+    line-height: 450px;
+  }
+}
+@media screen and (max-width: @MATCH_WIDTH) {
+  .banner {
+    height: 5.54rem;
+    background-size: 100% 5.54rem;
+    &__text {
+      line-height: 5.54rem;
+      font-size: 0.53rem;
+      margin-left: 1.15rem;
+    }
+  }
+}

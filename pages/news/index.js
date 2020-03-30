@@ -93,6 +93,11 @@ export default class News extends Component {
                     <img src="/static/images/news/logo.png" />
                     <span>泰迪资讯 | 2020年2月14日 </span>
                   </div>
+                  <div className="news__content__item__info__footer--match">
+                    <img src="/static/images/news/logo.png" />
+                    <span className="news__content__item__info__footer--match__teddy">泰迪资讯</span>
+                    <span className="news__content__item__info__footer--match__time">2020年2月14日</span>
+                  </div>
                 </div>
               </li>
             ))}
