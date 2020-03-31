@@ -1,0 +1,84 @@
+@import '../../pages/var.less';
+
+@media screen and (max-width: @MATCH_WIDTH) {
+  .banner {
+    height: 11.39rem;
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__img {
+      position: initial;
+    }
+    &__desc {
+      position: initial;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__title {
+        font-size: 0.59rem;
+      }
+      &__content {
+        font-size: 0.37rem;
+        width: 6.96rem;
+        text-align: center;
+      }
+    }
+  }
+  .scenic-banner {
+    height: 8.77rem;
+    background:linear-gradient(270deg,rgba(50,84,163,1) 0%,rgba(30,54,116,1) 100%);
+    .banner__img {
+      width: 4.35rem;
+      height: 4.56rem;
+    }
+  }
+  .quick-app-banner, .sms-banner {
+    height: 8.77rem;
+    .banner__desc {
+      height: auto;
+      margin: 0;
+      margin-top: 0.93rem;
+      margin-bottom: 0.53rem;
+      &__content {
+        width: auto;
+        margin-top: 0.53rem;
+      }
+    }
+    .banner__img {
+      width: 4.05rem;
+      height: 4.53rem;
+      margin: 0;
+    }
+  }
+  .sms-banner {
+    .banner__desc {
+      margin-bottom: 1.01rem;
+    }
+    .banner__img {
+      width: 6rem;
+      height: 3.84rem;
+    }
+  }
+
+  .number-banner {
+    height: 8.77rem;
+    .banner__desc {
+      height: auto;
+      margin: 0;
+      &__title {
+        margin-top: 0.93rem;
+      }
+      &__content {
+        margin-top: 0.53rem;
+        margin-bottom: 1.01rem;
+      }
+    }
+    .banner__img {
+      width: 5.84rem;
+      height: 4.24rem;
+      margin: 0;
+    }
+  }
+}

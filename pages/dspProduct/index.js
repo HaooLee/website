@@ -106,12 +106,6 @@ export default class DspProduct extends Component {
         <SectionCard title={'平台优势'} bgc={'#fff'}>
           <ProductAdvantage
             products={products}
-            // customStyle={{
-            //   boxShadow: '0px 4px 15px 0px rgba(0,0,0,0.15)',
-            //   width: '330px',
-            //   height: '222px',
-            //   borderRadius: '3px'
-            // }}
             customClassName={'dsp-product__item'}
           ></ProductAdvantage>
         </SectionCard>

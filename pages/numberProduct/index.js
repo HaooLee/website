@@ -3,6 +3,7 @@ import SectionCard from '@/components/sectionCard'
 import ProductBanner from '@/components/productBanner'
 import ProblemItem from '@/components/problemItem'
 import CoreContent from '@/components/coreContent'
+import ProductAdvantage from '@/components/productAdvantage'
 import styles from './index.less'
 
 export default class NumberProduct extends Component {
@@ -36,30 +37,68 @@ export default class NumberProduct extends Component {
           src: '/static/images/numberProduct/icon-xunihaoma.png',
           title: '支持400、虚拟号段、个人号段'
         }
+      ],
+      products: [
+        {
+          src: '/static/images/numberProduct/icon-fugai.png',
+          title: '用户覆盖广',
+          desc: '日均请求量高达47亿次，用户覆盖广。'
+        },
+        {
+          src: '/static/images/numberProduct/icon-shibie.png',
+          title: '识别精准',
+          desc: '采用实时大数据挖掘技术，每日更新 7000万号码数据，识别精准。'
+        },
+        {
+          src: '/static/images/numberProduct/icon-zhunquelvgao.png',
+          title: '准确率高',
+          desc: '多维度的校验数据，准确率达到了 99.9%的超高水平。'
+        }
       ]
     }
   }
   render() {
-    const {problems, coreList} = this.state
+    const {problems, coreList, products} = this.state
     return (
       <>
-        <ProductBanner title={'号码认证'} desc={'来电接的安心，去电不被拒绝'} src={'/static/images/numberProduct/banner.png'}></ProductBanner>
+        <ProductBanner customClassName={'number-banner'} title={'号码认证'} desc={'来电接的安心，去电不被拒绝'} src={'/static/images/numberProduct/banner.png'}></ProductBanner>
         <SectionCard title={'你的号码认证通常会遇到的问题'} bgc={'#FFFFFF'}>
           <div className="problem-wrap">
-            <ProblemItem problems={problems}></ProblemItem>
+            <ProblemItem customClassName={'number-problem'} problems={problems}></ProblemItem>
           </div>
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
           <CoreContent
             src={'/static/images/sms.png'}
             coreList={coreList}
-            customStyle={{
-              marginBottom: '70px'
-            }}
-            imgCustomStyle={{
-              marginRight: '133px'
-            }}
+            coreClassName={'number-product-core'}
           ></CoreContent>
+        </SectionCard>
+        <SectionCard title={'应用形态'} bgc={"#fff"} >
+        <div className="tab-content clearfix">
+            <div className="tab-content__left">
+              <div>
+                <p>文案文案文案文案文案文案 文案文案文案文案文案文案文案文 文案文案文案文案文案文案文案文案文 文案文案文案文案文案文案文案 文案文案文案文案文案文案文案文案文 </p>
+                <div className="tab-content__left__btn">马上合作</div>
+              </div>
+            </div>
+            <div className="tab-content__right clearfix">
+              <div className="tab-content__right__item">
+                <img src="/static/images/numberProduct/apply-phone1.png" />
+                <p>其他样例</p>
+              </div>
+              <div className="tab-content__right__item">
+                <img src="/static/images/numberProduct/apply-phone2.png" />
+                <p>卡片</p>
+              </div>
+            </div>
+          </div>
+        </SectionCard>
+        <SectionCard title={'产品优势'} bgc={'#F8FAFF'}>
+          <ProductAdvantage
+            products={products}
+            customClassName={'number-product__item'}
+          ></ProductAdvantage>
         </SectionCard>
         <style jsx>{styles}</style>
       </>
