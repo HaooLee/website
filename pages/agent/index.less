@@ -1,17 +1,10 @@
 .banner {
-  height: 450px;
   background: url(/static/images/agent/banner.png) no-repeat;
-  background-size: 100% 450px;
-  &__text {
-    font-size: 40px;
-    color: #fff;
-    line-height: 450px;
-  }
 }
 .agent-info {
   font-size: 18px;
   color: #666666;
-  line-height: 36px;
+  line-height: 2;
   margin-bottom: 90px;
 }
 .product-wrap {
@@ -27,6 +20,16 @@
     margin: 0 auto;
     .product__item:last-child{
       margin-right: 0;
+      img {
+        width: 59px;
+        height: 59px;
+      }
+    }
+    .product__item:first-child {
+      img {
+        width: 59px;
+        height: 59px;
+      }
     }
   }
   &__item {
@@ -40,6 +43,25 @@
     position: relative;
     cursor: pointer;
     transition: all .3s linear;
+    &:first-child {
+      img {
+        width: 64px;
+        height: 49px;
+      }
+    }
+    &:nth-child(2) {
+      img {
+        width: 64px;
+        height: 64px;
+      }
+    }
+    &:nth-child(3) {
+      img {
+        width: 58px;
+        height: 68px;
+      }
+    }
+    
     &:hover {
       box-shadow: 0px 0px 32px -24px;
       transform: scale(1.02);
@@ -146,15 +168,32 @@
     width: 300px;
     float: left;
     margin-right: 150px;
+    &:first-child {
+      img {
+        width: 247px;
+        height: 191px;
+        margin-top: 19px;
+      }
+    }
+    &:nth-child(2){
+      img {
+        width: 238px;
+        height: 164px;
+        margin-top: 26px;
+      }
+    }
+    &:nth-child(3){
+      img {
+        width: 265px;
+        height: 159px;
+        margin-top: 42px;
+      }
+    }
     &__img {
       width: 100%;
       height: 210px;
       background: #F3F4FB;
       text-align: center;
-      img {
-        width: 247px;
-        height: 191px;
-      }
     }
     &__content {
       &__title {
@@ -212,6 +251,41 @@
         margin-right: 20px;
         margin-bottom: 20px;
         position: relative;
+        &:first-child {
+          img {
+            width: 73px;
+            height: 73px;
+            margin-left: 30px;
+          }
+        }
+        &:nth-child(2) {
+          img {
+            width: 76px;
+            height: 85px;
+            margin-left: 30px;
+          }
+        }
+        &:nth-child(3) {
+          img {
+            width: 104px;
+            height: 104px;
+            margin-left: 16px;
+          }
+        }
+        &:nth-child(4) {
+          img {
+            width: 93px;
+            height: 93px;
+            margin-left: 20px;
+          }
+        }
+        &:nth-child(5) {
+          img {
+            width: 113px;
+            height: 41px;
+            margin-left: 9px;
+          }
+        }
         &__img-wrap {
           line-height: 188px;
           float: left;
@@ -254,3 +328,6 @@
     }
   }
 }
+
+
+@import './match.less';
