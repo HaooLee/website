@@ -1,10 +1,74 @@
+.mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.mask>.statement{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+  max-width: 880px;
+  height: 80%;
+  background-color: #fff;
+  overflow-y: scroll;
+  border-radius: 10px;
+}
+.mask>.statement>.close{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+  line-height: 35px;
+  background-color: red;
+}
+.statement > h2{
+  text-align: center;
+  padding:25px 0;
+  font-size: 28px;
+  color: #2b92d4;
+  border-bottom: #2b92d4 solid 2px;
+}
+
+.statement>h3{
+  font-size: 20px;
+  margin: 20px 0px;
+}
+.statement>p{
+  text-indent: 2em;
+  font-size: 12px;
+  line-height: 25px;
+  word-break: break-all;
+  white-space: normal;
+  color: #444;
+}
+.statement a{
+  color: #2a93d4;
+  text-decoration: underline;
+}
+
 .footer-wrap {
   background-color: #262626;
   // height: 601px;
   box-sizing: border-box;
   padding-top: 113px;
   padding-bottom: 126px;
-  overflow: hidden;
+
   .company-info {
 
     ul {
