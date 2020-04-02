@@ -11,3 +11,10 @@
     margin-left: 1.15rem;
   }
 }
+
+.flex-layout(@dir: row, @h: start, @v: start) {
+  display: flex;
+  flex-direction: @dir;
+  justify-content: @h;
+  align-items: @v;
+}

@@ -161,7 +161,7 @@ export default class Solution extends Component {
         <div className="solution">
           <div className="w">
             <div className="solution__tab-bar">
-              <TabBarCard list={tabBarList} width={'1193px'} clickCallback={this.tabBarClick}></TabBarCard>
+              <TabBarCard list={tabBarList} customClassName={'solution-tab-bar'} clickCallback={this.tabBarClick}></TabBarCard>
             </div>
             <div className="solution__content clearfix">
               <div className="solution__content__slider">
