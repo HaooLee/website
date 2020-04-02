@@ -13,7 +13,7 @@ export default class SliderList extends Component {
     const {list=[]} = this.props
     return (
       <>
-        <ul className="news__tab-bar">
+        <ul className="news__tab-bar col-2">
           {list.map((item, index) => (
             <li key={index} className={`news__tab-bar__item ${item.active ? 'active' : ''}`} onClick={this.clickAction.bind(this, index, item)}>{item.name}</li>
           ))}

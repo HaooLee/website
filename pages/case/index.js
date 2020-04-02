@@ -168,22 +168,24 @@ export default class Case extends Component {
         </div>
         <div className="w cases clearfix">
           <SliderList list={list} clickCallback={this.clickCallback}></SliderList>
-          <div className="cases__content">
-            {(cases[activeType] || []).map((item, idx) => (
-              <div className="cases__content__item clearfix" key={idx}>
-                <div className="cases__content__item__img">
-                  <img src={item.src} />
+          <div className="cases__content-wrap col-10">
+            <div className="cases__content">
+              {(cases[activeType] || []).map((item, idx) => (
+                <div className="cases__content__item clearfix" key={idx}>
+                  <div className="cases__content__item__img">
+                    <img src={item.src} />
+                  </div>
+                  <div className="cases__content__item__info">
+                    <p className="cases__content__item__info__title">{item.title}</p>
+                    <p className="cases__content__item__info__desc">{item.desc}</p>
+                    <p className="cases__content__item__info__tag">
+                      <span>使用产品：</span>
+                      <span className="tag__type">{item.typeName}</span>
+                    </p>
+                  </div>
                 </div>
-                <div className="cases__content__item__info">
-                  <p className="cases__content__item__info__title">{item.title}</p>
-                  <p className="cases__content__item__info__desc">{item.desc}</p>
-                  <p className="cases__content__item__info__tag">
-                    <span>使用产品：</span>
-                    <span className="tag__type">{item.typeName}</span>
-                  </p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
         <style jsx>{styles}</style>
