@@ -117,7 +117,7 @@ export default class Agent extends Component {
               <div className="footer-product">
               {
                 footerProducts.map((item, idx) => (
-                  <div className="product__item" key={idx} >
+                  <div className="product__item" key={idx} onClick={e=>Router.push({pathname: item.linkTo})}>
                     <div className="product__item__content">
                       <img className="product__item__content__img" src={item.src} />
                       <p className="product__item__content__name">{item.name}</p>

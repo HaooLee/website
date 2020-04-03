@@ -41,7 +41,6 @@ export default class Index extends React.Component {
                <p className="content">场景按钮</p>
                <p className="content">短信菜单</p>
              </div>
-             <span>+</span>
              <div className="card">
                <p className="title">场景推送+富媒体消息</p>
                <p className="desc">场景消息</p>
@@ -50,7 +49,6 @@ export default class Index extends React.Component {
                <p className="content">位置推送</p>
 
              </div>
-             <span>+</span>
              <div className="card">
                <p className="title">快应用服务</p>
                <p className="desc">快应用场景助手</p>
