@@ -9,8 +9,24 @@ import NewsCard from '@/components/newsCard'
 // import {FormattedMessage} from 'react-intl'
 
 export default class Index extends React.Component {
-
+  state ={
+    companies:[
+      {src:'/static/images/京东@2x.png'},
+      {src:'/static/images/淘宝@2x.png'},
+      {src:'/static/images/苏宁@2x.png'},
+      {src:'/static/images/图层 28@2x.png'},
+      {src:'/static/images/屈臣氏@2x.png'},
+      {src:'/static/images/建设银行@2x.png'},
+      {src:'/static/images/建设银行@2x.png'},
+      {src:'/static/images/招商银行@2x.png'},
+      {src:'/static/images/百度@2x.png'},
+      {src:''},
+      {src:''},
+      {src:''},
+      ]
+  }
   render () {
+    const {companies} = this.state
     return (
       <>
         <Banner />
@@ -91,16 +107,16 @@ export default class Index extends React.Component {
         <SectionCard title={'覆盖主流手机厂商'} desc={'泰迪熊移动利用自身强大的技术优势，与OPPO、vivo、魅族、金立、联想、乐视、酷派、阿里YunOS等国内主流手机厂商\n进行了深度合作，累计覆盖终端7亿+，日活用户4亿。'}>
           <img className="cp" src="/static/images/合作厂商@2x.png" alt=""/>
         </SectionCard>
-        <SectionCard title={'这些成功的企业正在使用泰迪熊移动'} desc={'泰迪熊移动成立于2014年，已为京东、淘宝、苏宁、携程、屈臣氏、建设银行、招商银行、百度等国内百家企业提供大数据和场景服务，\n' +
+        <SectionCard title={'这些成功的企业正在使用泰迪熊移动'} bgc={'#F7F7F7'} desc={'泰迪熊移动成立于2014年，已为京东、淘宝、苏宁、携程、屈臣氏、建设银行、招商银行、百度等国内百家企业提供大数据和场景服务，\n' +
         '覆盖快消、电商、零售、互联网、手机厂商、金融、旅游、教育等数十个行业，助力客户建设场景生态。'} overflow={true} >
           <div className="company-card-wrap">
             {
-              Array(12).fill({src:'/static/images/京东@2x.png'}).map((i,idx)=><CompanyLogo styleNum={idx} logoSrc={i.src} key={idx} />)
+              companies.map((i,idx)=><CompanyLogo styleNum={idx} logoSrc={i.src} key={idx} />)
             }
           </div>
         </SectionCard>
 
-        <SectionCard title={'热点资讯'} bgc={'#F7F7F7'}>
+        <SectionCard title={'热点资讯'}>
           <div className="news-wrap">
             <NewsCard company={"泰迪资讯"} date={'2020年2月14日'} logoSrc={"/static/images/图层 18@2x.png"} desc={"这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动"} />
 
