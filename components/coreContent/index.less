@@ -88,5 +88,36 @@
     margin-right: 133px;
   }
 }
+.dsp-core {
+  .core-content__list {
+    margin-top: 105px;
+    .core-content__item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      &.active {
+        img {
+          width: 52px;
+          height: 34px;
+        }
+      }
+      &:nth-child(2) {
+        img {
+          width: 39px;
+          height: 39px;
+        }
+      }
+      &:nth-child(3) {
+        img {
+          width: 37px;
+          height: 33px;
+        }
+      }
+    }
+  }
+  &>img {
+    margin-right: 133px;
+  }
+}
 
 @import './match.less';
