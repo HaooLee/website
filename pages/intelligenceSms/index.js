@@ -14,27 +14,27 @@ export default class IntelligenceSms extends React.Component {
       problems: [
         {
           src: '/static/images/intelligenceSms/icon-renzheng.png',
-          title: '短信未被认证 被拦截率高'
+          title: ['短信未被认证', '被拦截率高']
         },
         {
           src: '/static/images/intelligenceSms/icon-fuza.png',
-          title: '内容繁杂 用户打开率低 '
+          title: ['内容繁杂', '用户打开率低']
         },
         {
           src: '/static/images/intelligenceSms/icon-gongneng.png',
-          title: '通知类短信 功能单一 '
+          title: ['通知类短信', '功能单一']
         },
         {
           src: '/static/images/intelligenceSms/icon-zifu.png',
-          title: '短信内容篇幅 受到字符限制 '
+          title: ['短信内容篇幅', '受到字符限制']
         },
         {
           src: '/static/images/intelligenceSms/icon-zhuanhua.png',
-          title: '短信营销转化 效果差 '
+          title: ['短信营销', '转化效果差']
         },
         {
           src: '/static/images/intelligenceSms/icon-fasong.png',
-          title: '营销短信 发送量受限'
+          title: ['营销短信', '发送量受限']
         }
       ],
       products: [
@@ -122,7 +122,7 @@ export default class IntelligenceSms extends React.Component {
     }
   }
   clickCallback = (index) => {
-    const {tabBarList} = this.state 
+    const {tabBarList} = this.state
     tabBarList.forEach((item, idx) => {
       if(index === idx) {
         item.active = true
@@ -139,7 +139,7 @@ export default class IntelligenceSms extends React.Component {
     return (
       <>
         <ProductBanner title={'智能短信'} desc={'带你了解短信新形态,体验营销新玩法'} src={'/static/images/intelligenceSms/banner.png'} customClassName={'sms-banner'}></ProductBanner>
-        <SectionCard title={'你的场景消息通常会遇到的问题'} bgc={"#fff"} >
+        <SectionCard title={'你的智能短信通常会遇到的问题'} bgc={"#fff"} >
           <ProblemItem problems={problems} customClassName={'sms-problem'}></ProblemItem>
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
