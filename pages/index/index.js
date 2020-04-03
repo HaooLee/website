@@ -34,20 +34,27 @@ export default class Index extends React.Component {
           <div className="w product">
            <div>
              <div className="card">
-               <p>品牌认证+短信赋能</p>
-               <p>智能短信公众号</p>
+               <p className="title">品牌认证+短信赋能</p>
+               <p className="desc">智能短信公众号</p>
+               <p className="content">企业认证</p>
+               <p className="content">短信卡片</p>
+               <p className="content">场景按钮</p>
+               <p className="content">短信菜单</p>
+             </div>
+             <span>+</span>
+             <div className="card">
+               <p className="title">场景推送+富媒体消息</p>
+               <p className="desc">场景消息</p>
+               <p className="content">短信跟随</p>
+               <p className="content">挂机推送</p>
+               <p className="content">位置推送</p>
 
              </div>
              <span>+</span>
              <div className="card">
-               <p>品牌认证+短信赋能</p>
-               <p>智能短信公众号</p>
+               <p className="title">快应用服务</p>
+               <p className="desc">快应用场景助手</p>
 
-             </div>
-             <span>+</span>
-             <div className="card">
-               <p>品牌认证+短信赋能</p>
-               <p>智能短信公众号</p>
              </div>
 
            </div>
