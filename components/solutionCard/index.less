@@ -24,6 +24,24 @@
     margin-left: 51px;
     margin-top: 35px;
   }
+}
 
+@import '../../pages/var.less';
 
+@media screen and (max-width: @MATCH_WIDTH) {
+  
+  .solution-card {
+    width: 8.13rem;
+    height: 2.93rem;
+    display: flex;
+    flex-direction: row;
+    p {
+      margin: 0.64rem 0 0 0.43rem;
+      font-size: 18px;
+    }
+    .pic-wrap {
+      width: 3.25rem;
+      height: 2.93rem;
+    }
+  }
 }
