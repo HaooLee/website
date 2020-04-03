@@ -8,26 +8,14 @@ import styles from './index.less'
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    >
-      <img />
-    </div>
+    <img className={className} onClick={onClick} style={{width:18,height:30}} src="/static/images/right.png"/>
   )
 }
 
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "green" }}
-      onClick={onClick}
-    >
-      <img />
-    </div>
+    <img className={className} onClick={onClick} style={{width:18,height:30}} src="/static/images/left.png"/>
   )
 }
 export default class Solution extends Component {
@@ -125,7 +113,7 @@ export default class Solution extends Component {
     }
   }
   tabBarClick = (idx, row) => {
-    const {tabBarList} = this.state 
+    const {tabBarList} = this.state
     tabBarList.forEach((item, index) => {
       if(idx === index) {
         item.active = true
