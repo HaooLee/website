@@ -67,7 +67,24 @@ export default class Header extends React.Component {
       {
         title:'关于泰迪熊移动',
         link:'/about',
-        enable:true
+        enable:true,
+        routers: [
+          {
+            title:"公司",
+            link:"/about",
+            enable:true
+          },
+          {
+            title:"职位",
+            link:"/join",
+            enable:true
+          },
+          {
+            title:"新闻",
+            link:"/news",
+            enable:true
+          }
+        ]
       }
       ],
     secEle:[]

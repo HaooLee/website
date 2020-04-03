@@ -7,15 +7,20 @@
   margin-top: 30px;
   &__content {
     float: left;
-    margin-left: 31px;
+    padding: 0 31px;
+    box-sizing: border-box;
     &__item {
-      width: 919px;
-      height: 260px;
+      width: 100%;
+      box-sizing: border-box;
       background:#fff;
-      box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.15);
       border-radius: 3px;
       padding: 30px;
       margin-bottom: 30px;
+      display: flex;
+      flex-direction: row;
+      &:hover {
+        box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.15);
+      }
       &__img {
         width: 440px;
         height: 260px;
@@ -68,9 +73,7 @@
   .news {
     margin-top: 0;
     &__content {
-      margin-top: 0.72rem;
-      width: 100%;
-      margin-left: 0;
+      padding: 0 0.5rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -81,7 +84,7 @@
         &:after {
           display: none;
         }
-        width: 9.15rem;
+        // width: 9.15rem;
         height: 3.36rem;
         box-sizing: border-box;
         display: flex;

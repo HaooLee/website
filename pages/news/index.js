@@ -82,7 +82,7 @@ export default class News extends Component {
         </div>
         <div className="w news clearfix">
           <SliderList list={list} clickCallback={this.clickCallback}></SliderList>
-          <ul className="news__content">
+          <ul className="news__content col-10">
             {news.map((item, idx) => (
               <li className="news__content__item clearfix" key={idx}>
                 <img className="news__content__item__img" src={item.src} />
