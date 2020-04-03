@@ -133,9 +133,9 @@ export default class Solution extends Component {
       dots: false,
       infinite: true,
       speed: 500,
+      autoplay: true,
       slidesToShow: 2,
       slidesToScroll: 2,
-      autoplay: true,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />
     }

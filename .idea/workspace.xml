@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e7c6348-ff0b-441b-a7d3-ceac642b26c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/images/dspProduct/intro.bak.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/agent/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/agent/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dspProduct/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dspProduct/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/solution/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/solution/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/dspProduct/intro.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/dspProduct/intro.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,18 +21,6 @@
     <splitter split-orientation="horizontal" split-proportion="0.5336427">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/components/header/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="326">
-                  <caret line="116" column="26" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="26" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/agent/index.js">
               <provider selected="true" editor-type-id="text-editor">
@@ -55,8 +45,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/about/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" selection-start-line="6" selection-end-line="18" selection-end-column="1" />
+                <state relative-caret-position="253">
+                  <caret line="168" column="21" selection-start-line="168" selection-start-column="21" selection-end-line="168" selection-end-column="21" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
                   </folding>
@@ -65,13 +55,27 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/components/footer/index.js">
+            <entry file="file://$PROJECT_DIR$/pages/solution/index.less">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/dspProduct/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="118">
-                  <caret line="148" column="48" selection-start-line="148" selection-start-column="48" selection-end-line="148" selection-end-column="48" />
+                <state relative-caret-position="264">
+                  <caret line="87" column="33" lean-forward="true" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
                   <folding>
-                    <element signature="e#0#25#0" expanded="true" />
+                    <element signature="e#0#31#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pages/dspProduct/index.less">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="4" column="18" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="4" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
@@ -79,8 +83,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/solution/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+                <state relative-caret-position="-279">
+                  <caret line="138" selection-start-line="138" selection-end-line="138" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
                   </folding>
@@ -89,18 +93,11 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/intelligenceSms/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="540">
-                  <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
+            <entry file="file://$PROJECT_DIR$/static/images/dspProduct/位图@2x(2).png">
+              <provider selected="true" editor-type-id="images" />
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/index/index.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="323">
@@ -119,18 +116,6 @@
                   <caret line="44" column="37" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="37" />
                   <folding>
                     <element signature="e#0#33#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/components/companyLogo/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="343">
-                  <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -277,7 +262,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/locales/zh-CN.js" />
         <option value="$PROJECT_DIR$/pages/index.js" />
         <option value="$PROJECT_DIR$/components/solutionCard/index.js" />
         <option value="$PROJECT_DIR$/components/solutionCard/index.less" />
@@ -312,22 +296,23 @@
         <option value="$PROJECT_DIR$/components/problemItem/index.less" />
         <option value="$PROJECT_DIR$/pages/numberProduct/index.js" />
         <option value="$PROJECT_DIR$/components/productBanner/index.less" />
-        <option value="$PROJECT_DIR$/pages/dspProduct/index.js" />
         <option value="$PROJECT_DIR$/pages/agent/index.less" />
         <option value="$PROJECT_DIR$/pages/about/index.less" />
-        <option value="$PROJECT_DIR$/pages/about/index.js" />
         <option value="$PROJECT_DIR$/pages/intelligenceSms/index.js" />
         <option value="$PROJECT_DIR$/components/header/index.js" />
         <option value="$PROJECT_DIR$/components/companyLogo/index.js" />
         <option value="$PROJECT_DIR$/components/companyLogo/index.less" />
         <option value="$PROJECT_DIR$/components/footer/index.js" />
-        <option value="$PROJECT_DIR$/pages/solution/index.js" />
         <option value="$PROJECT_DIR$/components/header/index.less" />
         <option value="$PROJECT_DIR$/pages/index/index.less" />
         <option value="$PROJECT_DIR$/components/footer/index.less" />
         <option value="$PROJECT_DIR$/components/banner/index.less" />
         <option value="$PROJECT_DIR$/pages/agent/index.js" />
         <option value="$PROJECT_DIR$/pages/index/index.js" />
+        <option value="$PROJECT_DIR$/pages/about/index.js" />
+        <option value="$PROJECT_DIR$/pages/solution/index.js" />
+        <option value="$PROJECT_DIR$/pages/dspProduct/index.js" />
+        <option value="$PROJECT_DIR$/pages/dspProduct/index.less" />
       </list>
     </option>
   </component>
@@ -399,7 +384,7 @@
               <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
               <item name="new-website" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="dspProduct" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
@@ -417,6 +402,13 @@
               <item name="new-website" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new-website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="dspProduct" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -436,15 +428,15 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/index" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/images/dspProduct" />
       <recent name="$PROJECT_DIR$/static/images" />
       <recent name="$PROJECT_DIR$/static/images/about" />
       <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/static/images/auth" />
-      <recent name="$PROJECT_DIR$/pages" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/pages/index" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -474,12 +466,12 @@
       <workItem from="1585020892165" duration="35331000" />
       <workItem from="1585766101292" duration="81000" />
       <workItem from="1585860318677" duration="1881000" />
-      <workItem from="1585903535912" duration="6874000" />
+      <workItem from="1585903535912" duration="7573000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110528000" />
+    <option name="totallyTimeSpent" value="111227000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -509,51 +501,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/intelligenceSms/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="69" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/auth/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="78" column="1" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/auth/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="113" column="62" selection-start-line="113" selection-start-column="62" selection-end-line="113" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/solutionCard/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/sectionCard/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/solutionCard/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -726,16 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/dspProduct/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="104" column="22" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/images/logo.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -811,26 +748,6 @@
           <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/about/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/solution/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -917,6 +834,58 @@
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/about/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="168" column="21" selection-start-line="168" selection-start-column="21" selection-end-line="168" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/solution/index.less">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/dspProduct/位图@2x(2).png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/dspProduct/intro.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/solution/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-279">
+          <caret line="138" selection-start-line="138" selection-end-line="138" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/dspProduct/banner.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/dspProduct/intro.bak.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dspProduct/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="87" column="33" lean-forward="true" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dspProduct/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="18" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="4" selection-end-column="18" />
         </state>
       </provider>
     </entry>
