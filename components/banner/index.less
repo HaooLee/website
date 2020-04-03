@@ -82,3 +82,36 @@
     bottom: 10px;
   }
 }
+
+@import '../../pages/var.less';
+
+@media screen and (max-width: @MATCH_WIDTH) {
+  .carousel {
+    .banner-wrap {
+      height: 7.6rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h1 {
+        margin-top: 1.41rem;
+        font-size: 20px;
+      }
+      .we-can {
+        font-size: 14px;
+        // margin-top: 0.5rem;
+        // margin-bottom: 0.1rem;
+      }
+      .buttons {
+        a {
+          width: 2.64rem;
+          height: 0.69rem;
+          box-sizing: border-box;
+          line-height: 0.69rem;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  
+}
