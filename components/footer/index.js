@@ -108,7 +108,7 @@ export default class Footer extends React.Component {
                   </li>
                   <li onClick={e=> this.privacyStatementShow()} style={{cursor:'pointer'}}>隐私申明</li>
                   <li>
-                    <a href="/numberSign">申诉通道</a>
+                    <a href="/numberComplain">申诉通道</a>
                   </li>
                </ul>
                <ul className="company__item company__link">
