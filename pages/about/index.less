@@ -173,6 +173,16 @@
   }
 }
 
+.develop {
+  margin-bottom: 90px;
+  &__img {
+    
+  }
+  &__img--match {
+    display: none;
+  }
+}
+
 @import '../var.less';
 
 @media screen and (max-width: @MATCH_WIDTH) {
@@ -337,6 +347,18 @@
           text-align: left;
         }
       }
+    }
+  }
+  .develop {
+    margin-bottom: 1.07rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &__img {
+      display: none;
+    }
+    &__img--match {
+      display: block;
     }
   }
 }

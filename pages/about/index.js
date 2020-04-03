@@ -185,7 +185,10 @@ export default class About extends Component {
           </div>
         </SectionCard>
         <SectionCard title={'发展历程'} bgc={'#F8FAFF'}>
-
+            <div className="develop">
+              <img className="develop__img" src="/static/images/about/about.png" />
+              <img className="develop__img--match" src="/static/images/about/about-match.png" />
+            </div>
         </SectionCard>
         <SectionCard title={'技术优势'} bgc={'#355EA6'} titleClass={'title-white'}>
           <div className="technology-advantage">

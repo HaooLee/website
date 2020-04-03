@@ -201,8 +201,9 @@ export default class Agent extends Component {
         <SectionCard title={'合作伙伴遍及全国'} bgc={'#FFFFFF'}>
           <div className="partner">
             <div className="map-img">
-              <img className="china-map" src="/static/images/agent/china-map.png" />
-              <img className="map-dot" src="/static/images/agent/map-dot.png" />
+              {/* <img className="china-map" src="/static/images/agent/china-map.png" />
+              <img className="map-dot" src="/static/images/agent/map-dot.png" /> */}
+              <img className="map-img__new" src="/static/images/agent/map-new.png" />
             </div>
             <div className="agent-list">
               <div className="agent-list__title">代理商列表</div>
