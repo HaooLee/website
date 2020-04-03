@@ -93,7 +93,7 @@ export default class Header extends React.Component {
   mouseenterHandler = (routers)=>{
     this.setState({
       secEle:routers.map((i, idx)=><div style={{padding:20}} key={idx}>
-        <a href={i.link}>{i.title}</a>
+        <a className="link" style={{color:'#fff'}} href={i.link}>{i.title}</a>
       </div>)
     })
   }

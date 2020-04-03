@@ -10,7 +10,8 @@ export default class CompanyLogo extends React.Component{
     styleType:{
       0:"#C1C1C1",
       1:"#DCDCDC",
-      2:'#ECECEC'
+      2:'#ECECEC',
+      3:'#EfEfEf'
     }
   }
 
@@ -19,8 +20,8 @@ export default class CompanyLogo extends React.Component{
     const {styleNum, logoSrc} = this.props
     return (
       <>
-        <div className="company-logo" style={{backgroundColor:styleType[styleNum % 3]}}>
-          <img src={logoSrc} alt=""/>
+        <div className="company-logo" style={{backgroundColor:styleType[styleNum % 4]}}>
+          {logoSrc && <img src={logoSrc} alt=""/>}
         </div>
         <style jsx>
           {

@@ -23,6 +23,7 @@ header {
     }
     .nav {
       float: right;
+      margin-right: 30px;
       .nav-item {
         float: left;
         margin-left: 50px;
@@ -38,12 +39,25 @@ header {
   }
   .header-content-sec{
     width: 100%;
-    background-color: rgba(255,255,255,.8);
+    background-color: rgba(0,0,0,.8);
     transition: height linear .5s;
-    .sec-wrap {
+    :global(.sec-wrap) {
       padding-left: 300px;
       box-sizing: border-box;
-
+      :global(a){
+        font-size:14px;
+        font-family:PingFangSC-Regular,PingFang SC;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        text-decoration: none;
+        line-height:14px;
+        :global(&:hover){
+          color: #2a93d4;
+        }
+        &:visited{
+          color:rgba(255,255,255,1);
+        }
+      }
     }
   }
 

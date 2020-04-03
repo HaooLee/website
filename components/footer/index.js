@@ -108,25 +108,47 @@ export default class Footer extends React.Component {
                   </li>
                   <li onClick={e=> this.privacyStatementShow()} style={{cursor:'pointer'}}>隐私申明</li>
                   <li>
-                    <a href="/numberSign">申诉通道</a>
+                    <a href="/numberComplain">申诉通道</a>
                   </li>
                </ul>
                <ul className="company__item company__link">
                  <ul>
                    <li>友情链接</li>
                    <li>
-                      <div className="friendly">OPPO</div>
-                      <div className="friendly">VIVO</div>
-                      <div className="friendly">联想</div>
-                      <div className="friendly">魅族</div>
-                      <div className="friendly">小米</div>
-                      <div className="friendly">一加</div>
-                      <div className="friendly">Alios</div>
-                      <div className="friendly">乐视</div>
-                      <div className="friendly">金立</div>
-                      <div className="friendly">中国移动</div>
-                      <div className="friendly">中国联通</div>
-                      <div className="friendly">中国电信</div>
+                      <div className="friendly"><a href="https://www.oppo.com/cn/">OPPO</a></div>
+                      <div className="friendly">
+                        <a href="https://www.vivo.com.cn/">VIVO</a>
+                        </div>
+                      <div className="friendly">
+                        <a href="https://www.lenovo.com.cn/">联想</a>
+                        </div>
+                      <div className="friendly">
+                        <a href="https://www.meizu.com/">魅族</a>
+                      </div>
+                      <div className="friendly">
+                        <a href="https://www.mi.com/">小米</a>
+                      </div>
+                      <div className="friendly">
+                        <a href="https://www.oneplus.com/cn">一加</a>
+                      </div>
+                      <div className="friendly">
+                        <a href="http://www.alios.cn/">Alios</a>
+                      </div>
+                      <div className="friendly">
+                        <a href="http://www.le.com/">乐视</a>
+                      </div>
+                      <div className="friendly">
+                        <a href="https://www.gionee.com/">金立</a>
+                      </div>
+                      <div className="friendly">
+                        <a href="http://www.10086.cn">中国移动</a>
+                      </div>
+                      <div className="friendly">
+                        <a href="http://www.chinaunicom.com.cn/">中国联通</a>
+                      </div>
+                      <div className="friendly">
+                        <a href="http://www.chinatelecom.com.cn/">中国电信</a>
+                      </div>
 
                    </li>
                  </ul>
