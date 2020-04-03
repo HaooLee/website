@@ -1,21 +1,22 @@
 header {
   position: fixed;
   z-index: 1000;
-  background-color: #fff;
   height: 60px;
   width: 100%;
   left: 0;
   top: 0;
+  background-color: #fff;
   box-shadow: 1px -10px 21px 2px;
   .header-content{
+    position: relative;
     height: 60px;
     line-height: 60px;
-
     .logo {
       display: inline-block;
       font-size: 0px;
       width: 134px;
       height: 33px;
+      margin-left: 10px;
       /* margin: 18px 0; */
       background: url(/static/images/logo.png) no-repeat center center;
       background-size: 100%;
@@ -33,42 +34,161 @@ header {
           font-size: 15px;
           font-weight: 400;
           font-family: Source Han Sans CN;
+          &:visited{
+            color: rgb(51,51,51);
+          }
         }
       }
     }
+    .mask{
+      overflow-x:hidden ;
+      overflow-y: auto;
+      display: none;
+    }
+    .collapse-button{
+      display: none;
+    }
   }
-  .header-content-sec{
+  .header-content-sec {
     width: 100%;
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(0, 0, 0, .8);
     transition: height linear .5s;
+
     :global(.sec-wrap) {
       padding-left: 300px;
       box-sizing: border-box;
-      :global(a){
-        font-size:14px;
-        font-family:PingFangSC-Regular,PingFang SC;
-        font-weight:400;
-        color:rgba(255,255,255,1);
+
+      :global(a) {
+        font-size: 14px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 1);
         text-decoration: none;
-        line-height:14px;
-        :global(&:hover){
+        line-height: 14px;
+
+        :global(&:hover) {
           color: #2a93d4;
         }
-        &:visited{
-          color:rgba(255,255,255,1);
+
+        &:visited {
+          color: rgba(255, 255, 255, 1);
         }
       }
     }
   }
-
-
   @media screen and (max-width: 980px) {
+    .header-content-sec{
+      display: none;
+    }
     .header-content{
       .nav {
         display: none;
       }
 
+
+      .collapse-button {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 23px;
+        height: 16px;
+        span{
+          position: absolute;
+          display: block;
+          width: 23px;
+          height: 2px;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          background: #ccc;
+          border-radius: 1px;
+          transform-origin: right center;
+          transition: all linear .3s;
+          transform: rotate(0deg);
+          &:first-child{
+            top: 0;
+            left: 0;
+            bottom: auto;
+          }
+          &:last-child{
+            top: auto;
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+
+      .mask {
+        position: fixed;
+        display: block;
+        top: 120px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: rgba(0,0,0,.6);
+        width: 100%;
+        height: 100%;
+        display: none;
+        &.active{
+          display: block;
+        }
+        .mobile-nav{
+          background-color: #fff;
+          overflow: hidden;
+          transition: all linear .5s;
+          .mobile-nav-item{
+            position: relative;
+            border-bottom: 1px solid #ccc;
+            a {
+              display: block;
+              padding: 0 20px;
+              line-heighth: 60px;
+              font-size: 16px;
+              color: #666;
+              text-decoration: none;
+            }
+            .arrow {
+              display: block;
+              width: 10px;
+              height: 10px;
+              background: transparent;
+              border-left: 2px solid #ccc;
+              border-top: 2px solid #ccc;
+              transform: rotate(-135deg);
+              position: absolute;
+              right: 25px;
+              top: 22px;
+              transition: all .5s;
+              &.rotate{
+                transform: rotate(45deg);
+              }
+            }
+
+          }
+        }
+      }
+
+      .collapse-active {
+        span {
+          &:first-child{
+            transform: rotate(-37deg);
+          }
+          &:last-child{
+            transform: rotate(37deg);
+          }
+          &.hide{
+            width: 0px;
+          }
+        }
+
+      }
+
     }
   }
-
 }
+
+

@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './index.less'
+import Link from 'next/link'
+import Router from 'next/router'
 
 export default class Header extends React.Component {
 
@@ -87,13 +89,14 @@ export default class Header extends React.Component {
         ]
       }
       ],
-    secEle:[]
+    secEle:[],
+    isActive:false
   }
 
   mouseenterHandler = (routers)=>{
     this.setState({
       secEle:routers.map((i, idx)=><div style={{padding:20}} key={idx}>
-        <a className="link" style={{color:'#fff'}} href={i.link}>{i.title}</a>
+        <Link href={i.link}><a className="link" style={{color:'#fff'}}>{i.title}</a></Link>
       </div>)
     })
   }
@@ -104,8 +107,57 @@ export default class Header extends React.Component {
     })
   }
 
+  handleCollapseClick(){
+    const {routers} = this.state
+    const { isActive } = this.state
+    routers.forEach(i=>i.opened = false)
+    this.setState({
+      isActive:!isActive,
+      routers: routers,
+    })
+  }
+
+  handleMenuClick(i,idx){
+    const {routers} = this.state
+    routers.forEach(item=>{
+      if(i != item)item.opened = false
+    })
+    if(i.routers && i.routers.length > 0){
+      i.opened = !i.opened
+    }else {
+      this.setState({
+        isActive:false
+      })
+    }
+
+    this.setState({
+      routers: routers,
+    })
+  }
+  handleMaskClick(e){
+    if (!Element.prototype.matches) {
+      Element.prototype.matches =
+        Element.prototype.matchesSelector ||
+        Element.prototype.mozMatchesSelector ||
+        Element.prototype.msMatchesSelector ||
+        Element.prototype.oMatchesSelector ||
+        Element.prototype.webkitMatchesSelector ||
+        function(s) {
+          var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+            i = matches.length;
+          while (--i >= 0 && matches.item(i) !== this) {}
+          return i > -1;
+        };
+    }
+    if(e.target && e.target.matches('div')){
+      this.setState({
+        isActive:false
+      })
+    }
+  }
+
   render() {
-    const {routers, secEle} =  this.state
+    const {routers, secEle,isActive} =  this.state
     return (
       <>
         <header>
@@ -116,12 +168,42 @@ export default class Header extends React.Component {
                 routers.map((i,idx)=>{
                   return (
                     <li className="nav-item" key={idx} onMouseEnter={e => this.mouseenterHandler(i.routers || [])}>
-                        <a href={i.link}>{i.title}</a>
+                        <Link href={i.routers && i.routers.length > 0 ?'':i.link}><a>{i.title}</a></Link>
                     </li>
                   )
                 })
               }
             </ul>
+
+            <div className={`collapse-button ${isActive?'collapse-active' : ''}` } onClick={e=>{this.handleCollapseClick()}} >
+              <span className="icon-bar" ></span>
+              <span className="icon-bar hide" ></span>
+              <span className="icon-bar" ></span>
+            </div>
+            <div className={`mask ${isActive? 'active':''}`} onClick={ e =>this.handleMaskClick(e) }>
+              <ul className={`mobile-nav`}>
+                {
+                  routers.map((i,idx)=>{
+                    return (
+                      <li className="mobile-nav-item" key={idx}>
+                        <Link href={i.routers && i.routers.length > 0 ?'':i.link} passHref><a onClick={() => this.handleMenuClick(i, idx)}>{i.title}</a></Link>
+
+                        {i.routers && i.routers.length > 0 && <span className={`arrow  ${i.opened? 'rotate':''}`}></span>}
+                        {
+                          i.routers && i.routers.length > 0 && (<ul style={{overflow:'hidden',transition:'all linear .4s',height: i.opened?i.routers.length * 61:0}}>
+                              {
+                                i.routers.map((item, index)=><li style={{paddingLeft:20,borderTop:'1px solid #ccc',backgroundColor:'#eee'}} key={index}>
+                                  <Link href={item.link} passHref><a onClick={e=>this.setState({isActive:false})}>{item.title}</a></Link>
+                                </li>)
+                              }
+                          </ul>)
+                        }
+                      </li>
+                    )
+                  })
+                }
+              </ul>
+            </div>
           </div>
           <div className="header-content-sec" onMouseLeave={e=> this.mouseLeaveHandler()}>
             <div className="w sec-wrap">
@@ -131,6 +213,7 @@ export default class Header extends React.Component {
             </div>
           </div>
         </header>
+        {/*<div className="hold" id="hold"></div>*/}
         <style jsx>
           {
             styles
