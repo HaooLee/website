@@ -82,10 +82,7 @@ export default class DspProduct extends Component {
           title={'全域场景营销平台'}
           desc={'提供全场景人群覆盖、优质丰富的媒体资源、 最具创意的呈现形式，以及一站式、全流程的投放及优化服务。'}
           src={'/static/images/dspProduct/banner.png'}
-          imgCustomStyle={{
-            width: '397px',
-            height: '383px'
-          }}
+          customClassName={'dsp-banner'}
         ></ProductBanner>
         <SectionCard title={'平台介绍'} bgc={"#fff"} >
           <div className="intro">
@@ -96,10 +93,9 @@ export default class DspProduct extends Component {
           <div className="core-content-wrap" id="core-content">
             <CoreContent
               coreList={coreList}
-              listStyle={{marginTop: '105px'}}
               coreClassName={'dsp-core'}
+              src={'/static/images/quickAppProduct/phone.png'}
             >
-              <img src={'/static/images/quickAppProduct/phone.png'} className="core-content__img" />
             </CoreContent>
           </div>
         </SectionCard>

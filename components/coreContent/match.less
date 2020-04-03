@@ -34,26 +34,35 @@
   }
 
   .dsp-core {
-    .core-content__item:first-child {
-      img {
-        width: 0.85rem;
-        height: 0.56rem;
-        margin-right: 0.21rem;
-      }
+    &>img {
+      width: 4rem;
+      height: 8.13rem;
+      margin-right: 0;
     }
-    .core-content__item:nth-child(2) {
-      img {
-        width: 0.64rem;
-        height: 0.64rem;
-        margin-right: 0.29rem;
-      }
-    }
-    .core-content__item:last-child {
-      margin-bottom: 0;
-      img {
-        width: 0.64rem;
-        height: 0.56rem;
-        margin-right: 0.21rem;
+    .core-content__list {
+      .core-content__item {
+        &__img-wrap {
+          width: 1rem;
+          text-align: left;
+        }
+        &:first-child {
+          img {
+            width: 0.85rem;
+            height: 0.56rem;
+          }
+        }
+        &:nth-child(2) {
+          img {
+            width: 0.64rem;
+            height: 0.64rem;
+          }
+        }
+        &:last-child {
+          img {
+            width: 0.64rem;
+            height: 0.56rem;
+          }
+        }
       }
     }
   }
