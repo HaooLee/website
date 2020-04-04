@@ -14,7 +14,7 @@ export default class CoreContent extends React.Component {
           <div className="core-content__list" style={listStyle}>
             {
               coreList.map((item, index) => (
-                <div key={index} className={`core-content__item clearfix ${index === 0 ? 'active' : ''}`}>
+                <div key={index} className={`core-content__item  ${index === 0 ? 'active' : ''}`}>
                   <div className="core-content__item__img-wrap">
                     <img src={item.src}/>
                   </div>
