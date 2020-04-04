@@ -138,7 +138,9 @@ export default class Case extends Component {
           }
         ]
       },
-      activeType: 'OTA'
+      activeType: 'OTA',
+      activeItem: null,
+      activeIndex: -1
     }
   }
   clickCallback = (index) => {
@@ -154,11 +156,21 @@ export default class Case extends Component {
     })
     this.setState({
       list: [...list],
-      activeType: type
+      activeType: type,
+      activeItem: null,
+      activeIndex: -1
     })
   }
+  contentItemClick = (item, idx) => {
+    if(window.innerWidth < 980) {
+      this.setState({
+        activeItem: item,
+        activeIndex: idx
+      })
+    }
+  }
   render() {
-    const {list, activeType, cases} = this.state
+    const {list, activeType, cases, activeItem, activeIndex} = this.state
     return (
       <>
         <div className="banner">
@@ -171,7 +183,8 @@ export default class Case extends Component {
           <div className="cases__content-wrap col-10">
             <div className="cases__content">
               {(cases[activeType] || []).map((item, idx) => (
-                <div className="cases__content__item clearfix" key={idx}>
+                <div key={idx}>
+                <div className="cases__content__item clearfix" key={idx} onClick={this.contentItemClick.bind(this, item, idx)}>
                   <div className="cases__content__item__img">
                     <img src={item.src} />
                   </div>
@@ -183,9 +196,22 @@ export default class Case extends Component {
                       <span className="tag__type">{item.typeName}</span>
                     </p>
                   </div>
+                  
+                </div>
+                {
+                  activeItem && activeIndex === idx && <div className="cases__content--match">
+                    <p className="cases__content--match__title">{activeItem.title}</p>
+                    <p className="cases__content--match__desc">{activeItem.desc}</p>
+                    <p className="cases__content--match__tag">
+                      <span className="tag__text">使用产品：</span>
+                      <span className="tag__type">{activeItem.typeName}</span>
+                    </p>
+                  </div>
+                }
                 </div>
               ))}
             </div>
+            
           </div>
         </div>
         <style jsx>{styles}</style>
