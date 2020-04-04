@@ -85,7 +85,7 @@ export default class Index extends React.Component {
             <div className="text">
               <h2>号码认证</h2>
               <h3>来电接的安心，去电不再被拒绝</h3>
-              <p>马上通过 <a href="">号码认证</a> 解锁</p>
+              <p>马上通过 <a href="/numberAuth">号码认证</a> 解锁</p>
             </div>
           </div>
         </section>
