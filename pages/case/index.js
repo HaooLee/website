@@ -143,6 +143,16 @@ export default class Case extends Component {
       activeIndex: -1
     }
   }
+  componentDidMount() {
+    window.addEventListener('resize', () => {
+      const {activeItem} = this.state 
+      if(activeItem) {
+        this.setState({
+          activeItem: null
+        })
+      }
+    })
+  }
   clickCallback = (index) => {
     const {list} = this.state
     let type = ''
