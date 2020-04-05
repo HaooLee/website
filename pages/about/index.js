@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import Slider from "react-slick";
 import SectionCard from '@/components/sectionCard'
+import TimeLine from '@/components/Timeline'
 import styles from './index.less'
 
 // 自定义箭头
@@ -185,9 +186,10 @@ export default class About extends Component {
           </div>
         </SectionCard>
         <SectionCard title={'发展历程'} bgc={'#F8FAFF'}>
-            <div className="develop">
-              <img className="develop__img" src="/static/images/about/about.png" />
-              <img className="develop__img--match" src="/static/images/about/about-match.png" />
+            <div className="w">
+              <TimeLine></TimeLine>
+              {/*<img className="develop__img" src="/static/images/about/about.png" />*/}
+              {/*<img className="develop__img--match" src="/static/images/about/about-match.png" />*/}
             </div>
         </SectionCard>
         <SectionCard title={'技术优势'} bgc={'#355EA6'} titleClass={'title-white'}>
