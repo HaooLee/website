@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './index.less'
 
-export default class Banner extends React.Component {
+export default class Timeline extends React.Component {
   constructor(props) {
     super(props)
   }
