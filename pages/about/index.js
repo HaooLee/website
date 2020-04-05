@@ -1,7 +1,7 @@
 import {Component} from 'react'
 import Slider from "react-slick";
 import SectionCard from '@/components/sectionCard'
-import TimeLine from '@/components/Timeline'
+import TimeLine from '@/components/timeline'
 import styles from './index.less'
 
 // 自定义箭头
