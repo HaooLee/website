@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e7c6348-ff0b-441b-a7d3-ceac642b26c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pages/about/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/about/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/common.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/common.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/join/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/join/index.less" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,11 +31,23 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/about/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="45">
-                  <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+                <state relative-caret-position="390">
+                  <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#0#31#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pages/common.less">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="315">
+                  <caret line="21" selection-start-line="21" selection-end-line="21" />
                 </state>
               </provider>
             </entry>
@@ -122,6 +136,7 @@
       <find>130</find>
       <find>75</find>
       <find>145px</find>
+      <find>00% 5.54re</find>
     </findStrings>
     <replaceStrings>
       <replace>TEDDY_MODE</replace>
@@ -138,8 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/pages/global.less" />
         <option value="$PROJECT_DIR$/pages/intelligenceSms/index.less" />
         <option value="$PROJECT_DIR$/pages/scenicProduct/index.less" />
         <option value="$PROJECT_DIR$/server.js" />
@@ -165,7 +178,6 @@
         <option value="$PROJECT_DIR$/pages/numberProduct/index.js" />
         <option value="$PROJECT_DIR$/components/productBanner/index.less" />
         <option value="$PROJECT_DIR$/pages/agent/index.less" />
-        <option value="$PROJECT_DIR$/pages/about/index.less" />
         <option value="$PROJECT_DIR$/pages/intelligenceSms/index.js" />
         <option value="$PROJECT_DIR$/components/companyLogo/index.js" />
         <option value="$PROJECT_DIR$/components/companyLogo/index.less" />
@@ -189,6 +201,9 @@
         <option value="$PROJECT_DIR$/components/TimeLine/index.less" />
         <option value="$PROJECT_DIR$/components/timeLine/index.js" />
         <option value="$PROJECT_DIR$/pages/about/index.js" />
+        <option value="$PROJECT_DIR$/pages/common.less" />
+        <option value="$PROJECT_DIR$/pages/about/index.less" />
+        <option value="$PROJECT_DIR$/pages/join/index.less" />
       </list>
     </option>
   </component>
@@ -317,18 +332,17 @@
       <workItem from="1585020892165" duration="35331000" />
       <workItem from="1585766101292" duration="81000" />
       <workItem from="1585860318677" duration="1881000" />
-      <workItem from="1585903535912" duration="41525000" />
+      <workItem from="1585903535912" duration="41958000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145179000" />
+    <option name="totallyTimeSpent" value="145612000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23930079" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23930079" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -340,7 +354,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.35714287" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.35714287" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -352,13 +366,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/numberComplain/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1263">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.next/server/static/development/pages/about.js.map">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -733,8 +740,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/about/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+        <state relative-caret-position="390">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/common.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
