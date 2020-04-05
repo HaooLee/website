@@ -10,7 +10,7 @@ export default class Banner extends React.Component {
   state = {
     timeLine:[
       {time:'2014',content:'泰迪熊移动成立'},
-      {time:'2015',content:'获得58赶集千万天使轮投资 与主流手机厂商建立合作关系 智能短信、号码识别产品'},
+      {time:'2015',content:'获得58赶集千万天使轮投资 与主流手机厂商建立合作关系, 智能短信 号码识别产品'},
       {time:'2016',content:['完成A轮融资','成立上海分公司','公司团队成长100余人','用户数突破1亿']},
       {time:'2017',content:['完成B轮融资','用户数突破4亿']},
       {time:'2018',content:['8月用户数突破6亿','4月完成1.88亿元C轮融资','公司团队成长200余人']},

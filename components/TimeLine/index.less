@@ -1,6 +1,7 @@
 .time-line {
   overflow-x: auto;
   min-width: 1200px;
+  overflow: hidden;
   margin-bottom: 90px;
   .top{
     font-size: 0px;
@@ -252,7 +253,6 @@
       padding:.3rem 0;
 
       .content{
-
         position: relative;
         font-size:0.32rem;
         font-family:PingFangSC-Regular,PingFang SC;
@@ -268,7 +268,9 @@
           height: 100%;
           text-align: right;
           float: left;
+          padding: 4px 0;
           span{
+            font-size: 0.32rem;
             margin-right: .2rem;
             color: #666666;
           }
@@ -280,10 +282,21 @@
             display: block;
             position: absolute;
             left: 0;
-            top: 10px;
+            top: 7px;
             content: '';
             width: 0.8rem;
             border-top: 2px dotted gray;
+          }
+          &:after{
+            display: block;
+            position: absolute;
+            content: '';
+            width: 0.21rem;
+            height: 0.21rem;
+            top: 0.105rem;
+            left: -0.105rem;
+            border-radius: 50%;
+            background-color: #355EA6;
           }
         }
       }
@@ -293,7 +306,9 @@
           height: 100%;
           text-align: left;
           float: right;
+          padding: 4px 0;
           span{
+            font-size: 0.32rem;
             margin-left: .2rem;
             color: #666666;
           }
@@ -306,10 +321,21 @@
             display: block;
             position: absolute;
             right: 0;
-            top: 10px;
+            top: 7px;
             content: '';
             width: 0.8rem;
             border-top: 2px dotted gray;
+          }
+          &:after{
+            display: block;
+            position: absolute;
+            content: '';
+            width: 0.21rem;
+            height: 0.21rem;
+            top: 0.105rem;
+            right: -0.105rem;
+            border-radius: 50%;
+            background-color: #355EA6;
           }
         }
       }
