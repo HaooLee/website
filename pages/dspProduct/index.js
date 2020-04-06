@@ -14,27 +14,20 @@ export default class DspProduct extends Component {
         {
           title: '平台：科技+负能广告投放管理',
           src: '/static/images/dspProduct/icon-pingtai.png',
-          // imgStyle: {
-          //   width: '52px',
-          //   height: '34px',
-          //   marginTop: '10px'
-          // }
+          activeIcon: '/static/images/dspProduct/icon-pingtai.png',
+          coreSrc: '/static/images/quickAppProduct/phone.png'
         },
         {
           title: '效果：以人为核心的全域场景覆盖',
           src: '/static/images/dspProduct/icon-xiaoguo.png',
-          // imgStyle: {
-          //   width: '39px',
-          //   height: '39px'
-          // }
+          activeIcon: '/static/images/dspProduct/icon-xiaoguo.png',
+          coreSrc: '/static/images/quickAppProduct/phone.png'
         },
         {
           title: '资源：合作市场主流厂商，覆盖用户7亿',
           src: '/static/images/dspProduct/icon-changshang.png',
-          // imgStyle: {
-          //   width: '37px',
-          //   height: '33px'
-          // }
+          activeIcon: '/static/images/dspProduct/icon-changshang.png',
+          coreSrc: '/static/images/quickAppProduct/phone.png'
         }
       ],
       products: [
