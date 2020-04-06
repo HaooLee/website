@@ -4,6 +4,9 @@
       "name": "new-website",
       "script": "server.js",
       "max_restarts": 10,
+      "env": {
+        "NODE_ENV": "production",
+      },
       "instances": 3,
       "log_date_format" : "YYYY-MM-DD HH:mm:ss",
     }
