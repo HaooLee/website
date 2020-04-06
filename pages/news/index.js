@@ -64,8 +64,10 @@ export default class News extends Component {
       ]
     }
   }
+
+
   clickCallback = (index) => {
-    const {list} = this.state 
+    const {list} = this.state
     list.forEach((item, idx) => {
       if(index === idx) {
         item.active = true
