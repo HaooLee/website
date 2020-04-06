@@ -82,46 +82,79 @@ export default class IntelligenceSms extends React.Component {
       coreList: [
         {
           src: '/static/images/intelligenceSms/icon-duanxinyanzheng.png',
-          title: '短信来源号码进行可信认证'
+          title: '短信来源号码进行可信认证',
+          coreSrc: '/static/images/intelligenceSms/core1.png',
+          activeIcon: '/static/images/intelligenceSms/icon-duanxinyanzheng.png'
         },
         {
           src: '/static/images/intelligenceSms/icon-kapian.png',
-          title: '核心内容可进行卡片化展示，简洁清晰'
+          title: '核心内容可进行卡片化展示，简洁清晰',
+          coreSrc: '/static/images/intelligenceSms/core2.png',
+          activeIcon: '/static/images/intelligenceSms/icon-kapian-active.png'
         },
         {
           src: '/static/images/intelligenceSms/icon-zhineng.png',
-          title: '根据场景可智能匹配按钮一键跳转后续服务'
+          title: '根据场景可智能匹配按钮一键跳转后续服务',
+          coreSrc: '/static/images/intelligenceSms/core3.png',
+          activeIcon: '/static/images/intelligenceSms/icon-zhineng-active.png'
         },
         {
           src: '/static/images/intelligenceSms/icon-service3.png',
-          title: '短信公众号短信页面享受更多服务'
+          title: '短信公众号短信页面享受更多服务',
+          coreSrc: '/static/images/intelligenceSms/core4.png',
+          activeIcon: '/static/images/intelligenceSms/icon-service3-active.png'
         },
         {
           src: '/static/images/intelligenceSms/icon-shape.png',
-          title: '支持跳转 H5、APP、快应用一键拨号、验证码复制'
+          title: '支持跳转 H5、APP、快应用一键拨号、验证码复制',
+          coreSrc: '/static/images/intelligenceSms/core5.png',
+          activeIcon: '/static/images/intelligenceSms/icon-shape-active.png'
         }
       ],
       tabBarList: [
         {
           name: '企业认证',
-          active: true
+          active: true,
+          type: 'company'
         },
         {
           active: false,
-          name: '短信卡片'
+          name: '短信卡片',
+          type: 'card'
         },
         {
           active: false,
-          name: '场景按钮'
+          name: '场景按钮',
+          type: 'btn'
         },
         {
           active: false,
-          name: '短信菜单'
+          name: '短信菜单',
+          type: 'menu'
         }
-      ]
+      ],
+      activeType: 'company'
+    }
+    this.barContent = {
+      'company': {
+        src: '/static/images/intelligenceSms/company-auth.png',
+        name: '企业认证'
+      },
+      'card': {
+        src: '/static/images/intelligenceSms/card.png',
+        name: '短信卡片'
+      },
+      'btn': {
+        src: '/static/images/intelligenceSms/scenic-btn.png',
+        name: '场景按钮'
+      },
+      'menu': {
+        src: '/static/images/intelligenceSms/menu.png',
+        name: '短信菜单'
+      }
     }
   }
-  clickCallback = (index) => {
+  clickCallback = (index, row) => {
     const {tabBarList} = this.state
     tabBarList.forEach((item, idx) => {
       if(index === idx) {
@@ -131,11 +164,12 @@ export default class IntelligenceSms extends React.Component {
       }
     })
     this.setState({
-      tabBarList: [...tabBarList]
+      tabBarList: [...tabBarList],
+      activeType: row.type
     })
   }
   render () {
-    const {problems, products, coreList, tabBarList} = this.state
+    const {problems, products, coreList, tabBarList, activeType} = this.state
     return (
       <>
         <ProductBanner title={'智能短信'} desc={'带你了解短信新形态,体验营销新玩法'} src={'/static/images/intelligenceSms/banner.png'} customClassName={'sms-banner'}></ProductBanner>
@@ -144,7 +178,6 @@ export default class IntelligenceSms extends React.Component {
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
           <CoreContent
-            src={'/static/images/sms.png'}
             coreList={coreList}
             coreClassName={'sms-core'}
           ></CoreContent>
@@ -160,16 +193,16 @@ export default class IntelligenceSms extends React.Component {
                   </div>
                   <div className="tab-content__right clearfix">
                     <div className="tab-content__right__item">
-                      <img src="/static/images/intelligenceSms/zhaohang.png" />
-                      <p>其他样例</p>
+                      <img src={this.barContent[activeType].src} />
+                      <p>{this.barContent[activeType].name}</p>
                     </div>
-                    <div className="tab-content__right__item">
+                    {/* <div className="tab-content__right__item">
                       <img src="/static/images/intelligenceSms/jianhang.png" />
                       <p>企业认证</p>
                     </div>
                     <div  className="tab-content__right__img">
                       <img src="/static/images/intelligenceSms/jianhang-scale.png" />
-                    </div>
+                    </div> */}
                   </div>
               </div>
             </div>
