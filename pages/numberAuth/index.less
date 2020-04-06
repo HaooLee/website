@@ -49,6 +49,7 @@
     display: flex;
     flex-direction: row;
     margin-top: 50px;
+    position: relative;
     &--required {
       .form__item__label:before {
         content: '*';
@@ -69,6 +70,12 @@
       flex: 1;
       display: flex;
       flex-direction: row;
+      &--error {
+        color: red;
+        position: absolute;
+        bottom: -20px;
+        left: 160px;
+      }
       &--v {
         flex-direction: column;
         input {

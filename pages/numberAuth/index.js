@@ -12,9 +12,11 @@ export default class NumberAuth extends Component {
           type: 'company'
         }
       ],
-      activeType: 'company'
+      activeType: 'company',
+      form: {},
+      phoneError: false,
+      companyError: false
     }
-    this.form = {}
   }
   headerItemClick = (idx, row) => {
     const {headers} = this.state
@@ -31,14 +33,35 @@ export default class NumberAuth extends Component {
     })
   }
   formSubmit = () => {
-    console.log(this.form)
+    console.log(this.state.form)
   }
   formChange = (type, ev) => {
     const val = ev.currentTarget.value 
-    this.form[type] = val
+    if(type === 'company' && val.indexOf('公司') < 0) {
+      this.setState({
+        companyError: true
+      })
+    } else {
+      this.setState({
+        companyError: false
+      })
+    }
+    if(type === 'phone' && !(/^[0-9]*$/.test(val))) {
+      console.log('必须是纯数字')
+      this.setState({
+        phoneError: true
+      })
+      return 
+    }
+    const {form} = this.state 
+    form[type] = val 
+    this.setState({
+      form,
+      phoneError: false
+    })
   }
   render() {
-    const {headers, activeType} = this.state
+    const {headers, activeType, form, phoneError, companyError} = this.state
     return (
       <>
         <div className="banner">
@@ -69,13 +92,19 @@ export default class NumberAuth extends Component {
                   <div className="form__item__input">
                     <input placeholder="请输入您的企业全称" onChange={this.formChange.bind(this, 'company')} type="text" />
                   </div>
+                  {companyError && <div className="form__item__input--error">
+                    必须包含公司这两个字符
+                  </div>}
                 </div>
 
                 <div className="form__item form__item--required">
                   <div className="form__item__label">联系电话</div>
                   <div className="form__item__input">
-                    <input placeholder="请留下您的联系电话，以便我们能够及时为您提供服务" onChange={this.formChange.bind(this, 'phone')} type="text" />
+                    <input placeholder="请留下您的联系电话，以便我们能够及时为您提供服务" value={form.phone || ''} onChange={this.formChange.bind(this, 'phone')} type="text" />
                   </div>
+                  {phoneError && <div className="form__item__input--error">
+                    必须是纯数字
+                  </div>}
                 </div>
                 <div className="form__item form__item--required">
                   <div className="form__item__label">所属城市</div>
