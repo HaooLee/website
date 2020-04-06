@@ -68,40 +68,76 @@ export default class ScenicProduct extends React.Component {
       coreList: [
         {
           src: '/static/images/scenicProduct/icon-changshang.png',
-          title: '厂商网络OTT通道发送：发送成本更低，降低投诉风险'
+          title: '厂商网络OTT通道发送：发送成本更低，降低投诉风险',
+          coreSrc: '/static/images/scenicProduct/core1.png',
+          activeIcon: '/static/images/scenicProduct/icon-changshang-active.png'
         },
         {
           src: '/static/images/scenicProduct/icon-xiaoxi.png',
-          title: '富媒体消息 ：快应用、视频、音频、语音、多图文、位置等多原画形态，提高用户体验的同时能够促进营销短信的效果转化。 '
+          title: '富媒体消息 ：快应用、视频、音频、语音、多图文、位置等多原画形态，提高用户体验的同时能够促进营销短信的效果转化。 ',
+          coreSrc: '/static/images/scenicProduct/core2.png',
+          activeIcon: '/static/images/scenicProduct/icon-xiaoxi-active.png'
         },
         {
           src: '/static/images/scenicProduct/icon-chufa.png',
-          title: '基于用户使用场景触发消息推送 ：精准营销，效率提升'
+          title: '基于用户使用场景触发消息推送 ：精准营销，效率提升',
+          coreSrc: '/static/images/scenicProduct/core3.png',
+          activeIcon: '/static/images/scenicProduct/icon-chufa-active.png'
         },
         {
           src: '/static/images/scenicProduct/icon-zhineng.png',
-          title: '支持 chatbot：智能客服 ，智能推送消息'
+          title: '支持 chatbot：智能客服 ，智能推送消息',
+          coreSrc: '/static/images/scenicProduct/core4.png',
+          activeIcon: '/static/images/scenicProduct/icon-zhineng-active.png'
         }
       ],
       tabBarList: [{
         name: '卡片',
-        active: true
+        active: true,
+        type: 'card'
       }, {
         name: '多图文',
-        active: false
+        active: false,
+        type: 'more-pic-text'
       }, {
         name: '视频',
-        active: false
+        active: false,
+        type: 'video'
       }, {
         name: '音频',
-        active: false
+        active: false,
+        type: 'audio'
       }, {
         name: '位置快应用',
-        active: false
-      }]
+        active: false,
+        type: 'quick-app'
+      }],
+      activeType: 'card'
+    }
+    this.barContent = {
+      'card': {
+        src: '/static/images/scenicProduct/card.png',
+        name: '卡片'
+      },
+      'more-pic-text': {
+        src: '/static/images/scenicProduct/more-pic-text.png',
+        name: '多图文'
+      },
+      'video': {
+        src: '/static/images/scenicProduct/video.png',
+        name: '视频'
+      },
+      'audio': {
+        src: '/static/images/scenicProduct/audio.png',
+        name: '音频'
+      },
+      'quick-app': {
+        src: '/static/images/scenicProduct/quick-app.png',
+        name: '位置快应用'
+      }
     }
   }
-  clickCallback = (index) => {
+  clickCallback = (index, row) => {
     const {tabBarList} = this.state 
     tabBarList.forEach((item, idx) => {
       if(index === idx) {
@@ -111,11 +147,12 @@ export default class ScenicProduct extends React.Component {
       }
     })
     this.setState({
-      tabBarList: [...tabBarList]
+      tabBarList: [...tabBarList],
+      activeType: row.type
     })
   }
   render () {
-    const {problems, products, coreList, tabBarList} = this.state
+    const {problems, products, coreList, tabBarList, activeType} = this.state
     return (
       <>
         <ProductBanner customClassName={'scenic-banner'} title={'场景消息'} desc={'千人千面的智慧场景营销服务'} src={'/static/images/scenicProduct/banner.png'}></ProductBanner>
@@ -124,7 +161,6 @@ export default class ScenicProduct extends React.Component {
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
           <CoreContent
-            src={'/static/images/sms.png'}
             coreList={coreList}
             coreClassName={'scenic-core'}
           >
@@ -142,16 +178,16 @@ export default class ScenicProduct extends React.Component {
                   </div>
                   <div className="tab-content__right clearfix">
                     <div className="tab-content__right__item">
-                      <img src="/static/images/intelligenceSms/zhaohang.png" />
-                      <p>其他样例</p>
+                      <img src={this.barContent[activeType].src} />
+                      <p>{this.barContent[activeType].name}</p>
                     </div>
-                    <div className="tab-content__right__item">
+                    {/* <div className="tab-content__right__item">
                       <img src="/static/images/intelligenceSms/jianhang.png" />
                       <p>卡片</p>
                     </div>
                     <div  className="tab-content__right__img">
                       <img src="/static/images/intelligenceSms/jianhang-scale.png" />
-                    </div>
+                    </div> */}
                   </div>
               </div>
             </div>
