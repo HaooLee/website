@@ -13,27 +13,39 @@ export default class QuickAppProduct extends React.Component {
       coreList: [
         {
           title: '高效转化 ：数字化营销',
-          src: '/static/images/quickAppProduct/icon-zhuanhua.png'
+          src: '/static/images/quickAppProduct/icon-zhuanhua.png',
+          coreSrc: '/static/images/quickAppProduct/core1.png',
+          activeIcon: '/static/images/quickAppProduct/icon-zhuanhua.png'
         },
         {
           title: '产品专业 ：满足各类业务需求',
-          src: '/static/images/quickAppProduct/icon-zhuanye.png'
+          src: '/static/images/quickAppProduct/icon-zhuanye.png',
+          coreSrc: '/static/images/quickAppProduct/core2.png',
+          activeIcon: '/static/images/quickAppProduct/icon-zhuanye.png'
         },
         {
           title: '品牌提升 ：专业的品牌服务',
-          src: '/static/images/quickAppProduct/icon-pinpai.png'
+          src: '/static/images/quickAppProduct/icon-pinpai.png',
+          coreSrc: '/static/images/quickAppProduct/core3.png',
+          activeIcon: '/static/images/quickAppProduct/icon-pinpai.png'
         },
         {
           title: '营销拓客 ：全渠道推广获客',
-          src: '/static/images/quickAppProduct/icon-yingxiao.png'
+          src: '/static/images/quickAppProduct/icon-yingxiao.png',
+          coreSrc: '/static/images/quickAppProduct/core4.png',
+          activeIcon: '/static/images/quickAppProduct/icon-yingxiao.png'
         },
         {
           title: '运营管理 ：数据推动业务增长 ',
-          src: '/static/images/quickAppProduct/icon-yunying.png'
+          src: '/static/images/quickAppProduct/icon-yunying.png',
+          coreSrc: '/static/images/quickAppProduct/core5.png',
+          activeIcon: '/static/images/quickAppProduct/icon-yunying.png'
         },
         {
           title: '服务支持 ：专业运营支持 ',
-          src: '/static/images/quickAppProduct/icon-fuwu.png'
+          src: '/static/images/quickAppProduct/icon-fuwu.png',
+          coreSrc: '/static/images/quickAppProduct/core6.png',
+          activeIcon: '/static/images/quickAppProduct/icon-fuwu.png'
         }
       ],
       products: [
