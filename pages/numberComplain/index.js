@@ -17,7 +17,8 @@ export default class NumberComplain extends Component {
           type: 'personal'
         }
       ],
-      activeType: 'company'
+      activeType: 'company',
+      fileContent: {}
     }
   }
   headerItemClick = (idx, row) => {
@@ -34,8 +35,17 @@ export default class NumberComplain extends Component {
       activeType: row.type
     })
   }
+  fileChange = (type, ev) => {
+    const {fileContent} = this.state 
+    const val = ev.currentTarget.value
+    let idx = val.lastIndexOf('\\')
+    fileContent[type] = val.slice(idx+1)
+    this.setState({
+      fileContent
+    })
+  }
   render() {
-    const {headers, activeType} = this.state
+    const {headers, activeType, fileContent} = this.state
     return (
       <>
         <div className="banner">
@@ -81,22 +91,34 @@ export default class NumberComplain extends Component {
                       <input placeholder="身份证正面照" type="text" />
                       <div className="upload">
                         <img src="/static/images/numberSign/upload-icon.png" />
-                        <span>选择文件</span>
+                        <input className="file" onChange={this.fileChange.bind(this, 'idCard')} type="file" id="idCard"/>
+                        <label htmlFor="idCard">选择文件</label>
                       </div>
+                      {
+                        fileContent['idCard'] && <div className="file-content">{fileContent['idCard']}</div>
+                      }
                     </div>
                     <div className="form__item__input__item">
                       <input placeholder="号码归属证明" type="text" />
                       <div className="upload">
                         <img src="/static/images/numberSign/upload-icon.png" />
-                        <span>选择文件</span>
+                        <input className="file" onChange={this.fileChange.bind(this, 'numCard')} type="file" id="numCard"/>
+                        <label htmlFor="numCard">选择文件</label>
                       </div>
+                      {
+                        fileContent['numCard'] && <div className="file-content">{fileContent['numCard']}</div>
+                      }
                     </div>
                     <div className="form__item__input__item">
                       <input placeholder="其他证明" type="text" />
                       <div className="upload">
                         <img src="/static/images/numberSign/upload-icon.png" />
-                        <span>选择文件</span>
+                        <input className="file" onChange={this.fileChange.bind(this, 'otherCard')} type="file" id="otherCard"/>
+                        <label htmlFor="otherCard">选择文件</label>
                       </div>
+                      {
+                        fileContent['otherCard'] && <div className="file-content">{fileContent['otherCard']}</div>
+                      }
                     </div>
                   </div>  
                 </div>

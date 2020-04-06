@@ -1,8 +1,14 @@
 import {Component} from 'react'
+import Link from 'next/link'
 import SliderList from '@/components/sliderList'
 import styles from './index.less'
-
+import axios from 'axios'
 export default class News extends Component {
+  static async getInitialProps({Component, router, ctx}) {
+    const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/news/getinfo')
+    console.log(data.data)
+    return {news: data.data}
+  }
   constructor(props) {
     super(props)
     this.state = {
@@ -72,7 +78,8 @@ export default class News extends Component {
     })
   }
   render() {
-    const {news, list} = this.state
+    const {list} = this.state
+    const {news} = this.props
     return (
       <>
         <div className="banner">
@@ -85,23 +92,27 @@ export default class News extends Component {
           <ul className="news__content col-10">
             {news.map((item, idx) => (
               <li className="news__content__item clearfix" key={idx}>
-                <img className="news__content__item__img" src={item.src} />
+                <img className="news__content__item__img" src={'/static/images/news/company.png'} />
                 <div className="news__content__item__info">
-                  <p className="news__content__item__info__title">{item.title}</p>
-                  <p className="news__content__item__info__desc">{item.desc}</p>
+                  <p className="news__content__item__info__title">
+                    <Link href={`/newsDetail?id=${item.nid}`}>
+                      <a style={{color: '#000'}}>{item.news_title}</a>
+                    </Link>
+                  </p>
+                  <p className="news__content__item__info__desc">{item.news_des}</p>
                   <div className="news__content__item__info__footer">
                     <img src="/static/images/news/logo.png" />
-                    <span>泰迪资讯 | 2020年2月14日 </span>
+                    <span>泰迪资讯 | {item.news_time.replace(/\s[\x00-\xff]*/g,'')} </span>
                   </div>
                   <div className="news__content__item__info__footer--match">
                     <img src="/static/images/news/logo.png" />
                     <span className="news__content__item__info__footer--match__teddy">泰迪资讯</span>
-                    <span className="news__content__item__info__footer--match__time">2020年2月14日</span>
+                    <span className="news__content__item__info__footer--match__time">{item.news_time.replace(/\s[\x00-\xff]*/g,'')}</span>
                   </div>
                 </div>
               </li>
             ))}
-            <div className="load-more">加载更多</div>
+            {/* <div className="load-more">加载更多</div> */}
           </ul>
         </div>
         <style jsx>{styles}</style>

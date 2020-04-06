@@ -15,7 +15,8 @@ export default class NumberAuth extends Component {
       activeType: 'company',
       form: {},
       phoneError: false,
-      companyError: false
+      companyError: false,
+      emailError: false
     }
   }
   headerItemClick = (idx, row) => {
@@ -53,15 +54,22 @@ export default class NumberAuth extends Component {
       })
       return 
     }
+    if(type === 'email' && (/[\u4e00-\u9fa5]+/.test(val))) {
+      this.setState({
+        emailError: true
+      })
+      return 
+    }
     const {form} = this.state 
     form[type] = val 
     this.setState({
       form,
-      phoneError: false
+      phoneError: false,
+      emailError: false
     })
   }
   render() {
-    const {headers, activeType, form, phoneError, companyError} = this.state
+    const {headers, activeType, form, phoneError, companyError, emailError} = this.state
     return (
       <>
         <div className="banner">
@@ -121,8 +129,13 @@ export default class NumberAuth extends Component {
                 <div className="form__item form__item--required">
                   <div className="form__item__label">邮箱</div>
                   <div className="form__item__input">
-                    <input placeholder="请输入您的邮箱" onChange={this.formChange.bind(this, 'email')} type="text" />
+                    <input placeholder="请输入您的邮箱" value={form.email || ''} onChange={this.formChange.bind(this, 'email')} type="text" />
                   </div>
+                  {
+                    emailError && <div className="form__item__input--error">
+                    不能包含中文
+                    </div>
+                  }
                 </div>
                 <div className="form__item" onClick={this.formSubmit}>
                   <div className="form__item__btn">确认提交</div>

@@ -23,6 +23,7 @@
   .form {
     width: 100%;
     box-sizing: border-box;
+    
     &__item {
       padding-right: 0.72rem;
       margin-top: 0.8rem;
@@ -45,11 +46,15 @@
           left: 2.53rem;
           font-size: 12px;
         }
+        
         input {
           font-size: 0.32rem;
           height: 0.91rem;
           padding: 0.2rem;
           box-sizing: border-box;
+          &.file {
+            visibility: hidden;
+          }
         }
         &__code {
           width: 2.67rem;
