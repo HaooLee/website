@@ -1,8 +1,15 @@
 import {Component} from 'react'
 import SliderList from '@/components/sliderList'
 import styles from './index.less'
-
+import axios from 'axios'
 export default class NewsDetail extends Component {
+  static async getInitialProps({Component, router, ctx, req, query}) {
+    console.log(query)
+    const {id} = query
+    console.log(id)
+    const {data} = await axios.post('http://php.bjdglt.com:8091/V1.4/news/detail', {nid: id})
+    return {newsDeatail: data.data}
+  }
   constructor(props) {
     super(props)
     this.state = {
@@ -41,6 +48,7 @@ export default class NewsDetail extends Component {
   }
   render() {
     const {list} = this.state
+    const {newsDeatail} = this.props
     return (
       <>
         <div className="banner">
@@ -50,14 +58,14 @@ export default class NewsDetail extends Component {
         </div>
         <div className="w news clearfix">
           <SliderList list={list} clickCallback={this.clickCallback}></SliderList>
-          <div className="news__detail">
-            <p className="news__detail__title">开发者大会开发者大会开发者大会开发者大会</p>
+          <div className="news__detail col-10">
+            <p className="news__detail__title">{newsDeatail.news_title}</p>
             <div className="news__detail__company">
               <img src="/static/images/news/logo.png" />
-              <span>泰迪资讯 | 2020年2月14日 </span>
+              <span>泰迪资讯 | {newsDeatail.news_time.replace(/\s[\x00-\xff]*/g,'')} </span>
             </div>
             <div className="news__detail__content">
-              <p>开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会开发者大会</p>
+              <div dangerouslySetInnerHTML = {{ __html: newsDeatail.content }} ></div>
             </div>
           </div>
         </div>

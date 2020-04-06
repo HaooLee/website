@@ -12,13 +12,15 @@
 .news {
   margin-top: 30px;
   &__detail {
-    width: 930px;
+    // width: 930px;
     float: left;
-    margin-left: 80px;
+    padding-left: 80px;
+    box-sizing: border-box;
+    margin-bottom: 90px;
     &__title {
       color: #333333;
       font-size: 26px;
-      margin-top: 36px;
+      margin-top: 20px;
     }
     &__company {
       margin-top: 20px;
@@ -36,6 +38,21 @@
       color: #666666;
       font-size: 16px;
       line-height: 30px;
+    }
+  }
+}
+@import '../common.less';
+@import '../var.less';
+
+@media screen and (max-width: @MATCH_WIDTH) {
+
+  .news {
+    &__detail {
+      margin-bottom: 1.07rem;
+      padding-left: 0.8rem;
+      &__content {
+        margin-top: 0.8rem;
+      }
     }
   }
 }
