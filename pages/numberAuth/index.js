@@ -14,6 +14,7 @@ export default class NumberAuth extends Component {
       ],
       activeType: 'company'
     }
+    this.form = {}
   }
   headerItemClick = (idx, row) => {
     const {headers} = this.state
@@ -28,6 +29,13 @@ export default class NumberAuth extends Component {
       headers: [...headers],
       activeType: row.type
     })
+  }
+  formSubmit = () => {
+    console.log(this.form)
+  }
+  formChange = (type, ev) => {
+    const val = ev.currentTarget.value 
+    this.form[type] = val
   }
   render() {
     const {headers, activeType} = this.state
@@ -50,44 +58,44 @@ export default class NumberAuth extends Component {
             </div>
             <div className="complain__content">
              {activeType === 'company' &&  <div className="form">
-                <div className="form__item">
-                  <div className="form__item__label">企业名称</div>
-                  <div className="form__item__input">
-                    <input placeholder="请填写您希望认证的企业名称" type="text" />
-                  </div>
-                </div>
-                <div className="form__item">
+                <div className="form__item form__item--required">
                   <div className="form__item__label">认证人姓名</div>
                   <div className="form__item__input">
-                    <input placeholder="请填写您的姓名" type="text" />
+                    <input placeholder="请填写您的姓名" onChange={this.formChange.bind(this, 'name')} type="text" />
                   </div>
                 </div>
-                <div className="form__item">
+                <div className="form__item form__item--required">
                   <div className="form__item__label">认证企业全称</div>
                   <div className="form__item__input">
-                    <input placeholder="请输入您的企业全称" type="text" />
+                    <input placeholder="请输入您的企业全称" onChange={this.formChange.bind(this, 'company')} type="text" />
                   </div>
                 </div>
 
-                <div className="form__item">
+                <div className="form__item form__item--required">
                   <div className="form__item__label">联系电话</div>
                   <div className="form__item__input">
-                    <input placeholder="请留下您的联系电话，以便我们能够及时为您提供服务" type="text" />
+                    <input placeholder="请留下您的联系电话，以便我们能够及时为您提供服务" onChange={this.formChange.bind(this, 'phone')} type="text" />
                   </div>
                 </div>
-                <div className="form__item">
+                <div className="form__item form__item--required">
                   <div className="form__item__label">所属城市</div>
                   <div className="form__item__input">
-                    <input placeholder="请填写您的所属城市" type="text" />
+                    <input placeholder="请填写您的所属城市" onChange={this.formChange.bind(this, 'city')} type="text" />
                   </div>
                 </div>
-                <div className="form__item">
+                <div className="form__item form__item--required">
                   <div className="form__item__label">所属行业</div>
                   <div className="form__item__input">
-                    <input placeholder="请填写您的所属行业" type="text" />
+                    <input placeholder="请填写您的所属行业" onChange={this.formChange.bind(this, 'industy')} type="text" />
                   </div>
                 </div>
-                <div className="form__item">
+                <div className="form__item form__item--required">
+                  <div className="form__item__label">邮箱</div>
+                  <div className="form__item__input">
+                    <input placeholder="请输入您的邮箱" onChange={this.formChange.bind(this, 'email')} type="text" />
+                  </div>
+                </div>
+                <div className="form__item" onClick={this.formSubmit}>
                   <div className="form__item__btn">确认提交</div>
                 </div>
               </div>}

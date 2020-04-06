@@ -49,6 +49,14 @@
     display: flex;
     flex-direction: row;
     margin-top: 50px;
+    &--required {
+      .form__item__label:before {
+        content: '*';
+        display: inline-block;
+        color: red;
+        margin-right: 5px;
+      }
+    }
     &__label {
       width: 120px;
       padding-right: 40px;
@@ -113,6 +121,7 @@
       color: #fff;
       font-size: 20px;
       margin: 0 auto;
+      cursor: pointer;
     }
   }
 }
