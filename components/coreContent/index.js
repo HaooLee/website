@@ -4,9 +4,35 @@ import styles from './index.less'
 export default class CoreContent extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      coreList: (this.props.coreList || []).map((item, idx) => {
+        if(idx === 0) {
+          item.active = true
+        } else {
+          item.active = false
+        }
+        return item
+      } ),
+      src: this.props.coreList[0].coreSrc
+    }
+  }
+  coreHover = (row, index) => {
+    const {coreList} = this.state 
+    coreList.map((item, idx) => {
+      if(idx === index) {
+        item.active = true 
+      } else {
+        item.active = false
+      }
+    })
+    this.setState({
+      coreList,
+      src: row.coreSrc
+    })
   }
   render() {
-    const {coreList = [], src, listStyle={}, coreClassName=""} = this.props
+    const {listStyle={}, coreClassName=""} = this.props
+    const {coreList, src} = this.state
     return (
       <>
         <div className={`core-content w clearfix ${coreClassName}`}>
@@ -14,9 +40,9 @@ export default class CoreContent extends React.Component {
           <div className="core-content__list" style={listStyle}>
             {
               coreList.map((item, index) => (
-                <div key={index} className={`core-content__item  ${index === 0 ? 'active' : ''}`}>
+                <div key={index} className={`core-content__item  ${item.active ? 'active' : ''}`} onClick={this.coreHover.bind(this, item, index)}>
                   <div className="core-content__item__img-wrap">
-                    <img src={item.src}/>
+                    <img src={item.active ? item.activeIcon : item.src}/>
                   </div>
                   <p className="core-content__item__text">{item.title}</p>
                 </div>

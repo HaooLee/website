@@ -27,15 +27,21 @@ export default class NumberProduct extends Component {
       coreList: [
         {
           src: '/static/images/numberProduct/icon-jingzhunshibie.png',
-          title: '准确识别陌生电话来源，保障用户手机安全'
+          title: '准确识别陌生电话来源，保障用户手机安全',
+          coreSrc: '/static/images/numberProduct/core1.png',
+          activeIcon: '/static/images/numberProduct/icon-jingzhunshibie-active.png'
         },
         {
           src: '/static/images/numberProduct/icon-renzhengyonghu.png',
-          title: '为企业提供号码认证服务，进行有效品牌展示'
+          title: '为企业提供号码认证服务，进行有效品牌展示',
+          coreSrc: '/static/images/numberProduct/core2.png',
+          activeIcon: '/static/images/numberProduct/icon-renzhengyonghu-active.png'
         },
         {
           src: '/static/images/numberProduct/icon-xunihaoma.png',
-          title: '支持400、虚拟号段、个人号段'
+          title: '支持400、虚拟号段、个人号段',
+          coreSrc: '/static/images/numberProduct/core3.png',
+          activeIcon: '/static/images/numberProduct/icon-xunihaoma-active.png'
         }
       ],
       products: [
@@ -69,7 +75,6 @@ export default class NumberProduct extends Component {
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
           <CoreContent
-            src={'/static/images/sms.png'}
             coreList={coreList}
             coreClassName={'number-product-core'}
           ></CoreContent>
@@ -84,13 +89,13 @@ export default class NumberProduct extends Component {
             </div>
             <div className="tab-content__right clearfix">
               <div className="tab-content__right__item">
-                <img src="/static/images/numberProduct/apply-phone1.png" />
-                <p>其他样例</p>
+                <img src="/static/images/numberProduct/apply.png" />
+                {/* <p>其他样例</p> */}
               </div>
-              <div className="tab-content__right__item">
+              {/* <div className="tab-content__right__item">
                 <img src="/static/images/numberProduct/apply-phone2.png" />
                 <p>卡片</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </SectionCard>
