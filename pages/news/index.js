@@ -3,6 +3,12 @@ import SliderList from '@/components/sliderList'
 import styles from './index.less'
 
 export default class News extends Component {
+  static async getInitialProps({ req }) {
+    console.log(req)
+    return { }
+  }
+
+
   constructor(props) {
     super(props)
     this.state = {
@@ -58,8 +64,10 @@ export default class News extends Component {
       ]
     }
   }
+
+
   clickCallback = (index) => {
-    const {list} = this.state 
+    const {list} = this.state
     list.forEach((item, idx) => {
       if(index === idx) {
         item.active = true
