@@ -81,9 +81,12 @@ export default class Join extends Component {
   }
 
   handleClick=(item, index)=>{
-    console.log(item)
     const {allJoins} = this.state
-    item.opened = !item.opened
+    const a = !item.opened
+    allJoins.forEach(i=>{
+      i.opened = false
+    })
+    item.opened = a
     this.setState({
       allJoins
     })
