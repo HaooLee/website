@@ -2,8 +2,14 @@ import {Component} from 'react'
 import SectionCard from '@/components/sectionCard'
 import ProductAdvantage from '@/components/productAdvantage'
 import styles from './index.less'
-
+import axios from 'axios'
 export default class Join extends Component {
+  static async getInitialProps({Component, router, ctx}) {
+    const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/recruit/getinfo', {
+      'job_cate': 0
+    })
+    return {allJoins: data.data}
+  }
   constructor(props) {
     super(props)
     this.state = {
@@ -60,6 +66,7 @@ export default class Join extends Component {
   }
   switchTabBar = (idx) => {
     const {tabBar} = this.state 
+    const {allJoins} = this.props
     tabBar.forEach((item, index) => {
       if(index === idx) {
         item.active = true 
@@ -73,6 +80,7 @@ export default class Join extends Component {
   }
   render() {
     const {tabBar, products} = this.state
+    const {allJoins} = this.props
     return (
       <>
         <div className="banner">
@@ -92,9 +100,14 @@ export default class Join extends Component {
           <div className="positions__content">
             <div className="w">
               <ul className="tab-bar__content clearfix">
-                <li className="tab-bar__content__item">
+                {
+                  allJoins.map((item, idx) => <li className="tab-bar__content__item" key={idx}>
+                    <a>{item.title}</a>
+                  </li> )
+                }
+                {/* <li className="tab-bar__content__item">
                   <a>高级销售经理（运营商板块）</a>
-                  {/* <div className="tab-bar__content__item__detail">
+                  <div className="tab-bar__content__item__detail">
                     <div>
                       <p>工作地点：</p>
                       <p>工作地点：北京市</p>
@@ -115,29 +128,8 @@ export default class Join extends Component {
                         <li>负责三大运营商智能短信的整体营销，指定周期性的营销方案</li>
                       </ol>
                     </div>
-                  </div> */}
-                </li>
-                <li>
-                  <a>渠道经理</a>
-                </li>
-                <li>
-                  <a>Android研发经理</a>
-                </li>
-                <li>
-                  <a>Android负责人</a>
-                </li>
-                <li>
-                  <a>平台产品专家/平台产品总监</a>
-                </li>
-                <li>
-                  <a>售前产品</a>
-                </li>
-                <li>
-                  <a>高级项目经理</a>
-                </li>
-                <li>
-                  <a>大客户销售（银行版图）</a>
-                </li>
+                  </div>
+                </li> */}
               </ul>
             </div>
           </div>
