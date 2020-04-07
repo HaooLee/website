@@ -8,6 +8,7 @@ export default class Join extends Component {
     const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/recruit/getinfo', {
       'job_cate': 0
     })
+    console.log(data.data)
     return {allJoins: data.data}
   }
   constructor(props) {
@@ -63,13 +64,13 @@ export default class Join extends Component {
         }
       ]
     }
+    this.state.allJoins = props.allJoins
   }
   switchTabBar = (idx) => {
-    const {tabBar} = this.state 
-    const {allJoins} = this.props
+    const {tabBar, allJoins} = this.state
     tabBar.forEach((item, index) => {
       if(index === idx) {
-        item.active = true 
+        item.active = true
       } else {
         item.active = false
       }
@@ -78,9 +79,21 @@ export default class Join extends Component {
       tabBar: [...tabBar]
     })
   }
+
+  handleClick=(item, index)=>{
+    console.log(item)
+    const {allJoins} = this.state
+    item.opened = !item.opened
+    this.setState({
+      allJoins
+    })
+
+  }
+
   render() {
-    const {tabBar, products} = this.state
-    const {allJoins} = this.props
+    const {tabBar,allJoins, products} = this.state
+    const currentId = tabBar.filter((i)=>i.active)[0].id
+    // console.log(allJoins)
     return (
       <>
         <div className="banner">
@@ -101,41 +114,55 @@ export default class Join extends Component {
             <div className="w">
               <ul className="tab-bar__content clearfix">
                 {
-                  allJoins.map((item, idx) => <li className="tab-bar__content__item" key={idx}>
-                    <a>{item.title}</a>
-                  </li> )
+                  currentId == 0 ?allJoins.map((item, idx) => <li className="tab-bar__content__item" key={idx}>
+                    <p className="title" onClick={()=> this.handleClick(item,idx)}>{item.title}</p>
+                    {
+                      item.opened && <div className="tab-bar__content__item">
+                        <div className="tab-bar__content__item__detail">
+                          <div>
+                            <p className="work-place">工作地点：</p>
+                            <p className="work-place-content"> {item.working_place}</p>
+                          </div>
+                          <div>
+                            <p className="work-duty">岗位职责：</p>
+                            <p className="work-duty-content">{item.duty}</p>
+                          </div>
+                          <div>
+                            <p className="work-require">应职要求：</p>
+                            <p className="work-require-content">{item.requier}</p>
+                          </div>
+                        </div>
+                      </div>
+                    }
+                  </li> ):allJoins.filter(i=>i.job_cate == currentId).map((item, idx) => <li className="tab-bar__content__item" key={idx}>
+                    <p className="title" onClick={()=> this.handleClick(item,idx)}>{item.title}</p>
+                    {
+                      item.opened && <div className="tab-bar__content__item">
+                        <div className="tab-bar__content__item__detail">
+                          <div>
+                            <p className="work-place">工作地点：</p>
+                            <p className="work-place-content"> {item.working_place}</p>
+                          </div>
+                          <div>
+                            <p className="work-duty">岗位职责：</p>
+                            <p className="work-duty-content">{item.duty}</p>
+                          </div>
+                          <div>
+                            <p className="work-require">应职要求：</p>
+                            <p className="work-require-content">{item.requier}</p>
+                          </div>
+                        </div>
+                      </div>
+                    }
+                  </li>)
                 }
-                {/* <li className="tab-bar__content__item">
-                  <a>高级销售经理（运营商板块）</a>
-                  <div className="tab-bar__content__item__detail">
-                    <div>
-                      <p>工作地点：</p>
-                      <p>工作地点：北京市</p>
-                    </div>
-                    <div>
-                      <p>岗位职责：</p>
-                      <ol>
-                        <li>负责三大运营商智能短信的整体营销，指定周期性的营销方案</li>
-                        <li>负责三大运营商智能短信的整体营销，指定周期性的营销方案</li>
-                        <li>负责三大运营商智能短信的整体营销，指定周期性的营销方案</li>
-                      </ol>
-                    </div>
-                    <div>
-                      <p>应职要求：</p>
-                      <ol>
-                        <li>负责三大运营商智能短信的整体营销，指定周期性的营销方案</li>
-                        <li>负责三大运营商智能短信的整体营销，指定周期性的营销方案</li>
-                        <li>负责三大运营商智能短信的整体营销，指定周期性的营销方案</li>
-                      </ol>
-                    </div>
-                  </div>
-                </li> */}
+                {/*  */}
               </ul>
             </div>
           </div>
           <SectionCard title={'企业文化'} bgc={'#F8FAFF'}>
-            <ProductAdvantage 
-              products={products} 
+            <ProductAdvantage
+              products={products}
               customClassName={'join-product__item'}
             ></ProductAdvantage>
           </SectionCard>

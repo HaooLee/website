@@ -46,7 +46,7 @@
         float: left;
         margin-right: 30px;
         margin-bottom: 30px;
-        a {
+        p.title {
           font-size: 20px;
           color: #999999;
           line-height: 56px;
@@ -55,9 +55,25 @@
           text-align: center;
           display: inline-block;
           cursor: pointer;
-          &:active {
+          &:hover {
             color: #355EA6;
             box-shadow: 1px 0px 10px rgba(0, 0, 0, .2);
+          }
+        }
+        .tab-bar__content__item__detail{
+          .work-place,.work-duty,.work-require {
+            padding:0 20px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-top: 10px;
+          }
+          .work-place-content,.work-duty-content,.work-require-content{
+            padding:0 20px;
+            color:#666;
+            line-height: 20px;
+            margin-bottom: 20px;
+            word-break: break-all;
           }
         }
       }
@@ -117,16 +133,24 @@
         }
         li {
           width: 4.32rem;
-          height: 1.17rem;
           margin-bottom: 0;
           margin-right: 0;
-          &:nth-of-type(even) {
-            justify-self: end;
-          }
-          a {
-            font-size: 0.32rem;
-            line-height: 1.17rem;
-            height: 1.17rem;
+          .tab-bar__content__item__detail{
+            .work-place,.work-duty,.work-require {
+              padding:0 20px;
+              font-size: 18px;
+              font-weight: bold;
+              margin-bottom: 10px;
+              margin-top: 10px;
+            }
+            .work-place-content,.work-duty-content,.work-require-content{
+              padding:0 20px;
+              color:#666;
+              font-size: 14px;
+              line-height: 20px;
+              margin-bottom: 20px;
+              word-break: break-all;
+            }
           }
         }
       }
