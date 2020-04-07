@@ -5,61 +5,6 @@
 
 .news {
   margin-top: 30px;
-  a{
-    text-decoration: none;
-  }
-  &__content {
-    float: left;
-    padding: 0 31px;
-    box-sizing: border-box;
-    &__item {
-      cursor: pointer;
-      width: 100%;
-      box-sizing: border-box;
-      background:#fff;
-      border-radius: 3px;
-      padding: 30px;
-      margin-bottom: 30px;
-      display: flex;
-      flex-direction: row;
-      box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.15);
-
-      &__img {
-        width: 440px;
-        height: 260px;
-        float: left;
-      }
-      &__info {
-        float: left;
-        width: 449px;
-        margin-left: 30px;
-        &__title {
-          color: #333333;
-          font-size: 22px;
-          margin-bottom: 36px;
-        }
-        &__desc {
-          font-size: 16px;
-          color: #666666;
-          line-height: 22px;
-        }
-        &__footer {
-          color: #999999;
-          font-size: 16px;
-          margin-top: 112px;
-          &--match {
-            display: none;
-          }
-          img {
-            width: 29px;
-            height: 24px;
-            vertical-align: middle;
-            margin-right: 6px;
-          }
-        }
-      }
-    }
-  }
 }
 
 .load-more {
@@ -75,73 +20,7 @@
 @media screen and (max-width: @MATCH_WIDTH) {
   .news {
     margin-top: 0;
-    &__content {
-      padding: 0 0.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      &__item {
-        &:before {
-          display: none;
-        }
-        &:after {
-          display: none;
-        }
-        // width: 9.15rem;
-        height: 3.36rem;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row-reverse;
-        padding: 0.43rem;
-        margin-bottom: 0.53rem;
-        position: relative;
-        &__img {
-          width: 1.33rem;
-          height: 1.33rem;
-          position: absolute;
-          bottom: 0.43rem;
-        }
-        &__info {
-          width: auto;
-          margin-left: 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column-reverse;
-          &__title {
-            margin-bottom: 0;
-            font-size: 0.37rem;
-            margin-bottom: auto;
-          }
-          &__desc {
-            display: none;
-          }
-          &__footer {
-            display: none;
-            &--match {
-              margin-bottom: auto;
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              font-size: 0.32rem;
-              img {
-                width: 0.61rem;
-                height: 0.51rem;
-                margin-right: 0.3rem;
-              }
-              &__teddy {
-                color: #355EA6;
-              }
-              &__time {
-                margin-left: auto;
-                color: #999999;
-              }
-            }
-          }
-        }
-      }
-    }
   }
-
   .load-more {
     font-size: 0.37rem;
     margin-bottom: 1.32rem;

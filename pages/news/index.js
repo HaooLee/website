@@ -3,6 +3,7 @@ import Link from 'next/link'
 import SliderList from '@/components/sliderList'
 import styles from './index.less'
 import axios from 'axios'
+import NewsCard from '@/components/newsCard'
 export default class News extends Component {
   static async getInitialProps({Component, router, ctx}) {
     const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/news/getinfo')
@@ -60,28 +61,7 @@ export default class News extends Component {
           <SliderList list={list} clickCallback={this.clickCallback}></SliderList>
           <ul className="news__content col-10">
             {news.map((item, idx) => (
-              <Link href={`/newsDetail?id=${item.nid}`} passHref>
-                <a>
-                  <li className="news__content__item clearfix" key={idx}>
-                    <img className="news__content__item__img" src={'/static/images/news/company.png'} />
-                    <div className="news__content__item__info">
-                      <p className="news__content__item__info__title">
-                        <p style={{color: '#000'}}>{item.news_title}</p>
-                      </p>
-                      <p className="news__content__item__info__desc">{item.news_des}</p>
-                      <div className="news__content__item__info__footer">
-                        <img src="/static/images/news/logo.png" />
-                        <span>泰迪资讯 | {item.news_time.replace(/\s[\x00-\xff]*/g,'')} </span>
-                      </div>
-                      <div className="news__content__item__info__footer--match">
-                        <img src="/static/images/news/logo.png" />
-                        <span className="news__content__item__info__footer--match__teddy">泰迪资讯</span>
-                        <span className="news__content__item__info__footer--match__time">{item.news_time.replace(/\s[\x00-\xff]*/g,'')}</span>
-                      </div>
-                    </div>
-                  </li>
-                </a>
-              </Link>
+              <NewsCard item={item} key={idx}></NewsCard>
             ))}
             {/* <div className="load-more">加载更多</div> */}
           </ul>

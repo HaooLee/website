@@ -5,10 +5,14 @@ import SectionCard from '@/components/sectionCard'
 import SolutionCard from '@/components/solutionCard'
 import CompanyLogo from '@/components/companyLogo'
 import NewsCard from '@/components/newsCard'
-
+import axios from 'axios'
 // import {FormattedMessage} from 'react-intl'
 
 export default class Index extends React.Component {
+  static async getInitialProps({Component, router, ctx}) {
+    const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/news/getinfo')
+    return {news: data.data}
+  }
   state ={
     companies:[
       {src:'/static/images/京东@2x.png'},
@@ -27,6 +31,7 @@ export default class Index extends React.Component {
   }
   render () {
     const {companies} = this.state
+    const {news} = this.props
     return (
       <>
         <Banner />
@@ -126,8 +131,7 @@ export default class Index extends React.Component {
 
         <SectionCard title={'热点资讯'}>
           <div className="news-wrap">
-            <NewsCard company={"泰迪资讯"} date={'2020年2月14日'} logoSrc={"/static/images/图层 18@2x.png"} desc={"这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动这些成功的企业正在使用泰迪熊移动"} />
-
+            {news.map((item, idx) => <NewsCard item={item} key={idx} />)}
           </div>
         </SectionCard>
         <style jsx>{styles}</style>
