@@ -95,45 +95,152 @@ export default class Header extends React.Component {
       name: '保险行业',
       business:[
         {
-          src:'',
-          link:''
+          src:'/static/images/header/矢量智能对象@2x.png',
+          link:'',
+          style:{
+            width: 132,
+            height: 25
+          }
         }
       ]
     },
     {
       name: '运营商',
-      active: false,
-      type: 'operator'
+      business:[
+        {
+          src:'/static/images/header/联通白@2x.png',
+          link:'',
+          style:{
+            width: 64,
+            height: 35,
+            marginRight:31,
+          }
+        },
+        {
+          src:'/static/images/header/移动白@2x.png',
+          link:'',
+          style:{
+            width: 100,
+            height: 31,
+            marginRight: 90,
+          }
+        },
+        {
+          src:'/static/images/header/中国电信白 2@2x.png',
+          link:'',
+          style:{
+            width: 30,
+            height: 37,
+            marginRight: 4,
+
+          }
+        },
+        {
+          src:'/static/images/header/21cn@2x.png',
+          link:'',
+          style:{
+            width: 37,
+            height: 37,
+            marginRight: 24,
+          }
+        },
+        {
+          src:'/static/images/header/中互移白 2@2x.png',
+          link:'',
+          style:{
+            width: 148,
+            height: 37,
+          }
+        },
+
+      ]
     },
     {
       name: '在线教育',
-        active: false,
-      type: 'education'
+      business:[
+        {
+          src:'/static/images/header/vipkid@2x.png',
+          link:'',
+          style:{
+            width: 92,
+            height: 39
+          }
+        }
+      ]
     },
     {
       name: '新零售',
-        active: false,
-      type: 'resale'
+      business:[
+        {
+          src:'/static/images/header/屈臣氏白@2x.png',
+          link:'',
+          style:{
+            width: 76,
+            height: 36
+          }
+        }
+      ]
     },
     {
       name: 'OTA',
-        active: false,
-      type: 'OTA'
+      business:[
+        {
+          src:'/static/images/header/携程@2x.png',
+          link:'',
+          style:{
+            width: 93,
+            height: 35
+          }
+        }
+      ]
     },
     {
       name: '本地生活',
-        active: false,
-      type: 'live'
+      business:[
+        {
+          src:'/static/images/header/美团白 2@2x.png',
+          link:'',
+          style:{
+            width: 58,
+            height: 52,
+            marginRight: 24,
+          }
+        },
+        {
+          src:'/static/images/header/饿了么白@2x.png',
+          link:'',
+          style:{
+            width: 91,
+            height: 23
+          }
+        },
+      ]
     },
     {
       name: '电商',
-        active: false,
-      type: 'e-commerce'
+      business:[
+        {
+          src:'/static/images/header/途虎养车 2@2x.png',
+          link:'',
+          style:{
+            width: 108,
+            height: 22
+          }
+        }
+      ]
     },
     {
       name: '互联网金融',
-        active: false,
-      type: 'finance'
+      business:[
+        {
+          src:'/static/images/header/度小满@2x.png',
+          link:'',
+          style:{
+            width: 110,
+            height: 45
+          }
+        }
+      ]
     }
     ],
     isActive:false
@@ -245,7 +352,7 @@ export default class Header extends React.Component {
                                         <a className="business-title">{i.name}</a>
                                       </Link>
                                       {
-
+                                        i.business && i.business.map((item, index) => <img style={item.style} src={item.src} alt=""/>)
                                       }
                                     </div>
                                   )

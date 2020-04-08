@@ -146,7 +146,6 @@ export default class Footer extends React.Component {
                       <div className="friendly">
                         <a href="http://www.le.com/">乐视</a>
                       </div>
-
                       <div className="friendly">
                         <a href="http://www.chinatelecom.com.cn/">中国电信</a>
                       </div>
