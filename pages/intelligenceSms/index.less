@@ -2,7 +2,8 @@
   margin-bottom: 90px;
 }
 .tab-content {
-  margin: 90px 0;
+  width: 1000px;
+  margin: 90px auto;
   position: relative;
   &__left {
     float: left;
@@ -10,11 +11,16 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    p {
+    &__desc {
       color: #666;
       font-size: 18px;
       line-height: 2;
     }
+    // p {
+    //   color: #666;
+    //   font-size: 18px;
+    //   line-height: 2;
+    // }
     &__btn {
       width:187px;
       height:46px;
@@ -73,14 +79,15 @@
   .tab-content {
     display: flex;
     flex-direction: row-reverse;
-    margin: 0.8rem 0 1.07rem 0;
+    margin: 0.8rem auto 1.07rem auto;
+    width: 100%;
     &__left {
       position: initial;
       width: auto;
       transform: none;
       margin-top: 0.85rem;
-      p {
-        font-size: 0.32rem;
+      &__desc {
+        font-size: 14px;
       }
       &__btn {
         width: 3.52rem;
@@ -92,7 +99,7 @@
       }
     }
     &__right {
-      margin-right: 0.5rem;
+      // margin-right: 0.5rem;
       &__item {
         &:nth-child(1) {
           img {

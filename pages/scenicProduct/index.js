@@ -92,48 +92,59 @@ export default class ScenicProduct extends React.Component {
         }
       ],
       tabBarList: [{
-        name: '卡片',
+        name: '文本消息',
         active: true,
+        type: 'text'
+      }, {
+        name: '卡片消息',
+        active: false,
         type: 'card'
       }, {
-        name: '多图文',
+        name: '多图文消息',
         active: false,
         type: 'more-pic-text'
       }, {
-        name: '视频',
-        active: false,
-        type: 'video'
-      }, {
-        name: '音频',
-        active: false,
-        type: 'audio'
-      }, {
-        name: '位置快应用',
+        name: '快应用消息',
         active: false,
         type: 'quick-app'
       }],
       activeType: 'card'
     }
     this.barContent = {
+      'text': {
+        src: '/static/images/scenicProduct/card.png',
+        name: '文本消息',
+        desc: <div>
+          <p>低成本，多字数，突破传统短信70字符限制，满足企业长短信需求</p>
+          <p>厂商报备，过审无拦截</p>
+          <p>企业认证，品牌曝</p>
+        </div>
+      },
       'card': {
         src: '/static/images/scenicProduct/card.png',
-        name: '卡片'
+        name: '卡片消息',
+        desc: <div>
+          <p>优化展现形式，场景化呈现</p>
+          <p>降低用户阅读成本，提升用户体验</p>
+          <p>搭配按钮增加业务入口，提高用户转化</p>
+        </div>
       },
       'more-pic-text': {
         src: '/static/images/scenicProduct/more-pic-text.png',
-        name: '多图文'
-      },
-      'video': {
-        src: '/static/images/scenicProduct/video.png',
-        name: '视频'
-      },
-      'audio': {
-        src: '/static/images/scenicProduct/audio.png',
-        name: '音频'
+        name: '多图文消息',
+        desc: <div>
+          <p>多图文展现形式，视觉体验佳</p>
+          <p>展示形态满足用户点击习惯，转化效果好</p>
+        </div>
       },
       'quick-app': {
         src: '/static/images/scenicProduct/quick-app.png',
-        name: '位置快应用'
+        name: '快应用消息',
+        desc: <div>
+          <p>基于用户场景，下发快应用消息</p>
+          <p>短链路，强留存</p>
+          <p>一键直达快应用</p>
+        </div>
       }
     }
   }
@@ -171,8 +182,8 @@ export default class ScenicProduct extends React.Component {
               <TabBarCard list={tabBarList} customClassName={'scenic-tab-bar'} clickCallback={this.clickCallback}></TabBarCard>
               <div className="tab-content clearfix">
                   <div className="tab-content__left">
-                    <div>
-                      <p>文案文案文案文案文案文案 文案文案文案文案文案文案文案文 文案文案文案文案文案文案文案文案文 文案文案文案文案文案文案文案 文案文案文案文案文案文案文案文案文 </p>
+                    <div className="tab-content__left__desc">
+                      {this.barContent[activeType] ? this.barContent[activeType].desc : ''}
                       <div className="tab-content__left__btn">马上合作</div>
                     </div>
                   </div>
