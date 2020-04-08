@@ -44,7 +44,7 @@ export default class Banner extends React.Component {
       <div className="carousel">
         <div className="w banner-wrap clearfix">
           <h1>国内专业的智慧场景生态服务商</h1>
-          <p className="we-can">我们可以帮助您</p>
+          <span className="we-can">我们可以帮助您</span>
           <TextTransform texts={['提升转化效果','增加品牌曝光']}/>
 
           <div className="buttons clearfix">

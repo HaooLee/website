@@ -35,7 +35,7 @@ export default class Index extends React.Component {
     return (
       <>
         <Banner />
-        <section>
+        <section style={{backgroundColor:'#f7f7f7'}}>
           <div className="w product">
            <div className="product__desc">
              <div className="card">
@@ -56,7 +56,6 @@ export default class Index extends React.Component {
              </div>
              <div className="card">
                <p className="title">快应用服务</p>
-               <p className="desc">快应用场景助手</p>
 
              </div>
 

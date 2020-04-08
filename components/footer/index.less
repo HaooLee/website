@@ -101,6 +101,12 @@
       .company__item {
         position: relative;
         float: left;
+        &.company__link{
+          width: 250px;
+          ul {
+            width: 100%;
+          }
+        }
         li:first-child {
           margin-bottom: 40px;
           height: 40px;
@@ -125,17 +131,15 @@
           background-color: #fff;
         }
         &:not(:last-child){
-          margin-right: 120px;
-        }
-        &:last-child {
-          width: 100px;
+          margin-right: 70px;
         }
       }
+
     }
     .info{
       width: 370px;
       float: left;
-      margin-right: 100px;
+      margin-right: 40px;
     }
   }
 
