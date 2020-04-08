@@ -7,18 +7,18 @@ export default class Header extends React.Component {
 
 
   state = {
-    routers:[
+    routes:[
       {
         title:"首页",
         link:"/",
         enable:true,
-        routers:[]
+        routes:[]
       },
       {
         title:'产品',
         link:'/',
         enable:true,
-        routers:[
+        routes:[
           {
             title:"智能短信",
             link:"/intelligenceSms",
@@ -71,7 +71,7 @@ export default class Header extends React.Component {
         title:'关于泰迪熊移动',
         link:'/about',
         enable:true,
-        routers: [
+        routes: [
           {
             title:"公司",
             link:"/about",
@@ -90,40 +90,89 @@ export default class Header extends React.Component {
         ]
       }
       ],
-    secEle:[],
+    customers: [
+    {
+      name: '保险行业',
+      business:[
+        {
+          src:'',
+          link:''
+        }
+      ]
+    },
+    {
+      name: '运营商',
+      active: false,
+      type: 'operator'
+    },
+    {
+      name: '在线教育',
+        active: false,
+      type: 'education'
+    },
+    {
+      name: '新零售',
+        active: false,
+      type: 'resale'
+    },
+    {
+      name: 'OTA',
+        active: false,
+      type: 'OTA'
+    },
+    {
+      name: '本地生活',
+        active: false,
+      type: 'live'
+    },
+    {
+      name: '电商',
+        active: false,
+      type: 'e-commerce'
+    },
+    {
+      name: '互联网金融',
+        active: false,
+      type: 'finance'
+    }
+    ],
     isActive:false
   }
 
-  mouseenterHandler = (routers)=>{
+  mouseenterHandler = (i)=>{
+    // if(!i.routes || i.routes.length === 0) return
+    const { routes } = this.state
+    i.opened = true
     this.setState({
-      secEle:routers.map((i, idx)=><div style={{padding:20}} key={idx}>
-        <Link href={i.link}><a className="link" style={{color:'#fff'}}>{i.title}</a></Link>
-      </div>)
+      routes
     })
   }
 
-  mouseLeaveHandler = ()=>{
+  mouseLeaveHandler = (i)=>{
+    // if(!i.routes || i.routes.length === 0) return
+    const { routes } = this.state
+    i.opened = false
     this.setState({
-      secEle:[]
+      routes
     })
   }
 
   handleCollapseClick(){
-    const {routers} = this.state
+    const {routes} = this.state
     const { isActive } = this.state
-    routers.forEach(i=>i.opened = false)
+    routes.forEach(i=>i.opened = false)
     this.setState({
       isActive:!isActive,
-      routers: routers,
+      routes: routes,
     })
   }
 
   handleMenuClick(i,idx){
-    const {routers} = this.state
-    routers.forEach(item=>{
+    const {routes} = this.state
+    routes.forEach(item=>{
       if(i != item)item.opened = false
     })
-    if(i.routers && i.routers.length > 0){
+    if(i.routes && i.routes.length > 0){
       i.opened = !i.opened
     }else {
       this.setState({
@@ -132,7 +181,7 @@ export default class Header extends React.Component {
     }
 
     this.setState({
-      routers: routers,
+      routes: routes,
     })
   }
   handleMaskClick(e){
@@ -158,7 +207,7 @@ export default class Header extends React.Component {
   }
 
   render() {
-    const {routers, secEle,isActive} =  this.state
+    const {routes, customers,isActive} =  this.state
     return (
       <>
         <header>
@@ -166,15 +215,53 @@ export default class Header extends React.Component {
             <a href="https://www.teddymobile.cn/" className="logo" title="泰迪熊移动">泰迪熊移动</a>
             <ul className="nav">
               {
-                routers.map((i,idx)=>{
+                routes.map((i,idx)=>{
                   return (
-                    <li className="nav-item" key={idx} onMouseEnter={e => this.mouseenterHandler(i.routers || [])}>
-                        <Link href={i.routers && i.routers.length > 0 ?'':i.link}><a>{i.title}</a></Link>
+                    <li className="nav-item" key={idx} onMouseEnter={e => this.mouseenterHandler(i)} onMouseLeave={e => this.mouseLeaveHandler(i)}>
+                      <Link href={i.link}><a>{i.title}</a></Link>
+                      {
+                        idx !== 3 ? ( //客户成功故事与其他不一样
+                          (i.routes && i.routes.length > 0 ) &&
+                          <ul className="nav-item-sec" style={{height: i.opened? i.routes.length * 60 : 0,width: idx === 6 ? '100%': 193}}>
+                            {
+                              i.routes.map((item, index)=>{
+                                return (
+                                  <li key={index}>
+                                    <Link href={item.link} key={index}>
+                                      <a>{item.title}</a>
+                                    </Link>
+                                  </li>)
+                              })
+                            }
+                          </ul>
+                        ):(
+                          <div className="customers-wrap" style={{height: i.opened? 516:0}}>
+                            <div className="w">
+                              {
+                                customers.map((i, idx)=>{
+                                  return (
+                                    <div className="business">
+                                      <Link href={'/case'}>
+                                        <a className="business-title">{i.name}</a>
+                                      </Link>
+                                      {
+
+                                      }
+                                    </div>
+                                  )
+                                })
+                              }
+                            </div>
+                          </div>
+                        )
+                      }
                     </li>
                   )
                 })
               }
             </ul>
+
+
 
             <div className={`collapse-button ${isActive?'collapse-active' : ''}` } onClick={e=>{this.handleCollapseClick()}} >
               <span className="icon-bar" ></span>
@@ -184,16 +271,16 @@ export default class Header extends React.Component {
             <div className={`mask ${isActive? 'active':''}`} onClick={ e =>this.handleMaskClick(e) }>
               <ul className={`mobile-nav`}>
                 {
-                  routers.map((i,idx)=>{
+                  routes.map((i,idx)=>{
                     return (
                       <li className="mobile-nav-item" key={idx}>
-                        <Link href={i.routers && i.routers.length > 0 ?'':i.link} passHref><a onClick={() => this.handleMenuClick(i, idx)}>{i.title}</a></Link>
+                        <Link href={i.routes && i.routes.length > 0 ?'':i.link} passHref><a onClick={() => this.handleMenuClick(i, idx)}>{i.title}</a></Link>
 
-                        {i.routers && i.routers.length > 0 && <span className={`arrow  ${i.opened? 'rotate':''}`}></span>}
+                        {i.routes && i.routes.length > 0 && <span className={`arrow  ${i.opened? 'rotate':''}`}></span>}
                         {
-                          i.routers && i.routers.length > 0 && (<ul style={{overflow:'hidden',transition:'all linear .4s',height: i.opened?i.routers.length * 61:0}}>
+                          i.routes && i.routes.length > 0 && (<ul style={{overflow:'hidden',transition:'all linear .4s',height: i.opened?i.routes.length * 61:0}}>
                               {
-                                i.routers.map((item, index)=><li style={{paddingLeft:20,borderTop:'1px solid #ccc',backgroundColor:'#eee'}} key={index}>
+                                i.routes.map((item, index)=><li style={{paddingLeft:20,borderTop:'1px solid #ccc',backgroundColor:'#eee'}} key={index}>
                                   <Link href={item.link} passHref><a onClick={e=>this.setState({isActive:false})}>{item.title}</a></Link>
                                 </li>)
                               }
@@ -204,13 +291,6 @@ export default class Header extends React.Component {
                   })
                 }
               </ul>
-            </div>
-          </div>
-          <div className="header-content-sec" onMouseLeave={e=> this.mouseLeaveHandler()}>
-            <div className="w sec-wrap">
-              {
-                secEle
-              }
             </div>
           </div>
         </header>
