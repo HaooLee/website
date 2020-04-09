@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo '开始拉取git代码'
 
