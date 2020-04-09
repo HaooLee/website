@@ -251,7 +251,7 @@ export default class Case extends Component {
       <>
         <div className="banner">
           <div className="banner__text w">
-            这些成功的企业正在使用 泰迪熊移动
+            这些成功的企业正在使用泰迪熊移动
           </div>
         </div>
         <div className="w cases clearfix">

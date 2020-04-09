@@ -96,6 +96,7 @@ export default class DspProduct extends Component {
           <ProductAdvantage
             products={products}
             customClassName={'dsp-product__item'}
+            parentClassName={'dsp-product'}
           ></ProductAdvantage>
         </SectionCard>
         <SectionCard title={'帮你解决'} bgc={"#F8FAFF"} >

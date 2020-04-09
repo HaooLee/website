@@ -6,10 +6,10 @@ export default class ProductAdvantage extends React.Component {
     super(props)
   }
   render() {
-    const {products = [], customStyle={}, customClassName=''} = this.props
+    const {products = [], customClassName='', parentClassName=''} = this.props
     return (
       <>
-        <div className="product clearfix">
+        <div className={`product clearfix ${parentClassName}`}>
           {products.map((item, index) => (
             <div className={`product__item ${customClassName}`} key={index}>
               <div className="product__item-content">

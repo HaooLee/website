@@ -34,7 +34,7 @@ export default class Agent extends Component {
         {
           src: '/static/images/agent/platform-icon.png',
           linkTo:'/dspProduct',
-          name: '全场景营销平台'
+          name: '全域场景增量营销平台'
         }
       ],
       supports: [
