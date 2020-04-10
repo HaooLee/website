@@ -5,7 +5,7 @@ import Link from 'next/link'
 import router from 'next/router'
 export default class Case extends Component {
 
-  static async getInitialProps({req}){
+  static async getInitialProps({req={}}){
     const {params:{type} = {type:''}} =  req
     console.log(type)
     return {type}

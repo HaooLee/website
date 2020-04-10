@@ -2,6 +2,8 @@ import {Component} from 'react'
 import Slider from "react-slick";
 import SectionCard from '@/components/sectionCard';
 import TimeLine from '@/components/timeLine'
+import ProductAdvantage from '@/components/productAdvantage'
+
 import styles from './index.less'
 
 // 自定义箭头
@@ -55,6 +57,23 @@ export default class About extends Component {
           phone: '电话：010-234521'
         }
       ],
+      products: [
+      {
+        title: '使命',
+        desc: '智能连接人与服务',
+        src: '/static/images/dspProduct/icon-chanpin.png'
+      },
+      {
+        title: '愿景',
+        desc: '服务世界大多数人',
+        src: '/static/images/dspProduct/icon-ziyuan.png'
+      },
+      {
+        title: '价值观',
+        desc: '客户第一、团队合作、激情、敬业',
+        src: '/static/images/dspProduct/icon-fuwu.png'
+      }
+    ],
       honorList: [
         {
           src: '/static/images/about/2016互联网周刊人物奖.jpg',
@@ -160,7 +179,7 @@ export default class About extends Component {
     }
   }
   render() {
-    const {addressList, contactList, honorList} = this.state
+    const {addressList, contactList, honorList, products} = this.state
     const settings = {
       dots: false,
       infinite: true,
@@ -280,6 +299,12 @@ export default class About extends Component {
             }
             </div>
           </div>
+        </SectionCard>
+        <SectionCard title={'企业文化'} bgc={'#F8FAFF'}>
+          <ProductAdvantage
+            products={products}
+            customClassName={'join-product__item'}
+          ></ProductAdvantage>
         </SectionCard>
         <style jsx>{styles}</style>
       </>
