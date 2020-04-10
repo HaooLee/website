@@ -198,22 +198,34 @@ export default class Index extends React.Component {
         <SectionCard title={'为不同行业提供专业的全场景营销解决方案'} bgc={"#F8FAFF"} >
           <div className="solution-card-wrap">
             <Link href={'/case/insurance'}>
-              <SolutionCard src={'/static/images/jr.png'} title={'银行/保险'}/>
+              <div>
+                <SolutionCard src={'/static/images/jr.png'} title={'银行/保险'}/>
+              </div>
             </Link>
             <Link href={'/case/operator'}>
+              <div>
               <SolutionCard src={'/static/images/运营商@2x.png'} title={'运营商'}/>
+              </div>
             </Link>
             <Link href={'/case/education'}>
+              <div>
               <SolutionCard src={'/static/images/互联网@2x.png'} title={'互联网'}/>
+              </div>
             </Link>
             <Link href={'/case/resale'}>
+              <div>
               <SolutionCard src={'/static/images/新零售@2x.png'} title={'快消品'}/>
+              </div>
             </Link>
             <Link href={'/case/finance'}>
+              <div>
               <SolutionCard src={'/static/images/互联网金融@2x.png'} title={'新零售'}/>
+              </div>
             </Link>
             <Link href={'/case/e-commerce'}>
+              <div>
               <SolutionCard src={'/static/images/电商@2x.png'} title={'电商'}/>
+              </div>
             </Link>
           </div>
         </SectionCard>
@@ -233,7 +245,9 @@ export default class Index extends React.Component {
 
         <SectionCard title={'热点资讯'}>
           <div className="news-wrap">
-            {news.map((item, idx) => <NewsCard item={item} key={idx} />)}
+            <Slider {...settings}>
+            {news.map((item, idx) => <NewsCard item={item} key={idx} customClassName="index-news-card" />)}
+            </Slider>
           </div>
         </SectionCard>
         <style jsx>{styles}</style>
