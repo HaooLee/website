@@ -393,7 +393,7 @@ export default class Header extends React.Component {
 
                         {i.routes && i.routes.length > 0 && <span className={`arrow  ${i.opened? 'rotate':''}`}></span>}
                         {
-                          i.routes && i.routes.length > 0 && (<ul style={{overflow:'hidden',transition:'all linear .4s',height: i.opened?i.routes.length * 61:0}}>
+                          i.routes && i.routes.length > 0 && (<ul style={{overflow:'hidden',transition:'all linear .4s',height: i.opened?i.routes.length * 51:0}}>
                               {
                                 i.routes.map((item, index)=><li style={{paddingLeft:20,borderTop:'1px solid #ccc',backgroundColor:'#eee'}} key={index}>
                                   <Link href={item.link} passHref><a onClick={e=>this.setState({isActive:false})}>{item.title}</a></Link>
