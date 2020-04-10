@@ -76,105 +76,110 @@ export default class About extends Component {
     ],
       honorList: [
         {
-          src: '/static/images/about/2016互联网周刊人物奖.jpg',
-          time: '2016年',
-          title: '获“2016年度最具技术领导力人物”奖'
-        },
-        {
-          src: '/static/images/about/2016极客网最具潜力大数据和智能化服务商.jpg',
+          src: '/static/images/about/获“2016年度极最具潜力大数据和智能化服务商”.jpg',
           time: '2016年',
           title: '获“2016年度极最具潜力大数据和智能化服务商”'
         },
         {
-          src: '/static/images/about/2017创业邦创新成长100强奖牌.jpg',
+          src: '/static/images/about/获“2016年度最具技术领导力人物”奖.jpg',
+          time: '2016年',
+          title: '获“2016年度最具技术领导力人物”奖'
+        },
+        {
+          src: '/static/images/about/获“2017创业黑马企业级服务成长组TOP20“.jpg',
+          time: '2017年',
+          title: '获“2017创业黑马企业级服务成长组TOP20“'
+        },
+        {
+          src: '/static/images/about/获“2017年中国年度创新成长企业100强”.jpg',
           time: '2017年',
           title: '获“2017年中国年度创新成长企业100强”'
         },
         {
-          src: '/static/images/about/2017创业黑马”企业服务成长组TOP20“.jpg',
+          src: '/static/images/about/获“2017手机天鹅奖年度最佳终端解决方案奖”.jpg',
           time: '2017年',
-          title: '获“2017创业黑马企业级服务成长组TOP20““'
+          title: '获“2017手机天鹅奖年度最佳终端解决方案奖”'
         },
         {
-          src: '/static/images/about/2017品途人工智能领域 最具创新企业TOP5.jpg',
+          src: '/static/images/about/获”2017商业影响力人工智能领域 最具创新企业TOP5.jpg',
           time: '2017年',
-          title: '品途人工智能领域 最具创新企业TOP5'
+          title: '获”2017商业影响力人工智能领域 最具创新企业TOP5'
         },
         {
-          src: '/static/images/about/2017年金触点奖杯.jpg',
+          src: '/static/images/about/获”2017年全球商业创新大赛技术营销类 铜奖“.jpg',
           time: '2017年',
-          title: '金触点奖杯'
+          title: '获”2017年全球商业创新大赛技术营销类 铜奖“'
         },
         {
-          src: '/static/images/about/2017手机天鹅奖.jpg',
+          src: '/static/images/about/获”2017-2018年度码号卫士奖“.jpg',
           time: '2017年',
-          title: '2017手机天鹅奖'
+          title: '获”2017-2018年度码号卫士奖“'
         },
         {
-          src: '/static/images/about/2018不凡商业”最具商业价值创业公司“.jpg',
+          src: '/static/images/about/获“2018中国大数据准独角兽“.jpg',
           time: '2018年',
-          title: '不凡商业”最具商业价值创业公司“'
+          title: '获“2017年中国年度创新成长企业100强”'
         },
         {
-          src: '/static/images/about/2018亿欧”中国智能企业服务年度创新力企业“奖杯.jpg',
+          src: '/static/images/about/获“2018中国智能企业服务年度创新力企业“.jpg',
           time: '2018年',
-          title: '亿欧”中国智能企业服务年度创新力企业“奖杯'
+          title: '获“2018中国智能企业服务年度创新力企业“'
         },
         {
-          src: '/static/images/about/2018创业邦”创新成长100强“奖杯.jpg',
+          src: '/static/images/about/获“2018最具商业价值创业公司“.jpg',
           time: '2018年',
-          title: '创业邦”创新成长100强“奖杯'
+          title: '获“2018最具商业价值创业公司“'
         },
         {
-          src: '/static/images/about/2018创业黑马”中国大数据准独角兽“.jpg',
+          src: '/static/images/about/获“2018金比特 最佳智能营销平台&效果案例标杆奖”.jpg',
           time: '2018年',
-          title: '创业黑马”中国大数据准独角兽“'
+          title: '获“2018金比特 最佳智能营销平台&效果案例标杆奖”'
         },
         {
-          src: '/static/images/about/2018年创业黑马”企业服务独角兽“+”企业服务产品TOP50“.jpg',
+          src: '/static/images/about/获“2018金触点最佳具技术创新力营销产品+技术营销案例”.jpg',
           time: '2018年',
-          title: '创业黑马”企业服务独角兽“+”企业服务产品TOP50“'
+          title: '获“2018金触点最佳具技术创新力营销产品+技术营销案例”'
         },
         {
-          src: '/static/images/about/2018甲子20”最具商业潜力成长型企业TOP20“.jpg',
+          src: '/static/images/about/获”2018中国创新成长企业100强“.jpg',
           time: '2018年',
-          title: '甲子20”最具商业潜力成长型企业TOP20“'
+          title: '获”2018中国创新成长企业100强“'
         },
         {
-          src: '/static/images/about/2018码号卫士奖杯.jpg',
+          src: '/static/images/about/获”2018中国最具商业潜力成长型科技企业TOP20“.jpg',
           time: '2018年',
-          title: '码号卫士奖杯'
+          title: '获”2018中国最具商业潜力成长型科技企业TOP20“'
         },
         {
-          src: '/static/images/about/2018金比特 最佳智能营销平台&效果案例标杆奖.jpg',
+          src: '/static/images/about/获”2018年年度企业服务独角兽+企业服务产品TOP50“.jpg',
           time: '2018年',
-          title: '金比特 最佳智能营销平台&效果案例标杆奖'
+          title: '获”2018年年度企业服务独角兽+企业服务产品TOP50“'
         },
         {
-          src: '/static/images/about/2018金触点最佳具技术创新力营销产品+技术营销案例.jpg',
-          time: '2018年',
-          title: '金触点最佳具技术创新力营销产品+技术营销案例'
-        },
-        {
-          src: '/static/images/about/2019 爱分析 中国数据智能创新企业50强.jpg',
+          src: '/static/images/about/获“2019手机天鹅奖最佳手机应用”.jpg',
           time: '2019年',
-          title: '2019 爱分析 中国数据智能创新企业50强'
+          title: '获“2019手机天鹅奖最佳手机应用”'
         },
         {
-          src: '/static/images/about/2019快应用获手机天鹅奖“2019最佳手机应用”.jpg',
+          src: '/static/images/about/获”2019 中国数据智能创新企业50强“.jpg',
           time: '2019年',
-          title: '快应用获手机天鹅奖“2019最佳手机应用”'
+          title: '获”2019 中国数据智能创新企业50强“'
         },
         {
-          src: '/static/images/about/2019证券时报中国创业企业新苗榜-年度高成长企业.jpg',
+          src: '/static/images/about/获“2019手机天鹅奖最佳手机应用”.jpg',
           time: '2019年',
-          title: '证券时报中国创业企业新苗榜-年度高成长企业'
+          title: '获“2019手机天鹅奖最佳手机应用”'
         },
         {
-          src: '/static/images/about/2019金瑞奖“最佳AI创新营销案例奖”.jpg',
+          src: '/static/images/about/获”2019中国创业企业新苗榜-年度高成长企业“.jpg',
           time: '2019年',
-          title: '金瑞奖“最佳AI创新营销案例奖”'
-        }
+          title: '获”2019中国创业企业新苗榜-年度高成长企业“'
+        },
+        {
+          src: '/static/images/about/获”2019金瑞奖最佳AI创新营销案例奖”.jpg',
+          time: '2019年',
+          title: '获”2019金瑞奖最佳AI创新营销案例奖”'
+        },
       ]
     }
   }
