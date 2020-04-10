@@ -114,7 +114,7 @@ export default class ScenicProduct extends React.Component {
       'text': {
         src: '/static/images/scenicProduct/card.png',
         name: '文本消息',
-        desc: <div>
+        desc: <div className="apply-desc__content">
           <p>低成本，多字数，突破传统短信70字符限制，满足企业长短信需求</p>
           <p>厂商报备，过审无拦截</p>
           <p>企业认证，品牌曝</p>
@@ -123,7 +123,7 @@ export default class ScenicProduct extends React.Component {
       'card': {
         src: '/static/images/scenicProduct/card.png',
         name: '卡片消息',
-        desc: <div>
+        desc: <div className="apply-desc__content">
           <p>优化展现形式，场景化呈现</p>
           <p>降低用户阅读成本，提升用户体验</p>
           <p>搭配按钮增加业务入口，提高用户转化</p>
@@ -132,7 +132,7 @@ export default class ScenicProduct extends React.Component {
       'more-pic-text': {
         src: '/static/images/scenicProduct/more-pic-text.png',
         name: '多图文消息',
-        desc: <div>
+        desc: <div className="apply-desc__content">
           <p>多图文展现形式，视觉体验佳</p>
           <p>展示形态满足用户点击习惯，转化效果好</p>
         </div>
@@ -140,7 +140,7 @@ export default class ScenicProduct extends React.Component {
       'quick-app': {
         src: '/static/images/scenicProduct/quick-app.png',
         name: '快应用消息',
-        desc: <div>
+        desc: <div className="apply-desc__content">
           <p>基于用户场景，下发快应用消息</p>
           <p>短链路，强留存</p>
           <p>一键直达快应用</p>

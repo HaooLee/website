@@ -139,7 +139,7 @@ export default class IntelligenceSms extends React.Component {
       'company': {
         src: '/static/images/intelligenceSms/company-auth.png',
         name: '企业认证',
-        desc: <div className="intel-desc__content">
+        desc: <div className="apply-desc__content">
                 <p>可本地解析，智能识别企业名称、LOGO</p>
                 <p>每条成功触达用户的短信提供品牌展示效果</p>
                 <p>区别长串数字，提升用户信任度</p>
@@ -149,7 +149,7 @@ export default class IntelligenceSms extends React.Component {
       'card': {
         src: '/static/images/intelligenceSms/card.png',
         name: '短信卡片',
-        desc: <div className="intel-desc__content">
+        desc: <div className="apply-desc__content">
           <p>短信内容本地智能解析，形成结构化卡片视图</p>
           <p>优化展现形式，场景化呈现</p>
           <p>降低用户阅读成本，提升用户体验</p>
@@ -159,7 +159,7 @@ export default class IntelligenceSms extends React.Component {
       'btn': {
         src: '/static/images/intelligenceSms/scenic-btn.png',
         name: '场景按钮',
-        desc: <div className="intel-desc__content">
+        desc: <div className="apply-desc__content">
           <p>场景识别按钮，不同场景搭配不同业务按钮</p>
           <p>快速跳转H5/app/快应用</p>
           <p>一键回复代码</p>
@@ -170,7 +170,7 @@ export default class IntelligenceSms extends React.Component {
       'menu': {
         src: '/static/images/intelligenceSms/menu.png',
         name: '短信菜单',
-        desc: <div className="intel-desc__content">
+        desc: <div className="apply-desc__content">
           <p>结束通知即结束的传统短信模式</p>
           <p>一键链接企业与用户，快速跳转H5/app/快应用</p>
           <p>根据用户特征，针对不同场景匹配对应菜单，实现千人千面，精准投放，提升业务转化</p>
