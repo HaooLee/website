@@ -82,7 +82,7 @@ export default class NumberProduct extends Component {
         <SectionCard title={'应用形态'} bgc={"#fff"} >
         <div className="tab-content clearfix">
             <div className="tab-content__left">
-              <div>
+              <div className="apply-desc__content">
                 <p>识别号码来源，保证通话安全</p>
                 <p>企业号码有效认证，提高品牌曝光</p>
                 <div className="tab-content__left__btn">马上合作</div>
