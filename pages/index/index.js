@@ -244,8 +244,6 @@ export default class Index extends React.Component {
           </div>
         </SectionCard>
 
-
-
         <SectionCard title={'热点资讯'}>
           <div className="news-wrap">
             <Slider {...settings}>
