@@ -195,6 +195,16 @@ export default class About extends Component {
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />
     }
+    const matchSettings = {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />
+    }
     return (
       <>
         <div className="banner">
@@ -255,6 +265,7 @@ export default class About extends Component {
             </Slider>
           </div>
           <div className="honor-list--match">
+            <Slider {...matchSettings}>
             {
               honorList.map((item, index) => (
                 <div key={index} className="honor-list__item">
@@ -266,6 +277,7 @@ export default class About extends Component {
                 </div>
               ))
             }
+            </Slider>
           </div>
         </SectionCard>
         <SectionCard title={'联系我们'} bgc={'#FFFFFF'}>

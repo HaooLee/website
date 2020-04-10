@@ -196,16 +196,9 @@ export default class ScenicProduct extends React.Component {
                       <img src={this.barContent[activeType].src} />
                       <p>{this.barContent[activeType].name}</p>
                     </div>
-                    {/* <div className="tab-content__right__item">
-                      <img src="/static/images/intelligenceSms/jianhang.png" />
-                      <p>卡片</p>
-                    </div>
-                    <div  className="tab-content__right__img">
-                      <img src="/static/images/intelligenceSms/jianhang-scale.png" />
-                    </div> */}
                   </div>
               </div>
-            </div>
+          </div>
         </SectionCard>
         <SectionCard title={'产品优势'} bgc={'#F8FAFF'}>
           <ProductAdvantage

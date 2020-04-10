@@ -29,7 +29,74 @@
     }
   }
 }
-
+.tab-content {
+  width: 1000px;
+  margin: 90px auto;
+  position: relative;
+  &__left {
+    float: left;
+    width: 342px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    &__desc {
+      color: #666;
+      font-size: 18px;
+      line-height: 2;
+    }
+    &__btn {
+      width:187px;
+      height:46px;
+      background:rgba(53,94,166,1);
+      border-radius:28px;
+      line-height: 46px;
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+      margin-top: 50px;
+    }
+  }
+  &__right{
+    float: right;
+    position: relative;
+    &__img {
+      position: absolute;
+      right: -36px;
+      top: 57px;
+      padding: 18px 13px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow:0px 4px 15px 0px rgba(0,0,0,0.1);
+      img {
+        width: 357px;
+        height: 68px;
+      }
+    }
+    &__item {
+      float: left;
+      p {
+        text-align: center;
+        font-size: 22px;
+        color: #333;
+        margin-top: 20px;
+      }
+    }
+    &__item:nth-child(1) {
+      margin-right: 17px;
+      img {
+        // width: 412px;
+        height: 639px;
+        margin-top: 9px;
+      }
+    }
+    &__item:nth-child(2) {
+      img {
+        width: 303px;
+        height: 639px;
+      }
+    }
+  }
+}
 @import '../var.less';
 @media screen and (max-width: @MATCH_WIDTH) {
   .intro {
@@ -68,4 +135,59 @@
       }
     }
   }
+  .tab-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 0.8rem 0 1.07rem 0;
+    &__left {
+      position: initial;
+      width: auto;
+      transform: none;
+      // margin-top: 0.85rem;
+      p {
+        font-size: 0.32rem;
+      }
+      &__btn {
+        width: 3.52rem;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        border-radius: 0.59rem;
+        font-size: 0.43rem;
+        margin-top: 0.53rem;
+      }
+    }
+    &__right {
+      margin-right: 0.5rem;
+      &__item {
+        &:nth-child(1) {
+          img {
+            // width: 4.32rem;
+            height: 7.69rem;
+          }
+          p {
+            display: none;
+          }
+        }
+        // &:first-child {
+        //   display: none;
+        // }
+      }
+      &__img {
+        padding: 0.24rem 0.16rem 0.24rem 0.16rem;
+        width: 4.8rem;
+        height: 1.31rem;
+        box-sizing: border-box;
+        top: 0.8rem;
+        left: -0.4rem;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
 }
+
+
