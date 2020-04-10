@@ -14,14 +14,14 @@ import Link from 'next/link'
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <img className={className} onClick={onClick} style={{width:18,height:30}} src="/static/images/right.png"/>
+    <img className={className} onClick={onClick} style={{width:18,height:30,right:0}} src="/static/images/right.png"/>
   )
 }
 
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <img className={className} onClick={onClick} style={{width:18,height:30}} src="/static/images/left.png"/>
+    <img className={className} onClick={onClick} style={{width:18,height:30,left:0}} src="/static/images/left.png"/>
   )
 }
 
