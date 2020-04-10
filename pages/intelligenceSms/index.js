@@ -164,6 +164,7 @@ export default class IntelligenceSms extends React.Component {
           <p>快速跳转H5/app/快应用</p>
           <p>一键回复代码</p>
           <p>一键拨号直达客服</p>
+          
         </div>
       },
       'menu': {

@@ -78,22 +78,22 @@ export default class About extends Component {
         {
           src: '/static/images/about/2016互联网周刊人物奖.jpg',
           time: '2016年',
-          title: '互联网周刊人物奖'
+          title: '获“2016年度最具技术领导力人物”奖'
         },
         {
           src: '/static/images/about/2016极客网最具潜力大数据和智能化服务商.jpg',
           time: '2016年',
-          title: '极客网最具潜力大数据和智能化服务商'
+          title: '获“2016年度极最具潜力大数据和智能化服务商”'
         },
         {
           src: '/static/images/about/2017创业邦创新成长100强奖牌.jpg',
           time: '2017年',
-          title: '创业邦创新成长100强奖牌.jpg'
+          title: '获“2017年中国年度创新成长企业100强”'
         },
         {
           src: '/static/images/about/2017创业黑马”企业服务成长组TOP20“.jpg',
           time: '2017年',
-          title: '创业黑马”企业服务成长组TOP20“'
+          title: '获“2017创业黑马企业级服务成长组TOP20““'
         },
         {
           src: '/static/images/about/2017品途人工智能领域 最具创新企业TOP5.jpg',
