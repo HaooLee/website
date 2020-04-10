@@ -2,52 +2,70 @@ import {Component} from 'react'
 import SliderList from '@/components/sliderList'
 import styles from './index.less'
 import Link from 'next/link'
+import router from 'next/router'
 export default class Case extends Component {
+
+  static async getInitialProps({req}){
+    const {params:{type} = {type:''}} =  req
+    console.log(type)
+    return {type}
+  }
+
   constructor(props) {
     super(props)
+    const list = [
+      {
+        name: '保险行业',
+        active: false,
+        type: 'insurance'
+      },
+      {
+        name: '运营商',
+        active: false,
+        type: 'operator'
+      },
+      {
+        name: '在线教育',
+        active: false,
+        type: 'education'
+      },
+      {
+        name: '新零售',
+        active: false,
+        type: 'resale'
+      },
+      {
+        name: 'OTA',
+        active: false,
+        type: 'OTA'
+      },
+      {
+        name: '本地生活',
+        active: false,
+        type: 'live'
+      },
+      {
+        name: '电商',
+        active: false,
+        type: 'e-commerce'
+      },
+      {
+        name: '互联网金融',
+        active: false,
+        type: 'finance'
+      }
+    ].map(i=>{
+      if(i.type === props.type){
+        i.active = true
+      }
+      return i
+    })
+    if(!(list.some(i=>i.active))){
+      list[0].active = true
+    }
+
     this.state = {
-      list: [
-        {
-          name: '保险行业',
-          active: true,
-          type: 'insurance'
-        },
-        {
-          name: '运营商',
-          active: false,
-          type: 'operator'
-        },
-        {
-          name: '在线教育',
-          active: false,
-          type: 'education'
-        },
-        {
-          name: '新零售',
-          active: false,
-          type: 'resale'
-        },
-        {
-          name: 'OTA',
-          active: false,
-          type: 'OTA'
-        },
-        {
-          name: '本地生活',
-          active: false,
-          type: 'live'
-        },
-        {
-          name: '电商',
-          active: false,
-          type: 'e-commerce'
-        },
-        {
-          name: '互联网金融',
-          active: false,
-          type: 'finance'
-        }
-      ],
+      list,
       cases: {
         'OTA': [
           {
@@ -181,17 +199,6 @@ export default class Case extends Component {
             typeName: '智能短信'
           },
           {
-            src: '/static/images/case/zh-yidong-net.png',
-            title: '中移互',
-            desc: '中移互联网有限公司（以下简称“中移互联网公司”）是中国移动面向互联网领域设立的专业子公司，负责全网互联网业务的统一运营，致力于成为移动互联网特色产品的引领者、互联网优质平台服务的提供者和可持续增长价值的创造者。 中移互联网公司始终坚持“客户为先、以人为本、创新为要、合作为重”的企业价值观，面向融合通信（和飞信）、移动应用商场（MM）、云业务（和彩云、139邮箱、和家相册）、通信增值业务（和留言、和多号）、能力开放平台（互联网计费、统一认证、大数据等）等发展方向开展业务运营，各项互联网业务稳步增长，公司主要业务月活跃用户超5亿。',
-            types: [
-              <Link href={'/intelligenceSms'}>
-                <a style={{color: '#355EA6'}}>智能短信</a>
-              </Link>
-            ],
-            typeName: '智能短信'
-          },
-          {
             src: '/static/images/case/zh-dianxin.png',
             title: '中国电信世纪龙',
             desc: '21CN（www.21cn.com）成立于1999年，是中国电信全资子公司。 21CN是中国最早的互联网企业之一，也是中国电信旗下最具媒体价值、排名最靠前的互联网品牌企业。 21CN近年来致力于移动互联网领域与云计算领域的产品研发，为个人和企业用户提供媒体资讯、电子邮箱、移动应用与云存储等方面的服务，并带来优质体验，从国内十大综合性门户网站转型为提供移动互联网服务的企业。',
@@ -201,17 +208,29 @@ export default class Case extends Component {
               </Link>
             ],
             typeName: '智能短信'
-          }
+          },
+          {
+            src: '/static/images/case/zh-yidong-net.png',
+            title: '中移互联网',
+            desc: '中移互联网有限公司（以下简称“中移互联网公司”）是中国移动面向互联网领域设立的专业子公司，负责全网互联网业务的统一运营，致力于成为移动互联网特色产品的引领者、互联网优质平台服务的提供者和可持续增长价值的创造者。 中移互联网公司始终坚持“客户为先、以人为本、创新为要、合作为重”的企业价值观，面向融合通信（和飞信）、移动应用商场（MM）、云业务（和彩云、139邮箱、和家相册）、通信增值业务（和留言、和多号）、能力开放平台（互联网计费、统一认证、大数据等）等发展方向开展业务运营，各项互联网业务稳步增长，公司主要业务月活跃用户超5亿。',
+            types: [
+              <Link href={'/intelligenceSms'}>
+                <a style={{color: '#355EA6'}}>智能短信</a>
+              </Link>
+            ],
+            typeName: '智能短信'
+          },
+
         ]
       },
-      activeType: 'insurance',
+      activeType: list.filter(i=>i.active)[0].type,
       activeItem: null,
-      activeIndex: -1
+      activeIndex: list.findIndex(i=>i.active)
     }
   }
   componentDidMount() {
     window.addEventListener('resize', () => {
-      const {activeItem} = this.state 
+      const {activeItem} = this.state
       if(activeItem) {
         this.setState({
           activeItem: null
@@ -219,23 +238,26 @@ export default class Case extends Component {
       }
     })
   }
-  clickCallback = (index) => {
-    const {list} = this.state
-    let type = ''
-    list.forEach((item, idx) => {
-      if(index === idx) {
-        item.active = true
-        type = item.type
-      } else {
-        item.active = false
-      }
+  clickCallback = (index,item) => {
+    // const {list} = this.state
+    // let type = ''
+    // list.forEach((item, idx) => {
+    //   if(index === idx) {
+    //     item.active = true
+    //     type = item.type
+    //   } else {
+    //     item.active = false
+    //   }
+    // })
+    router.replace({
+      pathname:`/case/${item.type}`
     })
-    this.setState({
-      list: [...list],
-      activeType: type,
-      activeItem: null,
-      activeIndex: -1
-    })
+    // this.setState({
+    //   list: [...list],
+    //   activeType: type,
+    //   activeItem: null,
+    //   activeIndex: -1
+    // })
   }
   contentItemClick = (item, idx) => {
     if(window.innerWidth < 980) {
@@ -259,7 +281,7 @@ export default class Case extends Component {
           <div className="cases__content-wrap col-10">
             <div className="cases__content">
               {(cases[activeType] || []).map((item, idx) => (
-                <div key={idx}>
+                <div key={idx} id={idx}>
                 <div className="cases__content__item clearfix" key={idx} onClick={this.contentItemClick.bind(this, item, idx)}>
                   <div className="cases__content__item__img">
                     <img src={item.src} />
@@ -274,7 +296,7 @@ export default class Case extends Component {
                       </span>
                     </p>
                   </div>
-                  
+
                 </div>
                 {
                   activeItem && activeIndex === idx && <div className="cases__content--match">
@@ -291,7 +313,7 @@ export default class Case extends Component {
                 </div>
               ))}
             </div>
-            
+
           </div>
         </div>
         <style jsx>{styles}</style>

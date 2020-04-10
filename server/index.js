@@ -47,7 +47,7 @@ class RouterServer {
         console.log(paramMatch)
         if (paramMatch) {
           paramsKey = paramMatch.map(i => i.slice(2))
-          reg = new RegExp(`^${path.replace(/\/:\w+\b/g, '\/(\\w+)?')}`)
+          reg = new RegExp(`^${path.replace(/\/:\w+\b/g, '\/([\\w|-]+)?')}`)
         } else {
           reg = new RegExp(`^${path}`)
         }

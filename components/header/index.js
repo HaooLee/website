@@ -93,10 +93,11 @@ export default class Header extends React.Component {
     customers: [
     {
       name: '保险行业',
+      type:'insurance',
       business:[
         {
           src:'/static/images/header/矢量智能对象@2x.png',
-          link:'',
+          link:'/case',
           style:{
             width: 132,
             height: 25
@@ -106,6 +107,7 @@ export default class Header extends React.Component {
     },
     {
       name: '运营商',
+      type:'operator',
       business:[
         {
           src:'/static/images/header/联通白@2x.png',
@@ -135,15 +137,15 @@ export default class Header extends React.Component {
 
           }
         },
-        {
-          src:'/static/images/header/21cn@2x.png',
-          link:'',
-          style:{
-            width: 37,
-            height: 37,
-            marginRight: 24,
-          }
-        },
+        // {
+        //   src:'/static/images/header/21cn@2x.png',
+        //   link:'',
+        //   style:{
+        //     width: 37,
+        //     height: 37,
+        //     marginRight: 24,
+        //   }
+        // },
         {
           src:'/static/images/header/中互移白 2@2x.png',
           link:'',
@@ -157,6 +159,7 @@ export default class Header extends React.Component {
     },
     {
       name: '在线教育',
+      type:'education',
       business:[
         {
           src:'/static/images/header/vipkid@2x.png',
@@ -170,6 +173,7 @@ export default class Header extends React.Component {
     },
     {
       name: '新零售',
+      type:'resale',
       business:[
         {
           src:'/static/images/header/屈臣氏白@2x.png',
@@ -183,6 +187,7 @@ export default class Header extends React.Component {
     },
     {
       name: 'OTA',
+      type:'OTA',
       business:[
         {
           src:'/static/images/header/携程@2x.png',
@@ -196,6 +201,7 @@ export default class Header extends React.Component {
     },
     {
       name: '本地生活',
+      type:'live',
       business:[
         {
           src:'/static/images/header/美团白 2@2x.png',
@@ -218,6 +224,7 @@ export default class Header extends React.Component {
     },
     {
       name: '电商',
+      type:'e-commerce',
       business:[
         {
           src:'/static/images/header/途虎养车 2@2x.png',
@@ -231,6 +238,7 @@ export default class Header extends React.Component {
     },
     {
       name: '互联网金融',
+      type:'finance',
       business:[
         {
           src:'/static/images/header/度小满@2x.png',
@@ -347,12 +355,12 @@ export default class Header extends React.Component {
                               {
                                 customers.map((i, idx)=>{
                                   return (
-                                    <div className="business">
-                                      <Link href={'/case'}>
+                                    <div className="business" key={idx}>
+                                      <Link href={`/case/${i.type}`}>
                                         <a className="business-title">{i.name}</a>
                                       </Link>
                                       {
-                                        i.business && i.business.map((item, index) => <img style={item.style} src={item.src} alt=""/>)
+                                        i.business && i.business.map((item, index) => <Link href={`/case/${i.type} #${index}`} key={index} ><a><img style={item.style} src={item.src} alt=""/></a></Link>)
                                       }
                                     </div>
                                   )
