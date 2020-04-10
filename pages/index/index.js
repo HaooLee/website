@@ -4,10 +4,10 @@ import styles from './index.less'
 import SectionCard from '@/components/sectionCard'
 import SolutionCard from '@/components/solutionCard'
 import CompanyLogo from '@/components/companyLogo'
+import Slider from "react-slick";
+
 import NewsCard from '@/components/newsCard'
 import axios from 'axios'
-// import {FormattedMessage} from 'react-intl'
-import Slider from "react-slick";
 import Link from 'next/link'
 
 // 自定义箭头
@@ -24,6 +24,7 @@ function SamplePrevArrow(props) {
     <img className={className} onClick={onClick} style={{width:18,height:30}} src="/static/images/left.png"/>
   )
 }
+
 export default class Index extends React.Component {
   static async getInitialProps({Component, router, ctx}) {
     const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/news/getinfo')
@@ -77,17 +78,17 @@ export default class Index extends React.Component {
   }
   render () {
     const {companies, smsImage, smsActiveImage, scenicImage, scenicActiveImage} = this.state
+    const {news} = this.props
     const settings = {
-      dots: false,
+      dots: true,
       infinite: true,
       speed: 500,
-      autoplay: true,
-      slidesToShow: 1,
       slidesToScroll: 1,
+      dotsClass:'slick-dots teddy-dots',
+      autoplay: true,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />
     }
-    const {news} = this.props
     return (
       <>
         <Banner />
@@ -242,6 +243,8 @@ export default class Index extends React.Component {
             }
           </div>
         </SectionCard>
+
+
 
         <SectionCard title={'热点资讯'}>
           <div className="news-wrap">

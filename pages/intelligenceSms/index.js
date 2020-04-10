@@ -140,11 +140,11 @@ export default class IntelligenceSms extends React.Component {
         src: '/static/images/intelligenceSms/company-auth.png',
         name: '企业认证',
         desc: <div className="intel-desc__content">
-          <p>可本地解析，智能识别企业名称、LOGO</p>
-          <p>每条成功触达用户的短信提供品牌展示效果</p>
-          <p>区别长串数字，提升用户信任度</p>
-          <p>提高短信打开阅读率</p>
-        </div>
+                <p>可本地解析，智能识别企业名称、LOGO</p>
+                <p>每条成功触达用户的短信提供品牌展示效果</p>
+                <p>区别长串数字，提升用户信任度</p>
+                <p>提高短信打开阅读率</p>
+              </div>
       },
       'card': {
         src: '/static/images/intelligenceSms/card.png',
