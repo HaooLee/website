@@ -1,6 +1,5 @@
 import {Component} from 'react'
 import SectionCard from '@/components/sectionCard'
-import ProductAdvantage from '@/components/productAdvantage'
 import styles from './index.less'
 import axios from 'axios'
 export default class Join extends Component {
@@ -46,23 +45,6 @@ export default class Join extends Component {
           id: 5
         }
       ],
-      products: [
-        {
-          title: '使命',
-          desc: '智能连接人与服务',
-          src: '/static/images/dspProduct/icon-chanpin.png'
-        },
-        {
-          title: '愿景',
-          desc: '服务世界大多数人',
-          src: '/static/images/dspProduct/icon-ziyuan.png'
-        },
-        {
-          title: '价值观',
-          desc: '客户第一、团队合作、激情、敬业',
-          src: '/static/images/dspProduct/icon-fuwu.png'
-        }
-      ]
     }
     this.state.allJoins = props.allJoins
   }
@@ -163,12 +145,6 @@ export default class Join extends Component {
               </ul>
             </div>
           </div>
-          <SectionCard title={'企业文化'} bgc={'#F8FAFF'}>
-            <ProductAdvantage
-              products={products}
-              customClassName={'join-product__item'}
-            ></ProductAdvantage>
-          </SectionCard>
         </div>
         <style jsx>{styles}</style>
       </>
