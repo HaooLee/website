@@ -7,7 +7,7 @@ export default class Case extends Component {
 
   static async getInitialProps({req={}}){
     const {params:{type} = {type:''}} =  req
-    console.log(type)
+    console.log(req)
     return {type}
   }
 
