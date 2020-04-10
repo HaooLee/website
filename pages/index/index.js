@@ -64,7 +64,8 @@ export default class Index extends React.Component {
       'touzhi-licai': '/static/images/index/泰迪银行-投资理财.png',
       'view-application': '/static/images/index/泰迪银行-查看应用.png',
       'dae-cundan': '/static/images/index/泰迪银行-大额存单.png'
-    }
+    },
+    
   }
   changeSmsImage = (type) => {
     this.setState({
@@ -79,6 +80,13 @@ export default class Index extends React.Component {
   render () {
     const {companies, smsImage, smsActiveImage, scenicImage, scenicActiveImage} = this.state
     const {news} = this.props
+    const quickApps = [
+      '/static/images/index/快应用1.png',
+      '/static/images/index/快应用2.png',
+      '/static/images/index/快应用3.png',
+      '/static/images/index/快应用4.png',
+      '/static/images/index/快应用5.png'
+    ]
     const settings = {
       dots: true,
       infinite: true,
@@ -86,8 +94,8 @@ export default class Index extends React.Component {
       slidesToScroll: 1,
       dotsClass:'slick-dots teddy-dots',
       autoplay: true,
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />
+      // nextArrow: <SampleNextArrow />,
+      // prevArrow: <SamplePrevArrow />
     }
     return (
       <>
@@ -192,7 +200,15 @@ export default class Index extends React.Component {
               <p>马上通过 <a href="/quickAppProduct">快应用</a> 解锁更多营销新玩法</p>
             </div>
             <div className="feature-image">
-              <img src="/static/images/sms.png" alt=""/>
+              <Slider {...settings}>
+                {quickApps.map((item, idx) => 
+                  (
+                    <React.Fragment key={idx}>
+                      <img src={item} alt=""/>
+                    </React.Fragment>
+                  )
+                )}
+              </Slider>
             </div>
           </div>
         </section>

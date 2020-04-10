@@ -148,5 +148,19 @@
     }
   }
 }
-
+:global(.solution-desc__content){
+  :global(p) {
+    position: relative;
+  }
+  :global(p:before){
+    content: '';
+    position: absolute;
+    top: 0.2rem;
+    left: -10px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #000;
+  }
+}
 @import './match.less';
