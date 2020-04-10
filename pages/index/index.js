@@ -27,10 +27,40 @@ export default class Index extends React.Component {
       {src:''},
       {src:''},
       {src:''},
-      ]
+    ],
+    smsImage: {
+      'defaultImage': '/static/images/index/泰迪银行-智能短信.png',
+      'read-more': '/static/images/index/泰迪银行卡片-查看原文.png',
+      'my-account': '/static/images/index/泰迪银行-我的账户.png',
+      'account-card': '/static/images/index/泰迪银行-信用卡.png',
+      'touzhi-licai': '/static/images/index/泰迪银行-投资理财.png',
+      'view-application': '/static/images/index/泰迪银行-查看应用.png',
+      'dae-cundan': '/static/images/index/泰迪银行-大额存单.png'
+    },
+    smsActiveImage: 'defaultImage',
+    scenicActiveImage: 'defaultImage',
+    scenicImage: {
+      'defaultImage': '/static/images/index/场景消息.png',
+      'read-more': '/static/images/index/泰迪银行卡片-查看原文.png',
+      'my-account': '/static/images/index/泰迪银行-我的账户.png',
+      'account-card': '/static/images/index/泰迪银行-信用卡.png',
+      'touzhi-licai': '/static/images/index/泰迪银行-投资理财.png',
+      'view-application': '/static/images/index/泰迪银行-查看应用.png',
+      'dae-cundan': '/static/images/index/泰迪银行-大额存单.png'
+    }
+  }
+  changeSmsImage = (type) => {
+    this.setState({
+      smsActiveImage: type
+    })
+  }
+  changeScenicImage = (type) => {
+    this.setState({
+      scenicActiveImage: type
+    })
   }
   render () {
-    const {companies} = this.state
+    const {companies, smsImage, smsActiveImage, scenicImage, scenicActiveImage} = this.state
     const {news} = this.props
     return (
       <>
@@ -65,7 +95,21 @@ export default class Index extends React.Component {
         </section>
         <section className="feature-left">
           <div className="w feature-content">
-            <img src="/static/images/sms.png" alt=""/>
+            <div className="feature-image">
+              <img src={smsImage[smsActiveImage]} alt=""/>
+              {/* 查看原文 */}
+              <div className="read-more" onClick={this.changeSmsImage.bind(this, 'read-more')}></div>
+              {/* 查看应用 */}
+              <div className="view-application" onClick={this.changeSmsImage.bind(this, 'view-application')}></div>
+              {/* 大额存单 */}
+              <div className="dae-cundan" onClick={this.changeSmsImage.bind(this, 'dae-cundan')}></div>
+              {/* 我的用户 */}
+              <div className="my-account" onClick={this.changeSmsImage.bind(this, 'my-account')}></div>
+              {/* 信用卡 */}
+              <div className="account-card" onClick={this.changeSmsImage.bind(this, 'account-card')}></div>
+              {/* 投资理财 */}
+              <div className="touzhi-licai" onClick={this.changeSmsImage.bind(this, 'touzhi-licai')}></div>
+            </div>
             <div className="text">
               <h2>智能短信</h2>
               <h3>新短信、新营销</h3>
@@ -80,7 +124,21 @@ export default class Index extends React.Component {
               <h3>多形式、效率高、全场景、 省成本</h3>
               <p>马上通过 <a href="/scenicProduct">场景消息</a> 了解更多效果转化新玩法</p>
             </div>
-            <img src="/static/images/senceMsg.png" alt=""/>
+            <div className="feature-image scenic-image">
+              <img src={scenicImage[scenicActiveImage]} alt=""/>
+              {/* 查看原文 */}
+              <div className="read-more" onClick={this.changeScenicImage.bind(this, 'read-more')}></div>
+              {/* 查看应用 */}
+              <div className="view-application" onClick={this.changeScenicImage.bind(this, 'view-application')}></div>
+              {/* 大额存单 */}
+              <div className="dae-cundan" onClick={this.changeScenicImage.bind(this, 'dae-cundan')}></div>
+              {/* 我的用户 */}
+              <div className="my-account" onClick={this.changeScenicImage.bind(this, 'my-account')}></div>
+              {/* 信用卡 */}
+              <div className="account-card" onClick={this.changeScenicImage.bind(this, 'account-card')}></div>
+              {/* 投资理财 */}
+              <div className="touzhi-licai" onClick={this.changeScenicImage.bind(this, 'touzhi-licai')}></div>
+            </div>
           </div>
         </section>
         <section className="feature-left">
@@ -100,7 +158,9 @@ export default class Index extends React.Component {
               <h3>免安装、免存储、一键直达、更新直接推送</h3>
               <p>马上通过 <a href="/quickAppProduct">快应用</a> 解锁更多营销新玩法</p>
             </div>
-            <img src="/static/images/sms.png" alt=""/>
+            <div className="feature-image">
+              <img src="/static/images/sms.png" alt=""/>
+            </div>
           </div>
         </section>
         <SectionCard title={'为不同行业提供专业的全场景营销解决方案'} bgc={"#F8FAFF"} >
@@ -119,8 +179,7 @@ export default class Index extends React.Component {
             <img src="/static/images/index__logo.png" />
           </div>
         </SectionCard>
-        <SectionCard title={'这些成功的企业正在使用泰迪熊移动'} bgc={'#F7F7F7'} desc={'泰迪熊移动成立于2014年，已为京东、淘宝、苏宁、携程、屈臣氏、建设银行、招商银行、百度等国内百家企业提供大数据和场景服务，\n' +
-        '覆盖快消、电商、零售、互联网、手机厂商、金融、旅游、教育等数十个行业，助力客户建设场景生态。'} overflow={true} >
+        <SectionCard title={'这些成功的企业正在使用泰迪熊移动'} bgc={'#F7F7F7'} desc={'泰迪熊移动成立于2014年，已为京东、淘宝、苏宁、携程、屈臣氏、建设银行、招商银行、百度、三大运营商等国内百家企业提供大数据和场景服务，覆盖快消、电商、零售、互联网、运营商、手机厂商、金融、旅游、教育等数十个行业，助力客户建设场景生态。'} overflow={true} >
           <div className="company-card-wrap">
             {
               companies.map((i,idx)=><CompanyLogo styleNum={idx} logoSrc={i.src} key={idx} />)

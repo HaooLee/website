@@ -83,7 +83,8 @@ export default class NumberProduct extends Component {
         <div className="tab-content clearfix">
             <div className="tab-content__left">
               <div>
-                <p>文案文案文案文案文案文案 文案文案文案文案文案文案文案文 文案文案文案文案文案文案文案文案文 文案文案文案文案文案文案文案 文案文案文案文案文案文案文案文案文 </p>
+                <p>识别号码来源，保证通话安全</p>
+                <p>企业号码有效认证，提高品牌曝光</p>
                 <div className="tab-content__left__btn">马上合作</div>
               </div>
             </div>
