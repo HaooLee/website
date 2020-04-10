@@ -4,9 +4,26 @@ import styles from './index.less'
 import SectionCard from '@/components/sectionCard'
 import SolutionCard from '@/components/solutionCard'
 import CompanyLogo from '@/components/companyLogo'
+import Slider from "react-slick";
+
 import NewsCard from '@/components/newsCard'
 import axios from 'axios'
 // import {FormattedMessage} from 'react-intl'
+
+// 自定义箭头
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <img className={className} onClick={onClick} style={{width:18,height:30}} src="/static/images/right.png"/>
+  )
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <img className={className} onClick={onClick} style={{width:18,height:30}} src="/static/images/left.png"/>
+  )
+}
 
 export default class Index extends React.Component {
   static async getInitialProps({Component, router, ctx}) {
@@ -62,6 +79,16 @@ export default class Index extends React.Component {
   render () {
     const {companies, smsImage, smsActiveImage, scenicImage, scenicActiveImage} = this.state
     const {news} = this.props
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToScroll: 1,
+      dotsClass:'slick-dots teddy-dots',
+      autoplay: true,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />
+    }
     return (
       <>
         <Banner />
@@ -187,10 +214,12 @@ export default class Index extends React.Component {
           </div>
         </SectionCard>
 
+
+
         <SectionCard title={'热点资讯'}>
-          <div className="news-wrap">
+          <Slider {...settings}>
             {news.map((item, idx) => <NewsCard item={item} key={idx} />)}
-          </div>
+          </Slider>
         </SectionCard>
         <style jsx>{styles}</style>
       </>
