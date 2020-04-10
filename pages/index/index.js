@@ -7,7 +7,23 @@ import CompanyLogo from '@/components/companyLogo'
 import NewsCard from '@/components/newsCard'
 import axios from 'axios'
 // import {FormattedMessage} from 'react-intl'
+import Slider from "react-slick";
+import Link from 'next/link'
 
+// 自定义箭头
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <img className={className} onClick={onClick} style={{width:18,height:30}} src="/static/images/right.png"/>
+  )
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <img className={className} onClick={onClick} style={{width:18,height:30}} src="/static/images/left.png"/>
+  )
+}
 export default class Index extends React.Component {
   static async getInitialProps({Component, router, ctx}) {
     const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/news/getinfo')
@@ -61,6 +77,16 @@ export default class Index extends React.Component {
   }
   render () {
     const {companies, smsImage, smsActiveImage, scenicImage, scenicActiveImage} = this.state
+    const settings = {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      autoplay: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />
+    }
     const {news} = this.props
     return (
       <>
@@ -143,7 +169,13 @@ export default class Index extends React.Component {
         </section>
         <section className="feature-left">
           <div className="w feature-content">
-            <img src="/static/images/号码认证@2x.png" alt=""/>
+            <div className="feature-image">
+              <Slider {...settings}>
+                <img src="/static/images/numberProduct/core1.png" alt=""/>
+                <img src="/static/images/numberProduct/core2.png" alt=""/>
+                <img src="/static/images/numberProduct/core3.png" alt=""/>
+              </Slider>
+            </div>
             <div className="text">
               <h2>号码认证</h2>
               <h3>来电接的安心，去电不再被拒绝</h3>
@@ -165,12 +197,24 @@ export default class Index extends React.Component {
         </section>
         <SectionCard title={'为不同行业提供专业的全场景营销解决方案'} bgc={"#F8FAFF"} >
           <div className="solution-card-wrap">
-            <SolutionCard src={'/static/images/jr.png'} title={'银行/保险'}/>
-            <SolutionCard src={'/static/images/运营商@2x.png'} title={'运营商'}/>
-            <SolutionCard src={'/static/images/互联网@2x.png'} title={'互联网'}/>
-            <SolutionCard src={'/static/images/新零售@2x.png'} title={'快消品'}/>
-            <SolutionCard src={'/static/images/互联网金融@2x.png'} title={'新零售'}/>
-            <SolutionCard src={'/static/images/电商@2x.png'} title={'电商'}/>
+            <Link href={'/case/insurance'}>
+              <SolutionCard src={'/static/images/jr.png'} title={'银行/保险'}/>
+            </Link>
+            <Link href={'/case/operator'}>
+              <SolutionCard src={'/static/images/运营商@2x.png'} title={'运营商'}/>
+            </Link>
+            <Link href={'/case/education'}>
+              <SolutionCard src={'/static/images/互联网@2x.png'} title={'互联网'}/>
+            </Link>
+            <Link href={'/case/resale'}>
+              <SolutionCard src={'/static/images/新零售@2x.png'} title={'快消品'}/>
+            </Link>
+            <Link href={'/case/finance'}>
+              <SolutionCard src={'/static/images/互联网金融@2x.png'} title={'新零售'}/>
+            </Link>
+            <Link href={'/case/e-commerce'}>
+              <SolutionCard src={'/static/images/电商@2x.png'} title={'电商'}/>
+            </Link>
           </div>
         </SectionCard>
         <SectionCard title={'覆盖主流手机厂商'} desc={'泰迪熊移动利用自身强大的技术优势，与OPPO、vivo、魅族、金立、联想、乐视、酷派、阿里YunOS等国内主流手机厂商\n进行了深度合作，累计覆盖终端7亿+，日活用户4亿。'}>
