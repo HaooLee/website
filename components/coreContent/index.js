@@ -45,6 +45,7 @@ export default class CoreContent extends React.Component {
                     <img src={item.active ? item.activeIcon : item.src}/>
                   </div>
                   <p className="core-content__item__text">{item.title}</p>
+                  <p className="core-content__item__text--match">{item.matchTitle}</p>
                 </div>
               ))
             }

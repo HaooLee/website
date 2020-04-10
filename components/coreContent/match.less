@@ -2,7 +2,8 @@
 @media screen and (max-width: @MATCH_WIDTH) {
   .core-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     &__list {
       margin-top: 1.12rem !important;
@@ -45,6 +46,11 @@
       &__text {
         font-size: 0.37rem;
         line-height: 0.69rem;
+        display: none;
+      }
+      &__text--match {
+        font-size: 0.37rem;
+        display: block;
       }
     }
   }
@@ -164,7 +170,7 @@
     &>img {
       width: 4rem;
       height: 8.13rem;
-      margin-right: 0;
+      margin-right: 0.5rem;
     }
     .core-content__item {
       &__text {
@@ -212,7 +218,7 @@
     &>img {
       width: 4rem;
       height: 8.13rem;
-      margin-right: 0;
+      margin-right: 0.5rem;
     }
     .core-content__item {
       display: flex;

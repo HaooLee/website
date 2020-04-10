@@ -29,19 +29,22 @@ export default class NumberProduct extends Component {
           src: '/static/images/numberProduct/icon-jingzhunshibie.png',
           title: '准确识别陌生电话来源，保障用户手机安全',
           coreSrc: '/static/images/numberProduct/core1.png',
-          activeIcon: '/static/images/numberProduct/icon-jingzhunshibie-active.png'
+          activeIcon: '/static/images/numberProduct/icon-jingzhunshibie-active.png',
+          matchTitle: '识别陌生来电'
         },
         {
           src: '/static/images/numberProduct/icon-renzhengyonghu.png',
           title: '为企业提供号码认证服务，进行有效品牌展示',
           coreSrc: '/static/images/numberProduct/core2.png',
-          activeIcon: '/static/images/numberProduct/icon-renzhengyonghu-active.png'
+          activeIcon: '/static/images/numberProduct/icon-renzhengyonghu-active.png',
+          matchTitle: '企业号码认证'
         },
         {
           src: '/static/images/numberProduct/icon-xunihaoma.png',
           title: '支持400、虚拟号段、个人号段',
           coreSrc: '/static/images/numberProduct/core3.png',
-          activeIcon: '/static/images/numberProduct/icon-xunihaoma-active.png'
+          activeIcon: '/static/images/numberProduct/icon-xunihaoma-active.png',
+          matchTitle: '支持多种号段'
         }
       ],
       products: [

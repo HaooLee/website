@@ -70,25 +70,29 @@ export default class ScenicProduct extends React.Component {
           src: '/static/images/scenicProduct/icon-changshang.png',
           title: '厂商网络OTT通道发送：发送成本更低，降低投诉风险',
           coreSrc: '/static/images/scenicProduct/core1.png',
-          activeIcon: '/static/images/scenicProduct/icon-changshang-active.png'
+          activeIcon: '/static/images/scenicProduct/icon-changshang-active.png',
+          matchTitle: '网络通道发送'
         },
         {
           src: '/static/images/scenicProduct/icon-xiaoxi.png',
           title: '富媒体消息 ：快应用、视频、音频、语音、多图文、位置等多原画形态，提高用户体验的同时能够促进营销短信的效果转化。 ',
           coreSrc: '/static/images/scenicProduct/core2.png',
-          activeIcon: '/static/images/scenicProduct/icon-xiaoxi-active.png'
+          activeIcon: '/static/images/scenicProduct/icon-xiaoxi-active.png',
+          matchTitle: '富媒体消息'
         },
         {
           src: '/static/images/scenicProduct/icon-chufa.png',
           title: '基于用户使用场景触发消息推送 ：精准营销，效率提升',
           coreSrc: '/static/images/scenicProduct/core3.png',
-          activeIcon: '/static/images/scenicProduct/icon-chufa-active.png'
+          activeIcon: '/static/images/scenicProduct/icon-chufa-active.png',
+          matchTitle: '基于场景触发'
         },
         {
           src: '/static/images/scenicProduct/icon-zhineng.png',
           title: '支持 chatbot：智能客服 ，智能推送消息',
           coreSrc: '/static/images/scenicProduct/core4.png',
-          activeIcon: '/static/images/scenicProduct/icon-zhineng-active.png'
+          activeIcon: '/static/images/scenicProduct/icon-zhineng-active.png',
+          matchTitle: '支持chatbot'
         }
       ],
       tabBarList: [{
@@ -108,7 +112,7 @@ export default class ScenicProduct extends React.Component {
         active: false,
         type: 'quick-app'
       }],
-      activeType: 'card'
+      activeType: 'text'
     }
     this.barContent = {
       'text': {
