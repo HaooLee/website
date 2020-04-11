@@ -12,8 +12,7 @@ export default class CoreContent extends React.Component {
           item.active = false
         }
         return item
-      } ),
-      src: this.props.coreList[0].coreSrc
+      } )
     }
   }
   coreHover = (row, index) => {
@@ -26,17 +25,21 @@ export default class CoreContent extends React.Component {
       }
     })
     this.setState({
-      coreList,
-      src: row.coreSrc
+      coreList
     })
   }
   render() {
     const {listStyle={}, coreClassName=""} = this.props
-    const {coreList, src} = this.state
+    const {coreList} = this.state
     return (
       <>
         <div className={`core-content w clearfix ${coreClassName}`}>
-          <img src={src}/>
+          {coreList.map((item, index) => (
+            <div className={`core-content__img ${item.imgClassName}`} style={{display: item.active ? 'block' : 'none'}}>
+              <img src={item.coreSrc}/>
+              {item.highlightImage && <img src={item.highlightImage} className="high-light-image" />}
+            </div>
+          ))}
           <div className="core-content__list" style={listStyle}>
             {
               coreList.map((item, index) => (

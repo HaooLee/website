@@ -3,10 +3,89 @@
     float: left;
     margin-top: 30px;
   }
-  &>img {
+  .core-content__img {
     width: 296px;
     height: 600px;
     float: left;
+    position: relative;
+    &>img {
+      width: 100%;
+      height: 100%;
+    }
+    .high-light-image {
+      width: 356px;
+      height: 262px;
+      position: absolute;
+      left: -30px;
+      top: 20px;
+    }
+  }
+  .scenic-image {
+    .high-light-image {
+      width: 336px;
+      height: 257px;
+      left: -20px;
+      top: 78px;
+    }
+  }
+  .text-image {
+    .high-light-image {
+      width: 396px;
+      height: 110px;
+      left: -50px;
+      top: 15px;
+    }
+  }
+  .chatbot-image {
+    .high-light-image {
+      width: 356px;
+      height: 85px;
+      left: -30px;
+      bottom: -10px;
+      top: auto;
+    }
+  }
+  .sms-highlight-1 {
+    .high-light-image {
+      width: 366px;
+      height: 112px;
+      left: -35px;
+      top: 24px;
+    }
+  }
+  .sms-highlight-2 {
+    .high-light-image {
+      width: 348px;
+      height: 208px;
+      left: -26px;
+      top: 80px;
+    }
+  }
+  .sms-highlight-3 {
+    .high-light-image {
+      width: 327px;
+      height: 100px;
+      left: -16px;
+      top: 148px;
+    }
+  }
+  .sms-highlight-4 {
+    .high-light-image {
+      width: 118px;
+      height: 142px;
+      left: 27px;
+      top: auto;
+      bottom: 40px;
+    }
+  }
+  .sms-highlight-5 {
+    .high-light-image {
+      width: 327px;
+      height: 80px;
+      left: -16px;
+      top: auto;
+      bottom: 0;
+    }
   }
   &__item {
     width: 566px;
@@ -68,7 +147,7 @@
 }
 
 .scenic-core {
-  &>img {
+  .core-content__img {
     margin-right: 89px;
   }
   .core-content__list {
@@ -87,7 +166,7 @@
   .core-content__list {
     margin-top: 0;
   }
-  &>img {
+  .core-content__img {
     width: 358px;
     height: 726px;
     margin-right: 115px;
@@ -99,7 +178,7 @@
   .core-content__list {
     margin-top: 0;
   }
-  &>img {
+  .core-content__img {
     margin-right: 95px;
     margin-top: 45px;
   }
@@ -110,7 +189,7 @@
   .core-content__list {
     margin-top: 105px;
   }
-  &>img {
+  .core-content__img {
     margin-right: 133px;
   }
 }

@@ -71,28 +71,36 @@ export default class ScenicProduct extends React.Component {
           title: '厂商网络OTT通道发送：发送成本更低，降低投诉风险',
           coreSrc: '/static/images/scenicProduct/core1.png',
           activeIcon: '/static/images/scenicProduct/icon-changshang-active.png',
-          matchTitle: '网络通道发送'
+          matchTitle: '网络通道发送',
+          highlightImage: '/static/images/scenicProduct/泰迪旅游.png',
+          imgClassName: 'firm-image'
         },
         {
           src: '/static/images/scenicProduct/icon-xiaoxi.png',
           title: '富媒体消息 ：快应用、视频、音频、语音、多图文、位置等多原画形态，提高用户体验的同时能够促进营销短信的效果转化。 ',
           coreSrc: '/static/images/scenicProduct/core2.png',
           activeIcon: '/static/images/scenicProduct/icon-xiaoxi-active.png',
-          matchTitle: '富媒体消息'
+          matchTitle: '富媒体消息',
+          highlightImage: '/static/images/scenicProduct/高亮2.png',
+          imgClassName: 'text-image'
         },
         {
           src: '/static/images/scenicProduct/icon-chufa.png',
           title: '基于用户使用场景触发消息推送 ：精准营销，效率提升',
           coreSrc: '/static/images/scenicProduct/core3.png',
           activeIcon: '/static/images/scenicProduct/icon-chufa-active.png',
-          matchTitle: '基于场景触发'
+          matchTitle: '基于场景触发',
+          highlightImage: '/static/images/scenicProduct/高亮3.png',
+          imgClassName: 'scenic-image'
         },
         {
           src: '/static/images/scenicProduct/icon-zhineng.png',
           title: '支持 chatbot：智能客服 ，智能推送消息',
           coreSrc: '/static/images/scenicProduct/core4.png',
           activeIcon: '/static/images/scenicProduct/icon-zhineng-active.png',
-          matchTitle: '支持chatbot'
+          matchTitle: '支持chatbot',
+          highlightImage: '/static/images/scenicProduct/高亮4.png',
+          imgClassName: 'chatbot-image'
         }
       ],
       tabBarList: [{
@@ -104,9 +112,7 @@ export default class ScenicProduct extends React.Component {
         active: false,
         type: 'card'
       }, {
-        name: '多图文消息',
-        active: false,
-        type: 'more-pic-text'
+        
       }, {
         name: '快应用消息',
         active: false,
@@ -174,7 +180,7 @@ export default class ScenicProduct extends React.Component {
         <SectionCard title={'你的场景消息通常会遇到的问题'} bgc={"#fff"} >
           <ProblemItem customClassName={'scenic-problem'} problems={problems}></ProblemItem>
         </SectionCard>
-        <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
+        <SectionCard title={'核心功能'} bgc={"#F8FAF  F"} >
           <CoreContent
             coreList={coreList}
             coreClassName={'scenic-core'}
