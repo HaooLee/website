@@ -83,7 +83,7 @@ export default class IntelligenceSms extends React.Component {
         {
           src: '/static/images/intelligenceSms/icon-duanxinyanzheng.png',
           title: '短信来源号码进行可信认证',
-          coreSrc: '/static/images/intelligenceSms/core1.png',
+          coreSrc: '/static/images/intelligenceSms/core2.png',
           activeIcon: '/static/images/intelligenceSms/icon-duanxinyanzheng.png',
           matchTitle: '短信号码认证',
           highlightImage: '/static/images/intelligenceSms/高亮1.png',
@@ -101,7 +101,7 @@ export default class IntelligenceSms extends React.Component {
         {
           src: '/static/images/intelligenceSms/icon-zhineng.png',
           title: '根据场景可智能匹配按钮一键跳转后续服务',
-          coreSrc: '/static/images/intelligenceSms/core3.png',
+          coreSrc: '/static/images/intelligenceSms/core2.png',
           activeIcon: '/static/images/intelligenceSms/icon-zhineng-active.png',
           matchTitle: '服务一键直达',
           highlightImage: '/static/images/intelligenceSms/高亮3.png',
@@ -110,7 +110,7 @@ export default class IntelligenceSms extends React.Component {
         {
           src: '/static/images/intelligenceSms/icon-service3.png',
           title: '短信公众号短信页面享受更多服务',
-          coreSrc: '/static/images/intelligenceSms/core4.png',
+          coreSrc: '/static/images/intelligenceSms/core2.png',
           activeIcon: '/static/images/intelligenceSms/icon-service3-active.png',
           matchTitle: '短信公众号',
           highlightImage: '/static/images/intelligenceSms/高亮4.png',
@@ -119,7 +119,7 @@ export default class IntelligenceSms extends React.Component {
         {
           src: '/static/images/intelligenceSms/icon-shape.png',
           title: '支持跳转 H5、APP、快应用一键拨号、验证码复制',
-          coreSrc: '/static/images/intelligenceSms/core5.png',
+          coreSrc: '/static/images/intelligenceSms/core2.png',
           activeIcon: '/static/images/intelligenceSms/icon-shape-active.png',
           matchTitle: '跳转多应用',
           highlightImage: '/static/images/intelligenceSms/高亮5.png',
