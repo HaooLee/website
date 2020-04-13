@@ -69,11 +69,11 @@ export default class ScenicProduct extends React.Component {
         {
           src: '/static/images/scenicProduct/icon-changshang.png',
           title: '厂商网络OTT通道发送：发送成本更低，降低投诉风险',
-          coreSrc: '/static/images/scenicProduct/core1.png',
+          coreSrc: '/static/images/scenicProduct/core3.png',
           activeIcon: '/static/images/scenicProduct/icon-changshang-active.png',
           matchTitle: '网络通道发送',
-          highlightImage: '/static/images/scenicProduct/泰迪旅游.png',
-          imgClassName: 'firm-image'
+          highlightImage: '/static/images/scenicProduct/高亮2.png',
+          imgClassName: 'text-image'
         },
         {
           src: '/static/images/scenicProduct/icon-xiaoxi.png',
@@ -81,8 +81,8 @@ export default class ScenicProduct extends React.Component {
           coreSrc: '/static/images/scenicProduct/core2.png',
           activeIcon: '/static/images/scenicProduct/icon-xiaoxi-active.png',
           matchTitle: '富媒体消息',
-          highlightImage: '/static/images/scenicProduct/高亮2.png',
-          imgClassName: 'text-image'
+          highlightImage: '/static/images/scenicProduct/高亮3.png',
+          imgClassName: 'scenic-image'
         },
         {
           src: '/static/images/scenicProduct/icon-chufa.png',
@@ -90,8 +90,8 @@ export default class ScenicProduct extends React.Component {
           coreSrc: '/static/images/scenicProduct/core3.png',
           activeIcon: '/static/images/scenicProduct/icon-chufa-active.png',
           matchTitle: '基于场景触发',
-          highlightImage: '/static/images/scenicProduct/高亮3.png',
-          imgClassName: 'scenic-image'
+          highlightImage: '/static/images/scenicProduct/高亮4.png',
+          imgClassName: 'chatbot-image'
         },
         {
           src: '/static/images/scenicProduct/icon-zhineng.png',
@@ -99,8 +99,8 @@ export default class ScenicProduct extends React.Component {
           coreSrc: '/static/images/scenicProduct/core4.png',
           activeIcon: '/static/images/scenicProduct/icon-zhineng-active.png',
           matchTitle: '支持chatbot',
-          highlightImage: '/static/images/scenicProduct/高亮4.png',
-          imgClassName: 'chatbot-image'
+          highlightImage: '/static/images/scenicProduct/泰迪旅游.png',
+          imgClassName: 'firm-image'
         }
       ],
       tabBarList: [{
@@ -112,7 +112,9 @@ export default class ScenicProduct extends React.Component {
         active: false,
         type: 'card'
       }, {
-        
+        name: '多图文消息',
+        active: false,
+        type: 'more-pic-text'
       }, {
         name: '快应用消息',
         active: false,
@@ -122,7 +124,7 @@ export default class ScenicProduct extends React.Component {
     }
     this.barContent = {
       'text': {
-        src: '/static/images/scenicProduct/card.png',
+        src: '/static/images/scenicProduct/core3.png',
         name: '文本消息',
         desc: <div className="apply-desc__content">
           <p>低成本，多字数，突破传统短信70字符限制，满足企业长短信需求</p>
