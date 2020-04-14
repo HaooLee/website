@@ -4,7 +4,7 @@ import Head from 'next/head'
 import globalStyles from './global.less'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
-import FloatWindow from '@/components/FloatWindow'
+import FloatWindow from '@/components/floatWindow'
 
 // import { addLocaleData, IntlProvider } from 'react-intl';
 
@@ -64,7 +64,7 @@ export default class MyApp extends App {
         <div style={{paddingTop: '60px'}}>
           <Component {...pageProps} />
         </div>
-      <FloatWindow />
+        <FloatWindow />
       <Footer />
 
 
