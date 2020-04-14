@@ -65,7 +65,7 @@ export default class Index extends React.Component {
       'view-application': '/static/images/index/泰迪银行-查看应用.png',
       'dae-cundan': '/static/images/index/泰迪银行-大额存单.png'
     },
-    
+
   }
   changeSmsImage = (type) => {
     this.setState({
@@ -92,7 +92,7 @@ export default class Index extends React.Component {
       infinite: true,
       speed: 500,
       slidesToScroll: 1,
-      dotsClass:'slick-dots teddy-dots',
+      // dotsClass:'slick-dots teddy-dots',
       autoplay: true,
       // nextArrow: <SampleNextArrow />,
       // prevArrow: <SamplePrevArrow />
@@ -201,7 +201,7 @@ export default class Index extends React.Component {
             </div>
             <div className="feature-image">
               <Slider {...settings}>
-                {quickApps.map((item, idx) => 
+                {quickApps.map((item, idx) =>
                   (
                     <React.Fragment key={idx}>
                       <img src={item} alt=""/>

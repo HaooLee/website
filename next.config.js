@@ -33,7 +33,6 @@ module.exports = (phase, {defaultConfig}) => {
             loader: 'less-loader',
             options: {
               modifyVars: {
-                'primary-color': '#FF9415',
                 // or
                 // 'hack': `true; @import "your-less-file-path.less";`, // Override with less file
               },

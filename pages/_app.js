@@ -6,6 +6,7 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import FloatWindow from '@/components/floatWindow'
 
+
 // import { addLocaleData, IntlProvider } from 'react-intl';
 
 //导入中英文对象
