@@ -29,8 +29,5 @@
     "redux-form": "^8.3.5",
     "styled-jsx-plugin-less": "^0.0.1-alpha.2",
     "swiper": "^5.3.6"
-  },
-  "devDependencies": {
-    "react-form-next": "^3.0.6"
   }
 }

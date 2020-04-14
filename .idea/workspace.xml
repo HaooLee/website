@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e7c6348-ff0b-441b-a7d3-ceac642b26c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/modal/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/modal/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/select/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/select/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/floatWindow/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/floatWindow/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/floatWindow/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/floatWindow/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/var.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/var.less" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -61,11 +49,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/index/index.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="385">
-                  <caret line="95" column="21" lean-forward="true" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
+                  <caret line="95" column="21" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
@@ -129,11 +117,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/package.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" selection-start-line="14" selection-end-line="14" />
+                <state relative-caret-position="465">
+                  <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
                 </state>
               </provider>
             </entry>
@@ -334,7 +322,6 @@
         <option value="$PROJECT_DIR$/pages/dspProduct/index.less" />
         <option value="$PROJECT_DIR$/pages/_app.js" />
         <option value="$PROJECT_DIR$/.babelrc" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/components/index.js" />
         <option value="$PROJECT_DIR$/pages/var.less" />
         <option value="$PROJECT_DIR$/components/modal/index.js" />
@@ -347,6 +334,7 @@
         <option value="$PROJECT_DIR$/components/select/index.js" />
         <option value="$PROJECT_DIR$/components/floatWindow/index.js" />
         <option value="$PROJECT_DIR$/pages/index/index.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -480,12 +468,12 @@
       <workItem from="1586188810256" duration="1316000" />
       <workItem from="1586195424098" duration="20473000" />
       <workItem from="1586421772550" duration="41067000" />
-      <workItem from="1586880859819" duration="7497000" />
+      <workItem from="1586880859819" duration="7627000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219610000" />
+    <option name="totallyTimeSpent" value="219740000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -752,13 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/case/index.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -921,10 +902,17 @@
     <entry file="file://$PROJECT_DIR$/pages/index/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
-          <caret line="95" column="21" lean-forward="true" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
+          <caret line="95" column="21" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
         </state>
       </provider>
     </entry>
