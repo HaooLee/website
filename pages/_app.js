@@ -4,7 +4,7 @@ import Head from 'next/head'
 import globalStyles from './global.less'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
-import FloatWindow from '@/components/Floatwindow'
+import FloatWindow from '@/components/FloatWindow'
 
 // import { addLocaleData, IntlProvider } from 'react-intl';
 
