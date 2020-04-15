@@ -30,7 +30,7 @@ export default class Auth extends Component {
           }
         },
         {
-          title: '支持400、虚拟号段、个人号段',
+          title: '支持400、虚拟号段、个人号码',
           src: '/static/images/dspProduct/icon-changshang.png',
           imgStyle: {
             width: '37px',
@@ -84,7 +84,7 @@ export default class Auth extends Component {
             height: '383px'
           }}
         ></ProductBanner>
-        <SectionCard title={'你的场景消息通常会遇到的问题'} bgc={"#fff"} >
+        <SectionCard title={'你的消息通常会遇到的问题'} bgc={"#fff"} >
           <ProblemItem problems={problems}></ProblemItem>
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >

@@ -72,7 +72,7 @@ export default class DspProduct extends Component {
     return (
       <>
         <ProductBanner
-          title={'全域场景营销平台'}
+          title={'全域场景增量营销平台'}
           desc={'提供全场景人群覆盖、优质丰富的媒体资源、 最具创意的呈现形式，以及一站式、全流程的投放及优化服务。'}
           src={'/static/images/dspProduct/banner.png'}
           customClassName={'dsp-banner'}

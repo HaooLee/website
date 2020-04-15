@@ -48,13 +48,13 @@ export default class About extends Component {
           src: '/static/images/about/icon-jishu.png',
           name: '技术及问题反馈',
           email: '邮箱：123456@teddymobile',
-          phone: '电话：010-234521'
+          phone: ''
         },
         {
           src: '/static/images/about/icon-shangwu.png',
           name: '商务合作',
-          email: '邮箱：123456@teddymobile',
-          phone: '电话：010-234521'
+          email: '邮箱：bd@teddymobile.cn',
+          phone: ''
         }
       ],
       products: [
@@ -214,8 +214,8 @@ export default class About extends Component {
         </div>
         <SectionCard title={'泰迪熊移动介绍'} bgc={'#FFFFFF'}>
           <div className="intro">
-            <p>泰迪熊移动成立于2014年，是一家综合性智能科技公司，获得国家高新技术企业认证。公司总部位于北京，并在上海、深圳设有子公司。</p>
-            <p>泰迪熊移动以智能连接人与服务为使命，专注于提供基于大数据和场景的智能服务。公司以智能短信公众号、智慧场景公众号、快应用等产品为主导，融合人工智能大数据、云计算等先进技术，致力于成为客户信赖的智慧场景生态服务提供商。</p>
+            <p>泰迪熊移动成立于2014年，是一家综合性智能科技公司，获得国家高新技术企业认证。公司总部位于北京，并在上海、深圳、浙江设有子公司。</p>
+            <p>泰迪熊移动以智能连接人与服务为使命，专注于提供基于大数据和场景的智能服务。公司以智能短信公众号、5G消息、快应用等产品为主导，融合人工智能大数据、云计算等先进技术，致力于成为客户信赖的智慧场景生态服务提供商。</p>
             <p>泰迪熊移动已为京东、淘宝、苏宁、携程、屈臣氏、建设银行、招商银行、百度、三大运营商等国内百家企业提供大数据和场景服务，覆盖快消、电商、零售、互联网、运营商、手机厂商、金融、旅游、教育等数十个行业，助力客户建设场景生态</p>
           </div>
         </SectionCard>

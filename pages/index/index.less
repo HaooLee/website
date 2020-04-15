@@ -169,12 +169,32 @@
   margin-bottom: 90px;
   padding: 0 20px;
 }
+@keyframes move {
+  from {
+    top: 50%;
+    right: 0;
+  }
+  to {
+    top: 92%;
+    right: 67%;
+  }
+}
+
 
 .feature-image {
   width: 257px;
   height: 521px;
   position: relative;
   display: inline-block;
+  img.hand {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 30px !important;
+    height: 30px !important;
+    animation: move linear 1s 1s forwards;
+  }
+
   &>div {
     cursor: url(/static/images/cursor.png), auto;
   }
@@ -240,6 +260,7 @@
   .feature-left, .feature-right {
     height: auto;
     .feature-content {
+      position: relative;
       display: flex;
       flex-direction: row;
       justify-content: center;

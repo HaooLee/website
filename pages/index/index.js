@@ -144,7 +144,9 @@ export default class Index extends React.Component {
               <div className="account-card" onClick={this.changeSmsImage.bind(this, 'account-card')}></div>
               {/* 投资理财 */}
               <div className="touzhi-licai" onClick={this.changeSmsImage.bind(this, 'touzhi-licai')}></div>
-            </div>
+              <img src="/static/images/cursor.png" alt="" className="hand"/>
+              </div>
+
             <div className="text">
               <h2>智能短信</h2>
               <h3>新短信、新营销</h3>
@@ -252,7 +254,7 @@ export default class Index extends React.Component {
             <img src="/static/images/index__logo.png" />
           </div>
         </SectionCard>
-        <SectionCard title={'这些成功的企业正在使用泰迪熊移动'} bgc={'#F7F7F7'} desc={'泰迪熊移动成立于2014年，已为京东、淘宝、苏宁、携程、屈臣氏、建设银行、招商银行、百度、三大运营商等国内百家企业提供大数据和场景服务，覆盖快消、电商、零售、互联网、运营商、手机厂商、金融、旅游、教育等数十个行业，助力客户建设场景生态。'} overflow={true} >
+        <SectionCard title={'这些成功的企业正在使用泰迪熊移动'} bgc={'#F7F7F7'} desc={'泰迪熊移动成立于2014年，已为京东、淘宝、苏宁、携程、屈臣氏、建设银行、招商银行、百度、三大运营商等国内百家企业提供大数据和场景服务，覆盖快消品、电商、零售、互联网、运营商、手机厂商、金融、旅游、教育等数十个行业，助力客户建设场景生态。'} overflow={true} >
           <div className="company-card-wrap">
             {
               companies.map((i,idx)=><CompanyLogo styleNum={idx} logoSrc={i.src} key={idx} />)
