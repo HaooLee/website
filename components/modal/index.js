@@ -35,6 +35,7 @@ export default class Modal extends React.Component{
     this.setState({
       visible:false
     })
+    this.props.onCancel && this.props.onCancel()
   }
 
   render(){

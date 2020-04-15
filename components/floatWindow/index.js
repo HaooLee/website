@@ -23,7 +23,11 @@ export default class FloatWindow extends react.Component {
   formChange = () => {
 
   }
-
+  hideModel = () => {
+    this.setState({
+      visible: false
+    })
+  }
   render() {
 
     const {visible, options} = this.state
@@ -45,6 +49,7 @@ export default class FloatWindow extends react.Component {
         <Modal
           visible={visible}
           title={'合作加盟'}
+          onCancel={this.hideModel.bind(this)}
         >
           <div className="form">
             <div className="form__item form__item--required">
