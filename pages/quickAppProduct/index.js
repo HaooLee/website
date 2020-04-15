@@ -115,7 +115,6 @@ export default class QuickAppProduct extends React.Component {
         type: 'scenic'
       }],
       activeType: 'global-search',
-      
     }
     
     this.barContent = {
@@ -211,19 +210,21 @@ export default class QuickAppProduct extends React.Component {
               <TabBarCard list={tabBarList} customClassName={'quick-tab-bar'} clickCallback={this.clickCallback}></TabBarCard>
               {
                 types.map((item, idx) => (
-                  <div className="tab-content clearfix" key={idx} style={{display: item === activeType ? 'block' : 'none'}}>
-                      <div className="tab-content__left">
-                        <div className="tab-content__left__desc">
-                          {this.barContent[item] ? this.barContent[item].desc : ''}
-                          <div className="tab-content__left__btn">马上合作</div>
+                  <div key={idx} style={{display: item === activeType ? 'block' : 'none'}}>
+                    <div className="tab-content clearfix">
+                        <div className="tab-content__left">
+                          <div className="tab-content__left__desc">
+                            {this.barContent[item] ? this.barContent[item].desc : ''}
+                            <div className="tab-content__left__btn">马上合作</div>
+                          </div>
                         </div>
-                      </div>
-                      <div className="tab-content__right clearfix">
-                        <div className="tab-content__right__item">
-                          <img src={this.barContent[item].src} />
-                          <p>{this.barContent[item].name}</p>
+                        <div className="tab-content__right clearfix">
+                          <div className="tab-content__right__item">
+                            <img src={this.barContent[item].src} />
+                            <p>{this.barContent[item].name}</p>
+                          </div>
                         </div>
-                      </div>
+                    </div>
                   </div>
                 ))
               }
