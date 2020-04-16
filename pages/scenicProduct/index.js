@@ -178,11 +178,11 @@ export default class ScenicProduct extends React.Component {
     const {problems, products, coreList, tabBarList, activeType} = this.state
     return (
       <>
-        <ProductBanner customClassName={'scenic-banner'} title={'场景消息'} desc={'千人千面的智慧场景营销服务'} src={'/static/images/scenicProduct/banner.png'}></ProductBanner>
-        <SectionCard title={'你的场景消息通常会遇到的问题'} bgc={"#fff"} >
+        <ProductBanner customClassName={'scenic-banner'} title={'5G消息'} desc={'千人千面的智慧场景营销服务'} src={'/static/images/scenicProduct/banner.png'}></ProductBanner>
+        <SectionCard title={'你的5G消息通常会遇到的问题'} bgc={"#fff"} >
           <ProblemItem customClassName={'scenic-problem'} problems={problems}></ProblemItem>
         </SectionCard>
-        <SectionCard title={'核心功能'} bgc={"#F8FAF  F"} >
+        <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
           <CoreContent
             coreList={coreList}
             coreClassName={'scenic-core'}

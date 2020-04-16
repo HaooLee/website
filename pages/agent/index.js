@@ -17,7 +17,7 @@ export default class Agent extends Component {
         {
           src: '/static/images/agent/scenic-icon.png',
           linkTo:'/scenicProduct',
-          name: '场景消息'
+          name: '5G消息'
         },
         {
           src: '/static/images/agent/auth-icon.png',

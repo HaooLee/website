@@ -84,7 +84,7 @@ export default class Auth extends Component {
             height: '383px'
           }}
         ></ProductBanner>
-        <SectionCard title={'你的场景消息通常会遇到的问题'} bgc={"#fff"} >
+        <SectionCard title={'你的5G消息通常会遇到的问题'} bgc={"#fff"} >
           <ProblemItem problems={problems}></ProblemItem>
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >

@@ -43,7 +43,7 @@ export default class CoreContent extends React.Component {
           <div className="core-content__list" style={listStyle}>
             {
               coreList.map((item, index) => (
-                <div key={index} className={`core-content__item  ${item.active ? 'active' : ''}`} onClick={this.coreHover.bind(this, item, index)}>
+                <div key={index} className={`core-content__item  ${item.active ? 'active' : ''}`} onMouseEnter={this.coreHover.bind(this, item, index)}>
                   <div className="core-content__item__img-wrap">
                     <img src={item.active ? item.activeIcon : item.src}/>
                   </div>

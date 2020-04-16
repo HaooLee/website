@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import React from "react";
 import styles from './index.less'
 import TextTransform from '@/components/textTransform'
-
+import Link from 'next/link'
 export default class Banner extends React.Component {
   constructor(props) {
     super(props)
@@ -49,7 +49,7 @@ export default class Banner extends React.Component {
 
           <div className="buttons clearfix">
             <a href="" className="watch-video">观看视频</a>
-            <a href="" className="more">了解更多</a>
+            <a href="/agent" className="more">了解更多</a>
           </div>
 
           {/*<Slider {...settings}>*/}

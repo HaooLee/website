@@ -116,13 +116,13 @@ export default class Case extends Component {
                 <a style={{color: '#355EA6'}}>智能短信</a>
               </Link>,
               <Link href={'/scenicProduct'}>
-                <a style={{color: '#355EA6'}}>场景消息</a>
+                <a style={{color: '#355EA6'}}>5G消息</a>
               </Link>,
               <Link href={'/quickAppProduct'}>
                 <a style={{color: '#355EA6'}}>快应用</a>
               </Link>
             ],
-            typeName: '智能短信、场景消息、快应用'
+            typeName: '智能短信、5G消息、快应用'
           }
         ],
         'live': [

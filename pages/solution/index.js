@@ -180,7 +180,7 @@ export default class Solution extends Component {
             <div className="solution__content clearfix">
               {
                 tabBarList.map((item, idx) => (
-                  <div style={{display: activeType === item.type ? 'block' : 'none'}}>
+                  <div className="clearfix solution__content__card" style={{display: activeType === item.type ? 'flex' : 'none'}}>
                     <div className="solution__content__slider">
                       <Slider {...settings}>
                         {solutions[item.type] && solutions[item.type].images.map((item, index) => (

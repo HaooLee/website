@@ -109,7 +109,7 @@ export default class IntelligenceSms extends React.Component {
         },
         {
           src: '/static/images/intelligenceSms/icon-service3.png',
-          title: '短信公众号短信页面享受更多服务',
+          title: '短信公众号页面享受更多服务',
           coreSrc: '/static/images/intelligenceSms/core2.png',
           activeIcon: '/static/images/intelligenceSms/icon-service3-active.png',
           matchTitle: '短信公众号',

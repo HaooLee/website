@@ -140,7 +140,7 @@ export default class Index extends React.Component {
              </div>
              <div className="card">
                <p className="title">场景推送+富媒体消息</p>
-               <p className="desc">场景消息</p>
+               <p className="desc">5G消息</p>
                <p className="content">短信跟随</p>
                <p className="content">挂机推送</p>
                <p className="content">位置推送</p>
@@ -184,9 +184,9 @@ export default class Index extends React.Component {
         <section className="feature-right">
           <div className="w feature-content">
             <div className="text">
-              <h2>场景消息</h2>
+              <h2>5G消息</h2>
               <h3>多形式、效率高、全场景、 省成本</h3>
-              <p>马上通过 <a href="/scenicProduct">场景消息</a> 了解更多效果转化新玩法</p>
+              <p>马上通过 <a href="/scenicProduct">5G消息</a> 了解更多效果转化新玩法</p>
             </div>
             <div className="feature-image scenic-image">
               <img src={scenicImage[scenicActiveImage]} alt=""/>
@@ -219,7 +219,7 @@ export default class Index extends React.Component {
             <div className="text">
               <h2>号码认证</h2>
               <h3>来电接的安心，去电不再被拒绝</h3>
-              <p>马上通过 <a href="/numberAuth">号码认证</a> 解锁</p>
+              <p>马上通过 <a href="/numberAuth">号码认证</a> 进行认证申请</p>
             </div>
           </div>
         </section>

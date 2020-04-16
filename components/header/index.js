@@ -25,7 +25,7 @@ export default class Header extends React.Component {
             enable:true
           },
           {
-            title:"场景消息",
+            title:"5G消息",
             link:"/scenicProduct",
             enable:true
           },

@@ -33,17 +33,17 @@ export default class DspProduct extends Component {
       products: [
         {
           title: '产品优势',
-          desc: 'DMP数据整合服、DSP流量交易服务。',
+          desc: 'DMP数据整合服、DSP流量交易服务',
           src: '/static/images/dspProduct/icon-chanpin.png'
         },
         {
           title: '资源优势',
-          desc: 'TOP级媒体资源 、头部广告位资源。',
+          desc: 'TOP级媒体资源 、头部广告位资源',
           src: '/static/images/dspProduct/icon-ziyuan.png'
         },
         {
           title: '服务优势',
-          desc: '数据化服务能力、程序化平台运营、 场景化流量覆盖、目标化运营增长。',
+          desc: '数据化服务能力、程序化平台运营、 场景化流量覆盖、目标化运营增长',
           src: '/static/images/dspProduct/icon-fuwu.png'
         }
       ],
