@@ -53,22 +53,22 @@ export default class QuickAppProduct extends React.Component {
         {
           src: '/static/images/quickAppProduct/icon-shengji.png',
           title: '低成本易升级',
-          desc: '贴近H5标准，采用前端技术栈开发，无碎片。低成本更新。'
+          desc: '贴近H5标准，采用前端技术栈开发，无碎片。低成本更新'
         },
         {
           src: '/static/images/quickAppProduct/icon-transform.png',
           title: '高转化',
-          desc: '线上一步激活，精准直达。'
+          desc: '线上一步激活，精准直达'
         },
         {
           src: '/static/images/quickAppProduct/icon-changjing.png',
           title: '场景丰富',
-          desc: '智慧桌面、智慧识屏、语音助手、智慧场景，多入口、易触达。'
+          desc: '智慧桌面、智慧识屏、语音助手、智慧场景，多入口、易触达'
         },
         {
           src: '/static/images/quickAppProduct/icon-qiangliucun.png',
           title: '强留存',
-          desc: '支持创建桌面快捷方式、PUSH消息，助力开发者拉新、促活。 '
+          desc: '支持创建桌面快捷方式、PUSH消息，助力开发者拉新、促活'
         }
       ],
       industryList: [
@@ -110,7 +110,7 @@ export default class QuickAppProduct extends React.Component {
         active: false,
         type: 'sms'
       }, {
-        name: '场景消息',
+        name: '5G消息',
         active: false,
         type: 'scenic'
       }],
@@ -163,8 +163,8 @@ export default class QuickAppProduct extends React.Component {
         </div>
       },
       'scenic': {
-        src: '/static/images/quickAppProduct/场景消息.png',
-        name: '场景消息',
+        src: '/static/images/quickAppProduct/5G消息.png',
+        name: '5G消息',
         desc: <div className="apply-desc__content">
           <p>基于用户场景，下发快应用消息</p>
           <p>短链路，强留存</p>

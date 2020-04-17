@@ -2,20 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e7c6348-ff0b-441b-a7d3-ceac642b26c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/banner/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/banner/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/coreContent/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/coreContent/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/coreContent/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/coreContent/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/coreContent/match.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/coreContent/match.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/floatWindow/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/floatWindow/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/modal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/modal/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/footer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/agent/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/agent/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/case/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/case/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/dspProduct/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dspProduct/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/dspProduct/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dspProduct/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/global.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/global.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/intelligenceSms/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/intelligenceSms/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/numberProduct/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/numberProduct/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/quickAppProduct/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/quickAppProduct/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/quickAppProduct/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/quickAppProduct/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/scenicProduct/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/scenicProduct/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/scenicProduct/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/scenicProduct/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/solution/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/solution/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/solution/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/solution/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/solution/match.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/solution/match.less" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -142,22 +145,22 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/case/index.js">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="353">
-                  <caret line="244" column="7" selection-start-line="244" selection-start-column="7" selection-end-line="244" selection-end-column="7" />
-                  <folding>
-                    <element signature="e#0#31#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="45">
+                  <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/.gitignore">
+            <entry file="file://$PROJECT_DIR$/pages/auth/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="45">
-                  <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+                <state relative-caret-position="94">
+                  <caret line="86" column="58" selection-start-line="86" selection-start-column="58" selection-end-line="86" selection-end-column="58" />
+                  <folding>
+                    <element signature="e#0#31#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -347,7 +350,6 @@
         <option value="$PROJECT_DIR$/pages/intelligenceSms/index.js" />
         <option value="$PROJECT_DIR$/.next/server/static/development/pages/scenicProduct.js" />
         <option value="$PROJECT_DIR$/pages/scenicProduct/index.js" />
-        <option value="$PROJECT_DIR$/pages/auth/index.js" />
         <option value="$PROJECT_DIR$/pages/numberProduct/index.js" />
         <option value="$PROJECT_DIR$/pages/dspProduct/index.js" />
         <option value="$PROJECT_DIR$/pages/solution/index.js" />
@@ -355,6 +357,7 @@
         <option value="$PROJECT_DIR$/pages/index/index.js" />
         <option value="$PROJECT_DIR$/pages/quickAppProduct/index.js" />
         <option value="$PROJECT_DIR$/pages/case/index.js" />
+        <option value="$PROJECT_DIR$/pages/auth/index.js" />
       </list>
     </option>
   </component>
@@ -395,6 +398,12 @@
               <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
               <item name="new-website" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new-website" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
@@ -489,17 +498,18 @@
       <workItem from="1586880859819" duration="10868000" />
       <workItem from="1586939108221" duration="187000" />
       <workItem from="1586940917890" duration="1200000" />
-      <workItem from="1587014923444" duration="1266000" />
+      <workItem from="1587014923444" duration="1329000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225634000" />
+    <option name="totallyTimeSpent" value="225697000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12718505" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12718505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -511,7 +521,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.28469387" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.28469387" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -526,13 +536,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.sh" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/join/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1965">
-          <caret line="131" column="23" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pm2.config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -930,6 +933,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/auth/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="86" column="58" selection-start-line="86" selection-start-column="58" selection-end-line="86" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
