@@ -85,21 +85,27 @@ export default class DspProduct extends Component {
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
           <div className="w dsp-card-wrap" id="core-content">
             <div className="dsp-card">
-              <img src="/static/images/dspProduct/科技@2x.png" alt=""/>
+              <div className="dsp-card__img">
+                <img src="/static/images/dspProduct/科技@2x.png" alt=""/>
+              </div>
               <div>
                 <p className="title">平台</p>
                 <p className="desc">科技+赋能广告投放管理</p>
               </div>
             </div>
              <div className="dsp-card">
-              <img src="/static/images/dspProduct/用户覆盖@2x.png" alt=""/>
+              <div className="dsp-card__img">
+                <img src="/static/images/dspProduct/用户覆盖@2x.png" alt=""/>
+              </div> 
               <div>
                 <p className="title">效果</p>
                 <p className="desc">以人为核心的全域场景覆盖</p>
               </div>
             </div>
              <div className="dsp-card">
-              <img src="/static/images/dspProduct/icon-changshang@2x.png" alt=""/>
+              <div className="dsp-card__img">
+                <img src="/static/images/dspProduct/icon-changshang@2x.png" alt=""/>
+              </div>
               <div>
                 <p className="title">资源</p>
                 <p className="desc">合作市场主流厂商，覆盖用户7亿</p>

@@ -228,16 +228,24 @@ export default class Case extends Component {
       activeIndex: list.findIndex(i=>i.active)
     }
   }
-  componentDidMount() {
-    window.addEventListener('resize', () => {
-      const {activeItem} = this.state
-      if(activeItem) {
-        this.setState({
-          activeItem: null
-        })
-      }
-    })
+  handleResize = () => {
+    const {activeItem} = this.state
+    if(activeItem) {
+      this.setState({
+        activeItem: null
+      })
+    }
   }
+
+  componentDidMount() {
+    // window.addEventListener('resize', this.handleResize)
+  }
+
+  componentWillUnmount() {
+    // window.removeEventListener('resize',this.handleResize)
+  }
+
+
   clickCallback = (index,item) => {
     // const {list} = this.state
     // let type = ''

@@ -9,7 +9,7 @@ import TabBarCard from '@/components/tabBarCard'
 
 export default class QuickAppProduct extends React.Component {
   constructor(props) {
-    super(props) 
+    super(props)
     this.state = {
       coreList: [
         {
@@ -115,9 +115,8 @@ export default class QuickAppProduct extends React.Component {
         type: 'scenic'
       }],
       activeType: 'global-search',
-      
     }
-    
+
     this.barContent = {
       'global-search': {
         src: '/static/images/quickAppProduct/全局搜索.png',
@@ -175,7 +174,7 @@ export default class QuickAppProduct extends React.Component {
     }
   }
   clickCallback = (index, row) => {
-    const {tabBarList} = this.state 
+    const {tabBarList} = this.state
     tabBarList.forEach((item, idx) => {
       if(index === idx) {
         item.active = true
@@ -200,9 +199,9 @@ export default class QuickAppProduct extends React.Component {
           </div>
         </SectionCard>
         {/* <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
-          <CoreContent 
-            src={'/static/images/quickAppProduct/phone.png'} 
-            coreList={coreList} 
+          <CoreContent
+            src={'/static/images/quickAppProduct/phone.png'}
+            coreList={coreList}
             coreClassName={'quick-app-core'}
           ></CoreContent>
         </SectionCard> */}
@@ -211,40 +210,42 @@ export default class QuickAppProduct extends React.Component {
               <TabBarCard list={tabBarList} customClassName={'quick-tab-bar'} clickCallback={this.clickCallback}></TabBarCard>
               {
                 types.map((item, idx) => (
-                  <div className="tab-content clearfix" key={idx} style={{display: item === activeType ? 'block' : 'none'}}>
-                      <div className="tab-content__left">
-                        <div className="tab-content__left__desc">
-                          {this.barContent[item] ? this.barContent[item].desc : ''}
-                          <div className="tab-content__left__btn">马上合作</div>
+                  <div key={idx} style={{display: item === activeType ? 'block' : 'none'}}>
+                    <div className="tab-content clearfix">
+                        <div className="tab-content__left">
+                          <div className="tab-content__left__desc">
+                            {this.barContent[item] ? this.barContent[item].desc : ''}
+                            <div className="tab-content__left__btn">马上合作</div>
+                          </div>
                         </div>
-                      </div>
-                      <div className="tab-content__right clearfix">
-                        <div className="tab-content__right__item">
-                          <img src={this.barContent[item].src} />
-                          <p>{this.barContent[item].name}</p>
+                        <div className="tab-content__right clearfix">
+                          <div className="tab-content__right__item">
+                            <img src={this.barContent[item].src} />
+                            <p>{this.barContent[item].name}</p>
+                          </div>
                         </div>
-                      </div>
+                    </div>
                   </div>
                 ))
               }
           </div>
         </SectionCard>
         <SectionCard title={'产品优势'} bgc={'#fff'}>
-          <ProductAdvantage 
-            products={products} 
+          <ProductAdvantage
+            products={products}
             customClassName={'quick-app-product__item'}
           ></ProductAdvantage>
         </SectionCard>
-        <SectionCard title={'覆盖行业'} bgc={"#F8FAFF"} >
-          <div className="industry-list w clearfix">
-            {industryList.map((item, index) => (
-              <div className="industry-list__item" key={index}>
-                <img src={item.src} />
-                <div className="industry-list__item__text">{item.name}</div>
-              </div>
-            ))}
-          </div>
-        </SectionCard>
+        {/*<SectionCard title={'覆盖行业'} bgc={"#F8FAFF"} >*/}
+          {/*<div className="industry-list w clearfix">*/}
+            {/*{industryList.map((item, index) => (*/}
+              {/*<div className="industry-list__item" key={index}>*/}
+                {/*<img src={item.src} />*/}
+                {/*<div className="industry-list__item__text">{item.name}</div>*/}
+              {/*</div>*/}
+            {/*))}*/}
+          {/*</div>*/}
+        {/*</SectionCard>*/}
         <style jsx>{styles}</style>
       </>
     )

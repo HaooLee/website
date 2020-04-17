@@ -65,20 +65,47 @@ export default class Index extends React.Component {
       'view-application': '/static/images/index/泰迪银行-查看应用.png',
       'dae-cundan': '/static/images/index/泰迪银行-大额存单.png'
     },
-
+    quickImage: {
+      'defaultImage': '/static/images/index/快应用2.png',
+      'power-bank': '/static/images/index/快应用3.png'
+    },
+    quickActiveImage: 'defaultImage'
   }
   changeSmsImage = (type) => {
     this.setState({
       smsActiveImage: type
+    }, () => {
+      setTimeout(() => {
+        this.setState({
+          smsActiveImage: 'defaultImage'
+        })
+      }, 3000);
     })
   }
   changeScenicImage = (type) => {
     this.setState({
       scenicActiveImage: type
+    }, () => {
+      setTimeout(() => {
+        this.setState({
+          scenicActiveImage: 'defaultImage'
+        })
+      }, 3000);
+    })
+  }
+  changeQuickImage = (type) => {
+    this.setState({
+      quickActiveImage: type
+    }, () => {
+      setTimeout(() => {
+        this.setState({
+          quickActiveImage: 'defaultImage'
+        })
+      }, 3000);
     })
   }
   render () {
-    const {companies, smsImage, smsActiveImage, scenicImage, scenicActiveImage} = this.state
+    const {companies, smsImage, smsActiveImage, scenicImage, scenicActiveImage, quickActiveImage, quickImage} = this.state
     const {news} = this.props
     const quickApps = [
       '/static/images/index/快应用1.png',
@@ -132,21 +159,21 @@ export default class Index extends React.Component {
           <div className="w feature-content">
             <div className="feature-image">
               <img src={smsImage[smsActiveImage]} alt=""/>
-              {/* 查看原文 */}
-              <div className="read-more" onClick={this.changeSmsImage.bind(this, 'read-more')}></div>
-              {/* 查看应用 */}
-              <div className="view-application" onClick={this.changeSmsImage.bind(this, 'view-application')}></div>
-              {/* 大额存单 */}
-              <div className="dae-cundan" onClick={this.changeSmsImage.bind(this, 'dae-cundan')}></div>
-              {/* 我的用户 */}
-              <div className="my-account" onClick={this.changeSmsImage.bind(this, 'my-account')}></div>
-              {/* 信用卡 */}
-              <div className="account-card" onClick={this.changeSmsImage.bind(this, 'account-card')}></div>
-              {/* 投资理财 */}
-              <div className="touzhi-licai" onClick={this.changeSmsImage.bind(this, 'touzhi-licai')}></div>
-              <img src="/static/images/cursor.png" alt="" className="hand"/>
-              </div>
-
+              {smsActiveImage === 'defaultImage' && <div>
+                {/* 查看原文 */}
+                <div className="read-more" onClick={this.changeSmsImage.bind(this, 'read-more')}></div>
+                {/* 查看应用 */}
+                <div className="view-application" onClick={this.changeSmsImage.bind(this, 'view-application')}></div>
+                {/* 大额存单 */}
+                <div className="dae-cundan" onClick={this.changeSmsImage.bind(this, 'dae-cundan')}></div>
+                {/* 我的用户 */}
+                <div className="my-account" onClick={this.changeSmsImage.bind(this, 'my-account')}></div>
+                {/* 信用卡 */}
+                <div className="account-card" onClick={this.changeSmsImage.bind(this, 'account-card')}></div>
+                {/* 投资理财 */}
+                <div className="touzhi-licai" onClick={this.changeSmsImage.bind(this, 'touzhi-licai')}></div>
+              </div>}
+            </div>
             <div className="text">
               <h2>智能短信</h2>
               <h3>新短信、新营销</h3>
@@ -163,18 +190,20 @@ export default class Index extends React.Component {
             </div>
             <div className="feature-image scenic-image">
               <img src={scenicImage[scenicActiveImage]} alt=""/>
-              {/* 查看原文 */}
-              <div className="read-more" onClick={this.changeScenicImage.bind(this, 'read-more')}></div>
-              {/* 查看应用 */}
-              <div className="view-application" onClick={this.changeScenicImage.bind(this, 'view-application')}></div>
-              {/* 大额存单 */}
-              <div className="dae-cundan" onClick={this.changeScenicImage.bind(this, 'dae-cundan')}></div>
-              {/* 我的用户 */}
-              <div className="my-account" onClick={this.changeScenicImage.bind(this, 'my-account')}></div>
-              {/* 信用卡 */}
-              <div className="account-card" onClick={this.changeScenicImage.bind(this, 'account-card')}></div>
-              {/* 投资理财 */}
-              <div className="touzhi-licai" onClick={this.changeScenicImage.bind(this, 'touzhi-licai')}></div>
+              {scenicActiveImage === 'defaultImage' && <div>
+                {/* 查看原文 */}
+                <div className="read-more" onClick={this.changeScenicImage.bind(this, 'read-more')}></div>
+                {/* 查看应用 */}
+                <div className="view-application" onClick={this.changeScenicImage.bind(this, 'view-application')}></div>
+                {/* 大额存单 */}
+                <div className="dae-cundan" onClick={this.changeScenicImage.bind(this, 'dae-cundan')}></div>
+                {/* 我的用户 */}
+                <div className="my-account" onClick={this.changeScenicImage.bind(this, 'my-account')}></div>
+                {/* 信用卡 */}
+                <div className="account-card" onClick={this.changeScenicImage.bind(this, 'account-card')}></div>
+                {/* 投资理财 */}
+                <div className="touzhi-licai" onClick={this.changeScenicImage.bind(this, 'touzhi-licai')}></div>
+              </div>}
             </div>
           </div>
         </section>
@@ -202,7 +231,11 @@ export default class Index extends React.Component {
               <p>马上通过 <a href="/quickAppProduct">快应用</a> 解锁更多营销新玩法</p>
             </div>
             <div className="feature-image">
-              <Slider {...settings}>
+              <img src={quickImage[quickActiveImage]} />
+              {quickActiveImage === 'defaultImage' && <div>
+                <div className="quick-app-click" onClick={this.changeQuickImage.bind(this, 'power-bank')}></div>
+              </div>}
+              {/* <Slider {...settings}>
                 {quickApps.map((item, idx) =>
                   (
                     <React.Fragment key={idx}>
@@ -210,7 +243,7 @@ export default class Index extends React.Component {
                     </React.Fragment>
                   )
                 )}
-              </Slider>
+              </Slider> */}
             </div>
           </div>
         </section>
