@@ -6,8 +6,8 @@ import ProductBanner from '@/components/productBanner'
 import CoreContent from '@/components/coreContent'
 import ProductAdvantage from '@/components/productAdvantage'
 import {connect} from 'react-redux'
-
 import styles from './index.less'
+
 @connect()
 export default class ScenicProduct extends React.Component {
   constructor(props) {

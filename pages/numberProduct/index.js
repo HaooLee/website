@@ -5,7 +5,8 @@ import ProblemItem from '@/components/problemItem'
 import CoreContent from '@/components/coreContent'
 import ProductAdvantage from '@/components/productAdvantage'
 import styles from './index.less'
-
+import {connect} from 'react-redux';
+@connect(({floatWindowVisible})=>({visible:floatWindowVisible}))
 export default class NumberProduct extends Component {
   constructor(props) {
     super(props)
@@ -88,7 +89,9 @@ export default class NumberProduct extends Component {
               <div className="apply-desc__content">
                 <p>识别号码来源，保证通话安全</p>
                 <p>企业号码有效认证，提高品牌曝光</p>
-                <div className="tab-content__left__btn">马上合作</div>
+                <div className="tab-content__left__btn" onClick={() => {
+                  this.props.dispatch({type:'FLOAT_WINDOW_SHOW'})
+                }}>马上合作</div>
               </div>
             </div>
             <div className="tab-content__right clearfix">
