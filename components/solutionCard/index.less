@@ -5,6 +5,12 @@
   background:rgba(248,250,255,1);
   margin-bottom: 22px;
   box-shadow:0px 12px 23px 4px rgba(216,223,229,0.3);
+  cursor: pointer;
+  transition:all linear .2s;
+  &:hover{
+    transform:scale(1.03);
+    box-shadow:0px 12px 23px 4px rgba(216,223,229,0.6);
+  }
   .pic-wrap {
     width: 301px;
     height: 124px;
@@ -35,6 +41,7 @@
     height: 2.93rem;
     display: flex;
     flex-direction: row;
+
     p {
       margin: 0.64rem 0 0 0.43rem;
       font-size: 18px;

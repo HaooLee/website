@@ -1,5 +1,6 @@
 import {Component} from 'react'
 import Slider from "react-slick";
+import {connect} from 'react-redux'
 import TabBarCard from '@/components/tabBarCard'
 import SectionCard from '@/components/sectionCard'
 import styles from './index.less'
@@ -18,6 +19,7 @@ function SamplePrevArrow(props) {
     <img className={className} onClick={onClick} style={{width:18,height:30}} src="/static/images/left.png"/>
   )
 }
+@connect()
 export default class Solution extends Component {
   constructor(props) {
     super(props)
@@ -152,6 +154,12 @@ export default class Solution extends Component {
       activeType: activeType
     })
   }
+
+  handleJoinNow(){
+    const { dispatch } = this.props
+    dispatch({type:'FLOAT_WINDOW_SHOW'})
+  }
+
   render() {
     const {tabBarList, solutions, activeType, partnerImages} = this.state
     const settings = {
@@ -204,7 +212,7 @@ export default class Solution extends Component {
                           <p className="info__list__item__desc">{solutions[item.type] && solutions[item.type]['worthDesc']}</p>
                         </li>
                       </ul>
-                      <div className="solution__content__info__btn">马上合作</div>
+                      <div className="solution__content__info__btn" onClick={e=> this.handleJoinNow()}>马上合作</div>
                     </div>
                   </div>
                 ))

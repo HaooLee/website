@@ -114,7 +114,6 @@ export default class Auth extends Component {
                 <img src="/static/images/auth/auth-phone-2.png" />
                 <p>企业认证</p>
               </div>
-
             </div>
           </div>
         </SectionCard>
