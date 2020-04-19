@@ -5,7 +5,8 @@ import globalStyles from './global.less'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import FloatWindow from '@/components/floatWindow'
-
+import {Provider} from 'react-redux'
+import withReduxStore from '../lib/with-redux-store'
 
 // import { addLocaleData, IntlProvider } from 'react-intl';
 
@@ -13,7 +14,7 @@ import FloatWindow from '@/components/floatWindow'
 // import _ZH from '../locales/zh-CN';
 
 
-export default class MyApp extends App {
+class MyApp extends App {
   static async getInitialProps({Component, router, ctx}) {
     let pageProps = {}
 
@@ -46,36 +47,35 @@ export default class MyApp extends App {
   }
 
   render() {
-    const {Component, pageProps} = this.props
+    const {Component, pageProps,reduxStore} = this.props
     // router.query.lang当前语言 - 需要通过修改server.js传入query.lang
     // 根据url设置语言
     //const languages = router.query.lang || 'zh-CN';
     //const appLocale = this.getLocale(languages);
 
 
-    return <>
-      {/*<IntlProvider*/}
-        {/*locale={appLocale.local}*/}
-        {/*messages={appLocale.messages}*/}
-      {/*>*/}
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-      </Head>
-        <Header/>
-        <div style={{paddingTop: '60px'}}>
-          <Component {...pageProps} />
-        </div>
-        <FloatWindow />
-      <Footer />
-
-
-      {/*</IntlProvider>,*/}
-
-      <style global jsx>
-        {
-          globalStyles
-        }
-      </style>
-    </>
+    return(
+      <Container>
+        <Provider store={reduxStore}>
+          <>
+            <Head>
+              <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+            </Head>
+            <Header/>
+            <div style={{paddingTop: '60px'}}>
+              <Component {...pageProps} />
+            </div>
+            <FloatWindow />
+            <Footer />
+            <style global jsx>
+              {
+                globalStyles
+              }
+            </style>
+          </>
+        </Provider>
+      </Container>
+    )
   }
 }
+export default withReduxStore(MyApp)

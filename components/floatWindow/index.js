@@ -2,18 +2,22 @@ import react from 'react'
 import styles from './index.less'
 import Modal from '@/components/modal';
 import Select from '@/components/select'
+import {connect} from 'react-redux';
+import {floatWindowShow,floatWindowHide} from '@/store';
 
+
+
+@connect(({floatWindowVisible})=>({visible:floatWindowVisible}))
 export default class FloatWindow extends react.Component {
   state = {
-    visible: false,
+    // visible: false,
     options: [
       "医疗健康", "机械设备", "软件游戏", "教育培训", "商务服务", "装修装饰", "生活用品", "生活服务", "交通类", "电子电工", "化工及材料", "家用电器", "农林牧渔", "旅游及票务", "服装鞋帽", "休闲娱乐", "安全安保", "食品餐饮", "节能环保", "金融服务", "IT产品", "化妆品", "房地产", "通信服务", "办公文教", "图书音像", "母婴用品", "铃声短信", "彩票", "电子商务", "社交", "招聘", "资讯", "分类信息", "其他"]
   }
 
   showModal = () => {
-    this.setState({
-      visible: true,
-    });
+    const { dispatch } = this.props
+    dispatch({type:'FLOAT_WINDOW_SHOW'})
   }
 
   onSubmit = values => {
@@ -24,14 +28,13 @@ export default class FloatWindow extends react.Component {
 
   }
   hideModel = () => {
-    this.setState({
-      visible: false
-    })
+    const { dispatch } = this.props
+    dispatch({type:'FLOAT_WINDOW_HIDE'})
   }
   render() {
 
-    const {visible, options} = this.state
-
+    const { options} = this.state
+    const {visible} = this.props
     return (
       <>
         <div className="floating_ck">
@@ -49,7 +52,7 @@ export default class FloatWindow extends react.Component {
         <Modal
           visible={visible}
           title={'合作加盟'}
-          onCancel={this.hideModel.bind(this)}
+          onCancel={this.hideModel}
         >
           <div className="form">
             <div className="form__item form__item--required">
@@ -92,7 +95,6 @@ export default class FloatWindow extends react.Component {
             {/*</div>*/}
 
           </div>
-
         </Modal>
         <style jsx>{styles}</style>
       </>

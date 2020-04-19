@@ -34,7 +34,7 @@ export default class NewsDetail extends Component {
     }
   }
   clickCallback = (index) => {
-    const {list} = this.state 
+    const {list} = this.state
     list.forEach((item, idx) => {
       if(index === idx) {
         item.active = true
@@ -65,7 +65,7 @@ export default class NewsDetail extends Component {
               <span>泰迪资讯 | {newsDeatail.news_time.replace(/\s[\x00-\xff]*/g,'')} </span>
             </div>
             <div className="news__detail__content">
-              <div dangerouslySetInnerHTML = {{ __html: newsDeatail.content }} ></div>
+              <div dangerouslySetInnerHTML = {{ __html: newsDeatail.content }} style={{overflow:'hidden'}}></div>
             </div>
           </div>
         </div>

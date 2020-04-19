@@ -32,10 +32,13 @@ export default class Modal extends React.Component{
   }
 
   handleCloseClick = () =>{
+   if( this.props.onCancel ){
+    this.props.onCancel()
+     return
+   }
     this.setState({
       visible:false
     })
-    this.props.onCancel && this.props.onCancel()
   }
 
   render(){
