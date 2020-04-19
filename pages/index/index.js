@@ -173,6 +173,7 @@ export default class Index extends React.Component {
                 {/* 投资理财 */}
                 <div className="touzhi-licai" onClick={this.changeSmsImage.bind(this, 'touzhi-licai')}></div>
               </div>}
+              <p className="click-tip-text">点击可体验</p>
             </div>
             <div className="text">
               <h2>智能短信</h2>
@@ -204,6 +205,7 @@ export default class Index extends React.Component {
                 {/* 投资理财 */}
                 <div className="touzhi-licai" onClick={this.changeScenicImage.bind(this, 'touzhi-licai')}></div>  
               </div>}
+              <p className="click-tip-text">点击可体验</p>
             </div>
           </div>
         </section>
@@ -244,6 +246,7 @@ export default class Index extends React.Component {
                   )
                 )}
               </Slider> */}
+              <p className="click-tip-text">点击可体验</p>
             </div>
           </div>
         </section>
