@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e7c6348-ff0b-441b-a7d3-ceac642b26c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/with-redux-store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/floatWindow/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/floatWindow/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/modal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/modal/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/newsDetail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/newsDetail/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,11 +18,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.54340154">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/components/floatWindow/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="231">
-                  <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+                <state relative-caret-position="273">
+                  <caret line="19" column="40" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="19" selection-end-column="40" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
@@ -45,10 +35,10 @@
               <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/index/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1733">
+                <state relative-caret-position="1611">
                   <caret line="123" column="40" selection-start-line="123" selection-start-column="40" selection-end-line="123" selection-end-column="40" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
@@ -165,8 +155,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/index/index.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="93">
-                  <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
+                <state relative-caret-position="564">
+                  <caret line="521" lean-forward="true" selection-start-line="521" selection-end-line="521" />
                 </state>
               </provider>
             </entry>
@@ -335,7 +325,6 @@
         <option value="$PROJECT_DIR$/pages/quickAppProduct/index.js" />
         <option value="$PROJECT_DIR$/pages/case/index.js" />
         <option value="$PROJECT_DIR$/pages/auth/index.js" />
-        <option value="$PROJECT_DIR$/pages/index/index.less" />
         <option value="$PROJECT_DIR$/pages/index/index.js" />
         <option value="$PROJECT_DIR$/pages/newsDetail/index.js" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -343,6 +332,7 @@
         <option value="$PROJECT_DIR$/pages/_app.js" />
         <option value="$PROJECT_DIR$/components/modal/index.js" />
         <option value="$PROJECT_DIR$/components/floatWindow/index.js" />
+        <option value="$PROJECT_DIR$/pages/index/index.less" />
       </list>
     </option>
   </component>
@@ -478,12 +468,12 @@
       <workItem from="1586880859819" duration="10868000" />
       <workItem from="1586939108221" duration="187000" />
       <workItem from="1586940917890" duration="1200000" />
-      <workItem from="1587014923444" duration="5777000" />
+      <workItem from="1587014923444" duration="6031000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230145000" />
+    <option name="totallyTimeSpent" value="230399000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -841,13 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.babelrc">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -874,16 +857,6 @@
           <caret line="27" column="28" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="28" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1733">
-          <caret line="123" column="40" selection-start-line="123" selection-start-column="40" selection-end-line="123" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -929,11 +902,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/floatWindow/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="273">
+          <caret line="19" column="40" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="19" selection-end-column="40" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1611">
+          <caret line="123" column="40" selection-start-line="123" selection-start-column="40" selection-end-line="123" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="521" lean-forward="true" selection-start-line="521" selection-end-line="521" />
         </state>
       </provider>
     </entry>
