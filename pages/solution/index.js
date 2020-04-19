@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import TabBarCard from '@/components/tabBarCard'
 import SectionCard from '@/components/sectionCard'
 import styles from './index.less'
-import {connect} from 'react-redux';
+
 // 自定义箭头
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
