@@ -6,7 +6,8 @@ import ProductBanner from '@/components/productBanner'
 import CoreContent from '@/components/coreContent'
 import ProductAdvantage from '@/components/productAdvantage'
 import styles from './index.less'
-
+import {connect} from 'react-redux';
+@connect(({floatWindowVisible})=>({visible:floatWindowVisible}))
 export default class IntelligenceSms extends React.Component {
   constructor(props) {
     super(props)
@@ -207,6 +208,10 @@ export default class IntelligenceSms extends React.Component {
       activeType: row.type
     })
   }
+  showModal = () => {
+    const { dispatch } = this.props
+    dispatch({type:'FLOAT_WINDOW_SHOW'})
+  }
   render () {
     const {problems, products, coreList, tabBarList, activeType} = this.state
     return (
@@ -228,7 +233,7 @@ export default class IntelligenceSms extends React.Component {
                   <div className="tab-content__left">
                     <div className="tab-content__left__desc">
                       {this.barContent[activeType].desc}
-                      <div className="tab-content__left__btn">马上合作</div>
+                      <div className="tab-content__left__btn" onClick={this.showModal}>马上合作</div>
                     </div>
                   </div>
                   <div className="tab-content__right clearfix">

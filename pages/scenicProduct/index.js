@@ -6,7 +6,8 @@ import ProductBanner from '@/components/productBanner'
 import CoreContent from '@/components/coreContent'
 import ProductAdvantage from '@/components/productAdvantage'
 import styles from './index.less'
-
+import {connect} from 'react-redux';
+@connect(({floatWindowVisible})=>({visible:floatWindowVisible}))
 export default class ScenicProduct extends React.Component {
   constructor(props) {
     super(props)
@@ -196,7 +197,9 @@ export default class ScenicProduct extends React.Component {
                   <div className="tab-content__left">
                     <div className="tab-content__left__desc">
                       {this.barContent[activeType] ? this.barContent[activeType].desc : ''}
-                      <div className="tab-content__left__btn">马上合作</div>
+                      <div className="tab-content__left__btn" onClick={() => {
+                        this.props.dispatch({type:'FLOAT_WINDOW_SHOW'})
+                      }}>马上合作</div>
                     </div>
                   </div>
                   <div className="tab-content__right clearfix">
