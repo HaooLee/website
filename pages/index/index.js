@@ -148,7 +148,11 @@ export default class Index extends React.Component {
              </div>
              <div className="card">
                <p className="title">快应用服务</p>
-
+               <p className="desc">快应用</p>
+               <p className="content">即点即用</p>
+               <p className="content">免安装</p>
+               <p className="content">免存储</p>
+               <p className="content">一步激活</p>
              </div>
 
            </div>
