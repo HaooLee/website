@@ -52,7 +52,7 @@ export default class ScenicProduct extends React.Component {
         {
           src: '/static/images/scenicProduct/remain.png',
           title: '短信留存',
-          desc: '消息留存在短信列表中。'
+          desc: '消息留存在短信列表中'
         },
         {
           src: '/static/images/scenicProduct/marketing.png',
@@ -161,7 +161,7 @@ export default class ScenicProduct extends React.Component {
     }
   }
   clickCallback = (index, row) => {
-    const {tabBarList} = this.state 
+    const {tabBarList} = this.state
     tabBarList.forEach((item, idx) => {
       if(index === idx) {
         item.active = true

@@ -118,7 +118,7 @@ export default class IntelligenceSms extends React.Component {
         },
         {
           src: '/static/images/intelligenceSms/icon-shape.png',
-          title: '支持跳转 H5、APP、快应用一键拨号、验证码复制',
+          title: '支持跳转 H5、APP、快应用、一键拨号、验证码复制',
           coreSrc: '/static/images/intelligenceSms/core2.png',
           activeIcon: '/static/images/intelligenceSms/icon-shape-active.png',
           matchTitle: '跳转多应用',
@@ -179,7 +179,7 @@ export default class IntelligenceSms extends React.Component {
           <p>快速跳转H5/app/快应用</p>
           <p>一键回复代码</p>
           <p>一键拨号直达客服</p>
-          
+
         </div>
       },
       'menu': {
@@ -212,7 +212,7 @@ export default class IntelligenceSms extends React.Component {
     return (
       <>
         <ProductBanner title={'智能短信'} desc={'带你了解短信新形态,体验营销新玩法'} src={'/static/images/intelligenceSms/banner.png'} customClassName={'sms-banner'}></ProductBanner>
-        <SectionCard title={'你的智能短信通常会遇到的问题'} bgc={"#fff"} >
+        <SectionCard title={'你的短信通常会遇到的问题'} bgc={"#fff"} >
           <ProblemItem problems={problems} customClassName={'sms-problem'}></ProblemItem>
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >

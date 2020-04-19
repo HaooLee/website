@@ -83,7 +83,7 @@ export default class Solution extends Component {
           worthDesc: <div class="solution-desc__content">
             <p>投放可控、稳定、快速</p>
             <p>文案、模板预审流程，降低拦截率</p>
-            <p>海量流量，覆盖OPPO、vivo全量机型；70%主流手机厂商</p>
+            <p>海量流量，覆盖OPPO、vivo全量机型等70%主流手机厂商</p>
           </div>
         },
         'new-retail': {
@@ -106,7 +106,7 @@ export default class Solution extends Component {
           industryDesc: '通过泰迪熊移动自研产品技术，赋能快消品行业，为快消品行业提供高效粉丝维护及用户需求收集渠道，一键链接企业与用户。',
           worthDesc: <div class="solution-desc__content">
             <p>解决传统短信功能单一、触达即结束等问题</p>
-            <p>海量流量，覆盖OPPO、vivo全量机型；70%主流手机厂商</p>
+            <p>海量流量，覆盖OPPO、vivo全量机型等70%主流手机厂商</p>
             <p>提升用户体验，保护用户隐私</p>
           </div>
         },
@@ -117,7 +117,6 @@ export default class Solution extends Component {
           ],
           industryDesc: '赋能电商行业短信营销，打破传统短信字数限制的同时，降低电商企业营销短信拦截率，专业的技术运营团队实时响应，保障客户服务质量。',
           worthDesc: <div class="solution-desc__content">
-            <p>打破传统短信70个字符限制</p>
             <p>投放可控、稳定、快速</p>
             <p>文案、模板预审流程，降低拦截率</p>
             <p>专业运营团队根据数据报告，优化菜单文案、链接配置，提升用户体验</p>

@@ -41,7 +41,7 @@ export default class NumberProduct extends Component {
         },
         {
           src: '/static/images/numberProduct/icon-xunihaoma.png',
-          title: '支持400、虚拟号段、个人号段',
+          title: '支持400、虚拟号段、个人号码',
           coreSrc: '/static/images/numberProduct/core3.png',
           activeIcon: '/static/images/numberProduct/icon-xunihaoma-active.png',
           matchTitle: '支持多种号段'
@@ -71,7 +71,7 @@ export default class NumberProduct extends Component {
     return (
       <>
         <ProductBanner customClassName={'number-banner'} title={'号码认证'} desc={'来电接的安心，去电不被拒绝'} src={'/static/images/numberProduct/banner.png'}></ProductBanner>
-        <SectionCard title={'你的号码认证通常会遇到的问题'} bgc={'#FFFFFF'}>
+        <SectionCard title={'你的通话通常会遇到的问题'} bgc={'#FFFFFF'}>
           <div className="problem-wrap">
             <ProblemItem customClassName={'number-problem'} problems={problems}></ProblemItem>
           </div>

@@ -9,7 +9,7 @@ import TabBarCard from '@/components/tabBarCard'
 
 export default class QuickAppProduct extends React.Component {
   constructor(props) {
-    super(props) 
+    super(props)
     this.state = {
       coreList: [
         {
@@ -116,7 +116,7 @@ export default class QuickAppProduct extends React.Component {
       }],
       activeType: 'global-search',
     }
-    
+
     this.barContent = {
       'global-search': {
         src: '/static/images/quickAppProduct/全局搜索.png',
@@ -174,7 +174,7 @@ export default class QuickAppProduct extends React.Component {
     }
   }
   clickCallback = (index, row) => {
-    const {tabBarList} = this.state 
+    const {tabBarList} = this.state
     tabBarList.forEach((item, idx) => {
       if(index === idx) {
         item.active = true
@@ -199,9 +199,9 @@ export default class QuickAppProduct extends React.Component {
           </div>
         </SectionCard>
         {/* <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
-          <CoreContent 
-            src={'/static/images/quickAppProduct/phone.png'} 
-            coreList={coreList} 
+          <CoreContent
+            src={'/static/images/quickAppProduct/phone.png'}
+            coreList={coreList}
             coreClassName={'quick-app-core'}
           ></CoreContent>
         </SectionCard> */}
@@ -231,21 +231,21 @@ export default class QuickAppProduct extends React.Component {
           </div>
         </SectionCard>
         <SectionCard title={'产品优势'} bgc={'#fff'}>
-          <ProductAdvantage 
-            products={products} 
+          <ProductAdvantage
+            products={products}
             customClassName={'quick-app-product__item'}
           ></ProductAdvantage>
         </SectionCard>
-        <SectionCard title={'覆盖行业'} bgc={"#F8FAFF"} >
-          <div className="industry-list w clearfix">
-            {industryList.map((item, index) => (
-              <div className="industry-list__item" key={index}>
-                <img src={item.src} />
-                <div className="industry-list__item__text">{item.name}</div>
-              </div>
-            ))}
-          </div>
-        </SectionCard>
+        {/*<SectionCard title={'覆盖行业'} bgc={"#F8FAFF"} >*/}
+          {/*<div className="industry-list w clearfix">*/}
+            {/*{industryList.map((item, index) => (*/}
+              {/*<div className="industry-list__item" key={index}>*/}
+                {/*<img src={item.src} />*/}
+                {/*<div className="industry-list__item__text">{item.name}</div>*/}
+              {/*</div>*/}
+            {/*))}*/}
+          {/*</div>*/}
+        {/*</SectionCard>*/}
         <style jsx>{styles}</style>
       </>
     )
