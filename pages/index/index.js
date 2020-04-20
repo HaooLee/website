@@ -28,8 +28,8 @@ function SamplePrevArrow(props) {
 export default class Index extends React.Component {
   static async getInitialProps({Component, router, ctx}) {
     try {
-      const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/news/getlist')
-      return {news: data.data}
+      const {data:{data:{list}}} = await axios.get('http://php.bjdglt.com:8091/V1.4/news/getlist')
+      return {news: list}
     }catch (e) {
       return {news:[]}
     }

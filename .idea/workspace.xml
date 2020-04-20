@@ -44,8 +44,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/index/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="346">
-                  <caret line="32" column="16" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="32" selection-end-column="16" />
+                <state relative-caret-position="360">
+                  <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
@@ -244,7 +244,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>push</find>
       <find>adde</find>
       <find>product__item</find>
       <find>active</find>
@@ -274,6 +273,7 @@
       <find>马上合作</find>
       <find>__btn</find>
       <find>solution__content__info__btn</find>
+      <find>&lt;&lt;&lt;</find>
     </findStrings>
     <replaceStrings>
       <replace>TEDDY_MODE</replace>
@@ -496,18 +496,18 @@
       <workItem from="1586939108221" duration="187000" />
       <workItem from="1586940917890" duration="1200000" />
       <workItem from="1587014923444" duration="8354000" />
-      <workItem from="1587365379396" duration="659000" />
+      <workItem from="1587365379396" duration="1004000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233381000" />
+    <option name="totallyTimeSpent" value="233726000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17239301" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17239301" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -519,7 +519,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.27142859" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.27142859" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -956,8 +956,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="32" column="16" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="32" selection-end-column="16" />
+        <state relative-caret-position="360">
+          <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
