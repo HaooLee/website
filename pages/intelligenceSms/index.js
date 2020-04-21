@@ -86,7 +86,7 @@ export default class IntelligenceSms extends React.Component {
           src: '/static/images/intelligenceSms/icon-duanxinyanzheng.png',
           title: '短信来源号码进行可信认证',
           coreSrc: '/static/images/intelligenceSms/core2.png',
-          activeIcon: '/static/images/intelligenceSms/icon-duanxinyanzheng.png',
+          activeIcon: '/static/images/intelligenceSms/icon-duanxinyanzheng-active.png',
           matchTitle: '短信号码认证',
           highlightImage: '/static/images/intelligenceSms/高亮1.png',
           imgClassName: 'sms-highlight-1'
