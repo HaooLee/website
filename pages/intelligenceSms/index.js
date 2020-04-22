@@ -164,7 +164,7 @@ export default class IntelligenceSms extends React.Component {
               </div>
       },
       'card': {
-        src: '/static/images/intelligenceSms/card-new.png',
+        src: '/static/images/intelligenceSms/card-new2.png',
         name: '短信卡片',
         desc: <div className="apply-desc__content">
           <p>短信内容本地智能解析，形成结构化卡片视图</p>
