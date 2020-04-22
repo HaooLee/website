@@ -56,9 +56,9 @@ export default class Agent extends Component {
       ],
       partnerList: [
         {
-          src: '/static/images/agent/dianhui.png',
-          name: '点惠',
-          desc: '点惠信息技术（上海）有限公司，是一家专业从事计算机信息技术领域研发、应用和服务的高新技术企业，致力于打造围绕企业通信的智能服务平台。',
+          src: '/static/images/agent/高斯通.png',
+          name: '高斯通',
+          desc: '深圳市高斯通信息技术有限公司，在2001年全球首度提出企业应用短信服务模式及标准，创立了企业应用短信服务行业，并迅速成为行业领导者',
           types: [
             <Link href={'/numberProduct'}>
               <a style={{color: '#355EA6'}}>号码认证</a>
@@ -67,9 +67,9 @@ export default class Agent extends Component {
           typeName: '号码认证'
         },
         {
-          src: '/static/images/agent/zhuoxin.png',
-          name: '欣网卓信',
-          desc: '浙江欣网卓信科技有限公司成立于2004年，系上市公司万隆光电［300710］子公司。公司是国内领先的移动互联网，智慧运营服务提供商，专业为运营商提供线上线下一体的增值业务综合运营服务。',
+          src: '/static/images/agent/国都.png',
+          name: '国都',
+          desc: '北京国都互联科技有限公司注册于北京市中关村高新科技产业实验园区，注册资金1000万元，公司致力于成为国内最具影响力的移动通讯服务商之一',
           types: [
             <Link href={'/numberProduct'}>
               <a style={{color: '#355EA6'}}>号码认证</a>
@@ -81,9 +81,9 @@ export default class Agent extends Component {
           typeName: '号码认证、智能短信'
         },
         {
-          src: '/static/images/agent/wanhao.png',
-          name: '万号',
-          desc: '北京万号信息技术咨询有限公司，致力于将高效地链接人与服务。为企业提供除微信、运营商，两大通道之外的第三种高效触达用户信道。',
+          src: '/static/images/agent/联动优势.png',
+          name: '联动优势',
+          desc: '联动优势是一家互联网高新技术企业，成立于2003年，面向金融机构和产业经济提供综合性金融科技服务，助力政府机构推进科技监管与智慧政务建设',
           types: [
             <Link href={'/numberProduct'}>
               <a style={{color: '#355EA6'}}>号码认证</a>
@@ -92,26 +92,15 @@ export default class Agent extends Component {
           typeName: '号码认证'
         },
         {
-          src: '/static/images/agent/weihu.png',
-          name: '微呼',
-          desc: '北京微呼科技有限公司（简称“微呼科技”）作为国内深耕行业的“智能应用解决方案”提供商，一直专注于toB、toG领域，搭建了口碑优秀的智能语音、通信、号码认证平台，形成自主且完善的智能应用解决方案。',
+          src: '/static/images/agent/中天嘉华.png',
+          name: '中天嘉华',
+          desc: '中天嘉华信息技术有限公司（简称：嘉华信息）致力于通过大型联络中心（呼叫中心）、软件系统、数据挖掘技术等优势为中国保险、银行等大型金融企业，提供全面深入的金融产品营销服务解决方案',
           types: [
             <Link href={'/numberProduct'}>
               <a style={{color: '#355EA6'}}>号码认证</a>
             </Link>
           ],
           typeName: '号码认证'
-        },
-        {
-          src: '/static/images/agent/bojian.png',
-          name: '博见百约',
-          desc: '北京博见百约科技有限公司是一家致力于服务金融领域企业，以科技为驱动力，全方位提供行业解决方案及科技人员外包业务高科技公司。',
-          types: [
-            <Link href={'/intelligenceSms'}>
-              <a style={{color: '#355EA6'}}>智能短信</a>
-            </Link>
-          ],
-          typeName: '智能短信'
         }
       ]
     }
