@@ -106,31 +106,31 @@ export default class ScenicProduct extends React.Component {
         }
       ],
       tabBarList: [{
-        name: '文本消息',
+        name: '文本',
         active: true,
         type: 'text'
       }, {
-        name: '卡片消息',
+        name: '卡片',
         active: false,
         type: 'card'
       }, {
-        name: '多图文消息',
+        name: '多图文',
         active: false,
         type: 'more-pic-text'
       }, {
-        name: '快应用消息',
+        name: '快应用',
         active: false,
         type: 'quick-app'
       }, {
-        name: '视频消息',
+        name: '视频',
         active: false,
         type: 'video'
       }, {
-        name: '音频消息',
+        name: '音频',
         active: false,
         type: 'audio'
       }, {
-        name: '位置消息',
+        name: '位置',
         active: false,
         type: 'location'
       }],
