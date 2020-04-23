@@ -225,7 +225,7 @@ export default class Agent extends Component {
             <div className="map-img clearfix">
               {/* <img className="map-img__new" src='/static/images/agent/map1.png' />
               <img className="map-img__new" src='/static/images/agent/map2.png' /> */}
-              <img className="map-img__new" src='/static/images/agent/map.gif' />
+              <img className="map-img__new" src='/static/images/agent/map-new.gif' />
             </div>
             <div className="agent-list">
               <div className="agent-list__title">代理商列表</div>
