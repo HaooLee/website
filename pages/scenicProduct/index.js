@@ -121,6 +121,18 @@ export default class ScenicProduct extends React.Component {
         name: '快应用消息',
         active: false,
         type: 'quick-app'
+      }, {
+        name: '视频消息',
+        active: false,
+        type: 'video'
+      }, {
+        name: '音频消息',
+        active: false,
+        type: 'audio'
+      }, {
+        name: '位置消息',
+        active: false,
+        type: 'location'
       }],
       activeType: 'text'
     }
@@ -147,8 +159,9 @@ export default class ScenicProduct extends React.Component {
         src: '/static/images/scenicProduct/more-pic-text.png',
         name: '多图文消息',
         desc: <div className="apply-desc__content">
-          <p>多图文展现形式，视觉体验佳</p>
-          <p>展示形态满足用户点击习惯，转化效果好</p>
+          <p>活动主题</p>
+          <p>关键内容呈现</p>
+          <p>场景化赋能</p>
         </div>
       },
       'quick-app': {
@@ -158,6 +171,31 @@ export default class ScenicProduct extends React.Component {
           <p>基于用户场景，下发快应用消息</p>
           <p>短链路，强留存</p>
           <p>一键直达快应用</p>
+        </div>
+      },
+      'video': {
+        src: '/static/images/scenicProduct/视频消息.png',
+        name: '视频消息',
+        desc: <div className="apply-desc__content">
+          <p>内容丰富</p>
+          <p>视觉冲击力强</p>
+          <p>趣味性强</p>
+        </div>
+      },
+      'audio': {
+        src: '/static/images/scenicProduct/音频消息.png',
+        name: '音频消息',
+        desc: <div className="apply-desc__content">
+          <p>接收者的感知度更强</p>
+          <p>提醒效果更好</p>
+        </div>
+      },
+      'location': {
+        src: '/static/images/scenicProduct/位置消息.png',
+        name: '位置消息',
+        desc: <div className="apply-desc__content">
+          <p>精准定位</p>
+          <p>方便快捷</p>
         </div>
       }
     }
