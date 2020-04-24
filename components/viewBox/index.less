@@ -1,0 +1,353 @@
+.product {
+  position: relative;
+  height: 1004px;
+  border:1px solid;
+
+  // 广告主图片
+  .customer-pic {
+    position: absolute;
+    width: 198px;
+    height: 140px;
+    top: 620px;
+    left: 185px;
+    background: url(/static/images/viewbox/01.png) no-repeat  center/100%;
+    img {
+      position: absolute;
+      width: 200px;
+      visibility: hidden;
+      top: 75%;
+      left: -109px;
+    }
+    &.active {
+      img {
+        visibility: visible;
+      }
+    }
+
+    &:hover {
+      background-image: url(/static/images/viewbox/01-2.png);
+      img {
+        visibility: visible;
+      }
+    }
+  }
+  // 巧推
+  .smart-push-pic{
+    position: absolute;
+    width: 300px;
+    height: 228px;
+    top: 400px;
+    left: 200px;
+    background: url(/static/images/viewbox/02.png) no-repeat  center/100%;
+    img {
+      position: absolute;
+      width: 200px;
+      visibility: hidden;
+      top: -20%;
+      left: -163px;
+    }
+    &.active {
+      img {
+        visibility: visible;
+      }
+    }
+
+    &:hover {
+      background-image: url(/static/images/viewbox/02-2.png);
+      img {
+        visibility: visible;
+      }
+    }
+  }
+  // DSP
+  .dsp-pic{
+    position: absolute;
+    width: 300px;
+    height: 241px;
+    top: 507px;
+    left: 407px;
+    background: url(/static/images/viewbox/03.png) no-repeat  center/100%;
+    img {
+      position: absolute;
+      width: 200px;
+      visibility: hidden;
+      top: 80%;
+      left: 160px;
+    }
+    &.active {
+      img {
+        visibility: visible;
+      }
+    }
+
+    &:hover {
+      background-image: url(/static/images/viewbox/03-2.png);
+      img {
+        visibility: visible;
+      }
+    }
+  }
+  // 快应用
+  .fast-app-pic{
+    position: absolute;
+    width: 300px;
+    height: 228px;
+    top: 245px;
+    left: 405px;
+    background: url(/static/images/viewbox/04.png) no-repeat  center/100%;
+
+    &>.desc {
+      position: absolute;
+      visibility: hidden;
+      width: 700px;
+      top:-200px;
+      left: -370px;
+      :after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 45px;
+        top: 100%;
+        left: 74%;
+        border-left: 2px dotted rgba(194,219,253,1);
+      }
+      .card {
+        display: inline-block;
+        line-height: 100%;
+        border-radius: 10px;
+        width:183px;
+        height:125px;
+        padding: 10px;
+        vertical-align: top;
+        margin-right: 7px;
+        border:2px solid rgba(194,219,253,1);
+        box-shadow:0px 12px 23px 4px rgba(216,223,229,0.3);
+        text-align: center;
+        .title {
+          height:18px;
+          font-size:18px;
+          font-family:Source Han Sans CN;
+          color:rgba(55,55,55,1);
+          margin-bottom: 10px;
+        }
+        .desc {
+          font-size: 16px;
+          color: #3f51b5;
+          padding-bottom: 10px;
+        }
+        .content {
+          color: #666;
+          font-size: 14px;
+          line-height: 20px;
+
+
+        }
+      }
+    }
+    &.active {
+      .desc {
+        visibility: visible;
+      }
+    }
+
+    &:hover {
+      background-image: url(/static/images/viewbox/04-2.png);
+      .desc {
+        visibility: visible;
+      }
+    }
+  }
+
+  // 运营
+  .op-pic{
+    position: absolute;
+    width: 300px;
+    height: 244px;
+    top: 392px;
+    left: 640px;
+    background: url(/static/images/viewbox/05.png) no-repeat  center/100%;
+    img {
+      position: absolute;
+      width: 398px;
+      visibility: hidden;
+      top: 80%;
+      left: 160px;
+    }
+    &.active {
+      img {
+        visibility: visible;
+      }
+    }
+
+    &:hover {
+      background-image: url(/static/images/viewbox/05-2.png);
+      img {
+        visibility: visible;
+      }
+    }
+  }
+  // 终端
+  .client-pic{
+    position: absolute;
+    width: 300px;
+    height: 244px;
+    top: 150px;
+    left: 718px;
+    background: url(/static/images/viewbox/06.png) no-repeat  center/100%;
+    img {
+      position: absolute;
+      width: 200px;
+      visibility: hidden;
+      top: -2%;
+      left: 271px;
+    }
+    &.active {
+      img {
+        visibility: visible;
+      }
+    }
+
+    &:hover {
+      background-image: url(/static/images/viewbox/06-2.png);
+      img {
+        visibility: visible;
+      }
+    }
+  }
+
+  .line {
+    position: absolute;
+    display: block;
+    height: 0px;
+    border-top: 2px dotted #355ea6;
+  }
+  .line-1 {
+    width: 34px;
+    top: 663px;
+    left: 318px;
+    transform: rotate(-32deg);
+  }
+  .line-2 {
+    width: 250px;
+    top: 651px;
+    left: 226px;
+    transform: rotate(30deg);
+  }
+  .line-3 {
+    width: 25px;
+    top: 581px;
+    left: 240px;
+    transform: rotate(145deg);
+  }
+
+
+  .arrow {
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-right: 9px solid #355ea6;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+  }
+  .arrow-1 {
+    top: 664px;
+    left: 319px;
+    opacity: 0;
+    transform: rotate(121deg);
+    animation: move-1 2s linear infinite;
+  }
+  .arrow-2 {
+    top: 642px;
+    left: 349px;
+    opacity: 0;
+
+    transform: rotate(52deg);
+    animation: move-2 2s .4s linear infinite;
+  }
+  .arrow-3 {
+    top: 642px;
+    left: 349px;
+    opacity: 0;
+    transform: rotate(223deg);
+    animation: move-3 2s .4s linear infinite;
+  }
+
+}
+
+@keyframes move-3 {
+  0% {
+    top: 642px;
+    left: 349px;
+    opacity: 1;
+  }
+  80% {
+    top: 705px;
+    left: 452px;
+    opacity: 1;
+  }
+  80.1% {
+    top: 705px;
+    left: 452px;
+    opacity: 0;
+  }
+  100% {
+    top: 705px;
+    left: 452px;
+    opacity: 0;
+  }
+
+}
+@keyframes move-2 {
+  0% {
+    top: 642px;
+    left: 349px;
+    opacity: 1;
+  }
+  80% {
+    top: 580px;
+    left: 240px;
+    opacity: 1;
+  }
+  80.1% {
+    top: 580px;
+    left: 240px;
+    opacity: 0;
+  }
+  100% {
+    top: 580px;
+    left: 240px;
+    opacity: 0;
+  }
+
+}
+
+@keyframes move-1 {
+  0%{
+    top: 663px;
+    left: 318px;
+    transform: rotate(121deg);
+    opacity: 1;
+
+  }
+  20% {
+    top: 642px;
+    left: 349px;
+    transform: rotate(121deg);
+    opacity: 1;
+  }
+  20.1% {
+    top: 642px;
+    left: 349px;
+    transform: rotate(121deg);
+    opacity: 0;
+  }
+
+  100% {
+    top: 642px;
+    left: 349px;
+    transform: rotate(121deg);
+    opacity: 0;
+  }
+}

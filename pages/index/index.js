@@ -4,6 +4,7 @@ import styles from './index.less'
 import SectionCard from '@/components/sectionCard'
 import SolutionCard from '@/components/solutionCard'
 import CompanyLogo from '@/components/companyLogo'
+import ViewBox from '@/components/viewBox'
 import Slider from "react-slick";
 
 import NewsCard from '@/components/newsCard'
@@ -133,35 +134,8 @@ export default class Index extends React.Component {
       <>
         <Banner />
         <section style={{backgroundColor:'#f7f7f7'}}>
-          <div className="w product">
-           <div className="product__desc">
-             <div className="card">
-               <p className="title">品牌认证+短信赋能</p>
-               <p className="desc">智能短信公众号</p>
-               <p className="content">企业认证</p>
-               <p className="content">短信卡片</p>
-               <p className="content">场景按钮</p>
-               <p className="content">短信菜单</p>
-             </div>
-             <div className="card">
-               <p className="title">场景推送+富媒体消息</p>
-               <p className="desc">5G消息</p>
-               <p className="content">短信跟随</p>
-               <p className="content">挂机推送</p>
-               <p className="content">位置推送</p>
-
-             </div>
-             <div className="card">
-               <p className="title">快应用服务</p>
-               <p className="desc">快应用</p>
-               <p className="content">即点即用</p>
-               <p className="content">免安装</p>
-               <p className="content">免存储</p>
-               <p className="content">一步激活</p>
-             </div>
-
-           </div>
-            <img src="/static/images/center-pic.png" alt="" className="center-pic"/>
+          <div className="w">
+            <ViewBox />
           </div>
         </section>
         <section className="feature-left">

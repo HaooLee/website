@@ -4,11 +4,14 @@ import styles from './index.less'
 import axios from 'axios'
 export default class NewsDetail extends Component {
   static async getInitialProps({Component, router, ctx, req, query}) {
-    console.log(query)
-    const {id} = query
-    console.log(id)
-    const {data} = await axios.post('http://php.bjdglt.com:8091/V1.4/news/detail', {nid: id})
-    return {newsDeatail: data.data}
+    try {
+      const {id} = query
+      const {data} = await axios.post('http://php.bjdglt.com:8091/V1.4/news/detail', {nid: id})
+      return {newsDetail: data.data}
+    }catch (e) {
+      return {newsDetail:{content:""}}
+    }
+
   }
   constructor(props) {
     super(props)
@@ -48,7 +51,7 @@ export default class NewsDetail extends Component {
   }
   render() {
     const {list} = this.state
-    const {newsDeatail} = this.props
+    const {newsDetail} = this.props
     return (
       <>
         <div className="banner">
@@ -59,13 +62,13 @@ export default class NewsDetail extends Component {
         <div className="w news clearfix">
           <SliderList list={list} clickCallback={this.clickCallback}></SliderList>
           <div className="news__detail col-10">
-            <p className="news__detail__title">{newsDeatail.news_title}</p>
+            <p className="news__detail__title">{newsDetail.news_title}</p>
             <div className="news__detail__company">
               <img src="/static/images/news/logo.png" />
-              <span>泰迪资讯 | {newsDeatail.news_time.replace(/\s[\x00-\xff]*/g,'')} </span>
+              <span>泰迪资讯 | {newsDetail.news_time.replace(/\s[\x00-\xff]*/g,'')} </span>
             </div>
             <div className="news__detail__content">
-              <div dangerouslySetInnerHTML = {{ __html: newsDeatail.content }} style={{overflow:'hidden'}}></div>
+              <div dangerouslySetInnerHTML = {{ __html: newsDetail.content }} style={{overflow:'hidden'}}></div>
             </div>
           </div>
         </div>
