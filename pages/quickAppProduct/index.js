@@ -122,53 +122,51 @@ export default class QuickAppProduct extends React.Component {
         src: '/static/images/quickAppProduct/全局搜索.png',
         name: '全局搜索',
         desc: <div className="apply-desc__content">
-          <p>低成本，多字数，突破传统短信70字符限制，满足企业长短信需求</p>
-          <p>厂商报备，过审无拦截</p>
-          <p>企业认证，品牌曝</p>
+          <p>输入内容，“秒开”呈现，即点即用</p>
+          <p>轻量化的呈现形式（如卡片、语音、图标等）</p>
+          <p>提供灵活、贴心、智慧的一致性体验服务</p>
         </div>
       },
       'hi-board': {
         src: '/static/images/quickAppProduct/负一屏.png',
         name: '负一屏',
         desc: <div className="apply-desc__content">
-          <p>优化展现形式，场景化呈现</p>
-          <p>降低用户阅读成本，提升用户体验</p>
-          <p>搭配按钮增加业务入口，提高用户转化</p>
+          <p>右滑一屏，丰富卡片，立即使用</p>
+          <p>汇聚vivo手机多场景流量入口</p>
+          <p>增强服务曝光、转化率</p>
+          <p>只需右滑一屏，即可感受多方位智慧服务体验</p>
         </div>
       },
       'siri': {
         src: '/static/images/quickAppProduct/语音助手.png',
         name: '语音助手',
         desc: <div className="apply-desc__content">
-          <p>多图文展现形式，视觉体验佳</p>
-          <p>展示形态满足用户点击习惯，转化效果好</p>
+          <p>仅需语音输入即可唤醒快应用和使用语音技能的特色能力</p>
+          <p>用户侧只需简单语音输入，即可唤醒快应用相关服务</p>
         </div>
       },
       'firm': {
         src: '/static/images/quickAppProduct/厂商专属推荐.png',
         name: '厂商专属推荐',
         desc: <div className="apply-desc__content">
-          <p>基于用户场景，下发快应用消息</p>
-          <p>短链路，强留存</p>
-          <p>一键直达快应用</p>
+          <p>小米专属，福利来袭，即点即得</p>
+          <p>小米专属流量推荐位“小米福利社” ，长期为泰迪熊移动优质快应用开放，目前已经为屈臣氏为主的多家客户进行曝光推广，效果超出预期</p>
         </div>
       },
       'sms': {
         src: '/static/images/quickAppProduct/智能短信.png',
         name: '智能短信',
         desc: <div className="apply-desc__content">
-          <p>基于用户场景，下发快应用消息</p>
-          <p>短链路，强留存</p>
-          <p>一键直达快应用</p>
+          <p>传统短信进行升级改造的全新展现形式，无需用户下载、关注一键跳转</p>
+          <p>一键唤醒快应用、一键服务直达等功能</p>
         </div>
       },
       'scenic': {
-        src: '/static/images/quickAppProduct/5G消息.png',
+        src: '/static/images/quickAppProduct/场景消息.png',
         name: '5G消息',
         desc: <div className="apply-desc__content">
-          <p>基于用户场景，下发快应用消息</p>
-          <p>短链路，强留存</p>
-          <p>一键直达快应用</p>
+          <p>多媒体形式展现效果丰富</p>
+          <p>其成本低，获客快</p>
         </div>
       }
     }
