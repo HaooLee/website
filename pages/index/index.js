@@ -38,18 +38,18 @@ export default class Index extends React.Component {
   }
   state ={
     companies:[
-      {src:'/static/images/京东@2x.png'},
-      {src:'/static/images/淘宝@2x.png'},
-      {src:'/static/images/苏宁@2x.png'},
-      {src:'/static/images/图层 28@2x.png'},
-      {src:'/static/images/屈臣氏@2x.png'},
-      {src:'/static/images/建设银行@2x.png'},
-      {src:'/static/images/建设银行@2x.png'},
-      {src:'/static/images/招商银行@2x.png'},
-      {src:'/static/images/百度@2x.png'},
-      {src:''},
-      {src:''},
-      {src:''},
+      {src:'/static/images/index/LOGO_01.png'},
+      {src:'/static/images/index/LOGO_02.gif'},
+      {src:'/static/images/index/LOGO_03.gif'},
+      {src:'/static/images/index/LOGO_04.gif'},
+      {src:'/static/images/index/LOGO_05.gif'},
+      {src:'/static/images/index/LOGO_06.gif'},
+      {src:'/static/images/index/LOGO_07.gif'},
+      {src:'/static/images/index/LOGO_08.gif'},
+      {src:'/static/images/index/LOGO_09.gif'},
+      {src:'/static/images/index/LOGO_10.gif'},
+      {src:'/static/images/index/LOGO_11.gif'},
+      {src:'/static/images/index/LOGO_12.gif'},
     ],
     smsImage: {
       'defaultImage': '/static/images/index/泰迪银行-智能短信.png',
@@ -63,13 +63,14 @@ export default class Index extends React.Component {
     smsActiveImage: 'defaultImage',
     scenicActiveImage: 'defaultImage',
     scenicImage: {
-      'defaultImage': '/static/images/index/场景消息.png',
-      'read-more': '/static/images/index/泰迪银行卡片-查看原文.png',
-      'my-account': '/static/images/index/泰迪银行-我的账户.png',
+      'defaultImage': '/static/images/index/1.png',
+      // 'read-more': '/static/images/index/泰迪银行卡片-查看原文.png',
+      // 'my-account': '/static/images/index/泰迪银行-我的账户.png',
       'account-card': '/static/images/index/泰迪银行-信用卡.png',
-      'touzhi-licai': '/static/images/index/泰迪银行-投资理财.png',
-      'view-application': '/static/images/index/泰迪银行-查看应用.png',
-      'dae-cundan': '/static/images/index/泰迪银行-大额存单.png'
+      'touzhi-licai': '/static/images/index/2.png'
+      // 'touzhi-licai': '/static/images/index/泰迪银行-投资理财.png',
+      // 'view-application': '/static/images/index/泰迪银行-查看应用.png',
+      // 'dae-cundan': '/static/images/index/泰迪银行-大额存单.png'
     },
     quickImage: {
       'defaultImage': '/static/images/index/快应用2.png',
@@ -176,13 +177,13 @@ export default class Index extends React.Component {
               <img src={scenicImage[scenicActiveImage]} alt=""/>
               {scenicActiveImage === 'defaultImage' && <div>
                 {/* 查看原文 */}
-                <div className="read-more" onClick={this.changeScenicImage.bind(this, 'read-more')}></div>
+                {/* <div className="read-more" onClick={this.changeScenicImage.bind(this, 'read-more')}></div> */}
                 {/* 查看应用 */}
-                <div className="view-application" onClick={this.changeScenicImage.bind(this, 'view-application')}></div>
+                {/* <div className="view-application" onClick={this.changeScenicImage.bind(this, 'view-application')}></div> */}
                 {/* 大额存单 */}
-                <div className="dae-cundan" onClick={this.changeScenicImage.bind(this, 'dae-cundan')}></div>
+                {/* <div className="dae-cundan" onClick={this.changeScenicImage.bind(this, 'dae-cundan')}></div> */}
                 {/* 我的用户 */}
-                <div className="my-account" onClick={this.changeScenicImage.bind(this, 'my-account')}></div>
+                {/* <div className="my-account" onClick={this.changeScenicImage.bind(this, 'my-account')}></div> */}
                 {/* 信用卡 */}
                 <div className="account-card" onClick={this.changeScenicImage.bind(this, 'account-card')}></div>
                 {/* 投资理财 */}
