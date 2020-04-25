@@ -21,10 +21,26 @@ export default class ViewBox extends React.Component {
         <span className="line line-2"></span>
         <span className="line line-3"></span>
         <span className="line line-4"></span>
+        <span className="line line-5"></span>
+        <span className="line line-6"></span>
+        <span className="line line-7"></span>
+        <span className="line line-8"></span>
+        <span className="line line-9"></span>
+        <span className="line line-10"></span>
+        <span className="line line-11"></span>
+        <span className="line line-12"></span>
+        <span className="line line-13"></span>
 
         <span className="arrow arrow-1"></span>
         <span className="arrow arrow-2"></span>
         <span className="arrow arrow-3"></span>
+        <span className="arrow arrow-4"></span>
+        <span className="arrow arrow-5"></span>
+        <span className="arrow arrow-6"></span>
+        <span className="arrow arrow-7"></span>
+        <span className="arrow arrow-8"></span>
+        <span className="arrow arrow-9"></span>
+        <span className="arrow arrow-10"></span>
 
         <div className="customer-pic">
           <img src="/static/images/viewbox/01-3.png" alt=""/>
