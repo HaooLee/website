@@ -65,10 +65,11 @@ export default class Index extends React.Component {
     scenicImage: {
       'defaultImage': '/static/images/index/1.png',
       // 'read-more': '/static/images/index/泰迪银行卡片-查看原文.png',
-      // 'my-account': '/static/images/index/泰迪银行-我的账户.png',
+      'my-account': '/static/images/index/泰迪银行-我的账户.png',
       'account-card': '/static/images/index/泰迪银行-信用卡.png',
-      'touzhi-licai': '/static/images/index/2.png'
-      // 'touzhi-licai': '/static/images/index/泰迪银行-投资理财.png',
+      'touzhi-licai': '/static/images/index/2.png',
+      'touzhi-licai-footer': '/static/images/index/泰迪银行-投资理财.png',
+      'account-card-footer': '/static/images/index/泰迪银行-信用卡.png',
       // 'view-application': '/static/images/index/泰迪银行-查看应用.png',
       // 'dae-cundan': '/static/images/index/泰迪银行-大额存单.png'
     },
@@ -179,11 +180,11 @@ export default class Index extends React.Component {
                 {/* 查看原文 */}
                 {/* <div className="read-more" onClick={this.changeScenicImage.bind(this, 'read-more')}></div> */}
                 {/* 查看应用 */}
-                {/* <div className="view-application" onClick={this.changeScenicImage.bind(this, 'view-application')}></div> */}
+                <div className="touzhi-licai-footer" onClick={this.changeScenicImage.bind(this, 'touzhi-licai-footer')}></div>
                 {/* 大额存单 */}
-                {/* <div className="dae-cundan" onClick={this.changeScenicImage.bind(this, 'dae-cundan')}></div> */}
+                <div className="account-card-footer" onClick={this.changeScenicImage.bind(this, 'account-card-footer')}></div>
                 {/* 我的用户 */}
-                {/* <div className="my-account" onClick={this.changeScenicImage.bind(this, 'my-account')}></div> */}
+                <div className="my-account" onClick={this.changeScenicImage.bind(this, 'my-account')}></div>
                 {/* 信用卡 */}
                 <div className="account-card" onClick={this.changeScenicImage.bind(this, 'account-card')}></div>
                 {/* 投资理财 */}

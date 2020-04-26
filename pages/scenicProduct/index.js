@@ -225,7 +225,7 @@ export default class ScenicProduct extends React.Component {
     const {problems, products, coreList, tabBarList, activeType} = this.state
     return (
       <>
-        <ProductBanner customClassName={'scenic-banner'} title={'5G消息'} desc={'千人千面的智慧场景营销服务'} src={'/static/images/scenicProduct/banner.png'}></ProductBanner>
+        <ProductBanner customClassName={'scenic-banner'} title={'5G消息'} desc={'千人千面的智慧场景营销服务'} src={'/static/images/scenicProduct/banner-new.png'}></ProductBanner>
         <SectionCard title={'你的5G消息通常会遇到的问题'} bgc={"#fff"} >
           <ProblemItem customClassName={'scenic-problem'} problems={problems}></ProblemItem>
         </SectionCard>
