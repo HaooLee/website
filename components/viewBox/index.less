@@ -1,6 +1,9 @@
+.mobile-center {
+  display: none;
+}
 .product {
   position: relative;
-  height: 1004px;
+  height: 950px;
   //border:1px solid;
 
   // 广告主图片
@@ -19,6 +22,7 @@
       left: -109px;
     }
     &.active {
+      background-image: url(/static/images/viewbox/01-2.png);
       img {
         visibility: visible;
       }
@@ -47,6 +51,7 @@
       left: -163px;
     }
     &.active {
+      background-image: url(/static/images/viewbox/02-2.png);
       img {
         visibility: visible;
       }
@@ -75,6 +80,7 @@
       left: 160px;
     }
     &.active {
+      background-image: url(/static/images/viewbox/03-2.png);
       img {
         visibility: visible;
       }
@@ -146,6 +152,7 @@
       }
     }
     &.active {
+      background-image: url(/static/images/viewbox/04-2.png);
       .desc {
         visibility: visible;
       }
@@ -175,6 +182,7 @@
       left: 160px;
     }
     &.active {
+      background-image: url(/static/images/viewbox/05-2.png);
       img {
         visibility: visible;
       }
@@ -203,6 +211,7 @@
       left: 271px;
     }
     &.active {
+      background-image: url(/static/images/viewbox/06-2.png);
       img {
         visibility: visible;
       }
@@ -614,5 +623,22 @@
     left: 349px;
     transform: rotate(121deg);
     opacity: 0;
+  }
+}
+
+@media all and (max-width: 980px) {
+  .product {
+    display: none;
+  }
+  .mobile-center {
+    background-color: #fff;
+    height: 6.72rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 6.61rem;
+
+    }
   }
 }
