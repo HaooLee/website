@@ -70,7 +70,7 @@ export default class ViewBox extends React.Component {
           <div className={`dsp-pic ${activeIndex == 2 ? 'active':''}`}>
             <img src="/static/images/viewbox/03-3.png" alt=""/>
           </div>
-          <div className={`client-pic ${activeIndex ==6 ? 'active':''}`}>
+          <div className={`client-pic ${activeIndex == 5 ? 'active':''}`}>
             <img src="/static/images/viewbox/06-3.png" alt=""/>
           </div>
           <div className={`fast-app-pic ${activeIndex == 3 ? 'active':''}`}>
