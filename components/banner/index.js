@@ -48,7 +48,7 @@ export default class Banner extends React.Component {
           <TextTransform texts={['提升转化效果','增加品牌曝光']}/>
 
           <div className="buttons clearfix">
-            <a href="" className="watch-video">观看视频</a>
+            {/* <a href="" className="watch-video">观看视频</a> */}
             <a href="/agent" className="more">了解更多</a>
           </div>
 

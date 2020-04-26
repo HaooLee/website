@@ -57,12 +57,18 @@ export default class NumberProduct extends Component {
         {
           src: '/static/images/numberProduct/icon-shibie.png',
           title: '识别精准',
-          desc: '采用实时大数据挖掘技术，每日更新 7000万号码数据，识别精准'
+          desc: <div>
+            <p>采用实时大数据挖掘技术，每日更新7000万</p>
+            <p>号码数据，识别精准</p>
+          </div>
         },
         {
           src: '/static/images/numberProduct/icon-zhunquelvgao.png',
           title: '准确率高',
-          desc: '多维度的校验数据，准确率达到了 99.9%的超高水平'
+          desc: <div>
+            <p>多维度的校验数据，准确率达到了 99.9%</p>
+            <p>的超高水平</p>
+          </div>
         }
       ]
     }

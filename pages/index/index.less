@@ -211,11 +211,25 @@
   .view-application, .dae-cundan {
     top: 66%;
   }
+  .touzhi-licai-footer, .account-card-footer {
+    position: absolute;
+    width: 30%;
+    height: 32px;
+    bottom: 14px;
+  }
+  .account-card-footer {
+    left: 40%;
+  }
+  .touzhi-licai-footer {
+    left: 70%;
+    width: 25%;
+  }
 }
 .click-tip-text {
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
   margin-top: 20px;
+  font-weight: bold;
 }
 @import '../var.less';
 @media all and (max-width: @MATCH_WIDTH) {
@@ -360,6 +374,10 @@
       width: 80%;
       left: 10%;
       height: 0.6rem;
+    }
+    .touzhi-licai-footer, .account-card-footer {
+      height: 0.5rem;
+      bottom: 0.15rem;
     }
   }
 }
