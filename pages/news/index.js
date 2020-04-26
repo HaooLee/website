@@ -6,8 +6,12 @@ import axios from 'axios'
 import NewsCard from '@/components/newsCard'
 export default class News extends Component {
   static async getInitialProps({Component, router, ctx}) {
-    const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/news/getinfo')
-    return {news: data.data}
+    try {
+      const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/news/getinfo')
+      return {news: data.data}
+    }catch (e) {
+      return {news: []}
+    }
   }
   constructor(props) {
     super(props)

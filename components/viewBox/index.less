@@ -1,0 +1,618 @@
+.product {
+  position: relative;
+  height: 1004px;
+  border:1px solid;
+
+  // 广告主图片
+  .customer-pic {
+    position: absolute;
+    width: 198px;
+    height: 140px;
+    top: 620px;
+    left: 185px;
+    background: url(/static/images/viewbox/01.png) no-repeat  center/100%;
+    img {
+      position: absolute;
+      width: 200px;
+      visibility: hidden;
+      top: 75%;
+      left: -109px;
+    }
+    &.active {
+      img {
+        visibility: visible;
+      }
+    }
+
+    &:hover {
+      background-image: url(/static/images/viewbox/01-2.png);
+      img {
+        visibility: visible;
+      }
+    }
+  }
+  // 巧推
+  .smart-push-pic{
+    position: absolute;
+    width: 300px;
+    height: 228px;
+    top: 400px;
+    left: 200px;
+    background: url(/static/images/viewbox/02.png) no-repeat  center/100%;
+    img {
+      position: absolute;
+      width: 200px;
+      visibility: hidden;
+      top: -20%;
+      left: -163px;
+    }
+    &.active {
+      img {
+        visibility: visible;
+      }
+    }
+
+    &:hover {
+      background-image: url(/static/images/viewbox/02-2.png);
+      img {
+        visibility: visible;
+      }
+    }
+  }
+  // DSP
+  .dsp-pic{
+    position: absolute;
+    width: 300px;
+    height: 241px;
+    top: 507px;
+    left: 407px;
+    background: url(/static/images/viewbox/03.png) no-repeat  center/100%;
+    img {
+      position: absolute;
+      width: 200px;
+      visibility: hidden;
+      top: 80%;
+      left: 160px;
+    }
+    &.active {
+      img {
+        visibility: visible;
+      }
+    }
+
+    &:hover {
+      background-image: url(/static/images/viewbox/03-2.png);
+      img {
+        visibility: visible;
+      }
+    }
+  }
+  // 快应用
+  .fast-app-pic{
+    position: absolute;
+    width: 300px;
+    height: 228px;
+    top: 245px;
+    left: 405px;
+    background: url(/static/images/viewbox/04.png) no-repeat  center/100%;
+
+    &>.desc {
+      position: absolute;
+      visibility: hidden;
+      width: 700px;
+      top:-200px;
+      left: -370px;
+      :after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 45px;
+        top: 100%;
+        left: 74%;
+        border-left: 2px dotted rgba(194,219,253,1);
+      }
+      .card {
+        display: inline-block;
+        line-height: 100%;
+        border-radius: 10px;
+        width:183px;
+        height:125px;
+        padding: 10px;
+        vertical-align: top;
+        margin-right: 7px;
+        border:2px solid rgba(194,219,253,1);
+        box-shadow:0px 12px 23px 4px rgba(216,223,229,0.3);
+        text-align: center;
+        .title {
+          height:18px;
+          font-size:18px;
+          font-family:Source Han Sans CN;
+          color:rgba(55,55,55,1);
+          margin-bottom: 10px;
+        }
+        .desc {
+          font-size: 16px;
+          color: #3f51b5;
+          padding-bottom: 10px;
+        }
+        .content {
+          color: #666;
+          font-size: 14px;
+          line-height: 20px;
+
+
+        }
+      }
+    }
+    &.active {
+      .desc {
+        visibility: visible;
+      }
+    }
+
+    &:hover {
+      background-image: url(/static/images/viewbox/04-2.png);
+      .desc {
+        visibility: visible;
+      }
+    }
+  }
+
+  // 运营
+  .op-pic{
+    position: absolute;
+    width: 300px;
+    height: 244px;
+    top: 392px;
+    left: 640px;
+    background: url(/static/images/viewbox/05.png) no-repeat  center/100%;
+    img {
+      position: absolute;
+      width: 398px;
+      visibility: hidden;
+      top: 80%;
+      left: 160px;
+    }
+    &.active {
+      img {
+        visibility: visible;
+      }
+    }
+
+    &:hover {
+      background-image: url(/static/images/viewbox/05-2.png);
+      img {
+        visibility: visible;
+      }
+    }
+  }
+  // 终端
+  .client-pic{
+    position: absolute;
+    width: 300px;
+    height: 244px;
+    top: 150px;
+    left: 718px;
+    background: url(/static/images/viewbox/06.png) no-repeat  center/100%;
+    img {
+      position: absolute;
+      width: 200px;
+      visibility: hidden;
+      top: -2%;
+      left: 271px;
+    }
+    &.active {
+      img {
+        visibility: visible;
+      }
+    }
+
+    &:hover {
+      background-image: url(/static/images/viewbox/06-2.png);
+      img {
+        visibility: visible;
+      }
+    }
+  }
+
+  .line {
+    position: absolute;
+    display: block;
+    height: 0px;
+    border-top: 2px dotted #355ea6;
+  }
+  .line-1 {
+    width: 34px;
+    top: 663px;
+    left: 318px;
+    transform: rotate(-32deg);
+  }
+  .line-2 {
+    width: 250px;
+    top: 651px;
+    left: 226px;
+    transform: rotate(30deg);
+  }
+  .line-3 {
+    width: 25px;
+    top: 581px;
+    left: 240px;
+    transform: rotate(145deg);
+  }
+  .line-4 {
+    width: 25px;
+    top: 706px;
+    left: 455px;
+    transform: rotate(145deg);
+  }
+  .line-5 {
+    width: 25px;
+    top: 488px;
+    left: 411px;
+    transform: rotate(145deg);
+  }
+  .line-6 {
+    width: 25px;
+    top: 613px;
+    left: 627px;
+    transform: rotate(145deg);
+  }
+  .line-7 {
+    width: 250px;
+    top: 542px;
+    left: 418px;
+    transform: rotate(30deg);
+  }
+  .line-8 {
+    width: 116px;
+    top: 499px;
+    left: 518px;
+    transform: rotate(148deg);
+  }
+  .line-9 {
+    width: 102px;
+    top: 475px;
+    left: 593px;
+    transform: rotate(30deg);
+  }
+  .line-10 {
+    width: 200px;
+    top: 296px;
+    left: 594px;
+    transform: rotate(148deg);
+  }
+  .line-11 {
+    width: 200px;
+    top: 430px;
+    left: 826px;
+    transform: rotate(148deg);
+  }
+  .line-12 {
+    width: 40px;
+    top: 255px;
+    left: 777px;
+    transform: rotate(30deg);
+  }
+  .line-13 {
+    width: 67px;
+    top: 360px;
+    left: 947px;
+    transform: rotate(30deg);
+  }
+
+  .arrow {
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-right: 9px solid #355ea6;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+  }
+  .arrow-1 {
+    top: 664px;
+    left: 319px;
+    opacity: 0;
+    transform: rotate(121deg);
+    animation: move-1 2s linear infinite;
+  }
+  .arrow-2 {
+    top: 642px;
+    left: 349px;
+    opacity: 0;
+    transform: rotate(52deg);
+    animation: move-2 2s .4s linear infinite;
+  }
+  .arrow-3 {
+    top: 642px;
+    left: 349px;
+    opacity: 0;
+    transform: rotate(223deg);
+    animation: move-3 2s .4s linear infinite;
+  }
+  .arrow-4 {
+    top: 488px;
+    left: 410px;
+    opacity: 0;
+    transform: rotate(122deg);
+    animation: move-4 4s linear infinite;
+  }
+  .arrow-5 {
+    top: 614px;
+    left: 623px;
+    opacity: 0;
+    transform: rotate(122deg);
+    animation: move-5 4s linear infinite;
+  }
+  .arrow-6 {
+    top: 522px;
+    left: 523px;
+    opacity: 0;
+    transform: rotate(122deg);
+    animation: move-6 4s 3.2s linear infinite;
+  }
+  .arrow-7 {
+    top: 455px;
+    left: 618px;
+    opacity: 0;
+    transform: rotate(52deg);
+    animation: move-7 4s 5.2s linear infinite;
+  }
+  .arrow-8 {
+    top: 460px;
+    left: 627px;
+    opacity: 0;
+    transform: rotate(223deg);
+    animation: move-8 4s 5.2s linear infinite;
+  }
+  .arrow-9 {
+    top: 342px;
+    left: 605px;
+    opacity: 0;
+    transform: rotate(122deg);
+    animation: move-9 4s linear infinite;
+  }
+  .arrow-10 {
+    top: 475px;
+    left: 840px;
+    opacity: 0;
+    transform: rotate(122deg);
+    animation: move-10 4s linear infinite;
+  }
+
+}
+@keyframes move-10 {
+  0% {
+    top: 475px;
+    left: 840px;
+    opacity: 1;
+  }
+  80% {
+    top: 369px;
+    left: 1005px;
+    transform: rotate(122deg);
+    opacity: 1;
+  }
+  80.1% {
+    transform: rotate(52deg);
+  }
+  100% {
+    top: 336px;
+    left: 950px;
+    transform: rotate(52deg);
+    opacity: 1;
+  }
+}
+
+@keyframes move-9 {
+  0% {
+    top: 342px;
+    left: 605px;
+    opacity: 1;
+  }
+  80% {
+    top: 236px;
+    left: 773px;
+    transform: rotate(122deg);
+    opacity: 1;
+  }
+  80.1% {
+    transform: rotate(223deg);
+  }
+  100% {
+    top: 257px;
+    left: 808px;
+    transform: rotate(223deg);
+    opacity: 1;
+  }
+}
+
+@keyframes move-8 {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    top: 492px;
+    left: 681px;
+    opacity: 1;
+  }
+  20.1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes move-7 {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    top: 442px;
+    left: 598px;
+    opacity: 1;
+  }
+  20.1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes move-6 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    top: 458px;
+    left: 622px;
+    opacity: 1;
+  }
+  50.1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes move-5 {
+  0% {
+    top: 614px;
+    left: 622px;
+    opacity: 1;
+  }
+  20% {
+    top: 596px;
+    left: 645px;
+    opacity: 1;
+    transform: rotate(122deg);
+  }
+  20.1% {
+    top: 596px;
+    left: 645px;
+    opacity: 1;
+    transform: rotate(52deg);
+  }
+  80% {
+    top: 526px;
+    left: 523px;
+    transform: rotate(52deg);
+    opacity: 1;
+  }
+  80.1% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(223deg);
+    opacity: 0;
+  }
+}
+@keyframes move-4 {
+  0% {
+    top: 488px;
+    left: 410px;
+    opacity: 1;
+  }
+  20% {
+    top: 471px;
+    left: 429px;
+    opacity: 1;
+    transform: rotate(122deg);
+  }
+  20.1% {
+    top: 471px;
+    left: 429px;
+    opacity: 1;
+    transform: rotate(223deg);
+  }
+  80% {
+    top: 521px;
+    left: 518px;
+    transform: rotate(223deg);
+    opacity: 1;
+  }
+  80.1% {
+    opacity: 0;
+  }
+  100% {
+    top: 521px;
+    left: 518px;
+    transform: rotate(223deg);
+    opacity: 0;
+  }
+}
+@keyframes move-3 {
+  0% {
+    top: 642px;
+    left: 349px;
+    opacity: 1;
+  }
+  80% {
+    top: 705px;
+    left: 452px;
+    transform: rotate(223deg);
+    //    //opacity: 0;
+  }
+  80.1%{
+    transform: rotate(122deg);
+  }
+  100%{
+    top: 687px;
+    left: 476px;
+    opacity: 1;
+    transform: rotate(122deg);
+  }
+}
+@keyframes move-2 {
+  0% {
+    top: 642px;
+    left: 349px;
+    opacity: 1;
+  }
+  80% {
+    top: 580px;
+    left: 240px;
+    opacity: 1;
+    transform: rotate(52deg);
+  }
+  80.1% {
+    transform: rotate(122deg);
+  }
+  100% {
+    top: 561px;
+    left: 264px;
+    transform: rotate(122deg);
+    opacity: 1;
+  }
+}
+
+@keyframes move-1 {
+  0%{
+    top: 663px;
+    left: 318px;
+    transform: rotate(121deg);
+    opacity: 1;
+
+  }
+  20% {
+    top: 642px;
+    left: 349px;
+    transform: rotate(121deg);
+    opacity: 1;
+  }
+  20.1% {
+    top: 642px;
+    left: 349px;
+    transform: rotate(121deg);
+    opacity: 0;
+  }
+
+  100% {
+    top: 642px;
+    left: 349px;
+    transform: rotate(121deg);
+    opacity: 0;
+  }
+}
