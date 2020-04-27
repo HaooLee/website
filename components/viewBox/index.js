@@ -13,7 +13,7 @@ export default class ViewBox extends React.Component {
     this.timer = setInterval(()=>{
     const {activeIndex} = this.state
       this.setState({
-        activeIndex: activeIndex >=5 ? 0 : activeIndex + 1
+        activeIndex: activeIndex >=6 ? 0 : activeIndex + 1
       })
     },1500)
   }
@@ -31,7 +31,7 @@ export default class ViewBox extends React.Component {
 
     return (
       <>
-        <div className="product">
+        <div className="product" onDragStart={()=>false}>
 
           <span className="line line-1"></span>
           <span className="line line-2"></span>
@@ -64,16 +64,16 @@ export default class ViewBox extends React.Component {
           <div className={`smart-push-pic ${activeIndex == 1 ? 'active':''}`}>
             <img src="/static/images/viewbox/02-3.png" alt=""/>
           </div>
-          <div className={`op-pic ${activeIndex ==4 ? 'active':''}`}>
+          <div className={`op-pic ${activeIndex ==5 ? 'active':''}`}>
             <img src="/static/images/viewbox/05-3.png" alt=""/>
           </div>
-          <div className={`dsp-pic ${activeIndex == 2 ? 'active':''}`}>
+          <div className={`dsp-pic ${activeIndex == 4 ? 'active':''}`}>
             <img src="/static/images/viewbox/03-3.png" alt=""/>
           </div>
-          <div className={`client-pic ${activeIndex == 5 ? 'active':''}`}>
+          <div className={`client-pic ${activeIndex == 3  || activeIndex == 6? 'active':''}`}>
             <img src="/static/images/viewbox/06-3.png" alt=""/>
           </div>
-          <div className={`fast-app-pic ${activeIndex == 3 ? 'active':''}`}>
+          <div className={`fast-app-pic ${activeIndex ==2 ? 'active':''}`}>
             <div className="desc">
               <div className="card">
                 <p className="title">品牌认证+短信赋能</p>
