@@ -132,7 +132,7 @@ export default class QuickAppProduct extends React.Component {
         name: '负一屏',
         desc: <div className="apply-desc__content">
           <p>右滑一屏，丰富卡片，立即使用</p>
-          <p>汇聚vivo手机多场景流量入口</p>
+          <p>汇聚手机多场景流量入口</p>
           <p>增强服务曝光、转化率</p>
           <p>只需右滑一屏，即可感受多方位智慧服务体验</p>
         </div>

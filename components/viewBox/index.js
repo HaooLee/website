@@ -77,7 +77,7 @@ export default class ViewBox extends React.Component {
             <div className="desc">
               <div className="card">
                 <p className="title">品牌认证+短信赋能</p>
-                <p className="desc">智能短信公众号</p>
+                <p className="desc">智能短信</p>
                 <p className="content">企业认证</p>
                 <p className="content">短信卡片</p>
                 <p className="content">场景按钮</p>

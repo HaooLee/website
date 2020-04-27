@@ -39,11 +39,11 @@ export default class Header extends React.Component {
             link:"/quickAppProduct",
             enable:true
           },
-          {
-            title:"全域场景增量营销平台",
-            link:"/dspProduct",
-            enable:true
-          }
+          // {
+          //   title:"全域场景增量营销平台",
+          //   link:"/dspProduct",
+          //   enable:true
+          // }
 
         ]
       },
