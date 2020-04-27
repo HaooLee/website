@@ -3,7 +3,22 @@ import Link from 'next/link'
 import SectionCard from '@/components/sectionCard'
 import Router from 'next/router'
 import styles from './index.less'
+import Slider from "react-slick"
 
+// 自定义箭头
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <img className={className} onClick={onClick} style={{width:18,height:30,right:-30}} src="/static/images/right.png"/>
+  )
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <img className={className} onClick={onClick} style={{width:18,height:30,left:-30}} src="/static/images/left.png"/>
+  )
+}
 export default class Agent extends Component {
   constructor(props) {
     super(props)
@@ -55,6 +70,64 @@ export default class Agent extends Component {
         }
       ],
       partnerList: [
+        {
+          src: '/static/images/agent/dianhui.png',
+          name: '点惠',
+          desc: '点惠信息技术（上海）有限公司，是一家专业从事计算机信息技术领域研发、应用和服务的高新技术企业，致力于打造围绕企业通信的智能服务平台。',
+          types: [
+            <Link href={'/numberProduct'}>
+              <a style={{color: '#355EA6'}}>号码认证</a>
+            </Link>
+          ],
+          typeName: '号码认证'
+        },
+        {
+          src: '/static/images/agent/zhuoxin.png',
+          name: '欣网卓信',
+          desc: '浙江欣网卓信科技有限公司成立于2004年，系上市公司万隆光电［300710］子公司。公司是国内领先的移动互联网，智慧运营服务提供商，专业为运营商提供线上线下一体的增值业务综合运营服务。',
+          types: [
+            <Link href={'/numberProduct'}>
+              <a style={{color: '#355EA6'}}>号码认证</a>
+            </Link>,
+            <Link href={'/intelligenceSms'}>
+              <a style={{color: '#355EA6'}}>智能短信</a>
+            </Link>
+          ],
+          typeName: '号码认证、智能短信'
+        },
+        {
+          src: '/static/images/agent/wanhao.png',
+          name: '万号',
+          desc: '北京万号信息技术咨询有限公司，致力于将高效地链接人与服务。为企业提供除微信、运营商，两大通道之外的第三种高效触达用户信道。',
+          types: [
+            <Link href={'/numberProduct'}>
+              <a style={{color: '#355EA6'}}>号码认证</a>
+            </Link>
+          ],
+          typeName: '号码认证'
+        },
+        {
+          src: '/static/images/agent/weihu.png',
+          name: '微呼',
+          desc: '北京微呼科技有限公司（简称“微呼科技”）作为国内深耕行业的“智能应用解决方案”提供商，一直专注于toB、toG领域，搭建了口碑优秀的智能语音、通信、号码认证平台，形成自主且完善的智能应用解决方案。',
+          types: [
+            <Link href={'/numberProduct'}>
+              <a style={{color: '#355EA6'}}>号码认证</a>
+            </Link>
+          ],
+          typeName: '号码认证'
+        },
+        {
+          src: '/static/images/agent/bojian.png',
+          name: '博见百约',
+          desc: '北京博见百约科技有限公司是一家致力于服务金融领域企业，以科技为驱动力，全方位提供行业解决方案及科技人员外包业务高科技公司。',
+          types: [
+            <Link href={'/intelligenceSms'}>
+              <a style={{color: '#355EA6'}}>智能短信</a>
+            </Link>
+          ],
+          typeName: '智能短信'
+        },
         {
           src: '/static/images/agent/高斯通.png',
           name: '高斯通',
@@ -111,6 +184,29 @@ export default class Agent extends Component {
   }
   render() {
     const {products, footerProducts, supports, partnerList} = this.state
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      // dotsClass:'slick-dots teddy-dots',
+      autoplay: true,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
+      rows: 2,
+      className: 'agent-slider'
+    }
+    const matchSettings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      // dotsClass:'slick-dots teddy-dots',
+      autoplay: true,
+      arrows: false
+    }
     return (
       <>
         <div className="banner">
@@ -230,23 +326,48 @@ export default class Agent extends Component {
             <div className="agent-list">
               <div className="agent-list__title">代理商列表</div>
               <div className="agent-list__content clearfix">
-                {partnerList.map((item, idx) => (
-                  <div className="agent-list__content__item clearfix" key={idx}>
-                    <div className="agent-list__content__item__img-wrap">
-                      <img className="agent-list__content__item__img" src={item.src} />
-                    </div>
-                    <div className="agent-list__content__item__info">
-                      <p className="agent-list__content__item__info__title">{item.name}</p>
-                      <p className="agent-list__content__item__info__desc">{item.desc}</p>
-                      <div className="agent-list__content__item__info__tag">
-                        <span>代理产品：</span>
-                        <span className="tag__type">
-                          {item.types.map((typeDom, idx) => <span key={idx}>{typeDom}</span>)}
-                        </span>
+                <div className="slider-wrap">
+                  <Slider {...settings}>
+                  {partnerList.map((item, idx) => (
+                    <div className="agent-list__content__item clearfix" key={idx}>
+                      <div className="agent-list__content__item__img-wrap">
+                        <img className="agent-list__content__item__img" src={item.src} />
+                      </div>
+                      <div className="agent-list__content__item__info">
+                        <p className="agent-list__content__item__info__title">{item.name}</p>
+                        <p className="agent-list__content__item__info__desc">{item.desc}</p>
+                        <div className="agent-list__content__item__info__tag">
+                          <span>代理产品：</span>
+                          <span className="tag__type">
+                            {item.types.map((typeDom, idx) => <span key={idx}>{typeDom}</span>)}
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                  </Slider>
+                </div>
+                <div className="match-slider-wrap">
+                  <Slider {...matchSettings}>
+                  {partnerList.map((item, idx) => (
+                    <div className="agent-list__content__item clearfix" key={idx}>
+                      <div className="agent-list__content__item__img-wrap">
+                        <img className="agent-list__content__item__img" src={item.src} />
+                      </div>
+                      <div className="agent-list__content__item__info">
+                        <p className="agent-list__content__item__info__title">{item.name}</p>
+                        <p className="agent-list__content__item__info__desc">{item.desc}</p>
+                        <div className="agent-list__content__item__info__tag">
+                          <span>代理产品：</span>
+                          <span className="tag__type">
+                            {item.types.map((typeDom, idx) => <span key={idx}>{typeDom}</span>)}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                  </Slider>
+                </div>
               </div>
             </div>
           </div>
