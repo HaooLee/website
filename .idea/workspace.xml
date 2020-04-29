@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e7c6348-ff0b-441b-a7d3-ceac642b26c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/components/viewBox/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/viewBox/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/viewbox/01-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/viewbox/01-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/viewbox/02-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/viewbox/02-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/viewbox/03-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/viewbox/03-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/viewbox/05-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/viewbox/05-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/viewbox/06-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/viewbox/06-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/floatWindow/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/floatWindow/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/modal/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/modal/index.less" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -46,7 +42,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/components/viewBox/index.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="205">
@@ -107,27 +103,6 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/scenicProduct/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/scenicProduct/index.less">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="390">
-                  <caret line="26" selection-start-line="26" selection-end-line="26" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/store.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="495">
@@ -139,15 +114,45 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/components/floatWindow/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="259">
+                  <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#0#25#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/components/floatWindow/index.less">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="472">
+                  <caret line="158" column="9" lean-forward="true" selection-start-line="158" selection-start-column="9" selection-end-line="158" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/components/modal/index.less">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="562">
+                  <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/components/viewBox/index.less">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="309">
-                  <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+                  <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
                   <folding>
                     <element signature="e#4339#4349#0" />
                     <element signature="e#4436#4522#0" />
@@ -163,16 +168,6 @@
                   </folding>
                 </state>
               </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/static/images/index/2.png">
-              <provider selected="true" editor-type-id="images" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/static/images/index/1.png">
-              <provider selected="true" editor-type-id="images" />
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
@@ -238,7 +233,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>active</find>
       <find>core-content</find>
       <find>coreContent</find>
       <find>130</find>
@@ -268,6 +262,7 @@
       <find>&lt;&lt;&lt;</find>
       <find>transp</find>
       <find>tran</find>
+      <find>2%</find>
     </findStrings>
     <replaceStrings>
       <replace>TEDDY_MODE</replace>
@@ -304,8 +299,6 @@
         <option value="$PROJECT_DIR$/next.config.js" />
         <option value="$PROJECT_DIR$/pages/numberAuth/index.js" />
         <option value="$PROJECT_DIR$/components/timeLine/index.less" />
-        <option value="$PROJECT_DIR$/components/floatWindow/index.less" />
-        <option value="$PROJECT_DIR$/components/modal/index.less" />
         <option value="$PROJECT_DIR$/components/select/index.less" />
         <option value="$PROJECT_DIR$/components/select/index.js" />
         <option value="$PROJECT_DIR$/.next/server/static/development/pages/scenicProduct.js" />
@@ -336,6 +329,8 @@
         <option value="$PROJECT_DIR$/pages/quickAppProduct/index.js" />
         <option value="$PROJECT_DIR$/components/header/index.js" />
         <option value="$PROJECT_DIR$/components/viewBox/index.less" />
+        <option value="$PROJECT_DIR$/components/modal/index.less" />
+        <option value="$PROJECT_DIR$/components/floatWindow/index.less" />
       </list>
     </option>
   </component>
@@ -373,7 +368,19 @@
               <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
               <item name="new-website" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="header" type="462c0819:PsiDirectoryNode" />
+              <item name="floatWindow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new-website" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="footer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new-website" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="modal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
@@ -485,12 +492,12 @@
       <workItem from="1586939108221" duration="187000" />
       <workItem from="1586940917890" duration="1200000" />
       <workItem from="1587014923444" duration="8354000" />
-      <workItem from="1587365379396" duration="27096000" />
+      <workItem from="1587365379396" duration="28231000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259818000" />
+    <option name="totallyTimeSpent" value="260953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -534,13 +541,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/components/floatWindow/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/timeLine/index.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4770">
@@ -571,13 +571,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/modal/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -635,16 +628,6 @@
           <caret line="285" column="14" selection-start-line="285" selection-start-column="14" selection-end-line="285" selection-end-column="14" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/floatWindow/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" column="40" selection-start-line="18" selection-start-column="4" selection-end-line="19" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -915,7 +898,7 @@
     <entry file="file://$PROJECT_DIR$/components/viewBox/index.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
-          <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
           <folding>
             <element signature="e#4339#4349#0" />
             <element signature="e#4436#4522#0" />
@@ -929,6 +912,30 @@
             <element signature="e#5312#5399#0" />
             <element signature="e#5413#5499#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/modal/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/floatWindow/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/floatWindow/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="158" column="9" lean-forward="true" selection-start-line="158" selection-start-column="9" selection-end-line="158" selection-end-column="9" />
         </state>
       </provider>
     </entry>

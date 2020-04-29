@@ -60,9 +60,8 @@
 
 
 .form {
-  width: 700px;
   margin: 0 auto;
-  padding-bottom: 50px;
+  padding: 0 50px 50px;
   &__item {
     display: flex;
     flex-direction: row;
@@ -156,5 +155,14 @@
 @media screen and (max-width: 980px) {
   .floating_ck {
     display: none;
+  }
+  .form {
+    &__item {
+      flex-direction: column;
+      margin-top: 0;
+      &__label {
+        text-align: left;
+      }
+    }
   }
 }
