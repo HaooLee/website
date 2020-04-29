@@ -203,7 +203,7 @@ export default class QuickAppProduct extends React.Component {
             coreClassName={'quick-app-core'}
           ></CoreContent>
         </SectionCard> */}
-        <SectionCard title={'应用形态'} bgc={'#F8FAFF'}>
+        <SectionCard title={'多场景触达，高效链接企业服务'} bgc={'#F8FAFF'}>
           <div>
               <TabBarCard list={tabBarList} customClassName={'quick-tab-bar'} clickCallback={this.clickCallback}></TabBarCard>
               {
