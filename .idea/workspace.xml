@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e7c6348-ff0b-441b-a7d3-ceac642b26c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/Scroller/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Scroller/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/floatWindow/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/floatWindow/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/select/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/select/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/select/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/select/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/global.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/global.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/viewBox/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/viewBox/index.less" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.624909">
+    <splitter split-orientation="horizontal" split-proportion="0.4537509">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -108,8 +98,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/components/header/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="397">
-                  <caret line="267" column="94" selection-start-line="267" selection-start-column="94" selection-end-line="267" selection-end-column="94" />
+                <state relative-caret-position="409">
+                  <caret line="267" column="28" selection-start-line="267" selection-start-column="28" selection-end-line="267" selection-end-column="28" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
@@ -142,10 +132,10 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/components/floatWindow/index.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="412">
+                <state relative-caret-position="2370">
                   <caret line="158" column="9" selection-start-line="158" selection-start-column="9" selection-end-line="158" selection-end-column="9" />
                 </state>
               </provider>
@@ -172,11 +162,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/components/viewBox/index.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="309">
-                  <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+                <state relative-caret-position="511">
+                  <caret line="83" column="17" lean-forward="true" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
                   <folding>
                     <element signature="e#4339#4349#0" />
                     <element signature="e#4436#4522#0" />
@@ -328,7 +318,6 @@
         <option value="$PROJECT_DIR$/components/banner/index.js" />
         <option value="$PROJECT_DIR$/components/viewBox/index.js" />
         <option value="$PROJECT_DIR$/pages/quickAppProduct/index.js" />
-        <option value="$PROJECT_DIR$/components/viewBox/index.less" />
         <option value="$PROJECT_DIR$/components/modal/index.less" />
         <option value="$PROJECT_DIR$/components/select/index.less" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -337,6 +326,7 @@
         <option value="$PROJECT_DIR$/components/header/index.less" />
         <option value="$PROJECT_DIR$/pages/global.less" />
         <option value="$PROJECT_DIR$/components/header/index.js" />
+        <option value="$PROJECT_DIR$/components/viewBox/index.less" />
       </list>
     </option>
   </component>
@@ -510,12 +500,12 @@
       <workItem from="1586939108221" duration="187000" />
       <workItem from="1586940917890" duration="1200000" />
       <workItem from="1587014923444" duration="8354000" />
-      <workItem from="1587365379396" duration="31277000" />
+      <workItem from="1587365379396" duration="31926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263999000" />
+    <option name="totallyTimeSpent" value="264648000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -840,26 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/viewBox/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
-          <folding>
-            <element signature="e#4339#4349#0" />
-            <element signature="e#4436#4522#0" />
-            <element signature="e#4532#4618#0" />
-            <element signature="e#4627#4713#0" />
-            <element signature="e#4726#4812#0" />
-            <element signature="e#4822#4908#0" />
-            <element signature="e#4923#5009#0" />
-            <element signature="e#5019#5105#0" />
-            <element signature="e#5215#5302#0" />
-            <element signature="e#5312#5399#0" />
-            <element signature="e#5413#5499#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/modal/index.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="562">
@@ -931,13 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/floatWindow/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="158" column="9" selection-start-line="158" selection-start-column="9" selection-end-line="158" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/global.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -947,10 +910,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/header/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="267" column="94" selection-start-line="267" selection-start-column="94" selection-end-line="267" selection-end-column="94" />
+        <state relative-caret-position="409">
+          <caret line="267" column="28" selection-start-line="267" selection-start-column="28" selection-end-line="267" selection-end-column="28" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/floatWindow/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2370">
+          <caret line="158" column="9" selection-start-line="158" selection-start-column="9" selection-end-line="158" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/viewBox/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="83" column="17" lean-forward="true" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+          <folding>
+            <element signature="e#4339#4349#0" />
+            <element signature="e#4436#4522#0" />
+            <element signature="e#4532#4618#0" />
+            <element signature="e#4627#4713#0" />
+            <element signature="e#4726#4812#0" />
+            <element signature="e#4822#4908#0" />
+            <element signature="e#4923#5009#0" />
+            <element signature="e#5019#5105#0" />
+            <element signature="e#5215#5302#0" />
+            <element signature="e#5312#5399#0" />
+            <element signature="e#5413#5499#0" />
           </folding>
         </state>
       </provider>
