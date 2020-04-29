@@ -8,7 +8,6 @@ export default class Select extends React.Component {
     super(props)
   }
 
-
   state = {
     opened:false,
     currentValue:null
@@ -22,8 +21,10 @@ export default class Select extends React.Component {
   }
 
   handleOptionClick = (option) =>{
-    const {currentVlaue} = this.state
-    if(currentVlaue !== option.value){
+    const {currentValue} = this.state
+    const {onChange = ()=>{}} = this.props
+    if(currentValue !== option.value){
+      onChange(option.value)
       this.setState({
         currentValue:option.value,
         currentLabel:option.label
