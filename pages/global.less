@@ -46,6 +46,9 @@ ol, ul, dl, p {
 
 
 @media screen and (max-width: @MATCH_WIDTH) {
+  :global(body,html){
+    height: 100%;
+  }
   :global(.w) {
     max-width: none;
     min-width: auto;

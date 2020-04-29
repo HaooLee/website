@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from './index.less'
 import Link from 'next/link'
+import Scroller from '@/components/Scroller'
+
 import Router from 'next/router'
 
 export default class Header extends React.Component {
@@ -254,6 +256,19 @@ export default class Header extends React.Component {
     isActive:false
   }
 
+  handleTouchMove=(e)=>{
+    e.stopPropagation()
+    e.preventDefault()
+  }
+
+  componentDidMount() {
+    document.getElementById("menu-mask").addEventListener('touchmove', this.handleTouchMove, { passive: false })
+  }
+  componentWillUnmount() {
+    document.getElementById("menu-mask").removeEventListener('touchmove', this.handleTouchMove)
+
+  }
+
   mouseenterHandler = (i)=>{
     // if(!i.routes || i.routes.length === 0) return
     const { routes } = this.state
@@ -383,29 +398,32 @@ export default class Header extends React.Component {
               <span className="icon-bar hide" ></span>
               <span className="icon-bar" ></span>
             </div>
-            <div className={`mask ${isActive? 'active':''}`} onClick={ e =>this.handleMaskClick(e) }>
-              <ul className={`mobile-nav`}>
-                {
-                  routes.map((i,idx)=>{
-                    return (
-                      <li className="mobile-nav-item" key={idx}>
-                        <Link href={i.routes && i.routes.length > 0 ?'':i.link} passHref><a onClick={() => this.handleMenuClick(i, idx)}>{i.title}</a></Link>
+            <div className={`mask ${isActive? 'active':''}`} id={"menu-mask"} onClick={ e =>this.handleMaskClick(e) }>
+              <Scroller>
+                <ul className={`mobile-nav`}>
+                  {
+                    routes.map((i,idx)=>{
+                      return (
+                        <li className="mobile-nav-item" key={idx}>
+                          <Link href={i.routes && i.routes.length > 0 ?'':i.link} passHref><a onClick={() => this.handleMenuClick(i, idx)}>{i.title}</a></Link>
 
-                        {i.routes && i.routes.length > 0 && <span className={`arrow  ${i.opened? 'rotate':''}`}></span>}
-                        {
-                          i.routes && i.routes.length > 0 && (<ul style={{overflow:'hidden',transition:'all linear .4s',height: i.opened?i.routes.length * 51:0}}>
+                          {i.routes && i.routes.length > 0 && <span className={`arrow  ${i.opened? 'rotate':''}`}></span>}
+                          {
+                            i.routes && i.routes.length > 0 && (<ul style={{overflow:'hidden',transition:'all linear .4s',height: i.opened?i.routes.length * 51:0}}>
                               {
                                 i.routes.map((item, index)=><li style={{paddingLeft:20,borderTop:'1px solid #ccc',backgroundColor:'#eee'}} key={index}>
                                   <Link href={item.link} passHref><a onClick={e=>this.setState({isActive:false})}>{item.title}</a></Link>
                                 </li>)
                               }
-                          </ul>)
-                        }
-                      </li>
-                    )
-                  })
-                }
-              </ul>
+                            </ul>)
+                          }
+                        </li>
+                      )
+                    })
+                  }
+                </ul>
+              </Scroller>
+
             </div>
           </div>
         </header>

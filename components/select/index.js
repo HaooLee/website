@@ -1,5 +1,7 @@
 import React from "react";
 import styles from './index.less'
+import Scroller from '@/components/Scroller'
+
 
 export default class Select extends React.Component {
   constructor(props) {
@@ -55,17 +57,22 @@ export default class Select extends React.Component {
             currentLabel || placeholder
           }
           <div className="options" style={{height: opened?170:0}}>
-            {
-              optRes.map((i,idx)=>{
-                return (
-                  <div className={`option ${currentValue === i.value? 'active':''}`} key={idx} onClick={e => this.handleOptionClick(i)}>
-                    {
-                      i.label
-                    }
-                  </div>
-                )
-              })
-            }
+            <Scroller>
+              <div style={{height:optRes.length * 40}}>
+                {
+                  optRes.map((i,idx)=>{
+                    return (
+                      <div className={`option ${currentValue === i.value? 'active':''}`} key={idx} onClick={e => this.handleOptionClick(i)}>
+                        {
+                          i.label
+                        }
+                      </div>
+                    )
+                  })
+                }
+              </div>
+            </Scroller>
+
           </div>
         </div>
         <style jsx>{styles}</style>
