@@ -32,7 +32,7 @@ export default class Agent extends Component {
         {
           src: '/static/images/agent/scenic-icon.png',
           linkTo:'/scenicProduct',
-          name: '5G消息'
+          name: '5G场景消息'
         },
         {
           src: '/static/images/agent/auth-icon.png',
@@ -214,6 +214,66 @@ export default class Agent extends Component {
             平台化发展、产业链共赢
           </div>
         </div>
+        <SectionCard title={'合作伙伴遍及全国'}>
+          <div className="partner">
+            <div className="map-img clearfix">
+              {/* <img className="map-img__new" src='/static/images/agent/map1.png' />
+              <img className="map-img__new" src='/static/images/agent/map2.png' /> */}
+              <img className="map-img__new" src='/static/images/agent/map-new.gif' />
+            </div>
+          </div>
+        </SectionCard>
+
+        <SectionCard title={'代理商列表'} bgc={'#F8FAFF'}>
+          <div className="agent-list">
+            {/*<div className="agent-list__title"></div>*/}
+            <div className="agent-list__content clearfix">
+              <div className="slider-wrap">
+                <Slider {...settings}>
+                  {partnerList.map((item, idx) => (
+                    <div className="agent-list__content__item clearfix" key={idx}>
+                      <div className="agent-list__content__item__img-wrap">
+                        <img className="agent-list__content__item__img" src={item.src} />
+                      </div>
+                      <div className="agent-list__content__item__info">
+                        <p className="agent-list__content__item__info__title">{item.name}</p>
+                        <p className="agent-list__content__item__info__desc">{item.desc}</p>
+                        <div className="agent-list__content__item__info__tag">
+                          <span>代理产品：</span>
+                          <span className="tag__type">
+                            {item.types.map((typeDom, idx) => <span key={idx}>{typeDom}</span>)}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+              <div className="match-slider-wrap">
+                <Slider {...matchSettings}>
+                  {partnerList.map((item, idx) => (
+                    <div className="agent-list__content__item clearfix" key={idx}>
+                      <div className="agent-list__content__item__img-wrap">
+                        <img className="agent-list__content__item__img" src={item.src} />
+                      </div>
+                      <div className="agent-list__content__item__info">
+                        <p className="agent-list__content__item__info__title">{item.name}</p>
+                        <p className="agent-list__content__item__info__desc">{item.desc}</p>
+                        <div className="agent-list__content__item__info__tag">
+                          <span>代理产品：</span>
+                          <span className="tag__type">
+                            {item.types.map((typeDom, idx) => <span key={idx}>{typeDom}</span>)}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+            </div>
+          </div>
+        </SectionCard>
+
         <SectionCard title={'诚邀加盟'} bgc={'#fff'}>
           <div className="agent-info">
           智能通讯市场环境和客户需求的不断演变，单靠一家或几家公司，远远不够支撑一个产业，泰迪熊渠道在"平台化发展 产业链共赢"策略下，致力于打造一个全新的智能通讯产业联盟。在未来，泰迪熊移动将坚实基础，建立更大更全的产业链，实现经营模式的转型升级。
@@ -314,62 +374,6 @@ export default class Agent extends Component {
                 </div>
               </div>
             ))}
-          </div>
-        </SectionCard>
-        <SectionCard title={'合作伙伴遍及全国'} bgc={'#FFFFFF'}>
-          <div className="partner">
-            <div className="map-img clearfix">
-              {/* <img className="map-img__new" src='/static/images/agent/map1.png' />
-              <img className="map-img__new" src='/static/images/agent/map2.png' /> */}
-              <img className="map-img__new" src='/static/images/agent/map-new.gif' />
-            </div>
-            <div className="agent-list">
-              <div className="agent-list__title">代理商列表</div>
-              <div className="agent-list__content clearfix">
-                <div className="slider-wrap">
-                  <Slider {...settings}>
-                  {partnerList.map((item, idx) => (
-                    <div className="agent-list__content__item clearfix" key={idx}>
-                      <div className="agent-list__content__item__img-wrap">
-                        <img className="agent-list__content__item__img" src={item.src} />
-                      </div>
-                      <div className="agent-list__content__item__info">
-                        <p className="agent-list__content__item__info__title">{item.name}</p>
-                        <p className="agent-list__content__item__info__desc">{item.desc}</p>
-                        <div className="agent-list__content__item__info__tag">
-                          <span>代理产品：</span>
-                          <span className="tag__type">
-                            {item.types.map((typeDom, idx) => <span key={idx}>{typeDom}</span>)}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                  </Slider>
-                </div>
-                <div className="match-slider-wrap">
-                  <Slider {...matchSettings}>
-                  {partnerList.map((item, idx) => (
-                    <div className="agent-list__content__item clearfix" key={idx}>
-                      <div className="agent-list__content__item__img-wrap">
-                        <img className="agent-list__content__item__img" src={item.src} />
-                      </div>
-                      <div className="agent-list__content__item__info">
-                        <p className="agent-list__content__item__info__title">{item.name}</p>
-                        <p className="agent-list__content__item__info__desc">{item.desc}</p>
-                        <div className="agent-list__content__item__info__tag">
-                          <span>代理产品：</span>
-                          <span className="tag__type">
-                            {item.types.map((typeDom, idx) => <span key={idx}>{typeDom}</span>)}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                  </Slider>
-                </div>
-              </div>
-            </div>
           </div>
         </SectionCard>
         <style jsx>{styles}</style>

@@ -114,7 +114,7 @@ export default class FloatWindow extends react.Component {
               <div className="form__item__input">
                 <input placeholder="请输入公司名称" className={errors['company']?.err ? 'err' :''} onChange={e=>this.formChange.call(this, 'company',e.target.value)} type="text"/>
                 {/*{errors.filter(i=>i.key == "company" && i.err).map(i=><span className={'errMsg'}>{i.msg}</span>)}*/}
-                {errors['company']?.err && <span className={'errMsg'}>{errors['company'].msg}</span>}
+                {errors[' ']?.err && <span className={'errMsg'}>{errors['company'].msg}</span>}
               </div>
             </div>
             <div className="form__item form__item--required">
@@ -153,7 +153,7 @@ export default class FloatWindow extends react.Component {
             <div className="form__item form__item--required">
               <div className="form__item__label">产品选项</div>
               <div className="form__item__input">
-                <CheckBoxGroup onChange={this.formChange.bind(this, 'product')} options={['智能短信','号码认证', '5G消息','快应用']} />
+                <CheckBoxGroup onChange={this.formChange.bind(this, 'product')} options={['智能短信','号码认证', '5G场景消息','快应用']} />
                 {errors['product']?.err && <span className={'errMsg'}>{errors['product'].msg}</span>}
 
               </div>

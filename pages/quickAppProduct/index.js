@@ -110,7 +110,7 @@ export default class QuickAppProduct extends React.Component {
         active: false,
         type: 'sms'
       }, {
-        name: '5G消息',
+        name: '5G场景消息',
         active: false,
         type: 'scenic'
       }],
@@ -163,7 +163,7 @@ export default class QuickAppProduct extends React.Component {
       },
       'scenic': {
         src: '/static/images/quickAppProduct/场景消息.png',
-        name: '5G消息',
+        name: '5G场景消息',
         desc: <div className="apply-desc__content">
           <p>多媒体形式展现效果丰富</p>
           <p>其成本低，获客快</p>

@@ -170,9 +170,9 @@ export default class Index extends React.Component {
         <section className="feature-right">
           <div className="w feature-content">
             <div className="text">
-              <h2>5G消息</h2>
+              <h2>5G场景消息</h2>
               <h3>多形式、效率高、全场景、 省成本</h3>
-              <p>马上通过 <a href="/scenicProduct">5G消息</a> 了解更多效果转化新玩法</p>
+              <p>马上通过 <a href="/scenicProduct">5G场景消息</a> 了解更多效果转化新玩法</p>
             </div>
             <div className="feature-image scenic-image">
               <img src={scenicImage[scenicActiveImage]} alt=""/>

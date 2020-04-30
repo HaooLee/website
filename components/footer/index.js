@@ -86,7 +86,7 @@ export default class Footer extends React.Component {
                     <a href="/intelligenceSms">智能短信</a>
                   </li>
                   <li>
-                    <a href="/scenicProduct">5G消息</a>
+                    <a href="/scenicProduct">5G场景消息</a>
                   </li>
                   <li>
                     <a href="/numberProduct">号码认证</a>
