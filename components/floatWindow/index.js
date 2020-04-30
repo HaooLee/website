@@ -3,7 +3,6 @@ import styles from './index.less'
 import Modal from '@/components/modal';
 import Select from '@/components/select'
 import CheckBox from '@/components/checkBox'
-
 import Radio from '@/components/radio'
 import {connect} from 'react-redux';
 import {floatWindowShow,floatWindowHide} from '@/store';
@@ -102,20 +101,20 @@ export default class FloatWindow extends react.Component {
           title={'合作加盟'}
           onCancel={this.hideModel}
         >
-
           <div className="form">
             <div className="form__item form__item--required">
               <div className="form__item__label">合作模式</div>
               <div className="form__item__input">
                 <RadioGroup options={['商业合作','代理加盟']} defaultValue={0} onChange={this.formChange.bind(this, 'mode')}></RadioGroup>
                 {errors['mode']?.err && <span className={'errMsg'}>{errors['mode'].msg}</span>}
+
               </div>
             </div><div className="form__item form__item--required">
               <div className="form__item__label">公司名称</div>
               <div className="form__item__input">
                 <input placeholder="请输入公司名称" className={errors['company']?.err ? 'err' :''} onChange={e=>this.formChange.call(this, 'company',e.target.value)} type="text"/>
                 {/*{errors.filter(i=>i.key == "company" && i.err).map(i=><span className={'errMsg'}>{i.msg}</span>)}*/}
-                {errors[' ']?.err && <span className={'errMsg'}>{errors['company'].msg}</span>}
+                {errors['company']?.err && <span className={'errMsg'}>{errors['company'].msg}</span>}
               </div>
             </div>
             <div className="form__item form__item--required">
