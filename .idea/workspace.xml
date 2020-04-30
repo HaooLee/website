@@ -3,18 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4e7c6348-ff0b-441b-a7d3-ceac642b26c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/components/floatWindow/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/floatWindow/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/footer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/viewBox/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/viewBox/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/modal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/modal/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/modal/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/modal/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/agent/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/agent/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/agent/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/agent/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/case/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/case/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/quickAppProduct/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/quickAppProduct/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/scenicProduct/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/scenicProduct/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/agent/match.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/agent/match.less" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,11 +33,20 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/components/modal/index.less">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="566">
+                  <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/components/modal/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="192">
-                  <caret line="15" selection-start-line="15" selection-end-line="21" selection-end-column="3" />
+                <state relative-caret-position="427">
+                  <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="41" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
@@ -54,13 +55,19 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/components/Scroller/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-503">
+                  <caret line="1" column="47" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="47" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/components/floatWindow/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="293">
-                  <caret line="116" column="26" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="26" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="75">
+                  <caret line="5" selection-start-line="5" selection-end-line="5" />
                 </state>
               </provider>
             </entry>
@@ -89,11 +96,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/agent/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="185">
-                  <caret line="216" column="39" lean-forward="true" selection-start-line="216" selection-start-column="39" selection-end-line="216" selection-end-column="39" />
+                <state relative-caret-position="3353">
+                  <caret line="233" column="61" selection-start-line="233" selection-start-column="36" selection-end-line="233" selection-end-column="61" />
                   <folding>
                     <element signature="e#0#33#0" expanded="true" />
                   </folding>
@@ -122,22 +129,19 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/news/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-233">
-                  <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-                  <folding>
-                    <element signature="e#0#31#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/agent/match.less">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="528">
+                  <caret line="206" column="23" selection-start-line="206" selection-start-column="23" selection-end-line="206" selection-end-column="23" />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/about/index.less">
               <provider selected="true" editor-type-id="text-editor">
@@ -147,11 +151,23 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/agent/index.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="376">
-                  <caret line="240" column="1" selection-start-line="240" selection-start-column="1" selection-end-line="240" selection-end-column="1" />
+                <state relative-caret-position="-1099">
+                  <caret line="244" column="14" selection-start-line="244" selection-start-column="14" selection-end-line="244" selection-end-column="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/components/select/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="30">
+                  <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -170,8 +186,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>145px</find>
-      <find>00% 5.54re</find>
       <find>eight: 5.54rem;</find>
       <find>allJoins</find>
       <find>routers</find>
@@ -195,11 +209,13 @@
       <find>&lt;&lt;&lt;</find>
       <find>transp</find>
       <find>tran</find>
-      <find>err &amp;&amp; 'err'</find>
       <find>5G消息</find>
       <find>2%</find>
       <find>checkbox-</find>
       <find>__title</find>
+      <find>agent-slider</find>
+      <find>partner</find>
+      <find>err &amp;&amp; 'err'</find>
     </findStrings>
     <replaceStrings>
       <replace>TEDDY_MODE</replace>
@@ -220,7 +236,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/components/banner/index.less" />
         <option value="$PROJECT_DIR$/restart.sh" />
         <option value="$PROJECT_DIR$/components/companyLogo/index.less" />
         <option value="$PROJECT_DIR$/pages/dspProduct/index.less" />
@@ -236,7 +251,6 @@
         <option value="$PROJECT_DIR$/pages/case/index.js" />
         <option value="$PROJECT_DIR$/store.js" />
         <option value="$PROJECT_DIR$/pages/_app.js" />
-        <option value="$PROJECT_DIR$/components/modal/index.js" />
         <option value="$PROJECT_DIR$/components/solutionCard/index.less" />
         <option value="$PROJECT_DIR$/pages/auth/index.js" />
         <option value="$PROJECT_DIR$/pages/intelligenceSms/index.less" />
@@ -250,20 +264,17 @@
         <option value="$PROJECT_DIR$/pages/_document.js" />
         <option value="$PROJECT_DIR$/components/banner/index.js" />
         <option value="$PROJECT_DIR$/pages/quickAppProduct/index.js" />
-        <option value="$PROJECT_DIR$/components/modal/index.less" />
         <option value="$PROJECT_DIR$/components/select/index.less" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/pages/global.less" />
         <option value="$PROJECT_DIR$/components/header/index.js" />
         <option value="$PROJECT_DIR$/components/viewBox/index.less" />
-        <option value="$PROJECT_DIR$/components/select/index.js" />
         <option value="$PROJECT_DIR$/components/checkBox/index.less" />
         <option value="$PROJECT_DIR$/components/radio/index.less" />
         <option value="$PROJECT_DIR$/components/radio/index.js" />
         <option value="$PROJECT_DIR$/components/floatWindow/index.less" />
         <option value="$PROJECT_DIR$/pages/news/index.js" />
         <option value="$PROJECT_DIR$/components/checkBox/index.js" />
-        <option value="$PROJECT_DIR$/components/floatWindow/index.js" />
         <option value="$PROJECT_DIR$/components/header/index.less" />
         <option value="$PROJECT_DIR$/components/viewBox/index.js" />
         <option value="$PROJECT_DIR$/pages/scenicProduct/index.js" />
@@ -271,6 +282,11 @@
         <option value="$PROJECT_DIR$/pages/about/index.js" />
         <option value="$PROJECT_DIR$/pages/agent/index.less" />
         <option value="$PROJECT_DIR$/pages/agent/index.js" />
+        <option value="$PROJECT_DIR$/pages/agent/match.less" />
+        <option value="$PROJECT_DIR$/components/select/index.js" />
+        <option value="$PROJECT_DIR$/components/floatWindow/index.js" />
+        <option value="$PROJECT_DIR$/components/modal/index.js" />
+        <option value="$PROJECT_DIR$/components/modal/index.less" />
       </list>
     </option>
   </component>
@@ -303,6 +319,12 @@
               <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
               <item name="new-website" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new-website" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="floatWindow" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
@@ -468,12 +490,12 @@
       <workItem from="1586939108221" duration="187000" />
       <workItem from="1586940917890" duration="1200000" />
       <workItem from="1587014923444" duration="8354000" />
-      <workItem from="1587365379396" duration="50227000" />
+      <workItem from="1587365379396" duration="51966000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="282949000" />
+    <option name="totallyTimeSpent" value="284688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -517,13 +539,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/intelligenceSms/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/intelligenceSms/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -639,13 +654,6 @@
     <entry file="file://$PROJECT_DIR$/static/images/viewbox/05-3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/modal/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/images/viewbox/06-3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -714,16 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/select/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-116">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/textTransform/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-12">
@@ -742,16 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/modal/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="15" selection-start-line="15" selection-end-line="21" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/news/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-233">
@@ -766,16 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="26" selection-start-column="13" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/floatWindow/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="116" column="26" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -837,13 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/Scroller/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="47" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/select/index.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -887,18 +858,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/agent/index.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="240" column="1" selection-start-line="240" selection-start-column="1" selection-end-line="240" selection-end-column="1" />
+        <state relative-caret-position="-1099">
+          <caret line="244" column="14" selection-start-line="244" selection-start-column="14" selection-end-line="244" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/agent/match.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="206" column="23" selection-start-line="206" selection-start-column="23" selection-end-line="206" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/select/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/agent/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="216" column="39" lean-forward="true" selection-start-line="216" selection-start-column="39" selection-end-line="216" selection-end-column="39" />
+        <state relative-caret-position="3353">
+          <caret line="233" column="61" selection-start-line="233" selection-start-column="36" selection-end-line="233" selection-end-column="61" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/floatWindow/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/Scroller/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-503">
+          <caret line="1" column="47" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/modal/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/modal/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
         </state>
       </provider>
     </entry>

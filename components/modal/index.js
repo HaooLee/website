@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './index.less'
+import Scroller from '@/components/Scroller'
+
 
 export default class Modal extends React.Component{
   constructor(props){
@@ -51,9 +53,13 @@ export default class Modal extends React.Component{
           <div className="modal-wrap">
             <div className="close" onClick={()=>this.handleCloseClick()}>×</div>
             {title && <div className="title">{title}</div>}
-            {
-              children
-            }
+            <div className={'content-wrap'}>
+              <Scroller>
+                {
+                  children
+                }
+              </Scroller>
+            </div>
           </div>
 
         </div>

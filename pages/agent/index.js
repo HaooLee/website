@@ -199,12 +199,12 @@ export default class Agent extends Component {
     }
     const matchSettings = {
       dots: true,
-      infinite: true,
+      infinite: false,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
       // dotsClass:'slick-dots teddy-dots',
-      autoplay: true,
+      autoplay: false,
       arrows: false
     }
     return (
@@ -225,7 +225,7 @@ export default class Agent extends Component {
         </SectionCard>
 
         <SectionCard title={'代理商列表'} bgc={'#F8FAFF'}>
-          <div className="agent-list">
+          <div className="agent-list w">
             {/*<div className="agent-list__title"></div>*/}
             <div className="agent-list__content clearfix">
               <div className="slider-wrap">
