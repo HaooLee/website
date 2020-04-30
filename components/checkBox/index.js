@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useState }  from "react";
 import styles from './index.less'
 
 
@@ -48,12 +48,13 @@ export default class CheckBox extends React.Component {
 
 CheckBox.Group = (props)=>{
     const { options = [],onChange = ()=>{} } = props
-    let selection = []
+  const [selection,setSelection] = useState([])
     const handleChange = (idx, checked) =>{
       if(checked){
         selection.push(options[idx])
+        setSelection(selection)
       }else {
-        selection = selection.filter(i=> i !== options[idx])
+        setSelection(selection.filter(i=> i !== options[idx]))
       }
       onChange(selection)
     }
@@ -62,7 +63,7 @@ CheckBox.Group = (props)=>{
       <>
         {
           options.map((i,idx)=>{
-            return <CheckBox key={idx} checked={false} onChange={handleChange.bind(this,idx)}>{i}</CheckBox>
+            return <CheckBox key={idx} checked={selection.includes(i)} onChange={handleChange.bind(this,idx)}>{i}</CheckBox>
           })
         }
       </>

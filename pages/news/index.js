@@ -8,7 +8,7 @@ export default class News extends Component {
   static async getInitialProps({Component, router, ctx}) {
     try {
       const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/news/getinfo')
-      return {news: data.data}
+      return {news: data.data.list}
     }catch (e) {
       return {news: []}
     }
