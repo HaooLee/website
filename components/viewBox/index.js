@@ -59,19 +59,35 @@ export default class ViewBox extends React.Component {
           <span className="arrow arrow-10"></span>
 
           <div className={`customer-pic ${activeIndex == 0 ? 'active':''}` }>
-            <img src="/static/images/viewbox/01-3.png" alt=""/>
+            {/*<img src="/static/images/viewbox/01-3.png" alt=""/>*/}
+            <div className={'card'}>
+              <p className={'title'}>广告主/B端客户</p>
+              <p className={'content'}>场景赋能 - 场景构建 - 场景融合服务</p>
+            </div>
           </div>
           <div className={`smart-push-pic ${activeIndex == 1 ? 'active':''}`}>
-            <img src="/static/images/viewbox/02-3.png" alt=""/>
+            {/*<img src="/static/images/viewbox/02-3.png" alt=""/>*/}
+            <div className={'card'}>
+              <p className={'title'}>巧推智慧营销平台</p>
+              <p className={'content'}>高效提升  品牌营销</p>
+              <p className={'content'}>营销拓客  运营管理</p>
+            </div>
           </div>
           <div className={`op-pic ${activeIndex ==5 ? 'active':''}`}>
             <img src="/static/images/viewbox/05-3.png" alt=""/>
           </div>
           <div className={`dsp-pic ${activeIndex == 4 ? 'active':''}`}>
-            <img src="/static/images/viewbox/03-3.png" alt=""/>
+            {/*<img src="/static/images/viewbox/03-3.png" alt=""/>*/}
+            <div className={'card'}>
+              <p className={'title'}>全域场景增量营销平台</p>
+              <p className={'content'}>用户增长  服务支持</p>
+            </div>
           </div>
           <div className={`client-pic ${activeIndex == 3  || activeIndex == 6? 'active':''}`}>
-            <img src="/static/images/viewbox/06-3.png" alt=""/>
+            {/*<img src="/static/images/viewbox/06-3.png" alt=""/>*/}
+            <div className={'card'}>
+              <p className={'title'}>终端用户</p>
+            </div>
           </div>
           <div className={`fast-app-pic ${activeIndex ==2 ? 'active':''}`}>
             <div className="desc">
