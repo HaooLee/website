@@ -74,7 +74,39 @@ export default class ViewBox extends React.Component {
             </div>
           </div>
           <div className={`op-pic ${activeIndex ==5 ? 'active':''}`}>
-            <img src="/static/images/viewbox/05-3.png" alt=""/>
+            <div className="op-wrap">
+              <img src="/static/images/viewbox/arrow-1.png" alt=""/>
+              <img src="/static/images/viewbox/arrow-2.png" alt=""/>
+              <img src="/static/images/viewbox/arrow-3.png" alt=""/>
+              <img src="/static/images/viewbox/arrow-4.png" alt=""/>
+              <p>场景-行业-媒体覆盖,数据化精准运营</p>
+              <div className={"card card-1"}>
+                <p className={"title"}>程序化广告服务</p>
+              </div>
+              <div className={"card card-2"}>
+                <p className={"title"}>DMP数据管理平台</p>
+                <p className={"desc"}>流量分析+人群标签 <img src="/static/images/viewbox/trigon-1.png" alt=""/></p>
+                <p className={"desc"}>媒体<img src="/static/images/viewbox/trigon-2.png" alt=""/>DSP智能出价模型<img src="/static/images/viewbox/trigon-3.png" alt=""/>媒体</p>
+              </div>
+
+              <div className={"card card-3"}>
+                <p className={"title"}>DSP一站式投放平台</p>
+                <span className={"desc desc-1"}>数据整合</span>
+                <span className={"desc desc-2"}>数据分析</span>
+                <span className={"desc desc-3"}>流量投放</span>
+                <span className={"desc desc-4"}>数据应用</span>
+                <img src="/static/images/viewbox/c.png" alt=""/>
+              </div>
+              <div className={"card card-4"}>
+                <p className={"title"}>供给资源 移动终端</p>
+                <p className={"desc"}>媒介服务 网络消息</p>
+                <p className={"desc"}>厂商服务 智能短信</p>
+                <p className={"desc"}>联盟服务</p>
+                <p className={"desc"}>APP服务</p>
+              </div>
+
+            </div>
+            {/*<img src="/static/images/viewbox/05-3.png" alt=""/>*/}
           </div>
           <div className={`dsp-pic ${activeIndex == 4 ? 'active':''}`}>
             {/*<img src="/static/images/viewbox/03-3.png" alt=""/>*/}

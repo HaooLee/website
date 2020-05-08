@@ -267,23 +267,134 @@
     top: 392px;
     left: 640px;
     background: url(/static/images/viewbox/05.png) no-repeat  center/100%;
-    img {
+    .op-wrap {
       position: absolute;
-      width: 398px;
+      width: 462px;
+      height: 282px;
       visibility: hidden;
-      top: 80%;
+      top: 103%;
       left: 160px;
+      font-size: 18px;
+
+      .card {
+        position: absolute;
+        border-radius: 10px;
+        background-color: #fff;
+        border:2px solid rgba(194,219,253,1);
+        box-shadow:0px 12px 23px 4px rgba(216,223,229,0.3);
+        color: rgb(55,55,55);
+        .title {
+          text-align: center;
+          margin-top: 16px;
+          margin-bottom: 13px;
+        }
+        .desc {
+          font-size: 13px;
+          color: rgb(169,169,169);
+          text-align: center;
+          margin-bottom: 5px;
+        }
+      }
+
+      .card-1 {
+        left: 0;
+        top: 30px;
+        width: 176px;
+        height: 70px;
+      }
+
+      .card-2 {
+        left: 217px;
+        top: 30px;
+        width: 246px;
+        height: 104px;
+
+      }
+
+      .card-3 {
+        left: 217px;
+        top: 174px;
+        width: 246px;
+        height: 104px;
+        .desc {
+          position: absolute;
+        }
+        .desc-1 {
+           left:45px;
+        }
+        .desc-2 {
+           right:45px;
+        }
+        .desc-3 {
+          top:70px;
+           left:45px;
+        }
+        .desc-4 {
+          top: 70px;
+           right:45px;
+        }
+        img {
+          position: absolute;
+          right: 0;
+          left: 0;
+          top: 50px;
+          margin: auto;
+          animation: ro 2s linear infinite;
+        }
+
+      }
+
+      .card-4 {
+        left: 0;
+        top: 130px;
+        width: 176px;
+        height: 152px;
+      }
+      &>img {
+        position: absolute;
+        &:nth-child(1){
+          left: 193px;
+          top: 63px;
+        }
+        &:nth-child(2){
+          left: 335px;
+          top: 150px;
+        }
+        &:nth-child(3){
+          left: 195px;
+          top: 225px;
+        }
+        &:nth-child(4){
+          left: 85px;
+          top: 112px;
+        }
+      }
+
+
+
+      &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 45px;
+        bottom: 102%;
+        left: 14%;
+        border-top: 2px dotted #c2dbfd;
+        border-right: 2px dotted #c2dbfd;
+      }
+
     }
     &.active {
       background-image: url(/static/images/viewbox/05-2.png);
-      img {
+      .op-wrap {
         visibility: visible;
       }
     }
 
     &:hover {
       background-image: url(/static/images/viewbox/05-2.png);
-      img {
+      .op-wrap {
         visibility: visible;
       }
     }
@@ -532,6 +643,15 @@
     left: 950px;
     transform: rotate(52deg);
     opacity: 1;
+  }
+}
+
+@keyframes ro {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
