@@ -221,7 +221,8 @@ export default class NumberComplain extends Component {
                 <div className="form__item form__item--required">
                   <div className="form__item__label">申诉号码</div>
                   <div className="form__item__input">
-                    <input placeholder="输入号码，如果是座机号请加上区号" type="text" />
+                    <input placeholder="输入号码，如果是座机号请加上区号" type="text"  onChange={this.companyFormChange.bind(this, 'phone')} />
+                    {companyErrors['phone']?.err && <span className={'errMsg'}>{companyErrors['phone'].msg}</span>}
                   </div>
                 </div>
                 <div className="form__item">
@@ -234,22 +235,25 @@ export default class NumberComplain extends Component {
                 <div className="form__item form__item--required">
                   <div className="form__item__label">申诉人姓名</div>
                   <div className="form__item__input">
-                    <input placeholder="请填写您的姓名" type="text" />
+                    <input placeholder="请填写您的姓名" type="text" onChange={this.companyFormChange.bind(this, 'name')} />
+                    {companyErrors['name']?.err && <span className={'errMsg'}>{companyErrors['name'].msg}</span>}
                   </div>
                 </div>
                 <div className="form__item form__item--required">
                   <div className="form__item__label">申诉原因</div>
                   <div className="form__item__input">
-                    <input placeholder="请说明您的申诉原因" type="text" />
+                    <input placeholder="请说明您的申诉原因" type="text" onChange={this.companyFormChange.bind(this, 'reason')} />
+                    {companyErrors['reason']?.err && <span className={'errMsg'}>{companyErrors['reason'].msg}</span>}
                   </div>
                 </div>
                 <div className="form__item form__item--required">
                   <div className="form__item__label">联系方式</div>
                   <div className="form__item__input">
-                    <input placeholder="请留下您的联系电话，以便我们能够及时为您提供服务" type="text" />
+                    <input placeholder="请留下您的联系电话，以便我们能够及时为您提供服务" type="text" onChange={this.companyFormChange.bind(this, 'contactPhone')} />
+                    {companyErrors['contactPhone']?.err && <span className={'errMsg'}>{companyErrors['contactPhone'].msg}</span>}
                   </div>
                 </div>
-                <div className="form__item">
+                <div className="form__item" onClick={this.companyFormSubmit}>
                   <div className="form__item__btn">确认提交</div>
                 </div>
               </div>
