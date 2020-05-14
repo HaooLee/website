@@ -1,6 +1,7 @@
 import {Component} from 'react'
+import axios from 'axios'
 import styles from './index.less'
-
+import {URL} from '../urlConfig.js'
 export default class NumberComplain extends Component {
   constructor(props) {
     super(props)
@@ -85,23 +86,62 @@ export default class NumberComplain extends Component {
       activeType: row.type
     })
   }
-  fileChange = (type, ev) => {
+  fileChange = async (type, ev) => {
     const {fileContent} = this.state 
-    const val = ev.currentTarget.value
-    let idx = val.lastIndexOf('\\')
-    fileContent[type] = val.slice(idx+1)
+    const {value, files} = ev.currentTarget
+    let idx = value.lastIndexOf('\\')
+    fileContent[type] = value.slice(idx+1)
     this.setState({
       fileContent
     })
+    const params = new FormData()
+    params.append('file', files[0])
+    const data = await axios.post(`/file/upload`, params)
+    console.log(data)
   }
   companyFormChange = (type, ev) => {
     const val = ev.currentTarget.value 
     this.companyValues[type] = val 
   }
-  companyFormSubmit = () => {
-    console.log(this.companyValues)
+  companyFormSubmit = async (type) => {
+    if(type === 'person') {
+      delete this.companyValues.code
+      delete this.companyRules.contactOther
+    }
     if(this.validate(this.companyValues, this.companyRules)){
       console.log(this.companyValues)
+      let params = new FormData()
+      Object.entries(this.companyValues).forEach((item, index) => {
+        params.append(item[0], item[1])
+      })  
+      const {data} = await axios.post(`/single/numberComplain`, params)
+      if (data.code == 0) {
+        console.log('成功')
+      }
+    }
+  }
+  getCode = async () => {
+    // 获取验证码
+    const {phone} = this.companyValues
+    if(!phone) {
+      return
+    }
+    const {data} = await axios.post(`/sms/send`, {
+      phone
+    })
+    if(data.code == 200) {
+      // this.personCode = data.data
+    }
+  }
+  // 短信验证
+  smsVerify = async () => {
+    const {code, phone} = this.companyValues
+    console.log(code, phone)
+    if(code && phone) {
+      const {data} = await axios.post('/sms/verify', {code, phone})
+      if(data.code == 200) {
+
+      }
     }
   }
   render() {
@@ -132,17 +172,17 @@ export default class NumberComplain extends Component {
                     {companyErrors['phone']?.err && <span className={'errMsg'}>{companyErrors['phone'].msg}</span>}
                   </div>
                 </div>
-                <div className="form__item">
+                {/* <div className="form__item">
                   <div className="form__item__label">申诉人手机号</div>
                   <div className="form__item__input">
-                    <input placeholder="请留下您最常用的手机号，以便我们及时联系并申诉" type="text" />
+                    <input placeholder="请留下您最常用的手机号，以便我们及时联系并申诉"  onChange={this.companyFormChange.bind(this, 'phone')} type="text" />
                   </div>
-                </div>
+                </div> */}
                 <div className="form__item">
                   <div className="form__item__label">验证码</div>
                   <div className="form__item__input">
-                    <input placeholder="请输入您的手机验证码" type="text" />
-                    <a className="form__item__input__code">获取验证码</a>
+                    <input placeholder="请输入您的手机验证码" type="text" onBlur={this.smsVerify} />
+                    <a className="form__item__input__code" onClick={this.getCode}>获取验证码</a>
                   </div>
                 </div>
                 <div className="form__item">
@@ -211,7 +251,7 @@ export default class NumberComplain extends Component {
                     {companyErrors['contactOther']?.err && <span className={'errMsg'}>{companyErrors['contactOther'].msg}</span>}
                   </div>
                 </div>
-                <div className="form__item" onClick={this.companyFormSubmit}>
+                <div className="form__item" onClick={this.companyFormSubmit.bind(this, 'company')}>
                   <div className="form__item__btn">确认提交</div>
                 </div>
               </div>}
@@ -221,15 +261,15 @@ export default class NumberComplain extends Component {
                 <div className="form__item form__item--required">
                   <div className="form__item__label">申诉号码</div>
                   <div className="form__item__input">
-                    <input placeholder="输入号码，如果是座机号请加上区号" type="text"  onChange={this.companyFormChange.bind(this, 'phone')} />
+                    <input placeholder="输入号码，如果是座机号请加上区号" type="text" onChange={this.companyFormChange.bind(this, 'phone')} />
                     {companyErrors['phone']?.err && <span className={'errMsg'}>{companyErrors['phone'].msg}</span>}
                   </div>
                 </div>
                 <div className="form__item">
                   <div className="form__item__label">验证码</div>
                   <div className="form__item__input">
-                    <input placeholder="请输入您的手机验证码" type="text" />
-                    <a className="form__item__input__code">获取验证码</a>
+                    <input placeholder="请输入您的手机验证码" onBlur={this.smsVerify} onChange={this.companyFormChange.bind(this, 'code')} type="text" />
+                    <a className="form__item__input__code" onClick={this.getCode}>获取验证码</a>
                   </div>
                 </div>
                 <div className="form__item form__item--required">
@@ -253,7 +293,7 @@ export default class NumberComplain extends Component {
                     {companyErrors['contactPhone']?.err && <span className={'errMsg'}>{companyErrors['contactPhone'].msg}</span>}
                   </div>
                 </div>
-                <div className="form__item" onClick={this.companyFormSubmit}>
+                <div className="form__item" onClick={this.companyFormSubmit.bind(this, 'person')}>
                   <div className="form__item__btn">确认提交</div>
                 </div>
               </div>

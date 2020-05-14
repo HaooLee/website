@@ -112,9 +112,14 @@ export default class NumberAuth extends Component {
 
   formSubmit = async () => {
     if(this.validate(this.values, this.rules)){
-      console.log(this.values)
-      const data = await axios.post(`${URL}/company/numberAuth`, this.values)
-      console.log(data)
+      let params = new FormData()
+      Object.entries(this.values).forEach((item, index) => {
+        params.append(item[0], item[1])
+      })  
+      const {data} = await axios.post(`${URL}/company/numberAuth`, params)
+      if (data.code == 0) {
+        console.log('成功')
+      }
     }
   }
 

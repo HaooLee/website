@@ -1,16 +1,35 @@
 const { createServer } = require('http')
 const { parse } = require('url')
 const next = require('next')
+const httpProxy = require('http-proxy');
 const RouterServer = require('./server/index')
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 const server = new RouterServer()
-
+const proxy = httpProxy.createProxyServer({
+  cookieDomainRewrite: {
+    '*': ''
+  },
+  target: 'http://php.bjdglt.com:8091',
+  changeOrigin: true
+})
 
 server.router('/case/:type', (req, res) => {
   app.render(req, res, '/case', req.query)
+})
+server.router('/sms', (req, res) => {
+  proxy.web(req, res);
+})
+server.router('/company', (req, res) => {
+  proxy.web(req, res);
+})
+server.router('/single', (req, res) => {
+  proxy.web(req, res);
+})
+server.router('/file', (req, res) => {
+  proxy.web(req, res);
 })
 server.router(/.*/, (req, res) => {
   const parsedUrl = parse(req.url, true)
