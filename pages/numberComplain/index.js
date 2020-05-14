@@ -1,7 +1,7 @@
 import {Component} from 'react'
 import axios from 'axios'
+import NotificationSystem from 'react-notification-system';
 import styles from './index.less'
-import {URL} from '../urlConfig.js'
 export default class NumberComplain extends Component {
   constructor(props) {
     super(props)
@@ -23,6 +23,7 @@ export default class NumberComplain extends Component {
       companyErrors: {}
     }
   }
+  notificationSystem = React.createRef()
 
   companyValues = {}
 
@@ -83,8 +84,10 @@ export default class NumberComplain extends Component {
     })
     this.setState({
       headers: [...headers],
-      activeType: row.type
+      activeType: row.type,
+      fileContent: ''
     })
+    this.companyValues = {}
   }
   fileChange = async (type, ev) => {
     const {fileContent} = this.state 
@@ -95,9 +98,31 @@ export default class NumberComplain extends Component {
       fileContent
     })
     const params = new FormData()
-    params.append('file', files[0])
-    const data = await axios.post(`/file/upload`, params)
-    console.log(data)
+    params.append('source', files[0])
+    const {data} = await axios.post(`http://php.bjdglt.com:8091/V1.4/file/upload`, params)
+    const notification = this.notificationSystem.current
+    if(data.code == 200) {
+      notification.addNotification({
+        title: '提示',
+        message: '上传成功',
+        level: 'success'
+      })
+    } else {
+      notification.addNotification({
+        title: '提示',
+        message: '上传失败',
+        level: 'error'
+      })
+    }
+    if(type === 'idCard') {
+      this.companyValues.file1 = data.data
+    }
+    if(type === 'numCard') {
+      this.companyValues.file2 = data.data
+    }
+    if(type === 'otherCard') {
+      this.companyValues.file3 = data.data
+    }
   }
   companyFormChange = (type, ev) => {
     const val = ev.currentTarget.value 
@@ -114,7 +139,13 @@ export default class NumberComplain extends Component {
       Object.entries(this.companyValues).forEach((item, index) => {
         params.append(item[0], item[1])
       })  
-      const {data} = await axios.post(`/single/numberComplain`, params)
+      const {data} = await axios.post(type === 'person' ? `/single/numberComplain` : `/company/numberComplain`, params)
+      const notification = this.notificationSystem.current
+      notification.addNotification({
+        title: '提示',
+        message: '申诉成功',
+        level: 'success'
+      })
       if (data.code == 0) {
         console.log('成功')
       }
@@ -185,7 +216,7 @@ export default class NumberComplain extends Component {
                     <a className="form__item__input__code" onClick={this.getCode}>获取验证码</a>
                   </div>
                 </div>
-                <div className="form__item">
+                <div className="form__item form__item--required">
                   <div className="form__item__label">添加证明</div>
                   <div className="form__item__input form__item__input--v">
                     <div className="form__item__input__item">
@@ -301,6 +332,7 @@ export default class NumberComplain extends Component {
             </div>
           </div>
         </div>
+        <NotificationSystem ref={this.notificationSystem} />
         <style jsx>{styles}</style>
       </>
     )

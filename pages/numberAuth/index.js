@@ -1,7 +1,7 @@
 import {Component} from 'react'
 import axios from 'axios'
+import NotificationSystem from 'react-notification-system';
 import styles from './index.less'
-import {URL} from '../urlConfig.js'
 export default class NumberAuth extends Component {
   constructor(props) {
     super(props)
@@ -17,6 +17,7 @@ export default class NumberAuth extends Component {
       errors:{}
     }
   }
+  notificationSystem = React.createRef()
   values = {}
   rules = {
     name:[{required:true,msg:'认证人姓名不能为空'}],
@@ -116,7 +117,13 @@ export default class NumberAuth extends Component {
       Object.entries(this.values).forEach((item, index) => {
         params.append(item[0], item[1])
       })  
-      const {data} = await axios.post(`${URL}/company/numberAuth`, params)
+      const {data} = await axios.post(`/company/numberAuth`, params)
+      const notification = this.notificationSystem.current
+      notification.addNotification({
+        title: '提示',
+        message: '认证成功',
+        level: 'success'
+      })
       if (data.code == 0) {
         console.log('成功')
       }
@@ -210,6 +217,7 @@ export default class NumberAuth extends Component {
             </div>
           </div>
         </div>
+        <NotificationSystem ref={this.notificationSystem} />
         <style jsx>{styles}</style>
       </>
     )
