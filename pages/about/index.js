@@ -3,8 +3,12 @@ import Slider from "react-slick";
 import SectionCard from '@/components/sectionCard';
 import TimeLine from '@/components/timeLine'
 import ProductAdvantage from '@/components/productAdvantage'
+import Head from 'next/head'
+
+
 
 import styles from './index.less'
+import React from "react";
 
 // 自定义箭头
 function SampleNextArrow(props) {
@@ -202,6 +206,12 @@ export default class About extends Component {
     }
     return (
       <>
+
+        <Head>
+          <title>关于泰迪熊移动</title>
+          <meta name="keywords" content="关于泰迪熊移动" />
+          <meta name="description" content="泰迪熊移动以智能连接人与服务为使命，专注于提供基于大数据和场景的智能服务。公司以智能短信、号码识别、5G场景消息、快应用等产品为主导，致力于成为客户信赖的智慧通讯服务提供商。"/>
+        </Head>
         <div className="banner">
           <div className="banner__text w">
             关于我们

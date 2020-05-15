@@ -3,6 +3,7 @@ import SliderList from '@/components/sliderList'
 import styles from './index.less'
 import Link from 'next/link'
 import router from 'next/router'
+import Head from 'next/head'
 export default class Case extends Component {
 
   static async getInitialProps({req={}}){
@@ -279,6 +280,10 @@ export default class Case extends Component {
     const {list, activeType, cases, activeItem, activeIndex} = this.state
     return (
       <>
+
+        <Head>
+          <title>这些成功的企业正在使用泰迪熊移动</title>
+        </Head>
         <div className="banner">
           <div className="banner__text w">
             这些成功的企业正在使用泰迪熊移动

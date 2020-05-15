@@ -7,6 +7,8 @@ import CoreContent from '@/components/coreContent'
 import ProductAdvantage from '@/components/productAdvantage'
 import {connect} from 'react-redux'
 import styles from './index.less'
+import Head from 'next/head'
+
 
 @connect()
 export default class ScenicProduct extends React.Component {
@@ -225,6 +227,12 @@ export default class ScenicProduct extends React.Component {
     const {problems, products, coreList, tabBarList, activeType} = this.state
     return (
       <>
+
+        <Head>
+          <title>5G消息——千人千面的智慧场景销服务</title>
+          <meta name="keywords" content="5G消息,场景消息,5G场景消息" />
+          <meta name="description" content="泰迪移动5G场景消息，可基于用户行为，通过短信、挂机、位置场景触发多种富媒体消息推送，有文本 、卡片  、多图文、视频、 位置、音频、快应用等多种邢式，5G场景消息单独存在于短信列表内，为客户提供千人千面的智慧场景营销服务。"/>
+        </Head>
         <ProductBanner customClassName={'scenic-banner'} title={'5G场景消息'} desc={'千人千面的智慧场景营销服务'} src={'/static/images/scenicProduct/banner-new.png'}></ProductBanner>
         <SectionCard title={'你的短信通常会遇到的问题'} bgc={"#fff"} >
           <ProblemItem customClassName={'scenic-problem'} problems={problems}></ProblemItem>

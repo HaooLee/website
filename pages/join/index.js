@@ -2,6 +2,10 @@ import {Component} from 'react'
 import SectionCard from '@/components/sectionCard'
 import styles from './index.less'
 import axios from 'axios'
+import Head from 'next/head'
+import React from "react";
+
+
 export default class Join extends Component {
   static async getInitialProps({Component, router, ctx}) {
     const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/recruit/getinfo', {
@@ -81,6 +85,11 @@ export default class Join extends Component {
     // console.log(allJoins)
     return (
       <>
+        <Head>
+          <title>加入泰迪熊移动</title>
+          <meta name="keywords" content="加入泰迪熊移动" />
+          <meta name="description" content="泰迪熊移动以智能连接人与服务为使命，专注于提供基于大数据和场景的智能服务。公司以智能短信、号码识别、5G场景消息、快应用等产品为主导，致力于成为客户信赖的智慧通讯服务提供商。"/>
+        </Head>
         <div className="banner">
           <div className="banner__text w">
             加入我们

@@ -7,6 +7,8 @@ import CoreContent from '@/components/coreContent'
 import ProductAdvantage from '@/components/productAdvantage'
 import styles from './index.less'
 import {connect} from 'react-redux'
+import Head from 'next/head'
+
 
 @connect()
 export default class IntelligenceSms extends React.Component {
@@ -219,6 +221,11 @@ export default class IntelligenceSms extends React.Component {
     const {problems, products, coreList, tabBarList, activeType} = this.state
     return (
       <>
+        <Head>
+          <title>智能短信——新短信、新营销</title>
+          <meta name="keywords" content="智能短信,短信菜单,短信公众号,短信验证码,营销短信" />
+          <meta name="description" content="智能短信是泰迪熊移动为合作伙伴提供的一款短信服务产品，通过技术开发，实现将传统短信以公众号形式发送，适用于短信验证码、短信通知及短信推广服务国内短信发送跨运营商、跨终端，直搭手机厂商专属OTT通道，服务范围覆盖8亿用户"/>
+        </Head>
         <ProductBanner title={'智能短信'} desc={'带你了解短信新形态,体验营销新玩法'} src={'/static/images/intelligenceSms/banner.png'} customClassName={'sms-banner'}></ProductBanner>
         <SectionCard title={'你的短信通常会遇到的问题'} bgc={"#fff"} >
           <ProblemItem problems={problems} customClassName={'sms-problem'}></ProblemItem>
