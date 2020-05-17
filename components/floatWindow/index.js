@@ -80,7 +80,7 @@ export default class FloatWindow extends react.Component {
       dispatch({type:'FLOAT_WINDOW_HIDE'})
       notification.addNotification({
         title: '提示',
-        message: '认证成功',
+        message: '提交成功',
         level: 'success'
       })
 
