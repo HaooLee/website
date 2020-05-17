@@ -215,7 +215,7 @@ export default class Agent extends Component {
         <Head>
           <title>智慧消息诚邀加盟</title>
           <meta name="keywords" content="智能短信加盟,5G消息加盟,号码认证代理,智能短信代理" />
-          <meta name="description" content="泰迪熊移动渠道在"平台化发展 产业链共赢"策略下，致力于打造一个全新的智能通讯产业联盟。主要产品有：智能短信、5G场景消息、快应用、号码认认证等，在未来，泰迪熊移动将坚实基础，建立更大更全的产业链，实现经营模式的转型升级。"/>
+          <meta name="description" content="泰迪熊移动渠道在'平台化发展 产业链共赢'策略下，致力于打造一个全新的智能通讯产业联盟。主要产品有：智能短信、5G场景消息、快应用、号码认认证等，在未来，泰迪熊移动将坚实基础，建立更大更全的产业链，实现经营模式的转型升级。"/>
 
         </Head>
         <div className="banner">
