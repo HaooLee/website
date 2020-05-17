@@ -1,10 +1,14 @@
 import react from 'react'
 import styles from './index.less'
-import Modal from '@/components/modal';
+import Modal from '@/components/modal'
 import Select from '@/components/select'
 import CheckBox from '@/components/checkBox'
 import Radio from '@/components/radio'
-import {connect} from 'react-redux';
+import {connect} from 'react-redux'
+import NotificationSystem from 'react-notification-system';
+
+import axios from 'axios'
+
 import {floatWindowShow,floatWindowHide} from '@/store';
 
 const CheckBoxGroup = CheckBox.Group
@@ -19,7 +23,7 @@ export default class FloatWindow extends react.Component {
       "医疗健康", "机械设备", "软件游戏", "教育培训", "商务服务", "装修装饰", "生活用品", "生活服务", "交通类", "电子电工", "化工及材料", "家用电器", "农林牧渔", "旅游及票务", "服装鞋帽", "休闲娱乐", "安全安保", "食品餐饮", "节能环保", "金融服务", "IT产品", "化妆品", "房地产", "通信服务", "办公文教", "图书音像", "母婴用品", "铃声短信", "彩票", "电子商务", "社交", "招聘", "资讯", "分类信息", "其他"],
     errors:{}
   }
-
+  notificationSystem = React.createRef()
   values = {}
 
   showModal = () => {
@@ -63,10 +67,23 @@ export default class FloatWindow extends react.Component {
     return true
   }
 
-  onSubmit = () => {
+  onSubmit = async () => {
 
     if(this.validate(this.values, this.rules)){
-      console.log(this.values)
+      let params = new FormData()
+      Object.entries(this.values).forEach((item, index) => {
+        params.append(item[0], item[1])
+      })
+      const {data} = await axios.post(`/mail/send `, params)
+      const notification = this.notificationSystem.current
+      const { dispatch } = this.props
+      dispatch({type:'FLOAT_WINDOW_HIDE'})
+      notification.addNotification({
+        title: '提示',
+        message: '认证成功',
+        level: 'success'
+      })
+
     }
 
 
@@ -163,6 +180,7 @@ export default class FloatWindow extends react.Component {
             </button>
           </div>
         </Modal>
+        <NotificationSystem ref={this.notificationSystem} />
         <style jsx>{styles}</style>
       </>
     )

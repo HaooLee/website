@@ -25,6 +25,9 @@ server.router('/sms', (req, res) => {
 server.router('/company', (req, res) => {
   proxy.web(req, res);
 })
+server.router('/mail', (req, res) => {
+  proxy.web(req, res);
+})
 server.router('/single', (req, res) => {
   proxy.web(req, res);
 })
