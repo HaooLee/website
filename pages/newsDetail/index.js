@@ -60,7 +60,7 @@ export default class NewsDetail extends Component {
           </div>
         </div>
         <div className="w news clearfix">
-          <SliderList list={list} clickCallback={this.clickCallback}></SliderList>
+          {/*<SliderList list={list} clickCallback={this.clickCallback}></SliderList>*/}
           <div className="news__detail col-10">
             <p className="news__detail__title">{newsDetail.news_title}</p>
             <div className="news__detail__company">
