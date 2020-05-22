@@ -143,7 +143,7 @@ export default class Join extends Component {
                           </div>
                           <div>
                             <p className="work-require">应职要求：</p>
-                            <p className="work-require-content">{item.requier}</p>
+                            <p className="work-require-content">{item.require}</p>
                           </div>
                         </div>
                       </div>
