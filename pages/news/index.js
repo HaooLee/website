@@ -10,7 +10,7 @@ import React from "react";
 export default class News extends Component {
   static async getInitialProps({Component, router, ctx}) {
     try {
-      const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/news/getinfo')
+      const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/news/getinfo?news_type=2')
       return {news: data.data.list}
     }catch (e) {
       return {news: []}
@@ -18,30 +18,32 @@ export default class News extends Component {
   }
   constructor(props) {
     super(props)
-    this.state = {
-      list: [
-        {
-          name: '资讯列表',
-          active: true
-        },
-        {
-          name: '专题区',
-          active: false
-        },
-        {
-          name: '荣誉',
-          active: false
-        },
-        {
-          name: '疫情',
-          active: false
-        }
-      ]
-    }
+    this.state.news = props.news
+  }
+
+  state = {
+    list: [
+      {
+        name: '资讯列表',
+        active: true
+      },
+      {
+        name: '专题区',
+        active: false
+      },
+      {
+        name: '荣誉',
+        active: false
+      },
+      {
+        name: '疫情',
+        active: false
+      }
+    ]
   }
 
 
-  clickCallback = (index) => {
+   clickCallback = async (index) => {
     const {list} = this.state
     list.forEach((item, idx) => {
       if(index === idx) {
@@ -50,13 +52,15 @@ export default class News extends Component {
         item.active = false
       }
     })
+     const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/news/getinfo?news_type=' + (index + 1))
     this.setState({
+      news: data.data.list,
       list: [...list]
     })
   }
   render() {
-    const {list} = this.state
-    const {news} = this.props
+    const {list,news} = this.state
+    // const {} = this.props
     return (
       <>
         <Head>
