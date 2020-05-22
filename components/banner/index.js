@@ -3,6 +3,9 @@ import React from "react";
 import styles from './index.less'
 import TextTransform from '@/components/textTransform'
 import Link from 'next/link'
+import {connect} from "react-redux";
+
+@connect(({floatWindowVisible})=>({visible:floatWindowVisible}))
 export default class Banner extends React.Component {
   constructor(props) {
     super(props)
@@ -21,6 +24,11 @@ export default class Banner extends React.Component {
 
   state = {
     carouselBgColor: '#fbf0de'
+  }
+
+  showModal = () => {
+    const { dispatch } = this.props
+    dispatch({type:'FLOAT_WINDOW_SHOW'})
   }
 
   render() {
@@ -49,7 +57,7 @@ export default class Banner extends React.Component {
 
           <div className="buttons clearfix">
             {/* <a href="" className="watch-video">观看视频</a> */}
-            <a href="/agent" className="more">了解更多</a>
+            <a onClick={this.showModal} className="more">了解更多</a>
           </div>
 
           {/*<Slider {...settings}>*/}
