@@ -6,6 +6,7 @@
   &-content {
     position: relative;
     height: 100%;
+
   }
   &__desc {
     position: absolute;
@@ -24,10 +25,57 @@
       font-family: "Source Han Sans CN";
       font-weight: 400;
       margin-top: 50px;
-      width: 504px;
+      width: 580px;
       line-height: 2;
     }
+    .buttons{
+      margin-top: 30px;
+      a{
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        width:158px;
+        height:54px;
+        border-radius:27px;
+        font-size:24px;
+        font-family:Source Han Sans CN;
+        font-weight:bold;
+        text-align: center;
+        line-height: 54px;
+        text-decoration: none;
+      }
+
+      a:before{
+        position: absolute;
+        background-color: #fff;
+        content: '.';
+        height: 100%;
+        width: 6px;
+        left: -20px;
+        top: 0px;
+        font-size: 0px;
+        transform: skew(-20deg, 0);
+        transition: all .2s ease-in-out;
+      }
+
+      a:hover:before{
+        left: 120%;
+      }
+
+      .watch-video {
+        background-color: #fff;
+        color:rgba(60,141,210,1);
+      }
+      .more {
+        border:2px solid rgba(255,255,255,1);
+        color: #fff;
+        cursor: pointer;
+        // margin-left: 26px;
+      }
+    }
+
   }
+
   &__img {
     position: absolute;
     top: 0;

@@ -2,6 +2,9 @@ import {Component} from 'react'
 import SliderList from '@/components/sliderList'
 import styles from './index.less'
 import axios from 'axios'
+import Head from 'next/head'
+
+import React from "react"
 export default class NewsDetail extends Component {
   static async getInitialProps({Component, router, ctx, req, query}) {
     try {
@@ -54,6 +57,11 @@ export default class NewsDetail extends Component {
     const {newsDetail} = this.props
     return (
       <>
+        <Head>
+          <title>{newsDetail.news_title + '-泰迪熊移动'}</title>
+          <meta name="keywords" content="泰迪熊移动资讯" />
+          <meta name="description" content={newsDetail.news_des}/>
+        </Head>
         <div className="banner">
           <div className="banner__text w">
             新闻动态
