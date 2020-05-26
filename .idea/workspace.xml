@@ -2,52 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e7c6348-ff0b-441b-a7d3-ceac642b26c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/static/development/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/_app.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/static/development/pages/_app.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/static/development/pages/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/numberProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/static/development/pages/numberProduct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/numberProduct.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/static/development/pages/numberProduct.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/_app.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/development/pages/_app.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/development/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/numberProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/development/pages/numberProduct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/numberProduct.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/development/pages/numberProduct.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/banner/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/banner/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/banner/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/banner/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/floatWindow/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/floatWindow/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/footer/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/newsCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/newsCard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/viewBox/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/viewBox/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/viewBox/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/viewBox/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/agent/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/agent/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/agent/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/agent/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/case/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/case/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/case/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/case/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/dspProduct/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dspProduct/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/intelligenceSms/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/intelligenceSms/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/join/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/join/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/news/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/newsDetail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/newsDetail/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/newsDetail/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/newsDetail/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/numberAuth/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/numberAuth/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/numberComplain/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/numberComplain/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/numberComplain/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/numberComplain/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/numberProduct/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/numberProduct/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/numberSign/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/numberSign/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/numberSign/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/numberSign/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/numberSubmitSuccess/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/numberSubmitSuccess/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/quickAppProduct/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/quickAppProduct/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/scenicProduct/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/scenicProduct/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/solution/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/solution/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/solution/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/solution/index.less" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -91,18 +46,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/join/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2175">
-              <caret line="145" column="77" selection-start-line="145" selection-start-column="77" selection-end-line="145" selection-end-column="77" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/banner/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="381">
@@ -114,13 +57,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/newsDetail/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+            <state relative-caret-position="381">
+              <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/components/header/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -240,7 +195,6 @@
         <option value="$PROJECT_DIR$/pages/index/index.less" />
         <option value="$PROJECT_DIR$/components/select/index.less" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/components/header/index.js" />
         <option value="$PROJECT_DIR$/components/checkBox/index.less" />
         <option value="$PROJECT_DIR$/components/radio/index.less" />
         <option value="$PROJECT_DIR$/components/radio/index.js" />
@@ -282,6 +236,7 @@
         <option value="$PROJECT_DIR$/components/productBanner/index.less" />
         <option value="$PROJECT_DIR$/pages/news/index.js" />
         <option value="$PROJECT_DIR$/pages/newsDetail/index.js" />
+        <option value="$PROJECT_DIR$/components/header/index.js" />
       </list>
     </option>
   </component>
@@ -325,6 +280,12 @@
               <item name="new-website" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="floatWindow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new-website" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="header" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
@@ -418,15 +379,16 @@
       <workItem from="1589523293212" duration="4594000" />
       <workItem from="1589655056846" duration="3575000" />
       <workItem from="1590054582073" duration="1836000" />
-      <workItem from="1590130799042" duration="6562000" />
+      <workItem from="1590130799042" duration="6819000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="318518000" />
+    <option name="totallyTimeSpent" value="318775000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18565401" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -740,15 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/header/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -839,10 +792,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/newsDetail/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        <state relative-caret-position="381">
+          <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/header/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>

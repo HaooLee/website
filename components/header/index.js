@@ -32,15 +32,16 @@ export default class Header extends React.Component {
             enable:true
           },
           {
-            title:"号码认证",
-            link:"/numberProduct",
-            enable:true
-          },
-          {
             title:"快应用",
             link:"/quickAppProduct",
             enable:true
           },
+          {
+            title:"号码认证",
+            link:"/numberProduct",
+            enable:true
+          },
+
           // {
           //   title:"全域场景增量营销平台",
           //   link:"/dspProduct",
