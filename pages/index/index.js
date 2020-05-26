@@ -15,14 +15,14 @@ import Link from 'next/link'
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <img className={className} onClick={onClick} style={{width:18,height:30,right:0}} src="/static/images/right.png"/>
+    <img className={className} onClick={onClick} style={{width:18,height:30,right:0}} src="http://img.teddymobile.cn/www/images/right.png"/>
   )
 }
 
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <img className={className} onClick={onClick} style={{width:18,height:30,left:0}} src="/static/images/left.png"/>
+    <img className={className} onClick={onClick} style={{width:18,height:30,left:0}} src="http://img.teddymobile.cn/www/images/left.png"/>
   )
 }
 
@@ -38,44 +38,44 @@ export default class Index extends React.Component {
   }
   state ={
     companies:[
-      {src:'/static/images/index/LOGO_01.png'},
-      {src:'/static/images/index/LOGO_02.png'},
-      {src:'/static/images/index/LOGO_03.png'},
-      {src:'/static/images/index/LOGO_04.png'},
-      {src:'/static/images/index/LOGO_05.png'},
-      {src:'/static/images/index/LOGO_06.png'},
-      {src:'/static/images/index/LOGO_07.png'},
-      {src:'/static/images/index/LOGO_08.png'},
-      {src:'/static/images/index/LOGO_09.png'},
-      {src:'/static/images/index/LOGO_10.png'},
-      {src:'/static/images/index/LOGO_11.png'},
-      {src:'/static/images/index/LOGO_12.png'},
+      {src:'http://img.teddymobile.cn/www/images/index/LOGO_01.png'},
+      {src:'http://img.teddymobile.cn/www/images/index/LOGO_02.png'},
+      {src:'http://img.teddymobile.cn/www/images/index/LOGO_03.png'},
+      {src:'http://img.teddymobile.cn/www/images/index/LOGO_04.png'},
+      {src:'http://img.teddymobile.cn/www/images/index/LOGO_05.png'},
+      {src:'http://img.teddymobile.cn/www/images/index/LOGO_06.png'},
+      {src:'http://img.teddymobile.cn/www/images/index/LOGO_07.png'},
+      {src:'http://img.teddymobile.cn/www/images/index/LOGO_08.png'},
+      {src:'http://img.teddymobile.cn/www/images/index/LOGO_09.png'},
+      {src:'http://img.teddymobile.cn/www/images/index/LOGO_10.png'},
+      {src:'http://img.teddymobile.cn/www/images/index/LOGO_11.png'},
+      {src:'http://img.teddymobile.cn/www/images/index/LOGO_12.png'},
     ],
     smsImage: {
-      'defaultImage': '/static/images/index/泰迪银行-智能短信.png',
-      'read-more': '/static/images/index/泰迪银行卡片-查看原文.png',
-      'my-account': '/static/images/index/泰迪银行-我的账户.png',
-      'account-card': '/static/images/index/泰迪银行-信用卡.png',
-      'touzhi-licai': '/static/images/index/泰迪银行-投资理财.png',
-      'view-application': '/static/images/index/泰迪银行-查看应用.png',
-      'dae-cundan': '/static/images/index/泰迪银行-大额存单.png'
+      'defaultImage': 'http://img.teddymobile.cn/www/images/index/泰迪银行-智能短信.png',
+      'read-more': 'http://img.teddymobile.cn/www/images/index/泰迪银行卡片-查看原文.png',
+      'my-account': 'http://img.teddymobile.cn/www/images/index/泰迪银行-我的账户.png',
+      'account-card': 'http://img.teddymobile.cn/www/images/index/泰迪银行-信用卡.png',
+      'touzhi-licai': 'http://img.teddymobile.cn/www/images/index/泰迪银行-投资理财.png',
+      'view-application': 'http://img.teddymobile.cn/www/images/index/泰迪银行-查看应用.png',
+      'dae-cundan': 'http://img.teddymobile.cn/www/images/index/泰迪银行-大额存单.png'
     },
     smsActiveImage: 'defaultImage',
     scenicActiveImage: 'defaultImage',
     scenicImage: {
-      'defaultImage': '/static/images/index/1.png',
-      // 'read-more': '/static/images/index/泰迪银行卡片-查看原文.png',
-      'my-account': '/static/images/index/泰迪银行-我的账户.png',
-      'account-card': '/static/images/index/泰迪银行-信用卡.png',
-      'touzhi-licai': '/static/images/index/2.png',
-      'touzhi-licai-footer': '/static/images/index/泰迪银行-投资理财.png',
-      'account-card-footer': '/static/images/index/泰迪银行-信用卡.png',
-      // 'view-application': '/static/images/index/泰迪银行-查看应用.png',
-      // 'dae-cundan': '/static/images/index/泰迪银行-大额存单.png'
+      'defaultImage': 'http://img.teddymobile.cn/www/images/index/1.png',
+      // 'read-more': 'http://img.teddymobile.cn/www/images/index/泰迪银行卡片-查看原文.png',
+      'my-account': 'http://img.teddymobile.cn/www/images/index/泰迪银行-我的账户.png',
+      'account-card': 'http://img.teddymobile.cn/www/images/index/泰迪银行-信用卡.png',
+      'touzhi-licai': 'http://img.teddymobile.cn/www/images/index/2.png',
+      'touzhi-licai-footer': 'http://img.teddymobile.cn/www/images/index/泰迪银行-投资理财.png',
+      'account-card-footer': 'http://img.teddymobile.cn/www/images/index/泰迪银行-信用卡.png',
+      // 'view-application': 'http://img.teddymobile.cn/www/images/index/泰迪银行-查看应用.png',
+      // 'dae-cundan': 'http://img.teddymobile.cn/www/images/index/泰迪银行-大额存单.png'
     },
     quickImage: {
-      'defaultImage': '/static/images/index/快应用2.png',
-      'power-bank': '/static/images/index/快应用3.png'
+      'defaultImage': 'http://img.teddymobile.cn/www/images/index/快应用2.png',
+      'power-bank': 'http://img.teddymobile.cn/www/images/index/快应用3.png'
     },
     quickActiveImage: 'defaultImage'
   }
@@ -116,11 +116,11 @@ export default class Index extends React.Component {
     const {companies, smsImage, smsActiveImage, scenicImage, scenicActiveImage, quickActiveImage, quickImage} = this.state
     const {news} = this.props
     const quickApps = [
-      '/static/images/index/快应用1.png',
-      '/static/images/index/快应用2.png',
-      '/static/images/index/快应用3.png',
-      '/static/images/index/快应用4.png',
-      '/static/images/index/快应用5.png'
+      'http://img.teddymobile.cn/www/images/index/快应用1.png',
+      'http://img.teddymobile.cn/www/images/index/快应用2.png',
+      'http://img.teddymobile.cn/www/images/index/快应用3.png',
+      'http://img.teddymobile.cn/www/images/index/快应用4.png',
+      'http://img.teddymobile.cn/www/images/index/快应用5.png'
     ]
     const settings = {
       dots: true,
@@ -203,9 +203,9 @@ export default class Index extends React.Component {
           <div className="w feature-content">
             <div className="feature-image">
               <Slider {...settings}>
-                <img src="/static/images/numberProduct/core1.png" alt=""/>
-                <img src="/static/images/numberProduct/core2.png" alt=""/>
-                <img src="/static/images/numberProduct/core3.png" alt=""/>
+                <img src="http://img.teddymobile.cn/www/images/numberProduct/core1.png" alt=""/>
+                <img src="http://img.teddymobile.cn/www/images/numberProduct/core2.png" alt=""/>
+                <img src="http://img.teddymobile.cn/www/images/numberProduct/core3.png" alt=""/>
               </Slider>
             </div>
             <div className="text">
@@ -244,40 +244,40 @@ export default class Index extends React.Component {
           <div className="solution-card-wrap">
             <Link href={'/case/insurance'}>
               <div>
-                <SolutionCard src={'/static/images/jr.png'} title={'银行/保险'}/>
+                <SolutionCard src={'http://img.teddymobile.cn/www/images/jr.png'} title={'银行/保险'}/>
               </div>
             </Link>
             <Link href={'/case/operator'}>
               <div>
-              <SolutionCard src={'/static/images/运营商@2x.png'} title={'运营商'}/>
+              <SolutionCard src={'http://img.teddymobile.cn/www/images/运营商@2x.png'} title={'运营商'}/>
               </div>
             </Link>
             <Link href={'/case/education'}>
               <div>
-              <SolutionCard src={'/static/images/互联网@2x.png'} title={'互联网'}/>
+              <SolutionCard src={'http://img.teddymobile.cn/www/images/互联网@2x.png'} title={'互联网'}/>
               </div>
             </Link>
             <Link href={'/case/resale'}>
               <div>
-              <SolutionCard src={'/static/images/新零售@2x.png'} title={'快消品'}/>
+              <SolutionCard src={'http://img.teddymobile.cn/www/images/新零售@2x.png'} title={'快消品'}/>
               </div>
             </Link>
             <Link href={'/case/finance'}>
               <div>
-              <SolutionCard src={'/static/images/互联网金融@2x.png'} title={'新零售'}/>
+              <SolutionCard src={'http://img.teddymobile.cn/www/images/互联网金融@2x.png'} title={'新零售'}/>
               </div>
             </Link>
             <Link href={'/case/e-commerce'}>
               <div>
-              <SolutionCard src={'/static/images/电商@2x.png'} title={'电商'}/>
+              <SolutionCard src={'http://img.teddymobile.cn/www/images/电商@2x.png'} title={'电商'}/>
               </div>
             </Link>
           </div>
         </SectionCard>
         <SectionCard title={'覆盖主流手机厂商'} desc={'泰迪熊移动利用自身强大的技术优势，与OPPO、vivo、魅族、金立、联想、乐视、酷派、阿里YunOS等国内主流手机厂商\n进行了深度合作，累计覆盖终端7亿+，日活用户4亿。'}>
-          <img className="cp" src="/static/images/合作厂商@2x.png" alt=""/>
+          <img className="cp" src="http://img.teddymobile.cn/www/images/合作厂商@2x.png" alt=""/>
           <div className="cp--match">
-            <img src="/static/images/index__logo.png" />
+            <img src="http://img.teddymobile.cn/www/images/index__logo.png" />
           </div>
         </SectionCard>
         <SectionCard title={'这些成功的企业正在使用泰迪熊移动'} bgc={'#F7F7F7'} desc={'泰迪熊移动成立于2014年，已为京东、淘宝、苏宁、携程、屈臣氏、建设银行、招商银行、百度、三大运营商等国内百家企业提供大数据和场景服务，覆盖快消品、电商、零售、互联网、运营商、手机厂商、金融、旅游、教育等数十个行业，助力客户建设场景生态。'} overflow={true} >

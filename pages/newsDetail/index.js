@@ -72,7 +72,7 @@ export default class NewsDetail extends Component {
           <div className="news__detail col-10">
             <p className="news__detail__title">{newsDetail.news_title}</p>
             <div className="news__detail__company">
-              <img src="/static/images/news/logo.png" />
+              <img src="http://img.teddymobile.cn/www/images/news/logo.png" />
               <span>泰迪资讯 | {newsDetail.news_time.replace(/\s[\x00-\xff]*/g,'')} </span>
             </div>
             <div className="news__detail__content">

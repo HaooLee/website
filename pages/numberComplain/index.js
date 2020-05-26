@@ -222,7 +222,7 @@ export default class NumberComplain extends Component {
                     <div className="form__item__input__item">
                       <input placeholder="身份证正面照" type="text" />
                       <div className="upload">
-                        <img src="/static/images/numberSign/upload-icon.png" />
+                        <img src="http://img.teddymobile.cn/www/images/numberSign/upload-icon.png" />
                         <input className="file" onChange={this.fileChange.bind(this, 'idCard')} type="file" id="idCard"/>
                         <label htmlFor="idCard">选择文件</label>
                       </div>
@@ -233,7 +233,7 @@ export default class NumberComplain extends Component {
                     <div className="form__item__input__item">
                       <input placeholder="号码归属证明" type="text" />
                       <div className="upload">
-                        <img src="/static/images/numberSign/upload-icon.png" />
+                        <img src="http://img.teddymobile.cn/www/images/numberSign/upload-icon.png" />
                         <input className="file" onChange={this.fileChange.bind(this, 'numCard')} type="file" id="numCard"/>
                         <label htmlFor="numCard">选择文件</label>
                       </div>
@@ -244,7 +244,7 @@ export default class NumberComplain extends Component {
                     <div className="form__item__input__item">
                       <input placeholder="其他证明" type="text" />
                       <div className="upload">
-                        <img src="/static/images/numberSign/upload-icon.png" />
+                        <img src="http://img.teddymobile.cn/www/images/numberSign/upload-icon.png" />
                         <input className="file" onChange={this.fileChange.bind(this, 'otherCard')} type="file" id="otherCard"/>
                         <label htmlFor="otherCard">选择文件</label>
                       </div>

@@ -3,9 +3,51 @@
   <component name="ChangeListManager">
     <list default="true" id="4e7c6348-ff0b-441b-a7d3-ceac642b26c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/productBanner/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/productBanner/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/productBanner/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/productBanner/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/static/development/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/_app.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/static/development/pages/_app.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/static/development/pages/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/numberProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/static/development/pages/numberProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/static/development/pages/numberProduct.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/static/development/pages/numberProduct.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/_app.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/development/pages/_app.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/development/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/numberProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/development/pages/numberProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/development/pages/numberProduct.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/development/pages/numberProduct.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/banner/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/banner/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/banner/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/banner/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/floatWindow/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/floatWindow/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/footer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/newsCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/newsCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/viewBox/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/viewBox/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/viewBox/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/viewBox/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/about/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/about/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/agent/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/agent/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/agent/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/agent/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/case/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/case/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/case/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/case/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dspProduct/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dspProduct/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/intelligenceSms/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/intelligenceSms/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/join/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/join/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/news/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/newsDetail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/newsDetail/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/newsDetail/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/newsDetail/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/numberAuth/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/numberAuth/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/numberComplain/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/numberComplain/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/numberComplain/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/numberComplain/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/numberProduct/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/numberProduct/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/numberSign/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/numberSign/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/numberSign/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/numberSign/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/numberSubmitSuccess/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/numberSubmitSuccess/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/quickAppProduct/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/quickAppProduct/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/scenicProduct/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/scenicProduct/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/solution/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/solution/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/solution/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/solution/index.less" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -75,8 +117,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/newsDetail/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="60" column="49" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
+            <state relative-caret-position="748">
+              <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -138,7 +180,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>打破</find>
       <find>上海、深圳</find>
       <find>智慧场景公众号</find>
       <find>23456@teddymobile</find>
@@ -168,6 +209,7 @@
       <find>_code</find>
       <find>code</find>
       <find>NotificationSystem</find>
+      <find>/static/images</find>
     </findStrings>
     <replaceStrings>
       <replace>TEDDY_MODE</replace>
@@ -177,6 +219,7 @@
       <replace>5G场景消息</replace>
       <replace>radio-</replace>
       <replace>err ? 'err' :''</replace>
+      <replace>http://img.teddymobile.cn/www/images</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -298,23 +341,6 @@
             <path>
               <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
               <item name="new-website" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new-website" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="news" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new-website" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="newsDetail" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new-website" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -392,18 +418,17 @@
       <workItem from="1589523293212" duration="4594000" />
       <workItem from="1589655056846" duration="3575000" />
       <workItem from="1590054582073" duration="1836000" />
-      <workItem from="1590130799042" duration="5324000" />
+      <workItem from="1590130799042" duration="6562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="317280000" />
+    <option name="totallyTimeSpent" value="318518000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18565401" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18565401" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -415,7 +440,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.25816327" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.25816327" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -534,9 +559,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3135">
           <caret line="209" column="30" selection-start-line="209" selection-start-column="30" selection-end-line="209" selection-end-column="30" />
-          <folding>
-            <marker date="1588735618777" expanded="true" signature="2512:3149" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -817,8 +839,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/newsDetail/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="60" column="49" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
+        <state relative-caret-position="748">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>

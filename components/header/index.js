@@ -98,7 +98,7 @@ export default class Header extends React.Component {
       type:'insurance',
       business:[
         {
-          src:'/static/images/header/矢量智能对象@2x.png',
+          src:'http://img.teddymobile.cn/www/images/header/矢量智能对象@2x.png',
           link:'/case',
           style:{
             width: 132,
@@ -112,7 +112,7 @@ export default class Header extends React.Component {
       type:'operator',
       business:[
         {
-          src:'/static/images/header/联通白@2x.png',
+          src:'http://img.teddymobile.cn/www/images/header/联通白@2x.png',
           link:'',
           style:{
             width: 64,
@@ -121,7 +121,7 @@ export default class Header extends React.Component {
           }
         },
         {
-          src:'/static/images/header/移动白@2x.png',
+          src:'http://img.teddymobile.cn/www/images/header/移动白@2x.png',
           link:'',
           style:{
             width: 100,
@@ -130,7 +130,7 @@ export default class Header extends React.Component {
           }
         },
         {
-          src:'/static/images/header/中国电信白 2@2x.png',
+          src:'http://img.teddymobile.cn/www/images/header/中国电信白 2@2x.png',
           link:'',
           style:{
             width: 30,
@@ -140,7 +140,7 @@ export default class Header extends React.Component {
           }
         },
         // {
-        //   src:'/static/images/header/21cn@2x.png',
+        //   src:'http://img.teddymobile.cn/www/images/header/21cn@2x.png',
         //   link:'',
         //   style:{
         //     width: 37,
@@ -149,7 +149,7 @@ export default class Header extends React.Component {
         //   }
         // },
         {
-          src:'/static/images/header/中互移白 2@2x.png',
+          src:'http://img.teddymobile.cn/www/images/header/中互移白 2@2x.png',
           link:'',
           style:{
             width: 148,
@@ -164,7 +164,7 @@ export default class Header extends React.Component {
       type:'education',
       business:[
         {
-          src:'/static/images/header/vipkid@2x.png',
+          src:'http://img.teddymobile.cn/www/images/header/vipkid@2x.png',
           link:'',
           style:{
             width: 92,
@@ -178,7 +178,7 @@ export default class Header extends React.Component {
       type:'resale',
       business:[
         {
-          src:'/static/images/header/屈臣氏白@2x.png',
+          src:'http://img.teddymobile.cn/www/images/header/屈臣氏白@2x.png',
           link:'',
           style:{
             width: 76,
@@ -192,7 +192,7 @@ export default class Header extends React.Component {
       type:'OTA',
       business:[
         {
-          src:'/static/images/header/携程@2x.png',
+          src:'http://img.teddymobile.cn/www/images/header/携程@2x.png',
           link:'',
           style:{
             width: 93,
@@ -206,7 +206,7 @@ export default class Header extends React.Component {
       type:'live',
       business:[
         {
-          src:'/static/images/header/美团白 2@2x.png',
+          src:'http://img.teddymobile.cn/www/images/header/美团白 2@2x.png',
           link:'',
           style:{
             width: 58,
@@ -215,7 +215,7 @@ export default class Header extends React.Component {
           }
         },
         {
-          src:'/static/images/header/饿了么白@2x.png',
+          src:'http://img.teddymobile.cn/www/images/header/饿了么白@2x.png',
           link:'',
           style:{
             width: 91,
@@ -229,7 +229,7 @@ export default class Header extends React.Component {
       type:'e-commerce',
       business:[
         {
-          src:'/static/images/header/途虎养车 2@2x.png',
+          src:'http://img.teddymobile.cn/www/images/header/途虎养车 2@2x.png',
           link:'',
           style:{
             width: 108,
@@ -243,7 +243,7 @@ export default class Header extends React.Component {
       type:'finance',
       business:[
         {
-          src:'/static/images/header/度小满@2x.png',
+          src:'http://img.teddymobile.cn/www/images/header/度小满@2x.png',
           link:'',
           style:{
             width: 110,

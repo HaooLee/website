@@ -59,14 +59,14 @@ export default class ViewBox extends React.Component {
           <span className="arrow arrow-10"></span>
 
           <div className={`customer-pic ${activeIndex == 0 ? 'active':''}` }>
-            {/*<img src="/static/images/viewbox/01-3.png" alt=""/>*/}
+            {/*<img src="http://img.teddymobile.cn/www/images/viewbox/01-3.png" alt=""/>*/}
             <div className={'card'}>
               <p className={'title'}>广告主/B端客户</p>
               <p className={'content'}>场景赋能 - 场景构建 - 场景融合服务</p>
             </div>
           </div>
           <div className={`smart-push-pic ${activeIndex == 1 ? 'active':''}`}>
-            {/*<img src="/static/images/viewbox/02-3.png" alt=""/>*/}
+            {/*<img src="http://img.teddymobile.cn/www/images/viewbox/02-3.png" alt=""/>*/}
             <div className={'card'}>
               <p className={'title'}>巧推智慧营销平台</p>
               <p className={'content'}>高效提升  品牌营销</p>
@@ -75,18 +75,18 @@ export default class ViewBox extends React.Component {
           </div>
           <div className={`op-pic ${activeIndex ==5 ? 'active':''}`}>
             <div className="op-wrap">
-              <img src="/static/images/viewbox/arrow-1.png" alt=""/>
-              <img src="/static/images/viewbox/arrow-2.png" alt=""/>
-              <img src="/static/images/viewbox/arrow-3.png" alt=""/>
-              <img src="/static/images/viewbox/arrow-4.png" alt=""/>
+              <img src="http://img.teddymobile.cn/www/images/viewbox/arrow-1.png" alt=""/>
+              <img src="http://img.teddymobile.cn/www/images/viewbox/arrow-2.png" alt=""/>
+              <img src="http://img.teddymobile.cn/www/images/viewbox/arrow-3.png" alt=""/>
+              <img src="http://img.teddymobile.cn/www/images/viewbox/arrow-4.png" alt=""/>
               <p>场景-行业-媒体覆盖,数据化精准运营</p>
               <div className={"card card-1"}>
                 <p className={"title"}>程序化广告服务</p>
               </div>
               <div className={"card card-2"}>
                 <p className={"title"}>DMP数据管理平台</p>
-                <p className={"desc"}>流量分析+人群标签 <img src="/static/images/viewbox/trigon-1.png" alt=""/></p>
-                <p className={"desc"}>媒体<img src="/static/images/viewbox/trigon-2.png" alt=""/>DSP智能出价模型<img src="/static/images/viewbox/trigon-3.png" alt=""/>媒体</p>
+                <p className={"desc"}>流量分析+人群标签 <img src="http://img.teddymobile.cn/www/images/viewbox/trigon-1.png" alt=""/></p>
+                <p className={"desc"}>媒体<img src="http://img.teddymobile.cn/www/images/viewbox/trigon-2.png" alt=""/>DSP智能出价模型<img src="http://img.teddymobile.cn/www/images/viewbox/trigon-3.png" alt=""/>媒体</p>
               </div>
 
               <div className={"card card-3"}>
@@ -95,7 +95,7 @@ export default class ViewBox extends React.Component {
                 <span className={"desc desc-2"}>数据分析</span>
                 <span className={"desc desc-3"}>流量投放</span>
                 <span className={"desc desc-4"}>数据应用</span>
-                <img src="/static/images/viewbox/c.png" alt=""/>
+                <img src="http://img.teddymobile.cn/www/images/viewbox/c.png" alt=""/>
               </div>
               <div className={"card card-4"}>
                 <p className={"title"}>供给资源 移动终端</p>
@@ -106,17 +106,17 @@ export default class ViewBox extends React.Component {
               </div>
 
             </div>
-            {/*<img src="/static/images/viewbox/05-3.png" alt=""/>*/}
+            {/*<img src="http://img.teddymobile.cn/www/images/viewbox/05-3.png" alt=""/>*/}
           </div>
           <div className={`dsp-pic ${activeIndex == 4 ? 'active':''}`}>
-            {/*<img src="/static/images/viewbox/03-3.png" alt=""/>*/}
+            {/*<img src="http://img.teddymobile.cn/www/images/viewbox/03-3.png" alt=""/>*/}
             <div className={'card'}>
               <p className={'title'}>全域场景增量营销平台</p>
               <p className={'content'}>用户增长  服务支持</p>
             </div>
           </div>
           <div className={`client-pic ${activeIndex == 3  || activeIndex == 6? 'active':''}`}>
-            {/*<img src="/static/images/viewbox/06-3.png" alt=""/>*/}
+            {/*<img src="http://img.teddymobile.cn/www/images/viewbox/06-3.png" alt=""/>*/}
             <div className={'card'}>
               <p className={'title'}>终端用户</p>
             </div>
@@ -150,7 +150,7 @@ export default class ViewBox extends React.Component {
           </div>
         </div>
         <div className={'mobile-center'}>
-          <img src="/static/images/index/mobile-center.png" alt=""/>
+          <img src="http://img.teddymobile.cn/www/images/index/mobile-center.png" alt=""/>
         </div>
         <style lang="less" jsx>{styles}</style>
       </>
