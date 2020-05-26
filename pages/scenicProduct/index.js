@@ -229,7 +229,7 @@ export default class ScenicProduct extends React.Component {
       <>
 
         <Head>
-          <title>5G消息——千人千面的智慧场景销服务</title>
+          <title>5G消息|场景消息|5G场景消息</title>
           <meta name="keywords" content="5G消息,场景消息,5G场景消息" />
           <meta name="description" content="泰迪移动5G场景消息，可基于用户行为，通过短信、挂机、位置场景触发多种富媒体消息推送，有文本 、卡片  、多图文、视频、 位置、音频、快应用等多种邢式，5G场景消息单独存在于短信列表内，为客户提供千人千面的智慧场景营销服务。"/>
         </Head>

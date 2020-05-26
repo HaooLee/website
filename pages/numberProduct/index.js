@@ -81,7 +81,7 @@ export default class NumberProduct extends Component {
     return (
       <>
         <Head>
-          <title>号码认证——每一通电话都放心</title>
+          <title>号码识别|企业号码认证|号码标记</title>
           <meta name="keywords" content="号码识别,企业号码认证,号码标记" />
           <meta name="description" content="泰迪熊移动号码识别日均请求量高达47亿次，采用实时大数据挖掘技术，每日更新7000万号码数据，使用机器学习算法分析号码行为，多维度的校验数据，可准确识别陌生电话来源，保障用户手机安全并可为企业提供号码认证服务，进行有效品牌展示。"/>
 
