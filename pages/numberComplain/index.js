@@ -28,6 +28,7 @@ export default class NumberComplain extends Component {
   companyValues = {}
 
   companyRules = {
+    // 'phone': [{required:true,msg:'申诉企业不能为空'}],
     'name': [{required:true,msg:'申诉企业不能为空'}],
     'phone': [{required:true,msg:'申诉号码不能为空'}],
     'contactPhone': [{required:true,msg:'联系方式不能为空'}],
@@ -74,7 +75,7 @@ export default class NumberComplain extends Component {
   }
 
   headerItemClick = (idx, row) => {
-    const {headers} = this.state 
+    const {headers} = this.state
     headers.forEach((item, index) => {
       if(index === idx) {
         item.active = true
@@ -90,7 +91,7 @@ export default class NumberComplain extends Component {
     this.companyValues = {}
   }
   fileChange = async (type, ev) => {
-    const {fileContent} = this.state 
+    const {fileContent} = this.state
     const {value, files} = ev.currentTarget
     let idx = value.lastIndexOf('\\')
     fileContent[type] = value.slice(idx+1)
@@ -125,8 +126,8 @@ export default class NumberComplain extends Component {
     }
   }
   companyFormChange = (type, ev) => {
-    const val = ev.currentTarget.value 
-    this.companyValues[type] = val 
+    const val = ev.currentTarget.value
+    this.companyValues[type] = val
   }
   companyFormSubmit = async (type) => {
     if(type === 'person') {
@@ -138,7 +139,7 @@ export default class NumberComplain extends Component {
       let params = new FormData()
       Object.entries(this.companyValues).forEach((item, index) => {
         params.append(item[0], item[1])
-      })  
+      })
       const {data} = await axios.post(type === 'person' ? `/single/numberComplain` : `/company/numberComplain`, params)
       const notification = this.notificationSystem.current
       notification.addNotification({
@@ -151,18 +152,29 @@ export default class NumberComplain extends Component {
       }
     }
   }
+
+   checkPhone(phone){
+
+    return /^1[3456789]\d{9}$/.test(phone)
+  }
   getCode = async () => {
     // 获取验证码
     const {phone} = this.companyValues
+    if(this.checkPhone(phone)){
+      const {data} = await axios.post(`/sms/send`, {
+        phone
+      })
+      if(data.code == 200) {
+        // this.personCode = data.data
+      }
+    }else {
+      companyErrors['phone'] = {err:true,msg: '请输入正确的手机号'}
+    }
+
     if(!phone) {
       return
     }
-    const {data} = await axios.post(`/sms/send`, {
-      phone
-    })
-    if(data.code == 200) {
-      // this.personCode = data.data
-    }
+
   }
   // 短信验证
   smsVerify = async () => {
@@ -203,13 +215,14 @@ export default class NumberComplain extends Component {
                     {companyErrors['phone']?.err && <span className={'errMsg'}>{companyErrors['phone'].msg}</span>}
                   </div>
                 </div>
-                {/* <div className="form__item">
+                 <div className="form__item form__item--required">
                   <div className="form__item__label">申诉人手机号</div>
                   <div className="form__item__input">
                     <input placeholder="请留下您最常用的手机号，以便我们及时联系并申诉"  onChange={this.companyFormChange.bind(this, 'phone')} type="text" />
+                    {companyErrors['phone']?.err && <span className={'errMsg'}>{companyErrors['phone'].msg}</span>}
                   </div>
-                </div> */}
-                <div className="form__item">
+                </div>
+                <div className="form__item form__item--required">
                   <div className="form__item__label">验证码</div>
                   <div className="form__item__input">
                     <input placeholder="请输入您的手机验证码" type="text" onBlur={this.smsVerify} />
@@ -252,7 +265,7 @@ export default class NumberComplain extends Component {
                         fileContent['otherCard'] && <div className="file-content">{fileContent['otherCard']}</div>
                       }
                     </div>
-                  </div>  
+                  </div>
                 </div>
                 <div className="form__item form__item--no-margin form__item--required">
                   <div className="form__item__label">申诉企业全称</div>

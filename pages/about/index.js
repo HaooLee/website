@@ -39,19 +39,25 @@ export default class About extends Component {
         {
           src: 'http://img.teddymobile.cn/www/images/about/icon-shenzheng.png',
           name: '深圳',
-          address: '北京市朝阳区酒仙桥南路5号院'
+          address: '深圳市南山区学府路216号田厦金牛广场B座'
+        },
+        {
+          src: '/static/images/about/icon-zhejiang.png',
+          name: '杭州',
+          address: '浙江省杭州拱墅区远洋国际B座'
         },
         {
           src: 'http://img.teddymobile.cn/www/images/about/icon-shanghai.png',
           name: '上海',
-          address: '北京市朝阳区酒仙桥南路5号院'
-        }
+          address: '上海市浦东区环科路515号1号楼'
+        },
+
       ],
       contactList: [
         {
           src: 'http://img.teddymobile.cn/www/images/about/icon-jishu.png',
           name: '技术及问题反馈',
-          email: '邮箱：123456@teddymobile',
+          email: '邮箱：kefu@teddymobile.cn',
           phone: ''
         },
         {
@@ -243,12 +249,12 @@ export default class About extends Component {
               <li className="technology-advantage__list__item">
                 <img src="http://img.teddymobile.cn/www/images/about/icon-zhinengduanxin.png" />
                 <p className="technology-advantage__list__item__title">智能短信识别引擎</p>
-                <p className="technology-advantage__list__item__desc">基于NLP技术、触达十万+智能场景、 日均解析15亿条数据</p>
+                <p className="technology-advantage__list__item__desc">基于NLP技术、触达十万+智能场景、 日均解析32亿条数据</p>
               </li>
               <li className="technology-advantage__list__item">
                 <img src="http://img.teddymobile.cn/www/images/about/icon-zhihui.png" />
-                <p className="technology-advantage__list__item__title">智慧场景的近场服务</p>
-                <p className="technology-advantage__list__item__desc">10亿+位置数据、1W+品牌覆盖、 92% POI覆盖率</p>
+                <p className="technology-advantage__list__item__title">5G场景消息服务</p>
+                <p className="technology-advantage__list__item__desc">多种富媒体消息格式，同时支持通话挂机、位置识别等场景定向能力</p>
               </li>
             </ul>
           </div>
