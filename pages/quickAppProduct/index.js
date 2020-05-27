@@ -197,7 +197,7 @@ export default class QuickAppProduct extends React.Component {
           <meta name="keywords" content="快应用" />
           <meta name="description" content="泰迪熊移动科技快应用场景营销解决方案致力于打造多流量入口以及场景化的快应用生态建设。泰迪熊移动的快应用解决方案深度集成进各厂商手机系统中，具有“免安装、免存储、一键直达、更新直接推送”四大体验优势，泰迪熊移动的快应用凭借自身独有的近场服务能力，在精准位置识别下通过合适的产品通道和界面向用户提供更便捷的服务，让用户通过手机更容易获取到自己所需的服务。可以在操作系统层面实现用户需求与应用服务间的无缝连接，提升用户的使用体验的同时，还能够助力企业自身产品的传播和留存，为后续提供更高效的服务打下用户基础。"/>
         </Head>
-        <ProductBanner title={'快应用'} desc={'无需下载安装，即点即用，享受原生应用的性能体验'} src={'http://img.teddymobile.cn/www/images/quickAppProduct/banner.png'} customClassName={'quick-app-banner'}></ProductBanner>
+        <ProductBanner videoSrc={'/static/video/kyy.mp4'} title={'快应用'} desc={'无需下载安装，即点即用，享受原生应用的性能体验'} src={'http://img.teddymobile.cn/www/images/quickAppProduct/banner.png'} customClassName={'quick-app-banner'}></ProductBanner>
         <SectionCard title={'平台介绍'} bgc={"#fff"} >
           <div className="intro w">
             泰迪熊移动科技快应用场景营销解决方案致力于打造多流量入口以及场景化的快应用生态建设。泰迪熊移动的快应用解决方案深度集成进各厂商手机系统中，具有“免安装、免存储、一键直达、更新直接推送”四大体验优势，泰迪熊移动的快应用凭借自身独有的近场服务能力，在精准位置识别下通过合适的产品通道和界面向用户提供更便捷的服务，让用户通过手机更容易获取到自己所需的服务。可以在操作系统层面实现用户需求与应用服务间的无缝连接，提升用户的使用体验的同时，还能够助力企业自身产品的传播和留存，为后续提供更高效的服务打下用户基础。
