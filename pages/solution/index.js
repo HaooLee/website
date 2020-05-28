@@ -4,6 +4,8 @@ import {connect} from 'react-redux'
 import TabBarCard from '@/components/tabBarCard'
 import SectionCard from '@/components/sectionCard'
 import styles from './index.less'
+import Head from "../scenicProduct";
+import React from "react";
 
 // 自定义箭头
 function SampleNextArrow(props) {
@@ -174,6 +176,11 @@ export default class Solution extends Component {
     }
     return (
       <>
+        <Head>
+          <title>智能通讯服务解决方案-泰迪熊移动</title>
+          <meta name="keywords" content="泰迪熊移动,智能通讯服务解决方案" />
+          <meta name="description" content="泰迪熊移动为不同行业提供专业的全场景营销解决方案"/>
+        </Head>
         <div className="banner">
           <div className="banner__text w">
             解决方案

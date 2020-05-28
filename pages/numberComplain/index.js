@@ -215,13 +215,13 @@ export default class NumberComplain extends Component {
                     {companyErrors['phone']?.err && <span className={'errMsg'}>{companyErrors['phone'].msg}</span>}
                   </div>
                 </div>
-                 <div className="form__item form__item--required">
-                  <div className="form__item__label">申诉人手机号</div>
-                  <div className="form__item__input">
-                    <input placeholder="请留下您最常用的手机号，以便我们及时联系并申诉"  onChange={this.companyFormChange.bind(this, 'phone')} type="text" />
-                    {companyErrors['phone']?.err && <span className={'errMsg'}>{companyErrors['phone'].msg}</span>}
-                  </div>
-                </div>
+                 {/*<div className="form__item form__item--required">*/}
+                  {/*<div className="form__item__label">申诉人手机号</div>*/}
+                  {/*<div className="form__item__input">*/}
+                    {/*<input placeholder="请留下您最常用的手机号，以便我们及时联系并申诉"  onChange={this.companyFormChange.bind(this, 'phone')} type="text" />*/}
+                    {/*{companyErrors['phone']?.err && <span className={'errMsg'}>{companyErrors['phone'].msg}</span>}*/}
+                  {/*</div>*/}
+                {/*</div>*/}
                 <div className="form__item form__item--required">
                   <div className="form__item__label">验证码</div>
                   <div className="form__item__input">
