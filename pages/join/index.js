@@ -8,11 +8,16 @@ import React from "react";
 
 export default class Join extends Component {
   static async getInitialProps({Component, router, ctx}) {
-    const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/recruit/getinfo', {
-      'job_cate': 0
-    })
-    console.log(data.data)
-    return {allJoins: data.data}
+    try{
+      const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/recruit/getinfo', {
+        'job_cate': 0
+      })
+      console.log(data.data)
+      return {allJoins: data.data.list}
+    }catch (e) {
+      return {allJoins:[]}
+    }
+
   }
   constructor(props) {
     super(props)
@@ -108,7 +113,7 @@ export default class Join extends Component {
             <div className="w">
               <ul className="tab-bar__content clearfix">
                 {
-                  currentId == 0 ?allJoins.map((item, idx) => <li className="tab-bar__content__item" key={idx}>
+                  currentId == 0 ?allJoins?.map((item, idx) => <li className="tab-bar__content__item" key={idx}>
                     <p className="title" onClick={()=> this.handleClick(item,idx)}>{item.title}</p>
                     {
                       item.opened && <div className="tab-bar__content__item">
