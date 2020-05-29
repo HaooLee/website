@@ -19,4 +19,8 @@ echo 'build完成 开始重启pm2'
 
 pm2 reload pm2.config.json
 
+echo 'pm2 重启完成'
+
+pm2 list
+
 

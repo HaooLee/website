@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4e7c6348-ff0b-441b-a7d3-ceac642b26c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pm2.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/pm2.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restart.sh" beforeDir="false" afterPath="$PROJECT_DIR$/restart.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,12 +51,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/restart.sh">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pm2.config.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -186,7 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/components/select/index.less" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/components/checkBox/index.less" />
         <option value="$PROJECT_DIR$/components/radio/index.less" />
@@ -237,6 +240,7 @@
         <option value="$PROJECT_DIR$/pages/_document.js" />
         <option value="$PROJECT_DIR$/pages/join/index.js" />
         <option value="$PROJECT_DIR$/pm2.config.json" />
+        <option value="$PROJECT_DIR$/restart.sh" />
       </list>
     </option>
   </component>
@@ -397,17 +401,18 @@
       <workItem from="1589655056846" duration="3575000" />
       <workItem from="1590054582073" duration="1836000" />
       <workItem from="1590130799042" duration="23253000" />
-      <workItem from="1590726228294" duration="656000" />
+      <workItem from="1590726228294" duration="875000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="335865000" />
+    <option name="totallyTimeSpent" value="336084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18565401" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18565401" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -419,7 +424,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.18877551" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.18877551" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -813,13 +818,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restart.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pm2.config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restart.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
         </state>
       </provider>
     </entry>
