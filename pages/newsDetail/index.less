@@ -8,9 +8,12 @@
     line-height: 450px;
   }
 }
-
+body {
+  background-color: #f1f2f3;
+}
 .news {
   margin-top: 30px;
+
   &__detail {
     // width: 930px;
     float: left;
@@ -32,6 +35,52 @@
         margin-right: 5px;
       }
     }
+    &__content {
+      margin-top: 30px;
+    }
+    //.news-container{
+    //  box-sizing: border-box;
+    //  max-width: 1200px;
+    //  max-width: 100%;
+    //  min-height: 100%;
+    //  margin: 60px auto 0 ;
+    //  padding: 30px 20px;
+    //  overflow: hidden;
+    //  background-color: #fff;
+    //
+    //  :global(p){
+    //    white-space: pre-wrap;
+    //    min-height: 1em;
+    //    margin: 0;
+    //    line-height: 30px;
+    //  }
+    //  :global( ol){
+    //    list-style:decimal;
+    //    margin-left: 1em
+    //  }
+    //
+    //  :global(ul){
+    //      list-style: disc;
+    //      margin-left: 1em
+    //  }
+    //
+    //  :global(img, audio, video) {
+    //    max-width: 100%;
+    //    height: auto;
+    //  }
+    //  :global(pre){
+    //    padding: 15px;
+    //    background-color: #f1f1f1;
+    //    border-radius: 5px;
+    //  }
+    //  :global(blockquote){
+    //    margin: 0;
+    //    padding: 15px;
+    //    background-color: #f1f1f1;
+    //    border-left: 3px solid #d1d1d1;
+    //  }
+    //}
+
   }
 }
 @import '../common.less';

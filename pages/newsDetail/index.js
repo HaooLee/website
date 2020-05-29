@@ -61,6 +61,7 @@ export default class NewsDetail extends Component {
           <title>{newsDetail.news_title + '-泰迪熊移动'}</title>
           <meta name="keywords" content="泰迪熊移动资讯" />
           <meta name="description" content={newsDetail.news_des}/>
+          <link rel="stylesheet" href="/static/css/news.css"/>
         </Head>
         <div className="banner">
           <div className="banner__text w">
@@ -75,8 +76,8 @@ export default class NewsDetail extends Component {
               <img src="http://img.teddymobile.cn/www/images/news/logo.png" />
               <span>泰迪资讯 | {newsDetail.news_time.replace(/\s[\x00-\xff]*/g,'')} </span>
             </div>
-            <div className="news__detail__content">
-              <div dangerouslySetInnerHTML = {{ __html: newsDetail.content }} style={{overflow:'hidden'}}></div>
+            <div className="news__detail__content ">
+              <div className={'container'} dangerouslySetInnerHTML = {{ __html: newsDetail.content }} style={{overflow:'hidden'}}></div>
             </div>
           </div>
         </div>
