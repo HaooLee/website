@@ -69,7 +69,7 @@ export default class NewsDetail extends Component {
         </div>
         <div className="w news clearfix">
           {/*<SliderList list={list} clickCallback={this.clickCallback}></SliderList>*/}
-          <div className="news__detail col-10">
+          <div className="news__detail ">
             <p className="news__detail__title">{newsDetail.news_title}</p>
             <div className="news__detail__company">
               <img src="http://img.teddymobile.cn/www/images/news/logo.png" />
