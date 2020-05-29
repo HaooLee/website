@@ -2,6 +2,7 @@
 node_modules/
 .next/
 dist/
+.idea/*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

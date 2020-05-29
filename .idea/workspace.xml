@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e7c6348-ff0b-441b-a7d3-ceac642b26c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/css/news.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/newsCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/newsCard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/newsDetail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/newsDetail/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/newsDetail/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/newsDetail/index.less" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,7 +28,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/newsCard/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -40,6 +36,15 @@
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -102,11 +107,6 @@
               <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/var.less">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -187,7 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/components/radio/index.js" />
         <option value="$PROJECT_DIR$/components/floatWindow/index.less" />
         <option value="$PROJECT_DIR$/components/checkBox/index.js" />
         <option value="$PROJECT_DIR$/pages/agent/match.less" />
@@ -238,6 +237,7 @@
         <option value="$PROJECT_DIR$/pages/newsDetail/index.less" />
         <option value="$PROJECT_DIR$/static/css/news.css" />
         <option value="$PROJECT_DIR$/components/newsCard/index.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -422,12 +422,12 @@
       <workItem from="1589655056846" duration="3575000" />
       <workItem from="1590054582073" duration="1836000" />
       <workItem from="1590130799042" duration="23253000" />
-      <workItem from="1590726228294" duration="13009000" />
+      <workItem from="1590726228294" duration="13355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="348218000" />
+    <option name="totallyTimeSpent" value="348564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -471,13 +471,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.next/cache/next-babel-loader/c6be98cad5ee25887539b59689e2ef6e.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8823" selection-start-column="8823" selection-end-column="8823" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/urlConfig.js" />
     <entry file="file://$PROJECT_DIR$/pages/agent/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -840,6 +833,13 @@
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
         </state>
       </provider>
     </entry>
