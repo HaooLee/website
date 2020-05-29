@@ -100,7 +100,7 @@ export default class NumberComplain extends Component {
     })
     const params = new FormData()
     params.append('source', files[0])
-    const {data} = await axios.post(`http://php.bjdglt.com:8091/V1.4/file/upload`, params)
+    const {data} = await axios.post(`http://test-gw-td.teddymobile.cn/V1.4/file/upload`, params)
     const notification = this.notificationSystem.current
     if(data.code == 200) {
       notification.addNotification({
