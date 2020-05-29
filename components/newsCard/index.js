@@ -13,7 +13,7 @@ export default class NewsCard extends React.Component{
         <Link href={`/newsDetail?id=${item.nid}`} passHref>
           <a className={customClassName}>
             <li className="news__content__item clearfix">
-              <img className="news__content__item__img" src={'http://test-gw-td.teddymobile.cn:8090'+ item.news_cover || 'http://img.teddymobile.cn/www/images/news/company.png'} />
+              <img className="news__content__item__img" src={'http://php.bjdglt.com:8091'+ item.news_cover || 'http://img.teddymobile.cn/www/images/news/company.png'} />
               <div className="news__content__item__info">
                 <div className="news__content__item__info__title">
                   <p style={{color: '#000'}}>{item.news_title}</p>
