@@ -52,6 +52,9 @@
     line-height: 30px;
     font-size: 15px;
 }
+.container strong {
+    font-weight: bold;
+}
 .container ol {
     list-style:decimal;
 }
