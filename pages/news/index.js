@@ -10,7 +10,7 @@ import React from "react";
 export default class News extends Component {
   static async getInitialProps({Component, router, ctx}) {
     try {
-      const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/news/getlist?news_type=1')
+      const {data} = await axios.get('http://test-bg-td.teddymobile.cn/V1.4/news/getlist?news_type=1')
       return {news: data.data.list}
     }catch (e) {
       return {news: []}
@@ -52,7 +52,7 @@ export default class News extends Component {
         item.active = false
       }
     })
-     const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/news/getlist?news_type=' + (index + 1))
+     const {data} = await axios.get('http://test-bg-td.teddymobile.cn/V1.4/news/getlist?news_type=' + (index + 1))
     this.setState({
       news: data.data.list,
       list: [...list]

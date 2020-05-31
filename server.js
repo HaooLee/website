@@ -12,7 +12,7 @@ const proxy = httpProxy.createProxyServer({
   cookieDomainRewrite: {
     '*': ''
   },
-  target: 'http://test-gw-td.teddymobile.cn:8090/ ',
+  target: 'test-bg-td.teddymobile.cn ',
   changeOrigin: true
 })
 
