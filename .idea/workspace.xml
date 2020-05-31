@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e7c6348-ff0b-441b-a7d3-ceac642b26c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pages/news/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/newsDetail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/newsDetail/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/news.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/news.css" afterDir="false" />
-    </list>
+    <list default="true" id="4e7c6348-ff0b-441b-a7d3-ceac642b26c6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -20,7 +16,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/newsDetail/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
+            <state relative-caret-position="1140">
               <caret line="76" column="49" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -431,13 +427,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="349835000" />
+    <option name="totallyTimeSpent" value="350561000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18565401" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18565401" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -449,7 +444,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.18877551" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.18877551" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -840,7 +835,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/newsDetail/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
+        <state relative-caret-position="1140">
           <caret line="76" column="49" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
