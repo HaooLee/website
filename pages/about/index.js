@@ -146,7 +146,7 @@ export default class About extends Component {
           title: '获"2018金比特 最佳智能营销平台&效果案例标杆奖"'
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/about/获“2018金触点最佳具技术创新力营销产品+技术营销案例”.jpg',
+          src: 'http://img.teddymobile.cn/www/images/about/获“2018金触点最佳具技术创新力营销产品与技术营销案例”.jpg',
           time: '2018年',
           title: '获"2018金触点最佳具技术创新力营销产品+技术营销案例"'
         },
@@ -161,7 +161,7 @@ export default class About extends Component {
           title: '获"2018中国最具商业潜力成长型科技企业TOP20"'
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/about/获”2018年年度企业服务独角兽+企业服务产品TOP50“.jpg',
+          src: 'http://img.teddymobile.cn/www/images/about/获”2018年年度企业服务独角兽与企业服务产品TOP50“.jpg',
           time: '2018年',
           title: '获"2018年年度企业服务独角兽+企业服务产品TOP50"'
         },

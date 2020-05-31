@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e7c6348-ff0b-441b-a7d3-ceac642b26c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pages/newsDetail/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/newsDetail/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/about/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/about/获“2018金触点最佳具技术创新力营销产品+技术营销案例”.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/about/获“2018金触点最佳具技术创新力营销产品与技术营销案例”.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/about/获”2018年年度企业服务独角兽+企业服务产品TOP50“.jpg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -55,10 +58,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/footer/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="30" column="47" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="47" />
+            <state relative-caret-position="1275">
+              <caret line="85" column="29" lean-forward="true" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/about/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="161" column="10" lean-forward="true" selection-start-line="161" selection-start-column="10" selection-end-line="161" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,23 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/newsDetail/index.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="91" column="15" lean-forward="true" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/quickAppProduct/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="199" column="77" selection-start-line="199" selection-start-column="77" selection-end-line="199" selection-end-column="77" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1122">
+              <caret line="91" column="15" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -227,7 +230,6 @@
         <option value="$PROJECT_DIR$/pages/join/index.js" />
         <option value="$PROJECT_DIR$/pages/about/index.less" />
         <option value="$PROJECT_DIR$/pages/join/index.less" />
-        <option value="$PROJECT_DIR$/pages/about/index.js" />
         <option value="$PROJECT_DIR$/pages/quickAppProduct/index.less" />
         <option value="$PROJECT_DIR$/pages/global.less" />
         <option value="$PROJECT_DIR$/components/tabBarCard/index.js" />
@@ -237,6 +239,7 @@
         <option value="$PROJECT_DIR$/components/footer/index.js" />
         <option value="$PROJECT_DIR$/components/footer/index.less" />
         <option value="$PROJECT_DIR$/pages/newsDetail/index.less" />
+        <option value="$PROJECT_DIR$/pages/about/index.js" />
       </list>
     </option>
   </component>
@@ -273,49 +276,13 @@
             <path>
               <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
               <item name="new-website" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="footer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new-website" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
               <item name="new-website" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new-website" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="newsDetail" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new-website" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="numberComplain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new-website" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="quickAppProduct" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new-website" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="scenicProduct" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new-website" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="solution" type="462c0819:PsiDirectoryNode" />
+              <item name="about" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="new-website" type="b2602c69:ProjectViewProjectNode" />
@@ -344,7 +311,7 @@
               <item name="new-website" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="about" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -421,7 +388,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359225000" />
+    <option name="totallyTimeSpent" value="359999000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -465,16 +432,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/components/banner/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="31" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/banner/index.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
@@ -753,16 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/about/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="229" column="140" selection-start-line="229" selection-start-column="140" selection-end-line="229" selection-end-column="140" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/quickAppProduct/index.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -829,16 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/footer/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="30" column="47" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/footer/index.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -846,10 +783,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/about/获”2018年年度企业服务独角兽+企业服务产品TOP50“.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/newsDetail/index.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="91" column="15" lean-forward="true" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
+        <state relative-caret-position="1122">
+          <caret line="91" column="15" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/footer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="85" column="29" lean-forward="true" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/about/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="161" column="10" lean-forward="true" selection-start-line="161" selection-start-column="10" selection-end-line="161" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
