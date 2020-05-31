@@ -74,7 +74,7 @@ export default class NewsDetail extends Component {
             <p className="news__detail__title">{newsDetail.news_title}</p>
             <div className="news__detail__company">
               <img src="http://img.teddymobile.cn/www/images/news/logo.png" />
-              <span>泰迪资讯 | {newsDetail.news_time?.replace(/\s[\x00-\xff]*/g,'')} </span>
+              <span>泰迪熊移动资讯 | {newsDetail.news_time?.replace(/\s[\x00-\xff]*/g,'')} </span>
             </div>
             <div className="news__detail__content ">
               <div className={'container'} dangerouslySetInnerHTML = {{ __html: newsDetail.content }} style={{overflow:'hidden'}}></div>

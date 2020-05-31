@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import TabBarCard from '@/components/tabBarCard'
 import SectionCard from '@/components/sectionCard'
 import styles from './index.less'
-import Head from "../scenicProduct";
+import Head from 'next/head'
 import React from "react";
 
 // 自定义箭头
