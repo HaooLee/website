@@ -21,11 +21,11 @@ export default class NewsCard extends React.Component{
                 <p className="news__content__item__info__desc">{item.news_des}</p>
                 <div className="news__content__item__info__footer">
                   <img src="http://img.teddymobile.cn/www/images/news/logo.png" />
-                  <span>泰迪资讯 | {item.news_time ? item.news_time.replace(/\s[\x00-\xff]*/g,'') : ''} </span>
+                  <span>泰迪熊移动资讯 | {item.news_time ? item.news_time.replace(/\s[\x00-\xff]*/g,'') : ''} </span>
                 </div>
                 <div className="news__content__item__info__footer--match">
                   <img src="http://img.teddymobile.cn/www/images/news/logo.png" />
-                  <span className="news__content__item__info__footer--match__teddy">泰迪资讯</span>
+                  <span className="news__content__item__info__footer--match__teddy">泰迪熊移动资讯</span>
                   <span className="news__content__item__info__footer--match__time">{item.news_time ? item.news_time.replace(/\s[\x00-\xff]*/g,'') : ''}</span>
                 </div>
               </div>

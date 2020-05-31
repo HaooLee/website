@@ -74,6 +74,7 @@
             line-height: 20px;
             margin-bottom: 20px;
             word-break: break-all;
+            white-space: break-spaces;
           }
         }
       }
@@ -106,6 +107,7 @@
           line-height: 1.33rem;
           font-size: 0.43rem;
           text-align: left;
+          box-sizing: border-box;
           border-bottom: 0.05rem solid #D8D8D8;
           &.active {
             border-bottom: none;
@@ -132,7 +134,7 @@
         //  display: none;
         //}
         li {
-          width: 4.32rem;
+          width: 100%;
           //margin-bottom: 0;
           //margin-right: 0;
           margin: 3px;
@@ -147,10 +149,10 @@
             .work-place-content,.work-duty-content,.work-require-content{
               padding:0 20px;
               color:#666;
-              font-size: 14px;
+              font-size: 12px;
               line-height: 20px;
               margin-bottom: 20px;
-              word-break: break-all;
+              white-space:pre-line;
             }
           }
         }

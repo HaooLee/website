@@ -6,7 +6,7 @@ export default class TabBarCard extends React.Component {
     super(props)
   }
   clickAction = (idx, row) => {
-    const {clickCallback = () => {}} = this.props 
+    const {clickCallback = () => {}} = this.props
     clickCallback(idx, row)
   }
   render() {
@@ -15,7 +15,7 @@ export default class TabBarCard extends React.Component {
       <>
         <ul className={`tab-bar clearfix ${customClassName}`}>
           {list.map((item, index) => (
-            <li style={{width: `${100 / list.length}%`}} key={index} className={`tab-bar__item ${item.active ? 'active' : ''}`} onClick={this.clickAction.bind(this, index, item)}>{item.name}</li>
+            <li key={index} className={`tab-bar__item ${item.active ? 'active' : ''}`} onClick={this.clickAction.bind(this, index, item)}>{item.name}</li>
           ))}
         </ul>
 

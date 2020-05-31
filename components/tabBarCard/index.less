@@ -1,13 +1,17 @@
 .tab-bar {
   // width:1020;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
   height:50px;
   padding: 5px;
   background:rgba(247,247,247,1);
   margin: 0 auto;
   border-radius:6px;
   box-sizing: border-box;
+
   &__item {
-    float: left;
+    padding:0 10px;
     height: 40px;
     line-height: 40px;
     text-align: center;
@@ -37,10 +41,12 @@
   .tab-bar {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-around;
     box-sizing: border-box;
-    height: 0.96rem;
     padding: 0.08rem;
+    flex-wrap: wrap;
+    height: auto;
+
     &::before {
       display: none;
     }
@@ -48,10 +54,11 @@
       display: none;
     }
     .tab-bar__item {
+      padding: 0 5px !important;
       font-size: 0.37rem;
       height: 0.8rem;
       line-height: 0.8rem;
-      width: auto !important;
+      margin-bottom: 3px;
     }
   }
   .scenic-tab-bar {

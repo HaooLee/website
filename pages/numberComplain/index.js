@@ -159,6 +159,7 @@ export default class NumberComplain extends Component {
   }
   getCode = async () => {
     // 获取验证码
+    const {companyErrors} = this.state
     const {phone} = this.companyValues
     if(this.checkPhone(phone)){
       const {data} = await axios.post(`/sms/send`, {
@@ -169,10 +170,9 @@ export default class NumberComplain extends Component {
       }
     }else {
       companyErrors['phone'] = {err:true,msg: '请输入正确的手机号'}
-    }
-
-    if(!phone) {
-      return
+      this.setState({
+        companyErrors
+      })
     }
 
   }
