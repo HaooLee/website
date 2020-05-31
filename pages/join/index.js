@@ -26,6 +26,7 @@ export default class Join extends Component {
         {
           name: '所有职位',
           active: true,
+
           id: 0
         },
         {
