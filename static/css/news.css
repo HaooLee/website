@@ -46,6 +46,9 @@
     font-size: 12px;
 }
 
+.container em {
+    font-style:italic;
+}
 .container p{
     white-space: pre-wrap;
     min-height: 1em;
