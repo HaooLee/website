@@ -117,21 +117,24 @@ export default class Footer extends React.Component {
                  <ul>
                    <li>友情链接</li>
                    <li>
-                      <div className="friendly"><a href="https://www.oppo.com/cn/">OPPO</a></div>
+                      <div className="friendly">
+                        <a href="https://www.oppo.com/cn/">OPPO</a>
+                      </div>
                       <div className="friendly">
                         <a href="https://www.vivo.com.cn/">vivo</a>
                       </div>
                      <div className="friendly">
-                       <a href="http://www.alios.cn/">Alios</a>
+                       <a href="http://www.10086.cn/index/bj/index_100_100.html">中国移动</a>
                      </div>
+
                      <div className="friendly">
-                       <a href="https://www.lenovo.com.cn/">联想</a>
+                       <a href="https://shop.lenovo.com.cn/mobile/index.html?hmsr=u17&hmmd=banner&hmpl=150421&hmkw=home&cid=sqgc1012">联想</a>
                      </div>
                       <div className="friendly">
                         <a href="https://www.meizu.com/">魅族</a>
                       </div>
                      <div className="friendly">
-                       <a href="http://www.10086.cn">中国移动</a>
+                       <a href="http://www.chinaunicom.com.cn/">中国联通</a>
                      </div>
                       <div className="friendly">
                         <a href="https://www.mi.com/">小米</a>
@@ -140,17 +143,14 @@ export default class Footer extends React.Component {
                         <a href="https://www.oneplus.com/cn">一加</a>
                       </div>
                      <div className="friendly">
-                       <a href="http://www.chinaunicom.com.cn/">中国联通</a>
+                       <a href="http://www.chinatelecom.com.cn/">中国电信</a>
                      </div>
                      <div className="friendly">
                        <a href="https://www.gionee.com/">金立</a>
                      </div>
-                      <div className="friendly">
-                        <a href="http://www.le.com/">乐视</a>
-                      </div>
-                      <div className="friendly">
-                        <a href="http://www.chinatelecom.com.cn/">中国电信</a>
-                      </div>
+                     <div className="friendly">
+                       <a href="http://www.alios.cn/home?spm=a211jy.11060672.4974895212.1.716a1520sYAiXP">Alios</a>
+                     </div>
 
                    </li>
                  </ul>
