@@ -2,11 +2,12 @@
   position:fixed;
   right:20px;
   top:70%;
-  z-index: 99999;
+  z-index: 999;
 
   dl dd{
     position:relative;
-    width:80px;height:80px;
+    width:80px;
+    height:80px;
     background-color:#2D78EA;
     border-bottom:solid 1px #2D78EA;
     text-align:center;
@@ -182,7 +183,8 @@
 
 @media screen and (max-width: 980px) {
   .floating_ck {
-    display: none;
+    transform-origin: right;
+    transform:scale(.5);
   }
   .form {
     padding: 0px 25px 30px;
