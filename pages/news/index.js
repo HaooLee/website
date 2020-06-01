@@ -10,7 +10,7 @@ import React from "react";
 export default class News extends Component {
   static async getInitialProps({Component, router, ctx}) {
     try {
-      const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/news/getlist?news_type=1')
+      const {data} = await axios.get('/V1.4/news/getlist?news_type=1')
       return {news: data.data.list}
     }catch (e) {
       return {news: []}
