@@ -52,7 +52,7 @@ export default class News extends Component {
         item.active = false
       }
     })
-     const {data} = await axios.get('http://php.bjdglt.com:8091/V1.4/news/getlist?news_type=' + (index + 1))
+     const {data} = await axios.get('/V1.4/news/getlist?news_type=' + (index + 1))
     this.setState({
       news: data.data.list,
       list: [...list]
