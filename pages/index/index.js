@@ -262,7 +262,7 @@ export default class Index extends React.Component {
               <SolutionCard src={'http://img.teddymobile.cn/www/images/新零售@2x.png'} title={'快消品'}/>
               </div>
             </Link>
-            <Link href={'/case/finance'}>
+            <Link href={'/case/resale'}>
               <div>
               <SolutionCard src={'http://img.teddymobile.cn/www/images/互联网金融@2x.png'} title={'新零售'}/>
               </div>

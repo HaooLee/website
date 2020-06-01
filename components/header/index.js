@@ -349,7 +349,7 @@ export default class Header extends React.Component {
                 routes.map((i,idx)=>{
                   return (
                     <li className="nav-item" key={idx} onMouseEnter={e => this.mouseenterHandler(i)} onMouseLeave={e => this.mouseLeaveHandler(i)}>
-                      <Link href={i.link}><a>{i.title}</a></Link>
+                      <Link href={i.link} prefetch><a>{i.title}</a></Link>
                       {
                         idx !== 3 ? ( //客户成功故事与其他不一样
                           (i.routes && i.routes.length > 0 ) &&
@@ -372,7 +372,7 @@ export default class Header extends React.Component {
                                 customers.map((i, idx)=>{
                                   return (
                                     <div className="business" key={idx}>
-                                      <Link href={`/case/${i.type}`}>
+                                      <Link prefetch href={`/case/${i.type}`}>
                                         <a className="business-title">{i.name}</a>
                                       </Link>
                                       {
@@ -406,14 +406,14 @@ export default class Header extends React.Component {
                     routes.map((i,idx)=>{
                       return (
                         <li className="mobile-nav-item" key={idx}>
-                          <Link href={i.routes && i.routes.length > 0 ?'':i.link} passHref><a onClick={() => this.handleMenuClick(i, idx)}>{i.title}</a></Link>
+                          <Link prefetch href={i.routes && i.routes.length > 0 ?'':i.link} passHref><a onClick={() => this.handleMenuClick(i, idx)}>{i.title}</a></Link>
 
                           {i.routes && i.routes.length > 0 && <span className={`arrow  ${i.opened? 'rotate':''}`}></span>}
                           {
                             i.routes && i.routes.length > 0 && (<ul style={{overflow:'hidden',transition:'all linear .4s',height: i.opened?i.routes.length * 51:0}}>
                               {
                                 i.routes.map((item, index)=><li style={{paddingLeft:20,borderTop:'1px solid #ccc',backgroundColor:'#eee'}} key={index}>
-                                  <Link href={item.link} passHref><a onClick={e=>this.setState({isActive:false})}>{item.title}</a></Link>
+                                  <Link prefetch href={item.link} passHref><a onClick={e=>this.setState({isActive:false})}>{item.title}</a></Link>
                                 </li>)
                               }
                             </ul>)
