@@ -1,10 +1,10 @@
 import {Component} from 'react'
 import SliderList from '@/components/sliderList'
 import styles from './index.less'
-import axios from 'axios'
+import axios from '@/util/http'
 import Head from 'next/head'
-
 import React from "react"
+
 export default class NewsDetail extends Component {
   static async getInitialProps({Component, router, ctx, req, query}) {
     try {

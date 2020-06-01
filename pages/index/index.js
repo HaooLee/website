@@ -8,7 +8,7 @@ import ViewBox from '@/components/viewBox'
 import Slider from "react-slick"
 import Head from 'next/head'
 import NewsCard from '@/components/newsCard'
-import axios from 'axios'
+import axios from '@/util/http'
 import Link from 'next/link'
 
 // 自定义箭头

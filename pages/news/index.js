@@ -2,7 +2,7 @@ import {Component} from 'react'
 import Link from 'next/link'
 import SliderList from '@/components/sliderList'
 import styles from './index.less'
-import axios from 'axios'
+import axios from '@/util/http'
 import NewsCard from '@/components/newsCard'
 import Head from 'next/head'
 import React from "react";

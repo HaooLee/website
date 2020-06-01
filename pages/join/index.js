@@ -1,7 +1,7 @@
 import {Component} from 'react'
 import SectionCard from '@/components/sectionCard'
 import styles from './index.less'
-import axios from 'axios'
+import axios from '@/util/http'
 import Head from 'next/head'
 import React from "react";
 
