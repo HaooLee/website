@@ -66,7 +66,7 @@ export default class ScenicProduct extends React.Component {
         {
           src: 'http://img.teddymobile.cn/www/images/scenicProduct/experience.png',
           title: '体验提升',
-          desc: '富媒体消息，营销短信多元化， 用户体验提升，功能承载更多'
+          desc: <><p>富媒体消息，营销短信多元化，</p><p> 用户体验提升，功能承载更多</p></>
         }
       ],
       coreList: [

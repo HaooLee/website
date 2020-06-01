@@ -65,7 +65,7 @@ export default class QuickAppProduct extends React.Component {
         {
           src: 'http://img.teddymobile.cn/www/images/quickAppProduct/icon-changjing.png',
           title: '场景丰富',
-          desc: '智慧桌面、智慧识屏、语音助手、智慧场景，多入口、易触达'
+          desc: <><p style={{whiteSpace:'nowrap'}}>智慧桌面、智慧识屏、语音助手、</p><p>智慧场景，多入口、易触达</p></>
         },
         {
           src: 'http://img.teddymobile.cn/www/images/quickAppProduct/icon-qiangliucun.png',
