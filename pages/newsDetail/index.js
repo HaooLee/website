@@ -9,7 +9,7 @@ export default class NewsDetail extends Component {
   static async getInitialProps({Component, router, ctx, req, query}) {
     try {
       const {id} = query
-      const {data} = await axios.post(`${process.browser?'':'http://php.bjdglt.com:8091'}/V1.4/news/detail`, {nid: id})
+      const {data} = await axios.post(`${process.browser?'':'http://test-bg-td.teddymobile.cn'}/V1.4/news/detail`, {nid: id})
       return {newsDetail: data.data}
     }catch (e) {
       return {newsDetail:{content:""}}
