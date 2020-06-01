@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900" />
         <link href="https://cdn.bootcss.com/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
         <link href="https://cdn.bootcss.com/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
-        <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+        <script src="/static/js/flexible.js"></script>
         <script src="/static/js/statistics.js"></script>
         </Head>
       <body>
