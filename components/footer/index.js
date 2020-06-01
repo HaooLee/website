@@ -91,11 +91,11 @@ export default class Footer extends React.Component {
                     <a href="/scenicProduct">5G场景消息</a>
                   </li>
                   <li>
-                    <a href="/numberProduct">号码认证</a>
-                  </li>
-                  <li>
                     <a href="/quickAppProduct">快应用</a>
                   </li>
+                 <li>
+                   <a href="/numberProduct">号码认证</a>
+                 </li>
                   {/*<li>*/}
                     {/*<a href="/dspProduct">全域场景增量营销平台</a>*/}
                   {/*</li>*/}
