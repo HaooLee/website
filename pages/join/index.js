@@ -9,7 +9,7 @@ import React from "react";
 export default class Join extends Component {
   static async getInitialProps({Component, router, ctx}) {
     try{
-      const {data} = await axios.get('/V1.4/recruit/getinfo', {
+      const {data} = await axios.get(`${process.browser?'':'http://php.bjdglt.com:8091'}/V1.4/recruit/getinfo`, {
         'job_cate': 0
       })
       console.log(data.data)
