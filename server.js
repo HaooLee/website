@@ -12,7 +12,7 @@ const proxy = httpProxy.createProxyServer({
   cookieDomainRewrite: {
     '*': ''
   },
-  target: 'test-bg-td.teddymobile.cn ',
+  target: 'http://php.bjdglt.com:8091',
   changeOrigin: true
 })
 
@@ -32,6 +32,9 @@ server.router('/single', (req, res) => {
   proxy.web(req, res);
 })
 server.router('/file', (req, res) => {
+  proxy.web(req, res);
+})
+server.router('/V1.4', (req, res) => {
   proxy.web(req, res);
 })
 server.router(/.*/, (req, res) => {
