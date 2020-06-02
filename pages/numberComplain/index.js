@@ -23,7 +23,9 @@ export default class NumberComplain extends Component {
       ],
       activeType: 'company',
       fileContent: {},
-      companyErrors: {}
+      companyErrors: {},
+      codeText:'获取验证码',
+      codeDisabled:false,
     }
   }
   notificationSystem = React.createRef()
@@ -169,7 +171,23 @@ export default class NumberComplain extends Component {
         phone
       })
       if(data.code == 200) {
-        // this.personCode = data.data
+        this.setState({
+          codeDisabled:true
+        })
+        let sec = 60
+        let timer = setInterval(()=>{
+          if(--sec > 0){
+            this.setState({
+              codeText:`${sec}秒后重试`
+            })
+          }else {
+            this.setState({
+              codeText:`获取验证码`,
+              codeDisabled:false
+            })
+            clearInterval(timer)
+          }
+        },1000)
       }
     }else {
       companyErrors['phone'] = {err:true,msg: '请输入正确的手机号'}
@@ -191,7 +209,7 @@ export default class NumberComplain extends Component {
     }
   }
   render() {
-    const {headers, activeType, fileContent, companyErrors} = this.state
+    const {headers, activeType, fileContent, companyErrors,codeDisabled, codeText} = this.state
     return (
       <>
         <Head>
@@ -235,7 +253,7 @@ export default class NumberComplain extends Component {
                   <div className="form__item__label">验证码</div>
                   <div className="form__item__input">
                     <input placeholder="请输入您的手机验证码" type="text" onBlur={this.smsVerify} />
-                    <a className="form__item__input__code" onClick={this.getCode}>获取验证码</a>
+                    <button className="form__item__input__code" onClick={this.getCode} disabled={codeDisabled}>{codeText}</button>
                   </div>
                 </div>
                 <div className="form__item form__item--required">
@@ -322,7 +340,7 @@ export default class NumberComplain extends Component {
                   <div className="form__item__label">验证码</div>
                   <div className="form__item__input">
                     <input placeholder="请输入您的手机验证码" onBlur={this.smsVerify} onChange={this.companyFormChange.bind(this, 'code')} type="text" />
-                    <a className="form__item__input__code" onClick={this.getCode}>获取验证码</a>
+                    <button className="form__item__input__code" onClick={this.getCode} disabled={codeDisabled}>{codeText}</button>
                   </div>
                 </div>
                 <div className="form__item form__item--required">
