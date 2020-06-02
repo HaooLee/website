@@ -1,7 +1,10 @@
 import {Component} from 'react'
 import axios from 'axios'
-import NotificationSystem from 'react-notification-system';
+import NotificationSystem from 'react-notification-system'
 import styles from './index.less'
+import Head from 'next/head'
+import React from "react";
+
 export default class NumberComplain extends Component {
   constructor(props) {
     super(props)
@@ -191,6 +194,12 @@ export default class NumberComplain extends Component {
     const {headers, activeType, fileContent, companyErrors} = this.state
     return (
       <>
+        <Head>
+          <title>泰迪能移动—号码识别|企业号码认证|号码标记</title>
+          <meta name="keywords" content="企业号码认证,标记取消,号码识别" />
+          <meta name="description" content="通话时显示专属商企名片、 商企名片将进入中国庞大黄页库。 超过4亿级用户终端宣传显示。若您的号码变更或被错误显示，请号码所有人提交申诉。"/>
+        </Head>
+
         <div className="banner">
           <div className="banner__text w">
             认证通道
