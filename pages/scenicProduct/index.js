@@ -145,7 +145,7 @@ export default class ScenicProduct extends React.Component {
         desc: <div className="apply-desc__content">
           <p>低成本，多字数，突破传统短信70字符限制，满足企业长短信需求</p>
           <p>厂商报备，过审无拦截</p>
-          <p>企业认证，品牌曝</p>
+          <p>企业认证，品牌曝光</p>
         </div>
       },
       'card': {
