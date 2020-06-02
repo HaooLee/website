@@ -1,0 +1,72 @@
+@import '../../pages/var.less';
+@media screen and (max-width: @MATCH_WIDTH) {
+  .form {
+    width: 100%;
+    box-sizing: border-box;
+
+    &__item {
+      padding-right: 0.72rem;
+      margin-top: 0.8rem;
+
+      &:last-child {
+        padding-right: 0;
+      }
+      &--no-margin {
+        margin-top: 0;
+      }
+      &__label {
+        padding-right: 0.21rem;
+        font-size: 12px;
+        width: 2.53rem;
+        box-sizing: border-box;
+        line-height: 0.91rem;
+      }
+      &__input {
+        .errMsg{
+          font-size: 12px;
+        }
+        &--error {
+          bottom: -0.5rem;
+          left: 2.53rem;
+          font-size: 12px;
+        }
+
+        input {
+          font-size: 0.32rem;
+          height: 0.91rem;
+          padding: 0.2rem;
+          box-sizing: border-box;
+          &.file {
+            visibility: hidden;
+          }
+        }
+        &__code {
+          width: 2rem;
+          font-size: 12px;
+          height: 0.91rem;
+          line-height: 0.91rem;
+          margin-left: 0.27rem;
+          -webkit-appearance: none;
+          border:none;
+          outline:none;
+        }
+      }
+      .upload {
+        margin: 0.4rem 0;
+        img {
+          width: 0.4rem;
+          height: 0.4rem;
+        }
+        span {
+          font-size: 0.32rem;
+        }
+      }
+      &__btn {
+        width: 8rem;
+        height: 0.99rem;
+        font-size: 0.37rem;
+        line-height: 0.99rem;
+      }
+    }
+  }
+}
