@@ -222,7 +222,7 @@ export default class IntelligenceSms extends React.Component {
     return (
       <>
         <Head>
-          <title>智能短信|短信菜单|短信公众号|短信验证码|营销短信</title>
+          <title>泰迪熊移动—智能短信|短信菜单|短信公众号|短信验证码|营销短信</title>
           <meta name="keywords" content="智能短信,短信菜单,短信公众号,短信验证码,营销短信" />
           <meta name="description" content="智能短信是泰迪熊移动为合作伙伴提供的一款短信服务产品，通过技术开发，实现将传统短信以公众号形式发送，适用于短信验证码、短信通知及短信推广服务国内短信发送跨运营商、跨终端，直搭手机厂商专属OTT通道，服务范围覆盖8亿用户"/>
         </Head>

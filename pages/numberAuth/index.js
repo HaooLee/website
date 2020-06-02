@@ -2,6 +2,8 @@ import {Component} from 'react'
 import axios from 'axios'
 import NotificationSystem from 'react-notification-system';
 import styles from './index.less'
+import Head from 'next/head'
+
 export default class NumberAuth extends Component {
   constructor(props) {
     super(props)
@@ -116,7 +118,7 @@ export default class NumberAuth extends Component {
       let params = new FormData()
       Object.entries(this.values).forEach((item, index) => {
         params.append(item[0], item[1])
-      })  
+      })
       const {data} = await axios.post(`/company/numberAuth`, params)
       const notification = this.notificationSystem.current
       notification.addNotification({
@@ -131,14 +133,17 @@ export default class NumberAuth extends Component {
   }
 
   formChange = (type, ev) => {
-    const val = ev.currentTarget.value 
-    
-    this.values[type] = val 
+    const val = ev.currentTarget.value
+
+    this.values[type] = val
   }
   render() {
     const {headers, activeType, errors} = this.state
     return (
       <>
+        <Head>
+          <title>泰迪熊移动—号码认证|申诉|平台|查询|标记</title>
+        </Head>
         <div className="banner">
           <div className="banner__text w">
             认证通道
