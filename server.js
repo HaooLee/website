@@ -46,7 +46,7 @@ server.router(/.*/, (req, res) => {
 app.prepare().then(() => {
   server.listen(3008, err => {
     if (err) throw err
-    console.log(`> Ready on http://localhost:3000; App mode: ${process.env.HHB_FE_MODE}`)
+    console.log(`> Ready on http://localhost:3000; App mode: ${process.env.NODE_ENV}`)
   })
 
   // createServer((req, res) => {
