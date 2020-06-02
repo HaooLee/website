@@ -193,7 +193,7 @@ export default class NumberComplainPersonal extends Component {
         },1000)
       }
     }else {
-      companyErrors['contactPhone'] = {err:true,msg: '请输入正确的手机号'}
+      companyErrors['phone'] = {err:true,msg: '请输入正确的手机号'}
       this.setState({
         companyErrors
       })
