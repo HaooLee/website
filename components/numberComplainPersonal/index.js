@@ -3,7 +3,9 @@ import axios from 'axios'
 import NotificationSystem from 'react-notification-system'
 import styles from './index.less'
 import Head from 'next/head'
-import React from "react";
+import React from "react"
+import Router from 'next/router'
+
 
 export default class NumberComplainPersonal extends Component {
   constructor(props) {
@@ -25,6 +27,8 @@ export default class NumberComplainPersonal extends Component {
       companyErrors: {},
       codeText:'获取验证码',
       codeDisabled:false,
+      phoneMark:false,
+      codeMark:false,
     }
   }
   notificationSystem = React.createRef()
@@ -32,11 +36,11 @@ export default class NumberComplainPersonal extends Component {
   companyValues = {}
 
   companyRules = {
-    'code':[{required:true,msg:'验证码不能为空'}],
     'phone': [{required:true,msg:'申诉号码不能为空'}],
     'contactPhone': [{required:true,msg:'联系方式不能为空'}],
-    'contactOther': [{required:true,msg:'联系邮箱/QQ不能为空'}],
-    'reason': [{required:true,msg:'申诉理由不能为空'}]
+    'reason': [{required:true,msg:'申诉理由不能为空'}],
+    'code': [{required:true,msg:'验证码不能为空'}],
+    'name':[{required:true,msg:'申诉人姓名不能为空'}],
   }
 
   validate = (data, rules, type) =>{
@@ -76,64 +80,25 @@ export default class NumberComplainPersonal extends Component {
     return isValid
   }
 
-  headerItemClick = (idx, row) => {
-    const {headers} = this.state
-    headers.forEach((item, index) => {
-      if(index === idx) {
-        item.active = true
-      } else {
-        item.active = false
-      }
-    })
-    this.setState({
-      headers: [...headers],
-      activeType: row.type,
-      fileContent: ''
-    })
-    this.companyValues = {}
-  }
-  fileChange = async (type, ev) => {
-    const {fileContent} = this.state
-    const {value, files} = ev.currentTarget
-    let idx = value.lastIndexOf('\\')
-    fileContent[type] = value.slice(idx+1)
-    this.setState({
-      fileContent
-    })
-    const params = new FormData()
-    params.append('source', files[0])
-    const {data} = await axios.post(`http://php.bjdglt.com:8091/V1.4/file/upload`, params)
-    const notification = this.notificationSystem.current
-    if(data.code == 200) {
-      notification.addNotification({
-        title: '提示',
-        message: '上传成功',
-        level: 'success'
-      })
-    } else {
-      notification.addNotification({
-        title: '提示',
-        message: '上传失败',
-        level: 'error'
-      })
-    }
-    if(type === 'idCard') {
-      this.companyValues.file1 = data.data
-    }
-    if(type === 'numCard') {
-      this.companyValues.file2 = data.data
-    }
-    if(type === 'otherCard') {
-      this.companyValues.file3 = data.data
-    }
-  }
+
   companyFormChange = (type, ev) => {
     const val = ev.currentTarget.value
     this.companyValues[type] = val
   }
-  companyFormSubmit = async (type) => {
+
+  companyFormSubmit = async () => {
+    const {codeMark,phoneMark,companyErrors} = this.state
+    if(!phoneMark) {
+      return
+    }
+    if(!codeMark){
+      companyErrors['code'] = {err:true,msg: '验证码不正确'}
+      this.setState({
+        companyErrors
+      })
+      return
+    }
     if(this.validate(this.companyValues, this.companyRules)){
-      console.log(this.companyValues)
       let params = new FormData()
       Object.entries(this.companyValues).forEach((item, index) => {
         params.append(item[0], item[1])
@@ -142,11 +107,7 @@ export default class NumberComplainPersonal extends Component {
       const notification = this.notificationSystem.current
 
       if (data.code == 200) {
-        notification.addNotification({
-          title: '提示',
-          message: '申诉成功',
-          level: 'success'
-        })
+        Router.replace('/numberComplain/done')
       }else {
         notification.addNotification({
           title: '提示',
@@ -158,7 +119,6 @@ export default class NumberComplainPersonal extends Component {
   }
 
   checkPhone(phone){
-
     return /^1[3456789]\d{9}$/.test(phone)
   }
   getCode = async () => {
@@ -166,10 +126,6 @@ export default class NumberComplainPersonal extends Component {
     const {companyErrors} = this.state
     const {phone} = this.companyValues
     if(this.checkPhone(phone)){
-      companyErrors['phone'] = {}
-      this.setState({
-        companyErrors
-      })
       const {data} = await axios.post(`/sms/send`, {
         phone
       })
@@ -200,38 +156,70 @@ export default class NumberComplainPersonal extends Component {
     }
 
   }
-  // 短信验证
   smsVerify = async () => {
     const {companyErrors} = this.state
     const {code, phone} = this.companyValues
-    console.log(code, phone)
+    let codeMark = false
     if(code && this.checkPhone(phone)) {
       const {data} = await axios.post('/sms/verify', {code, phone})
       if(data.code == 200) {
         companyErrors['code'] = {}
+        codeMark = true
       }else {
         companyErrors['code'] = {err:true,msg: '验证码不正确'}
       }
       this.setState({
+        codeMark,
         companyErrors
       })
     }
   }
+
+  phoneMarkCheck = async () => {
+    const {companyErrors} = this.state
+    const {phone} = this.companyValues
+    if(!this.checkPhone(phone)){
+      companyErrors['phone'] = {err:true,msg: '请输入正确的手机号'}
+      this.setState({
+        companyErrors
+      })
+      return
+    }
+    const {data:{code}} = await axios.post('/phone/check', {phone})
+    if(code == 200){
+      companyErrors['phone'] = {}
+      this.setState({
+        companyErrors,
+        phoneMark:true
+      })
+    }else {
+      let msg = ''
+      switch (code) {
+        case 1:
+          msg = '该号码无标记，无需提交申诉'
+          break
+        case 3:
+          msg = '号码标记已取消，手机端可能存在延时，请耐心等待3-5个工作日的同步时间'
+          break
+      }
+      companyErrors['phone'] = {err:true,msg}
+      this.setState({
+        phoneMark:false,
+        companyErrors
+      })
+    }
+
+  }
+
   render() {
     const {headers, activeType, fileContent, companyErrors,codeDisabled, codeText} = this.state
     return (
       <>
-        <Head>
-          <title>泰迪熊移动—号码认证|申诉|平台|查询|标记</title>
-          <meta name="keywords" content="企业号码认证,标记取消,号码识别" />
-          <meta name="description" content="通话时显示专属商企名片、 商企名片将进入中国庞大黄页库。 超过4亿级用户终端宣传显示。若您的号码变更或被错误显示，请号码所有人提交申诉。"/>
-        </Head>
-
         <div className="form">
                 <div className="form__item form__item--required">
                   <div className="form__item__label">申诉号码</div>
                   <div className="form__item__input">
-                    <input placeholder="仅支持手机号，如需申诉座机号请转到企业申诉入口" type="text" onChange={this.companyFormChange.bind(this, 'phone')} />
+                    <input placeholder="仅支持手机号，如需申诉座机号请转到企业申诉入口" onBlur={this.phoneMarkCheck} type="text" onChange={this.companyFormChange.bind(this, 'phone')} />
                     {companyErrors['phone']?.err && <span className={'errMsg'}>{companyErrors['phone'].msg}</span>}
                   </div>
                 </div>
@@ -264,7 +252,7 @@ export default class NumberComplainPersonal extends Component {
                     {companyErrors['contactPhone']?.err && <span className={'errMsg'}>{companyErrors['contactPhone'].msg}</span>}
                   </div>
                 </div>
-                <div className="form__item" onClick={this.companyFormSubmit.bind(this, 'person')}>
+                <div className="form__item" onClick={this.companyFormSubmit}>
                   <div className="form__item__btn">确认提交</div>
                 </div>
               </div>

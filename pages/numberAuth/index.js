@@ -1,9 +1,9 @@
 import {Component} from 'react'
 import axios from 'axios'
-import NotificationSystem from 'react-notification-system';
 import styles from './index.less'
 import Head from 'next/head'
-import React from "react";
+import React from "react"
+import Router from 'next/router'
 
 export default class NumberAuth extends Component {
   constructor(props) {
@@ -121,14 +121,8 @@ export default class NumberAuth extends Component {
         params.append(item[0], item[1])
       })
       const {data} = await axios.post(`/company/numberAuth`, params)
-      const notification = this.notificationSystem.current
-      notification.addNotification({
-        title: '提示',
-        message: '认证成功',
-        level: 'success'
-      })
-      if (data.code == 0) {
-        console.log('成功')
+      if (data.code == 200) {
+        Router.push('/numberAuth/success')
       }
     }
   }
@@ -225,7 +219,6 @@ export default class NumberAuth extends Component {
             </div>
           </div>
         </div>
-        <NotificationSystem ref={this.notificationSystem} />
         <style jsx>{styles}</style>
       </>
     )

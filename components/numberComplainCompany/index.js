@@ -3,7 +3,8 @@ import axios from 'axios'
 import NotificationSystem from 'react-notification-system'
 import styles from './index.less'
 import Head from 'next/head'
-import React from "react";
+import React from "react"
+import Router from 'next/router'
 
 export default class NumberComplainCompany extends Component {
   constructor(props) {
@@ -26,20 +27,23 @@ export default class NumberComplainCompany extends Component {
       companyErrors: {},
       codeText:'获取验证码',
       codeDisabled:false,
+      phoneMark:false,
+      codeMark:false,
     }
   }
-  notificationSystem = React.createRef()
 
   companyValues = {}
-
+  notificationSystem = React.createRef()
   companyRules = {
-    // 'phone': [{required:true,msg:'申诉企业不能为空'}],
     'name': [{required:true,msg:'申诉企业不能为空'}],
-    'code':[{required:true,msg:'验证码不能为空'}],
+    'code': [{required:true,msg:'验证码不能为空'}],
     'phone': [{required:true,msg:'申诉号码不能为空'}],
     'contactPhone': [{required:true,msg:'联系方式不能为空'}],
     'contactOther': [{required:true,msg:'联系邮箱/QQ不能为空'}],
-    'reason': [{required:true,msg:'申诉理由不能为空'}]
+    'reason': [{required:true,msg:'申诉理由不能为空'}],
+    'file1':[{required:true,msg:'请上传文件'}],
+    'file2':[{required:true,msg:'请上传文件'}],
+    'file3':[{required:true,msg:'请上传文件'}]
   }
 
   validate = (data, rules, type) =>{
@@ -89,7 +93,7 @@ export default class NumberComplainCompany extends Component {
     })
     const params = new FormData()
     params.append('source', files[0])
-    const {data} = await axios.post(`http://php.bjdglt.com:8091/V1.4/file/upload`, params)
+    const {data} = await axios.post(`/V1.4/file/upload`, params)
     const notification = this.notificationSystem.current
     if(data.code == 200) {
       notification.addNotification({
@@ -119,12 +123,23 @@ export default class NumberComplainCompany extends Component {
     this.companyValues[type] = val
   }
   companyFormSubmit = async (type) => {
-    if(type === 'person') {
-      delete this.companyValues.code
-      delete this.companyRules.contactOther
+    const {codeMark,phoneMark,companyErrors} = this.state
+    if(!phoneMark) {
+      //companyErrors['phone'] = {err:true,msg:'该号码无标记，无需提交申诉'}
+      // this.setState({
+      //   companyErrors
+      // })
+      return
     }
+    if(!codeMark){
+      companyErrors['code'] = {err:true,msg: '验证码不正确'}
+      this.setState({
+        companyErrors
+      })
+      return
+    }
+
     if(this.validate(this.companyValues, this.companyRules)){
-      console.log(this.companyValues)
       let params = new FormData()
       Object.entries(this.companyValues).forEach((item, index) => {
         params.append(item[0], item[1])
@@ -133,11 +148,7 @@ export default class NumberComplainCompany extends Component {
       const notification = this.notificationSystem.current
 
       if (data.code == 200) {
-        notification.addNotification({
-          title: '提示',
-          message: '申诉成功',
-          level: 'success'
-        })
+        Router.replace('/numberComplain/success')
       }else {
         notification.addNotification({
           title: '提示',
@@ -146,12 +157,17 @@ export default class NumberComplainCompany extends Component {
         })
       }
     }
+
   }
 
   checkPhone(phone){
-
     return /^1[3456789]\d{9}$/.test(phone)
   }
+  checkTel(tel){
+    return /\d{3,4}[-]\d{7,8}/.test(tel)
+  }
+
+
   getCode = async () => {
     // 获取验证码
     const {companyErrors} = this.state
@@ -191,19 +207,57 @@ export default class NumberComplainCompany extends Component {
     }
 
   }
+  phoneMarkCheck = async () => {
+    const {companyErrors} = this.state
+    const {phone} = this.companyValues
+    if(!(this.checkPhone(phone) || this.checkTel(phone))){
+      companyErrors['phone'] = {err:true,msg: '请输入正确的手机号'}
+      this.setState({
+        companyErrors
+      })
+      return
+    }
+    const {data:{code}} = await axios.post('/phone/check', {phone})
+    if(code == 200){
+      companyErrors['phone'] = {}
+      this.setState({
+        companyErrors,
+        phoneMark:true
+      })
+    }else {
+      let msg = ''
+      switch (code) {
+        case 1:
+          msg = '该号码无标记，无需提交申诉'
+          break
+        case 3:
+          msg = '号码标记已取消，手机端可能存在延时，请耐心等待3-5个工作日的同步时间'
+          break
+      }
+      companyErrors['phone'] = {err:true,msg}
+      this.setState({
+        phoneMark:false,
+        companyErrors
+      })
+    }
+
+  }
+
   // 短信验证
   smsVerify = async () => {
     const {companyErrors} = this.state
     const {code, contactPhone} = this.companyValues
-    console.log(code, contactPhone)
+    let codeMark = false
     if(code && this.checkPhone(contactPhone)) {
       const {data} = await axios.post('/sms/verify', {code, phone:contactPhone})
       if(data.code == 200) {
         companyErrors['code'] = {}
+        codeMark = true
       }else {
         companyErrors['code'] = {err:true,msg: '验证码不正确'}
       }
       this.setState({
+        codeMark,
         companyErrors
       })
     }
@@ -216,7 +270,7 @@ export default class NumberComplainCompany extends Component {
                 <div className="form__item form__item--required">
                   <div className="form__item__label">申诉号码</div>
                   <div className="form__item__input">
-                    <input placeholder="输入号码，如果是座机号请加上区号" onChange={this.companyFormChange.bind(this, 'phone')} type="text" />
+                    <input placeholder="输入号码，如果是座机号请加上区号" onBlur={this.phoneMarkCheck} onChange={this.companyFormChange.bind(this, 'phone')} type="text" />
                     {companyErrors['phone']?.err && <span className={'errMsg'}>{companyErrors['phone'].msg}</span>}
                   </div>
                 </div>
@@ -244,6 +298,7 @@ export default class NumberComplainCompany extends Component {
                         <img src="http://img.teddymobile.cn/www/images/numberSign/upload-icon.png" />
                         <input className="file"  onChange={this.fileChange.bind(this, 'idCard')} type="file" id="idCard"/>
                         <label htmlFor="idCard">选择文件</label>
+                        {companyErrors['file1']?.err && <span className={'errMsg'}>{companyErrors['file1'].msg}</span>}
                       </div>
                       {
                         fileContent['idCard'] && <div className="file-content">{fileContent['idCard']}</div>
@@ -255,6 +310,7 @@ export default class NumberComplainCompany extends Component {
                         <img src="http://img.teddymobile.cn/www/images/numberSign/upload-icon.png" />
                         <input className="file" onChange={this.fileChange.bind(this, 'numCard')} type="file" id="numCard"/>
                         <label htmlFor="numCard">选择文件</label>
+                        {companyErrors['file2']?.err && <span className={'errMsg'}>{companyErrors['file2'].msg}</span>}
                       </div>
                       {
                         fileContent['numCard'] && <div className="file-content">{fileContent['numCard']}</div>
@@ -266,6 +322,7 @@ export default class NumberComplainCompany extends Component {
                         <img src="http://img.teddymobile.cn/www/images/numberSign/upload-icon.png" />
                         <input className="file" onChange={this.fileChange.bind(this, 'otherCard')} type="file" id="otherCard"/>
                         <label htmlFor="otherCard">选择文件</label>
+                        {companyErrors['file3']?.err && <span className={'errMsg'}>{companyErrors['file3'].msg}</span>}
                       </div>
                       {
                         fileContent['otherCard'] && <div className="file-content">{fileContent['otherCard']}</div>
@@ -302,10 +359,10 @@ export default class NumberComplainCompany extends Component {
                   </div>
                 </div>
                 <div className="form__item" onClick={this.companyFormSubmit.bind(this, 'company')}>
-                  <div className="form__item__btn">确认提交</div>
+                  <div className={`form__item__btn`}>确认提交</div>
                 </div>
+              <NotificationSystem ref={this.notificationSystem} />
               </div>
-        <NotificationSystem ref={this.notificationSystem} />
         <style jsx>{styles}</style>
       </>
     )
