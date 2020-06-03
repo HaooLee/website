@@ -1,5 +1,4 @@
 import {Component} from 'react'
-import Link from 'next/link'
 import SliderList from '@/components/sliderList'
 import styles from './index.less'
 import axios from '@/util/http'
