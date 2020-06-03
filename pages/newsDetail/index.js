@@ -61,7 +61,7 @@ export default class NewsDetail extends Component {
       <>
         <Head>
           <title>{current.news_title + '-泰迪熊移动'}</title>
-          <meta name="keywords" content="泰迪熊移动资讯" />
+          <meta name="keywords" content={current.news_source} />
           <meta name="description" content={current.news_des}/>
           <link rel="stylesheet" href="/static/css/news.css"/>
         </Head>
