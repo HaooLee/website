@@ -9,40 +9,55 @@ import React from "react";
 export default class News extends Component {
   static async getInitialProps({Component, router, ctx}) {
     try {
-      const {data} = await axios.get(`${process.browser?'':'http://test-bg-td.teddymobile.cn'}/V1.4/news/getlist?news_type=1`)
-      return {news: data.data.list}
+      const {data:{data}} = await axios.get(`${process.browser?'':'http://test-bg-td.teddymobile.cn'}/api/newsCategory/lists`)
+      const {data:{data:{list}}} = await axios.get(`${process.browser?'':'http://test-bg-td.teddymobile.cn'}/api/news/getlist?type=${data[0].id}`)
+      return {news: list, list: data}
     }catch (e) {
-      return {news: []}
+      return {news: [],list: []}
     }
   }
   constructor(props) {
     super(props)
     this.state.news = props.news
+    this.state.currentTypeIndex = props.list[0].id
+    this.state.list = props.list.map((i, idx) => {
+      let active = false
+      if (idx === 0) {
+        active = true
+      }
+      return {
+        ...i,
+        active
+      }
+    })
   }
+
+
 
   state = {
-    list: [
-      {
-        name: '资讯列表',
-        active: true
-      },
-      {
-        name: '专题区',
-        active: false
-      },
-      {
-        name: '荣誉',
-        active: false
-      },
-      {
-        name: '疫情',
-        active: false
-      }
-    ]
+
+    // list: [
+    //   {
+    //     name: '资讯列表',
+    //     active: true
+    //   },
+    //   {
+    //     name: '专题区',
+    //     active: false
+    //   },
+    //   {
+    //     name: '荣誉',
+    //     active: false
+    //   },
+    //   {
+    //     name: '疫情',
+    //     active: false
+    //   }
+    // ]
   }
 
 
-   clickCallback = async (index) => {
+   clickCallback = async (index,i) => {
     const {list} = this.state
     list.forEach((item, idx) => {
       if(index === idx) {
@@ -51,14 +66,15 @@ export default class News extends Component {
         item.active = false
       }
     })
-     const {data} = await axios.get('/V1.4/news/getlist?news_type=' + (index + 1))
+    const {data} = await axios.get('/api/news/getlist?type=' + i.id)
     this.setState({
       news: data.data.list,
+      currentTypeIndex:i.id,
       list: [...list]
     })
   }
   render() {
-    const {list,news} = this.state
+    const {list,news,currentTypeIndex} = this.state
     // const {} = this.props
     return (
       <>
@@ -76,7 +92,7 @@ export default class News extends Component {
           <SliderList list={list} clickCallback={this.clickCallback}></SliderList>
           <ul className="news__content col-10">
             {news.map((item, idx) => (
-              <NewsCard item={item} key={idx}></NewsCard>
+              <NewsCard item={item} type={currentTypeIndex} key={idx}></NewsCard>
             ))}
             {/* <div className="load-more">加载更多</div> */}
           </ul>

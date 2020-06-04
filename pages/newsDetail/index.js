@@ -10,11 +10,11 @@ import Link from 'next/link'
 export default class NewsDetail extends Component {
   static async getInitialProps({Component, router, ctx, req, query}) {
     try {
-      const {id} = query
-      const {data} = await axios.post(`${process.browser?'':'http://test-bg-td.teddymobile.cn'}/V1.4/news/detail`, {nid: id})
-      return {newsDetail: data.data}
+      const {id,type = 1} = query
+      const {data} = await axios.post(`${process.browser?'':'http://test-bg-td.teddymobile.cn'}/api/news/detail`, {nid: id, type})
+      return {newsDetail: data.data, type}
     }catch (e) {
-      return {newsDetail:{current:""}}
+      return {newsDetail:{current:""}, type}
     }
 
   }
@@ -56,7 +56,7 @@ export default class NewsDetail extends Component {
   }
   render() {
     const {list} = this.state
-    const {newsDetail:{current,prev,next}} = this.props
+    const {newsDetail:{current,prev,next},type} = this.props
     return (
       <>
         <Head>
@@ -81,12 +81,12 @@ export default class NewsDetail extends Component {
             <div className={'pagination clearfix'}>
               <div className={'prev'}>
                 {
-                  prev? <Link href={`newsDetail?id=${prev.nid}`}><a>上一篇 : {prev.news_title}</a></Link>:<span>上一篇 : 暂无</span>
+                  prev? <Link href={`newsDetail?id=${prev.nid}&type=${type}`}><a>上一篇 : {prev.news_title}</a></Link>:<span>上一篇 : 暂无</span>
                 }
               </div>
               <div className={'next'}>
                 {
-                  next? <Link href={`newsDetail?id=${next.nid}`}><a>下一篇 : {next.news_title}</a></Link>:<span>下一篇 : 暂无</span>
+                  next? <Link href={`newsDetail?id=${next.nid}&type=${type}`}><a>下一篇 : {next.news_title}</a></Link>:<span>下一篇 : 暂无</span>
                 }
               </div>
 

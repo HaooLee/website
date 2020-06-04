@@ -40,6 +40,9 @@ server.router('/file', (req, res) => {
 server.router('/V1.4', (req, res) => {
   proxy.web(req, res);
 })
+server.router('/api', (req, res) => {
+  proxy.web(req, res);
+})
 server.router(/.*/, (req, res) => {
   const parsedUrl = parse(req.url, true)
   handle(req, res, parsedUrl)

@@ -84,8 +84,17 @@ export default class NumberComplainCompany extends Component {
   }
 
   fileChange = async (type, ev) => {
-    const {fileContent} = this.state
+    const {fileContent, companyErrors} = this.state
     const {value, files} = ev.currentTarget
+
+    const map = {'idCard':'file1','numCard':'file2','otherCard':'file3'}
+    if(files[0].size >  5*1024 *1024){
+      companyErrors[map[type]] = {err:true,msg:'图片大小不能超过5M'}
+      this.setState({
+        companyErrors
+      })
+      return
+    }
     let idx = value.lastIndexOf('\\')
     fileContent[type] = value.slice(idx+1)
     this.setState({
@@ -110,12 +119,24 @@ export default class NumberComplainCompany extends Component {
     }
     if(type === 'idCard') {
       this.companyValues.file1 = data.data
+      companyErrors['file1'] = {}
+      this.setState({
+        companyErrors
+      })
     }
     if(type === 'numCard') {
       this.companyValues.file2 = data.data
+      companyErrors['file2'] = {}
+      this.setState({
+        companyErrors
+      })
     }
     if(type === 'otherCard') {
       this.companyValues.file3 = data.data
+      companyErrors['file3'] = {}
+      this.setState({
+        companyErrors
+      })
     }
   }
   companyFormChange = (type, ev) => {
@@ -125,10 +146,10 @@ export default class NumberComplainCompany extends Component {
   companyFormSubmit = async (type) => {
     const {codeMark,phoneMark,companyErrors} = this.state
     if(!phoneMark) {
-      //companyErrors['phone'] = {err:true,msg:'该号码无标记，无需提交申诉'}
-      // this.setState({
-      //   companyErrors
-      // })
+      companyErrors['phone'] = {err:true,msg:'该号码为空或无需提交申诉'}
+      this.setState({
+        companyErrors
+      })
       return
     }
     if(!codeMark){
