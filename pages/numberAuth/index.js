@@ -143,7 +143,7 @@ export default class NumberAuth extends Component {
         </Head>
         <div className="banner">
           <div className="banner__text w">
-            认证通道
+            号码标识
           </div>
         </div>
         <div className="complain-wrap">

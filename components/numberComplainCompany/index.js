@@ -147,8 +147,10 @@ export default class NumberComplainCompany extends Component {
       const {data} = await axios.post( `/company/numberComplain`, params)
       const notification = this.notificationSystem.current
 
-      if (data.code == 200) {
+      if (data.code == 0) {
         Router.replace('/numberComplain/success')
+      }else if(data.code == 1 || data.code == 2 || data.code == 3) {
+        Router.replace('/numberComplain/done')
       }else {
         notification.addNotification({
           title: '提示',
