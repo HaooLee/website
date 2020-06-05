@@ -66,7 +66,7 @@ export default class Header extends React.Component {
         enable:true
       },
       {
-        title:'号码标识',
+        title:'认证通道',
         link:'/numberSign',
         enable:true
       },

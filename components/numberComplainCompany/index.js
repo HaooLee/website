@@ -102,7 +102,7 @@ export default class NumberComplainCompany extends Component {
     })
     const params = new FormData()
     params.append('source', files[0])
-    const {data} = await axios.post(`/V1.4/file/upload`, params)
+    const {data} = await axios.post(`/api/file/upload`, params)
     const notification = this.notificationSystem.current
     if(data.code == 200) {
       notification.addNotification({
