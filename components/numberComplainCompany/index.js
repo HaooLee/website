@@ -253,7 +253,7 @@ export default class NumberComplainCompany extends Component {
         case 1:
           msg = '该号码无标记，无需提交申诉'
           break
-        case 3:
+        case 2:
           msg = '号码标记已取消，手机端可能存在延时，请耐心等待3-5个工作日的同步时间'
           break
       }
