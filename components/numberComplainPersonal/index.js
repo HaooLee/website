@@ -103,7 +103,7 @@ export default class NumberComplainPersonal extends Component {
       Object.entries(this.companyValues).forEach((item, index) => {
         params.append(item[0], item[1])
       })
-      const {data} = await axios.post(`/single/numberComplain` , params)
+      const {data} = await axios.post(`/api/single/numberComplain` , params)
       const notification = this.notificationSystem.current
 
       if (data.code == 0) {
@@ -128,7 +128,7 @@ export default class NumberComplainPersonal extends Component {
     const {companyErrors} = this.state
     const {phone} = this.companyValues
     if(this.checkPhone(phone)){
-      const {data} = await axios.post(`/sms/send`, {
+      const {data} = await axios.post(`/api/sms/send`, {
         phone
       })
       if(data.code == 200) {
