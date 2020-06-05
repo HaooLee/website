@@ -120,7 +120,7 @@ export default class NumberAuth extends Component {
       Object.entries(this.values).forEach((item, index) => {
         params.append(item[0], item[1])
       })
-      const {data} = await axios.post(`/company/numberAuth`, params)
+      const {data} = await axios.post(`/api/company/numberAuth`, params)
       if (data.code == 200) {
         Router.push('/numberAuth/success')
       }
@@ -143,7 +143,7 @@ export default class NumberAuth extends Component {
         </Head>
         <div className="banner">
           <div className="banner__text w">
-            认证通道
+            号码标识
           </div>
         </div>
         <div className="complain-wrap">

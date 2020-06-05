@@ -32,6 +32,7 @@ export default class NumberComplainCompany extends Component {
     }
   }
 
+  timer = 0
   companyValues = {}
   notificationSystem = React.createRef()
   companyRules = {
@@ -44,6 +45,10 @@ export default class NumberComplainCompany extends Component {
     'file1':[{required:true,msg:'请上传文件'}],
     'file2':[{required:true,msg:'请上传文件'}],
     'file3':[{required:true,msg:'请上传文件'}]
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer)
   }
 
   validate = (data, rules, type) =>{
@@ -208,7 +213,7 @@ export default class NumberComplainCompany extends Component {
           codeDisabled:true
         })
         let sec = 60
-        let timer = setInterval(()=>{
+        this.timer = setInterval(()=>{
           if(--sec > 0){
             this.setState({
               codeText:`${sec}秒后重试`
@@ -230,9 +235,43 @@ export default class NumberComplainCompany extends Component {
     }
 
   }
+  checkContactPhone = ()=>{
+    const {companyErrors} = this.state
+    const {contactPhone} = this.companyValues
+    if(!contactPhone){
+      companyErrors['contactPhone'] ={}
+      this.setState({
+        companyErrors
+      })
+      return
+    }
+    if(this.checkPhone(contactPhone)) {
+      companyErrors['contactPhone'] = {}
+      this.setState({
+        companyErrors
+      })
+      return
+    }else {
+      companyErrors['contactPhone'] = {err:true, msg:'请输入正确的手机号'}
+      this.setState({
+        companyErrors
+      })
+      return
+    }
+
+  }
+
   phoneMarkCheck = async () => {
     const {companyErrors} = this.state
     const {phone} = this.companyValues
+    if(!phone){
+      companyErrors['phone'] ={}
+      this.setState({
+        companyErrors,
+        phoneMark:false
+      })
+      return
+    }
     if(!(this.checkPhone(phone) || this.checkTel(phone))){
       companyErrors['phone'] = {err:true,msg: '请输入正确的手机号'}
       this.setState({
@@ -300,7 +339,7 @@ export default class NumberComplainCompany extends Component {
                  <div className="form__item form__item--required">
                   <div className="form__item__label">申诉人手机号</div>
                   <div className="form__item__input">
-                    <input placeholder="请留下您最常用的手机号，以便我们及时联系并申诉"  onChange={this.companyFormChange.bind(this, 'contactPhone')} type="text" />
+                    <input placeholder="请留下您最常用的手机号，以便我们及时联系并申诉" onBlur={this.checkContactPhone}  onChange={this.companyFormChange.bind(this, 'contactPhone')} type="text" />
                     {companyErrors['contactPhone']?.err && <span className={'errMsg'}>{companyErrors['contactPhone'].msg}</span>}
                   </div>
                 </div>
