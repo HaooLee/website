@@ -126,6 +126,13 @@ export default class NumberAuth extends Component {
       }
     }
   }
+  clearError = (prop) => {
+    const {errors} = this.state
+    errors[prop] = {}
+    this.setState({
+      errors
+    })
+  }
 
   formChange = (type, ev) => {
     const val = ev.currentTarget.value
@@ -161,14 +168,14 @@ export default class NumberAuth extends Component {
                 <div className="form__item form__item--required">
                   <div className="form__item__label">认证人姓名</div>
                   <div className="form__item__input">
-                    <input placeholder="请填写您的姓名" onChange={this.formChange.bind(this, 'name')} type="text" />
+                    <input placeholder="请填写您的姓名" onFocus={()=> this.clearError('name')} onChange={this.formChange.bind(this, 'name')} type="text" />
                     {errors['name']?.err && <span className={'errMsg'}>{errors['name'].msg}</span>}
                   </div>
                 </div>
                 <div className="form__item form__item--required">
                   <div className="form__item__label">认证企业全称</div>
                   <div className="form__item__input">
-                    <input placeholder="请输入您的企业全称" onChange={this.formChange.bind(this, 'company_name')} type="text" />
+                    <input placeholder="请输入您的企业全称" onFocus={()=> this.clearError('company_name')} onChange={this.formChange.bind(this, 'company_name')} type="text" />
                     {errors['company_name']?.err && <span className={'errMsg'}>{errors['company_name'].msg}</span>}
                   </div>
                   {/* {companyError && <div className="form__item__input--error">
@@ -179,7 +186,7 @@ export default class NumberAuth extends Component {
                 <div className="form__item form__item--required">
                   <div className="form__item__label">联系电话</div>
                   <div className="form__item__input">
-                    <input placeholder="请留下您的联系电话，以便我们能够及时为您提供服务" onChange={this.formChange.bind(this, 'phone')} type="text" />
+                    <input placeholder="请留下您的联系电话，以便我们能够及时为您提供服务" onFocus={()=> this.clearError('phone')} onChange={this.formChange.bind(this, 'phone')} type="text" />
                     {errors['phone']?.err && <span className={'errMsg'}>{errors['phone'].msg}</span>}
                   </div>
                   {/* {phoneError && <div className="form__item__input--error">
@@ -189,21 +196,21 @@ export default class NumberAuth extends Component {
                 <div className="form__item form__item--required">
                   <div className="form__item__label">所属城市</div>
                   <div className="form__item__input">
-                    <input placeholder="请填写您的所属城市" onChange={this.formChange.bind(this, 'city')} type="text" />
+                    <input placeholder="请填写您的所属城市" onFocus={()=> this.clearError('city')} onChange={this.formChange.bind(this, 'city')} type="text" />
                     {errors['city']?.err && <span className={'errMsg'}>{errors['city'].msg}</span>}
                   </div>
                 </div>
                 <div className="form__item form__item--required">
                   <div className="form__item__label">所属行业</div>
                   <div className="form__item__input">
-                    <input placeholder="请填写您的所属行业" onChange={this.formChange.bind(this, 'industry')} type="text" />
+                    <input placeholder="请填写您的所属行业" onFocus={()=> this.clearError('industry')} onChange={this.formChange.bind(this, 'industry')} type="text" />
                     {errors['industry']?.err && <span className={'errMsg'}>{errors['industry'].msg}</span>}
                   </div>
                 </div>
                 <div className="form__item form__item--required">
                   <div className="form__item__label">邮箱</div>
                   <div className="form__item__input">
-                    <input placeholder="请输入您的邮箱" onChange={this.formChange.bind(this, 'email')} type="text" />
+                    <input placeholder="请输入您的邮箱" onFocus={()=> this.clearError('email')} onChange={this.formChange.bind(this, 'email')} type="text" />
                     {errors['email']?.err && <span className={'errMsg'}>{errors['email'].msg}</span>}
                   </div>
                   {/* {
