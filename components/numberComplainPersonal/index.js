@@ -167,7 +167,7 @@ export default class NumberComplainPersonal extends Component {
     const {code, phone} = this.companyValues
     let codeMark = false
     if(code && this.checkPhone(phone)) {
-      const {data} = await axios.post('/sms/verify', {code, phone})
+      const {data} = await axios.post('/api/sms/verify', {code, phone})
       if(data.code == 200) {
         companyErrors['code'] = {}
         codeMark = true
@@ -191,7 +191,7 @@ export default class NumberComplainPersonal extends Component {
       })
       return
     }
-    const {data:{code}} = await axios.post('/phone/check', {phone})
+    const {data:{code}} = await axios.post('/api/phone/check', {phone})
     if(code == 200){
       companyErrors['phone'] = {}
       this.setState({
