@@ -19,13 +19,7 @@ const proxy = httpProxy.createProxyServer({
 server.router('/case/:type', (req, res) => {
   app.render(req, res, '/case', req.query)
 })
-server.router('/sms', (req, res) => {
-  proxy.web(req, res);
-})
 server.router('/company', (req, res) => {
-  proxy.web(req, res);
-})
-server.router('/phone', (req, res) => {
   proxy.web(req, res);
 })
 server.router('/mail', (req, res) => {

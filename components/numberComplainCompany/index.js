@@ -200,7 +200,7 @@ export default class NumberComplainCompany extends Component {
       this.setState({
         companyErrors
       })
-      const {data} = await axios.post(`/sms/send`, {
+      const {data} = await axios.post(`/api/sms/send`, {
         phone:contactPhone
       })
       if(data.code == 200) {
