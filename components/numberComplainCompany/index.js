@@ -273,7 +273,7 @@ export default class NumberComplainCompany extends Component {
       return
     }
     if(!(this.checkPhone(phone) || this.checkTel(phone))){
-      companyErrors['phone'] = {err:true,msg: '请输入正确的手机号'}
+      companyErrors['phone'] = {err:true,msg: '请输入正确的电话号码,座机请加区号'}
       this.setState({
         companyErrors
       })

@@ -73,7 +73,7 @@ export default class NumberComplain extends Component {
 
         <div className="banner">
           <div className="banner__text w">
-            认证通道
+            号码标识
           </div>
         </div>
         <div className="complain-wrap">
@@ -99,7 +99,7 @@ export default class NumberComplain extends Component {
               <p>4.为什么拨打号码时，显示“某公司/店铺的名称”。例如：“北京泰迪熊移动科技有限公司”或“泰迪熊”?</p>
               <p>答： 这是泰迪熊移动基于号码大数据为企业提供的移动端品牌展示服务。</p>
               <p>5、假如我的号码被标记了，例如：“快递送餐/广告推销”,数据由泰迪熊移动提供，需要如何处理？</p>
-              <p>答：号码标识问题可进入泰迪熊移动官网：<a href="https://www.teddymobile.cn">https://www.teddymobile.cn</a>进行处理;具体步骤:官网首页--认证通道--号码申诉--个人/企业提交申诉（座机号码需要加区号）。</p>
+              <p>答：号码标识问题可进入泰迪熊移动官网：<a href="https://www.teddymobile.cn">https://www.teddymobile.cn</a>进行处理;具体步骤:官网首页--号码标识--号码申诉--个人/企业提交申诉（座机号码需要加区号）。</p>
               <p>6、号码申诉是否收费?</p>
               <p>答：通过泰迪熊移动进行号码申诉，不收取任何费用。</p>
               <p>7、号码申诉提交后，处理时效是多久？</p>
