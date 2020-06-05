@@ -89,6 +89,10 @@ export default class NumberComplainPersonal extends Component {
   companyFormSubmit = async () => {
     const {codeMark,phoneMark,companyErrors} = this.state
     if(!phoneMark) {
+      companyErrors['phone'] = {err:true,msg:'该号码为空或无需提交申诉'}
+      this.setState({
+        companyErrors
+      })
       return
     }
     if(!codeMark){
