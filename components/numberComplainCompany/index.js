@@ -192,7 +192,7 @@ export default class NumberComplainCompany extends Component {
     return /^1[3456789]\d{9}$/.test(phone)
   }
   checkTel(tel){
-    return /0\d{9,11}/g.test(tel)
+    return /^0\d{9,11}/g.test(tel)
   }
 
 
@@ -279,29 +279,38 @@ export default class NumberComplainCompany extends Component {
       })
       return
     }
-    const {data:{code}} = await axios.post('/api/phone/check', {phone})
-    if(code == 200){
-      companyErrors['phone'] = {}
-      this.setState({
-        companyErrors,
-        phoneMark:true
-      })
-    }else {
-      let msg = ''
-      switch (code) {
-        case 1:
-          msg = '该号码无标记，无需提交申诉'
-          break
-        case 2:
-          msg = '号码标记已取消，手机端可能存在延时，请耐心等待3-5个工作日的同步时间'
-          break
+    try {
+      const {data:{code}} = await axios.post('/api/phone/check', {phone})
+      if(code == 200){
+        companyErrors['phone'] = {}
+        this.setState({
+          companyErrors,
+          phoneMark:true
+        })
+      }else {
+        let msg = ''
+        switch (code) {
+          case 1:
+            msg = '该号码无标记，无需提交申诉'
+            break
+          case 2:
+            msg = '号码标记已取消，手机端可能存在延时，请耐心等待3-5个工作日的同步时间'
+            break
+        }
+        companyErrors['phone'] = {err:true,msg}
+        this.setState({
+          phoneMark:false,
+          companyErrors
+        })
       }
-      companyErrors['phone'] = {err:true,msg}
+    }catch (e) {
+      companyErrors['phone'] = {err:true,msg:'网络异常,请检查网络连接'}
       this.setState({
         phoneMark:false,
         companyErrors
       })
     }
+
 
   }
 
