@@ -105,39 +105,39 @@ export default class NumberComplainCompany extends Component {
     this.setState({
       fileContent
     })
-    const params = new FormData()
-    params.append('source', files[0])
-    const {data} = await axios.post(`/api/file/upload`, params)
-    const notification = this.notificationSystem.current
-    if(data.code == 200) {
-      notification.addNotification({
-        title: '提示',
-        message: '上传成功',
-        level: 'success'
-      })
-    } else {
-      notification.addNotification({
-        title: '提示',
-        message: '上传失败',
-        level: 'error'
-      })
-    }
+    // const params = new FormData()
+    // params.append('source', files[0])
+    // const {data} = await axios.post(`/api/file/upload`, params)
+    // const notification = this.notificationSystem.current
+    // if(data.code == 200) {
+    //   notification.addNotification({
+    //     title: '提示',
+    //     message: '上传成功',
+    //     level: 'success'
+    //   })
+    // } else {
+    //   notification.addNotification({
+    //     title: '提示',
+    //     message: '上传失败',
+    //     level: 'error'
+    //   })
+    // }
     if(type === 'idCard') {
-      this.companyValues.file1 = data.data
+      this.companyValues.file1 = files[0]
       companyErrors['file1'] = {}
       this.setState({
         companyErrors
       })
     }
     if(type === 'numCard') {
-      this.companyValues.file2 = data.data
+      this.companyValues.file2 = files[0]
       companyErrors['file2'] = {}
       this.setState({
         companyErrors
       })
     }
     if(type === 'otherCard') {
-      this.companyValues.file3 = data.data
+      this.companyValues.file3 = files[0]
       companyErrors['file3'] = {}
       this.setState({
         companyErrors
