@@ -156,7 +156,7 @@ export default class NumberComplainPersonal extends Component {
               codeText:`获取验证码`,
               codeDisabled:false
             })
-            clearInterval(timer)
+            clearInterval(this.timer)
           }
         },1000)
       }
