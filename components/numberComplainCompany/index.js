@@ -192,7 +192,7 @@ export default class NumberComplainCompany extends Component {
     return /^1[3456789]\d{9}$/.test(phone)
   }
   checkTel(tel){
-    return /\d{3,4}[-]\d{7,8}/.test(tel)
+    return /0\d{9,11}/.test(tel)
   }
 
 

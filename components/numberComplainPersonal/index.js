@@ -239,7 +239,7 @@ export default class NumberComplainPersonal extends Component {
                     {companyErrors['phone']?.err && <span className={'errMsg'}>{companyErrors['phone'].msg}</span>}
                   </div>
                 </div>
-                <div className="form__item">
+                <div className="form__item form__item--required">
                   <div className="form__item__label">验证码</div>
                   <div className="form__item__input">
                     <input placeholder="请输入您的手机验证码" onBlur={this.smsVerify} onChange={this.companyFormChange.bind(this, 'code')} type="text" />
