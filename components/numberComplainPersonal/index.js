@@ -83,6 +83,11 @@ export default class NumberComplainPersonal extends Component {
 
 
   companyFormChange = (type, ev) => {
+    if(type == 'phone'){
+      this.setState({
+        codeMark:false
+      })
+    }
     const val = ev.currentTarget.value
     this.companyValues[type] = val
   }
