@@ -3,7 +3,7 @@
 echo '开始拉取git代码'
 
 git fetch --all
-git reset --hard origin/develop
+git reset --hard origin/master
 git pull
 
 chmod u+x restart.sh
