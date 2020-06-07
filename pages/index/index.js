@@ -29,7 +29,7 @@ function SamplePrevArrow(props) {
 export default class Index extends React.Component {
   static async getInitialProps({Component, router, ctx}) {
     try {
-      const {data:{data:{list}}} = await axios.get(`${process.browser?'':'http://test-bg-td.teddymobile.cn'}/V1.4/news/getlist`)
+      const {data:{data:{list}}} = await axios.get(`${process.browser?'':'http://test-bg-td.teddymobile.cn'}/api/news/getlist`)
       return {news: list}
     }catch (e) {
       return {news:[]}
@@ -242,32 +242,32 @@ export default class Index extends React.Component {
         </section>
         <SectionCard title={'为不同行业提供专业的全场景营销解决方案'} bgc={"#F8FAFF"} >
           <div className="solution-card-wrap">
-            <Link href={'/case/insurance'}>
+            <Link href={'/solution?cate=bank'}>
               <div>
                 <SolutionCard src={'http://img.teddymobile.cn/www/images/jr.png'} title={'银行/保险'}/>
               </div>
             </Link>
-            <Link href={'/case/operator'}>
+            <Link href={'/solution?cate=operator'}>
               <div>
               <SolutionCard src={'http://img.teddymobile.cn/www/images/运营商@2x.png'} title={'运营商'}/>
               </div>
             </Link>
-            <Link href={'/case/education'}>
+            <Link href={'/solution?cate=net'}>
               <div>
               <SolutionCard src={'http://img.teddymobile.cn/www/images/互联网@2x.png'} title={'互联网'}/>
               </div>
             </Link>
-            <Link href={'/case/resale'}>
+            <Link href={'/solution?cate=FMCG'}>
               <div>
               <SolutionCard src={'http://img.teddymobile.cn/www/images/新零售@2x.png'} title={'快消品'}/>
               </div>
             </Link>
-            <Link href={'/case/resale'}>
+            <Link href={'/solution?cate=new-retail'}>
               <div>
               <SolutionCard src={'http://img.teddymobile.cn/www/images/互联网金融@2x.png'} title={'新零售'}/>
               </div>
             </Link>
-            <Link href={'/case/e-commerce'}>
+            <Link href={'/solution?cate=e-commerce'}>
               <div>
               <SolutionCard src={'http://img.teddymobile.cn/www/images/电商@2x.png'} title={'电商'}/>
               </div>

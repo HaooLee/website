@@ -74,7 +74,7 @@ export default class FloatWindow extends react.Component {
       Object.entries(this.values).forEach((item, index) => {
         params.append(item[0], item[1])
       })
-      const {data} = await axios.post(`/mail/send `, params)
+      const {data} = await axios.post(`/api/mail/send `, params)
       const notification = this.notificationSystem.current
       const { dispatch } = this.props
       dispatch({type:'FLOAT_WINDOW_HIDE'})
@@ -83,10 +83,7 @@ export default class FloatWindow extends react.Component {
         message: '提交成功',
         level: 'success'
       })
-
     }
-
-
   }
 
   formChange = (name, value) => {

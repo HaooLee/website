@@ -7,10 +7,10 @@ export default class NewsCard extends React.Component{
   }
 
   render() {
-  const {item = {}, customClassName=""} = this.props
+  const {item = {}, customClassName="", type=""} = this.props
     return (
       <>
-        <Link href={`/newsDetail?id=${item.nid}`} passHref>
+        <Link href={`/newsDetail?id=${item.nid}&type=${type}`} passHref>
           <a className={customClassName}>
             <li className="news__content__item clearfix">
               <img className="news__content__item__img" src={item.news_cover || 'http://img.teddymobile.cn/www/images/news/company.png'} />

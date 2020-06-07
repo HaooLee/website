@@ -19,22 +19,7 @@ const proxy = httpProxy.createProxyServer({
 server.router('/case/:type', (req, res) => {
   app.render(req, res, '/case', req.query)
 })
-server.router('/sms', (req, res) => {
-  proxy.web(req, res);
-})
-server.router('/company', (req, res) => {
-  proxy.web(req, res);
-})
-server.router('/mail', (req, res) => {
-  proxy.web(req, res);
-})
-server.router('/single', (req, res) => {
-  proxy.web(req, res);
-})
-server.router('/file', (req, res) => {
-  proxy.web(req, res);
-})
-server.router('/V1.4', (req, res) => {
+server.router('/api', (req, res) => {
   proxy.web(req, res);
 })
 server.router(/.*/, (req, res) => {
@@ -46,7 +31,7 @@ server.router(/.*/, (req, res) => {
 app.prepare().then(() => {
   server.listen(3008, err => {
     if (err) throw err
-    console.log(`> Ready on http://localhost:3000; App mode: ${process.env.HHB_FE_MODE}`)
+    console.log(`> Ready on http://localhost:3008; App mode: ${process.env.NODE_ENV}`)
   })
 
   // createServer((req, res) => {

@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import TabBarCard from '@/components/tabBarCard'
 import SectionCard from '@/components/sectionCard'
 import styles from './index.less'
+import { withRouter } from 'next/router'
 import Head from 'next/head'
 import React from "react";
 
@@ -21,13 +22,15 @@ function SamplePrevArrow(props) {
     <img className={className} onClick={onClick} style={{width:18,height:30}} src="http://img.teddymobile.cn/www/images/left.png"/>
   )
 }
+
+
 @connect()
-export default class Solution extends Component {
+export default withRouter(class Solution extends Component {
   constructor(props) {
     super(props)
     this.state = {
       tabBarList: [{
-        active: true,
+        active: false,
         name: '银行/保险',
         type: 'bank'
       }, {
@@ -140,6 +143,19 @@ export default class Solution extends Component {
         ['http://img.teddymobile.cn/www/images/solution/partner/度小满@2x.png']
       ]
     }
+
+
+     let res =  this.state.tabBarList.find(i=>i.type == props.router.query.cate)
+      if(res){
+        res.active = true
+        this.state.activeType = props.router.query.cate
+      }else {
+        this.state.tabBarList[0].active = true
+      }
+
+
+
+
   }
   tabBarClick = (idx, row) => {
     const {tabBarList} = this.state
@@ -248,4 +264,4 @@ export default class Solution extends Component {
       </>
     )
   }
-}
+})

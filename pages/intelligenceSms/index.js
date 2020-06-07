@@ -87,7 +87,7 @@ export default class IntelligenceSms extends React.Component {
         {
           src: 'http://img.teddymobile.cn/www/images/intelligenceSms/icon-duanxinyanzheng.png',
           title: '短信来源号码进行可信认证',
-          coreSrc: 'http://img.teddymobile.cn/www/images/intelligenceSms/core2-2.png',
+          coreSrc: '/static/images/intelligenceSms/core2-2.png',
           activeIcon: 'http://img.teddymobile.cn/www/images/intelligenceSms/icon-duanxinyanzheng-active.png',
           matchTitle: '短信号码认证',
           highlightImage: 'http://img.teddymobile.cn/www/images/intelligenceSms/高亮1.png',
@@ -96,16 +96,16 @@ export default class IntelligenceSms extends React.Component {
         {
           src: 'http://img.teddymobile.cn/www/images/intelligenceSms/icon-kapian.png',
           title: '核心内容可进行卡片化展示，简洁清晰',
-          coreSrc: 'http://img.teddymobile.cn/www/images/intelligenceSms/core2-2.png',
+          coreSrc: '/static/images/intelligenceSms/core2-2.png',
           activeIcon: 'http://img.teddymobile.cn/www/images/intelligenceSms/icon-kapian-active.png',
           matchTitle: '内容卡片展示',
-          highlightImage: 'http://img.teddymobile.cn/www/images/intelligenceSms/高亮2.png',
+          highlightImage: '/static/images/intelligenceSms/高亮2.png',
           imgClassName: 'sms-highlight-2'
         },
         {
           src: 'http://img.teddymobile.cn/www/images/intelligenceSms/icon-zhineng.png',
           title: '根据场景可智能匹配按钮一键跳转后续服务',
-          coreSrc: 'http://img.teddymobile.cn/www/images/intelligenceSms/core2-2.png',
+          coreSrc: '/static/images/intelligenceSms/core2-2.png',
           activeIcon: 'http://img.teddymobile.cn/www/images/intelligenceSms/icon-zhineng-active.png',
           matchTitle: '服务一键直达',
           highlightImage: 'http://img.teddymobile.cn/www/images/intelligenceSms/高亮3.png',
@@ -114,7 +114,7 @@ export default class IntelligenceSms extends React.Component {
         {
           src: 'http://img.teddymobile.cn/www/images/intelligenceSms/icon-service3.png',
           title: '短信公众号页面享受更多服务',
-          coreSrc: 'http://img.teddymobile.cn/www/images/intelligenceSms/core2-2.png',
+          coreSrc: '/static/images/intelligenceSms/core2-2.png',
           activeIcon: 'http://img.teddymobile.cn/www/images/intelligenceSms/icon-service3-active.png',
           matchTitle: '短信公众号',
           highlightImage: 'http://img.teddymobile.cn/www/images/intelligenceSms/高亮4.png',
@@ -123,7 +123,7 @@ export default class IntelligenceSms extends React.Component {
         {
           src: 'http://img.teddymobile.cn/www/images/intelligenceSms/icon-shape.png',
           title: '支持跳转 H5、APP、快应用、一键拨号、验证码复制',
-          coreSrc: 'http://img.teddymobile.cn/www/images/intelligenceSms/core2-2.png',
+          coreSrc: '/static/images/intelligenceSms/core2-2.png',
           activeIcon: 'http://img.teddymobile.cn/www/images/intelligenceSms/icon-shape-active.png',
           matchTitle: '跳转多应用',
           highlightImage: 'http://img.teddymobile.cn/www/images/intelligenceSms/高亮5.png',
@@ -222,7 +222,7 @@ export default class IntelligenceSms extends React.Component {
     return (
       <>
         <Head>
-          <title>智能短信|短信菜单|短信公众号|短信验证码|营销短信</title>
+          <title>泰迪熊移动—智能短信|短信菜单|短信公众号|短信验证码|营销短信</title>
           <meta name="keywords" content="智能短信,短信菜单,短信公众号,短信验证码,营销短信" />
           <meta name="description" content="智能短信是泰迪熊移动为合作伙伴提供的一款短信服务产品，通过技术开发，实现将传统短信以公众号形式发送，适用于短信验证码、短信通知及短信推广服务国内短信发送跨运营商、跨终端，直搭手机厂商专属OTT通道，服务范围覆盖8亿用户"/>
         </Head>

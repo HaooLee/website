@@ -136,6 +136,9 @@ export default class Agent extends Component {
           name: '高斯通',
           desc: '深圳市高斯通信息技术有限公司，在2001年全球首度提出企业应用短信服务模式及标准，创立了企业应用短信服务行业，并迅速成为行业领导者',
           types: [
+            <Link href={'/intelligenceSms'}>
+              <a style={{color: '#355EA6'}}>智能短信</a>
+            </Link>,
             <Link href={'/numberProduct'}>
               <a style={{color: '#355EA6'}}>号码认证</a>
             </Link>
@@ -161,6 +164,9 @@ export default class Agent extends Component {
           name: '联动优势',
           desc: '联动优势是一家互联网高新技术企业，成立于2003年，面向金融机构和产业经济提供综合性金融科技服务，助力政府机构推进科技监管与智慧政务建设',
           types: [
+            <Link href={'/intelligenceSms'}>
+              <a style={{color: '#355EA6'}}>智能短信</a>
+            </Link>,
             <Link href={'/numberProduct'}>
               <a style={{color: '#355EA6'}}>号码认证</a>
             </Link>
@@ -213,7 +219,7 @@ export default class Agent extends Component {
     return (
       <>
         <Head>
-          <title>智慧消息诚邀加盟</title>
+          <title>泰迪熊移动——智慧消息诚邀加盟</title>
           <meta name="keywords" content="智能短信加盟,5G消息加盟,号码认证代理,智能短信代理" />
           <meta name="description" content="泰迪熊移动渠道在'平台化发展 产业链共赢'策略下，致力于打造一个全新的智能通讯产业联盟。主要产品有：智能短信、5G场景消息、快应用、号码认认证等，在未来，泰迪熊移动将坚实基础，建立更大更全的产业链，实现经营模式的转型升级。"/>
 

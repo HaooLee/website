@@ -1,7 +1,10 @@
 import {Component} from 'react'
 import axios from 'axios'
-import NotificationSystem from 'react-notification-system';
 import styles from './index.less'
+import Head from 'next/head'
+import React from "react"
+import Router from 'next/router'
+
 export default class NumberAuth extends Component {
   constructor(props) {
     super(props)
@@ -34,7 +37,7 @@ export default class NumberAuth extends Component {
     }}],
     phone:[{validator: (value, callback = ()=> {}) => {
       if(!value) {
-        callback('联系电话不能为空不能为空')
+        callback('联系电话不能为空')
         return
       }
       const reg = /^(?:(?:\+|00)86)?1(?:(?:3[\d])|(?:4[5-7|9])|(?:5[0-3|5-9])|(?:6[5-7])|(?:7[0-8])|(?:8[\d])|(?:9[1|8|9]))\d{8}$/
@@ -116,32 +119,38 @@ export default class NumberAuth extends Component {
       let params = new FormData()
       Object.entries(this.values).forEach((item, index) => {
         params.append(item[0], item[1])
-      })  
-      const {data} = await axios.post(`/company/numberAuth`, params)
-      const notification = this.notificationSystem.current
-      notification.addNotification({
-        title: '提示',
-        message: '认证成功',
-        level: 'success'
       })
-      if (data.code == 0) {
-        console.log('成功')
+      const {data} = await axios.post(`/api/company/numberAuth`, params)
+      if (data.code == 200) {
+        Router.push('/numberAuth/success')
       }
     }
   }
+  clearError = (prop) => {
+    const {errors} = this.state
+    errors[prop] = {}
+    this.setState({
+      errors
+    })
+  }
 
   formChange = (type, ev) => {
-    const val = ev.currentTarget.value 
-    
-    this.values[type] = val 
+    const val = ev.currentTarget.value
+
+    this.values[type] = val
   }
   render() {
     const {headers, activeType, errors} = this.state
     return (
       <>
+        <Head>
+          <title>泰迪熊移动—号码认证|申诉|平台|查询|标记</title>
+          <meta name="keywords" content="企业号码认证,标记取消,号码识别" />
+          <meta name="description" content="通话时显示专属商企名片、 商企名片将进入中国庞大黄页库。 超过4亿级用户终端宣传显示。若您的号码变更或被错误显示，请号码所有人提交申诉。"/>
+        </Head>
         <div className="banner">
           <div className="banner__text w">
-            认证通道
+            号码标识
           </div>
         </div>
         <div className="complain-wrap">
@@ -159,14 +168,14 @@ export default class NumberAuth extends Component {
                 <div className="form__item form__item--required">
                   <div className="form__item__label">认证人姓名</div>
                   <div className="form__item__input">
-                    <input placeholder="请填写您的姓名" onChange={this.formChange.bind(this, 'name')} type="text" />
+                    <input placeholder="请填写您的姓名" onFocus={()=> this.clearError('name')} onChange={this.formChange.bind(this, 'name')} type="text" />
                     {errors['name']?.err && <span className={'errMsg'}>{errors['name'].msg}</span>}
                   </div>
                 </div>
                 <div className="form__item form__item--required">
                   <div className="form__item__label">认证企业全称</div>
                   <div className="form__item__input">
-                    <input placeholder="请输入您的企业全称" onChange={this.formChange.bind(this, 'company_name')} type="text" />
+                    <input placeholder="请输入您的企业全称" onFocus={()=> this.clearError('company_name')} onChange={this.formChange.bind(this, 'company_name')} type="text" />
                     {errors['company_name']?.err && <span className={'errMsg'}>{errors['company_name'].msg}</span>}
                   </div>
                   {/* {companyError && <div className="form__item__input--error">
@@ -177,7 +186,7 @@ export default class NumberAuth extends Component {
                 <div className="form__item form__item--required">
                   <div className="form__item__label">联系电话</div>
                   <div className="form__item__input">
-                    <input placeholder="请留下您的联系电话，以便我们能够及时为您提供服务" onChange={this.formChange.bind(this, 'phone')} type="text" />
+                    <input placeholder="请留下您的联系电话，以便我们能够及时为您提供服务" onFocus={()=> this.clearError('phone')} onChange={this.formChange.bind(this, 'phone')} type="text" />
                     {errors['phone']?.err && <span className={'errMsg'}>{errors['phone'].msg}</span>}
                   </div>
                   {/* {phoneError && <div className="form__item__input--error">
@@ -187,21 +196,21 @@ export default class NumberAuth extends Component {
                 <div className="form__item form__item--required">
                   <div className="form__item__label">所属城市</div>
                   <div className="form__item__input">
-                    <input placeholder="请填写您的所属城市" onChange={this.formChange.bind(this, 'city')} type="text" />
+                    <input placeholder="请填写您的所属城市" onFocus={()=> this.clearError('city')} onChange={this.formChange.bind(this, 'city')} type="text" />
                     {errors['city']?.err && <span className={'errMsg'}>{errors['city'].msg}</span>}
                   </div>
                 </div>
                 <div className="form__item form__item--required">
                   <div className="form__item__label">所属行业</div>
                   <div className="form__item__input">
-                    <input placeholder="请填写您的所属行业" onChange={this.formChange.bind(this, 'industry')} type="text" />
+                    <input placeholder="请填写您的所属行业" onFocus={()=> this.clearError('industry')} onChange={this.formChange.bind(this, 'industry')} type="text" />
                     {errors['industry']?.err && <span className={'errMsg'}>{errors['industry'].msg}</span>}
                   </div>
                 </div>
                 <div className="form__item form__item--required">
                   <div className="form__item__label">邮箱</div>
                   <div className="form__item__input">
-                    <input placeholder="请输入您的邮箱" onChange={this.formChange.bind(this, 'email')} type="text" />
+                    <input placeholder="请输入您的邮箱" onFocus={()=> this.clearError('email')} onChange={this.formChange.bind(this, 'email')} type="text" />
                     {errors['email']?.err && <span className={'errMsg'}>{errors['email'].msg}</span>}
                   </div>
                   {/* {
@@ -217,7 +226,6 @@ export default class NumberAuth extends Component {
             </div>
           </div>
         </div>
-        <NotificationSystem ref={this.notificationSystem} />
         <style jsx>{styles}</style>
       </>
     )

@@ -1,0 +1,122 @@
+
+.form {
+  width: 900px;
+  margin: 0 auto;
+  margin-bottom: 55px;
+  &__item {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    position: relative;
+    &--required {
+      .form__item__label:before {
+        content: '*';
+        display: inline-block;
+        color: red;
+        margin-right: 5px;
+      }
+    }
+    &__label {
+      width: 120px;
+      padding-right: 40px;
+      text-align: right;
+      line-height: 40px;
+      color: #666;
+      font-size: 16px;
+    }
+    &__input {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      .errMsg{
+        position: absolute;
+        top: 100%;
+        margin-top: 5px;
+        color: red;
+      }
+      &--v {
+        flex-direction: column;
+        input {
+          width: 100%;
+        }
+      }
+      .file-content {
+        color: #666666;
+        margin-bottom: 10px;
+      }
+      input {
+        flex: 1;
+        outline: none;
+        border: none;
+        // height: 20px;
+        background: #F7F7F7;
+        border-radius: 3px;
+        border: 1px solid #D8D8D8;
+        font-size: 14px;
+        padding: 10px;
+        &.file {
+          display: none;
+          // visibility: hidden;
+        }
+      }
+      &__code {
+        width: 140px;
+        height: 40px;
+        background:#355EA6;
+        border-radius: 3px;
+        color: #fff;
+        font-size: 16px;
+        line-height: 40px;
+        text-align: center;
+        margin-left: 18px;
+        cursor: pointer;
+        -webkit-appearance: none;
+        border:none;
+        outline:none;
+      }
+
+      &__code:disabled{
+        background-color: #717171;
+        cursor: not-allowed;
+      }
+    }
+    .upload {
+      color: #355EA6;
+      font-size: 14px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 15px 0;
+      img {
+        width: 22px;
+        height: 22px;
+        margin-right: 5px;
+      }
+      .errMsg {
+        position: static;
+        position: relative;
+        top: -3px;
+        left: 31px;
+      }
+    }
+    &__btn {
+      width: 300px;
+      height: 46px;
+      background:#355EA6;
+      border-radius: 3px;
+      line-height: 46px;
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+      margin: 0 auto;
+      cursor: pointer;
+
+    }
+    btn-disabled {
+      background-color: #717171;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@import 'form.less';

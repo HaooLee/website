@@ -1,7 +1,12 @@
 import {Component} from 'react'
 import axios from 'axios'
-import NotificationSystem from 'react-notification-system';
+import NotificationSystem from 'react-notification-system'
+import NumberComplainCompany from '@/components/numberComplainCompany'
+import NumberComplainPersonal from '@/components/numberComplainPersonal'
 import styles from './index.less'
+import Head from 'next/head'
+import React from "react";
+
 export default class NumberComplain extends Component {
   constructor(props) {
     super(props)
@@ -20,7 +25,9 @@ export default class NumberComplain extends Component {
       ],
       activeType: 'company',
       fileContent: {},
-      companyErrors: {}
+      companyErrors: {},
+      codeText:'获取验证码',
+      codeDisabled:false,
     }
   }
   notificationSystem = React.createRef()
@@ -30,48 +37,11 @@ export default class NumberComplain extends Component {
   companyRules = {
     // 'phone': [{required:true,msg:'申诉企业不能为空'}],
     'name': [{required:true,msg:'申诉企业不能为空'}],
+    'code':[{required:true,msg:'验证码不能为空'}],
     'phone': [{required:true,msg:'申诉号码不能为空'}],
     'contactPhone': [{required:true,msg:'联系方式不能为空'}],
     'contactOther': [{required:true,msg:'联系邮箱/QQ不能为空'}],
     'reason': [{required:true,msg:'申诉理由不能为空'}]
-  }
-
-  validate = (data, rules, type) =>{
-    let isValid = true
-    try {
-      const {companyErrors} = this.state
-      let errors = companyErrors
-      Object.entries(rules).forEach((item,index)=>{
-        item[1].forEach((i)=>{
-          if(i.required){
-            if(!data[item[0]]) {
-              errors[item[0]] = {err:true,msg:i.msg}
-              isValid = false
-            }else {
-              errors[item[0]] = {err:false}
-            }
-          }
-          if(i.validator) {
-            i.validator(data[item[0]], (msg) => {
-              if(msg) {
-                errors[item[0]] = {err:true,msg: msg}
-                isValid = false
-              } else {
-                errors[item[0]] = {err:false}
-              }
-            })
-          }
-        })
-      })
-      console.log(errors)
-      this.setState({
-        companyErrors: {...errors}
-      })
-    }catch (e) {
-
-      return false
-    }
-    return isValid
   }
 
   headerItemClick = (idx, row) => {
@@ -90,110 +60,20 @@ export default class NumberComplain extends Component {
     })
     this.companyValues = {}
   }
-  fileChange = async (type, ev) => {
-    const {fileContent} = this.state
-    const {value, files} = ev.currentTarget
-    let idx = value.lastIndexOf('\\')
-    fileContent[type] = value.slice(idx+1)
-    this.setState({
-      fileContent
-    })
-    const params = new FormData()
-    params.append('source', files[0])
-    const {data} = await axios.post(`http://php.bjdglt.com:8091/V1.4/file/upload`, params)
-    const notification = this.notificationSystem.current
-    if(data.code == 200) {
-      notification.addNotification({
-        title: '提示',
-        message: '上传成功',
-        level: 'success'
-      })
-    } else {
-      notification.addNotification({
-        title: '提示',
-        message: '上传失败',
-        level: 'error'
-      })
-    }
-    if(type === 'idCard') {
-      this.companyValues.file1 = data.data
-    }
-    if(type === 'numCard') {
-      this.companyValues.file2 = data.data
-    }
-    if(type === 'otherCard') {
-      this.companyValues.file3 = data.data
-    }
-  }
-  companyFormChange = (type, ev) => {
-    const val = ev.currentTarget.value
-    this.companyValues[type] = val
-  }
-  companyFormSubmit = async (type) => {
-    if(type === 'person') {
-      delete this.companyValues.code
-      delete this.companyRules.contactOther
-    }
-    if(this.validate(this.companyValues, this.companyRules)){
-      console.log(this.companyValues)
-      let params = new FormData()
-      Object.entries(this.companyValues).forEach((item, index) => {
-        params.append(item[0], item[1])
-      })
-      const {data} = await axios.post(type === 'person' ? `/single/numberComplain` : `/company/numberComplain`, params)
-      const notification = this.notificationSystem.current
-      notification.addNotification({
-        title: '提示',
-        message: '申诉成功',
-        level: 'success'
-      })
-      if (data.code == 0) {
-        console.log('成功')
-      }
-    }
-  }
 
-   checkPhone(phone){
-
-    return /^1[3456789]\d{9}$/.test(phone)
-  }
-  getCode = async () => {
-    // 获取验证码
-    const {companyErrors} = this.state
-    const {phone} = this.companyValues
-    if(this.checkPhone(phone)){
-      const {data} = await axios.post(`/sms/send`, {
-        phone
-      })
-      if(data.code == 200) {
-        // this.personCode = data.data
-      }
-    }else {
-      companyErrors['phone'] = {err:true,msg: '请输入正确的手机号'}
-      this.setState({
-        companyErrors
-      })
-    }
-
-  }
-  // 短信验证
-  smsVerify = async () => {
-    const {code, phone} = this.companyValues
-    console.log(code, phone)
-    if(code && phone) {
-      const {data} = await axios.post('/sms/verify', {code, phone})
-      if(data.code == 200) {
-
-      }
-    }
-  }
   render() {
-    const {headers, activeType, fileContent, companyErrors} = this.state
+    const {headers, activeType, fileContent, companyErrors,codeDisabled, codeText} = this.state
     return (
       <>
+        <Head>
+          <title>泰迪熊移动—号码认证|申诉|平台|查询|标记</title>
+          <meta name="keywords" content="企业号码认证,标记取消,号码识别" />
+          <meta name="description" content="通话时显示专属商企名片、 商企名片将进入中国庞大黄页库。 超过4亿级用户终端宣传显示。若您的号码变更或被错误显示，请号码所有人提交申诉。"/>
+        </Head>
+
         <div className="banner">
           <div className="banner__text w">
-            认证通道
+            号码标识
           </div>
         </div>
         <div className="complain-wrap">
@@ -207,141 +87,27 @@ export default class NumberComplain extends Component {
               ))}
             </div>
             <div className="complain__content">
-             {activeType === 'company' &&  <div className="form">
-                <div className="form__item form__item--required">
-                  <div className="form__item__label">申诉号码</div>
-                  <div className="form__item__input">
-                    <input placeholder="输入号码，如果是座机号请加上区号" onChange={this.companyFormChange.bind(this, 'phone')} type="text" />
-                    {companyErrors['phone']?.err && <span className={'errMsg'}>{companyErrors['phone'].msg}</span>}
-                  </div>
-                </div>
-                 {/*<div className="form__item form__item--required">*/}
-                  {/*<div className="form__item__label">申诉人手机号</div>*/}
-                  {/*<div className="form__item__input">*/}
-                    {/*<input placeholder="请留下您最常用的手机号，以便我们及时联系并申诉"  onChange={this.companyFormChange.bind(this, 'phone')} type="text" />*/}
-                    {/*{companyErrors['phone']?.err && <span className={'errMsg'}>{companyErrors['phone'].msg}</span>}*/}
-                  {/*</div>*/}
-                {/*</div>*/}
-                <div className="form__item form__item--required">
-                  <div className="form__item__label">验证码</div>
-                  <div className="form__item__input">
-                    <input placeholder="请输入您的手机验证码" type="text" onBlur={this.smsVerify} />
-                    <a className="form__item__input__code" onClick={this.getCode}>获取验证码</a>
-                  </div>
-                </div>
-                <div className="form__item form__item--required">
-                  <div className="form__item__label">添加证明</div>
-                  <div className="form__item__input form__item__input--v">
-                    <div className="form__item__input__item">
-                      <input placeholder="身份证正面照" type="text" />
-                      <div className="upload">
-                        <img src="http://img.teddymobile.cn/www/images/numberSign/upload-icon.png" />
-                        <input className="file" onChange={this.fileChange.bind(this, 'idCard')} type="file" id="idCard"/>
-                        <label htmlFor="idCard">选择文件</label>
-                      </div>
-                      {
-                        fileContent['idCard'] && <div className="file-content">{fileContent['idCard']}</div>
-                      }
-                    </div>
-                    <div className="form__item__input__item">
-                      <input placeholder="号码归属证明" type="text" />
-                      <div className="upload">
-                        <img src="http://img.teddymobile.cn/www/images/numberSign/upload-icon.png" />
-                        <input className="file" onChange={this.fileChange.bind(this, 'numCard')} type="file" id="numCard"/>
-                        <label htmlFor="numCard">选择文件</label>
-                      </div>
-                      {
-                        fileContent['numCard'] && <div className="file-content">{fileContent['numCard']}</div>
-                      }
-                    </div>
-                    <div className="form__item__input__item">
-                      <input placeholder="其他证明" type="text" />
-                      <div className="upload">
-                        <img src="http://img.teddymobile.cn/www/images/numberSign/upload-icon.png" />
-                        <input className="file" onChange={this.fileChange.bind(this, 'otherCard')} type="file" id="otherCard"/>
-                        <label htmlFor="otherCard">选择文件</label>
-                      </div>
-                      {
-                        fileContent['otherCard'] && <div className="file-content">{fileContent['otherCard']}</div>
-                      }
-                    </div>
-                  </div>
-                </div>
-                <div className="form__item form__item--no-margin form__item--required">
-                  <div className="form__item__label">申诉企业全称</div>
-                  <div className="form__item__input">
-                    <input placeholder="请输入您的企业全称" type="text" onChange={this.companyFormChange.bind(this, 'name')} />
-                    {companyErrors['name']?.err && <span className={'errMsg'}>{companyErrors['name'].msg}</span>}
-                  </div>
-                </div>
-                <div className="form__item form__item--required">
-                  <div className="form__item__label">申诉原因</div>
-                  <div className="form__item__input">
-                    <input placeholder="请说明您的申诉原因" type="text" onChange={this.companyFormChange.bind(this, 'reason')} />
-                    {companyErrors['reason']?.err && <span className={'errMsg'}>{companyErrors['reason'].msg}</span>}
-                  </div>
-                </div>
-                <div className="form__item form__item--required">
-                  <div className="form__item__label">联系方式</div>
-                  <div className="form__item__input">
-                    <input placeholder="请留下您的联系电话，以便我们能够及时为您提供服务" type="text" onChange={this.companyFormChange.bind(this, 'contactPhone')} />
-                    {companyErrors['contactPhone']?.err && <span className={'errMsg'}>{companyErrors['contactPhone'].msg}</span>}
-                  </div>
-                </div>
-                <div className="form__item form__item--required">
-                  <div className="form__item__label">联系邮箱/QQ</div>
-                  <div className="form__item__input">
-                    <input placeholder="请留下您的联系邮箱及QQ" type="text" onChange={this.companyFormChange.bind(this, 'contactOther')} />
-                    {companyErrors['contactOther']?.err && <span className={'errMsg'}>{companyErrors['contactOther'].msg}</span>}
-                  </div>
-                </div>
-                <div className="form__item" onClick={this.companyFormSubmit.bind(this, 'company')}>
-                  <div className="form__item__btn">确认提交</div>
-                </div>
-              </div>}
-
-              {
-                activeType === 'personal' &&  <div className="form">
-                <div className="form__item form__item--required">
-                  <div className="form__item__label">申诉号码</div>
-                  <div className="form__item__input">
-                    <input placeholder="输入号码，如果是座机号请加上区号" type="text" onChange={this.companyFormChange.bind(this, 'phone')} />
-                    {companyErrors['phone']?.err && <span className={'errMsg'}>{companyErrors['phone'].msg}</span>}
-                  </div>
-                </div>
-                <div className="form__item">
-                  <div className="form__item__label">验证码</div>
-                  <div className="form__item__input">
-                    <input placeholder="请输入您的手机验证码" onBlur={this.smsVerify} onChange={this.companyFormChange.bind(this, 'code')} type="text" />
-                    <a className="form__item__input__code" onClick={this.getCode}>获取验证码</a>
-                  </div>
-                </div>
-                <div className="form__item form__item--required">
-                  <div className="form__item__label">申诉人姓名</div>
-                  <div className="form__item__input">
-                    <input placeholder="请填写您的姓名" type="text" onChange={this.companyFormChange.bind(this, 'name')} />
-                    {companyErrors['name']?.err && <span className={'errMsg'}>{companyErrors['name'].msg}</span>}
-                  </div>
-                </div>
-                <div className="form__item form__item--required">
-                  <div className="form__item__label">申诉原因</div>
-                  <div className="form__item__input">
-                    <input placeholder="请说明您的申诉原因" type="text" onChange={this.companyFormChange.bind(this, 'reason')} />
-                    {companyErrors['reason']?.err && <span className={'errMsg'}>{companyErrors['reason'].msg}</span>}
-                  </div>
-                </div>
-                <div className="form__item form__item--required">
-                  <div className="form__item__label">联系方式</div>
-                  <div className="form__item__input">
-                    <input placeholder="请留下您的联系电话，以便我们能够及时为您提供服务" type="text" onChange={this.companyFormChange.bind(this, 'contactPhone')} />
-                    {companyErrors['contactPhone']?.err && <span className={'errMsg'}>{companyErrors['contactPhone'].msg}</span>}
-                  </div>
-                </div>
-                <div className="form__item" onClick={this.companyFormSubmit.bind(this, 'person')}>
-                  <div className="form__item__btn">确认提交</div>
-                </div>
-              </div>
-              }
+             {activeType === 'company' ? <NumberComplainCompany /> : <NumberComplainPersonal />}
+            </div>
+            <div className={'tips-wrap'}>
+              <p>1.为什么我经常接到骚扰电话，但显示“号码识别服务由泰迪熊移动提供/数据由泰迪熊移动提供”？</p>
+              <p>答:您使用的手机支持陌生号码智能识别功能，此服务由泰迪熊移动提供。温馨提示：如遇到此类电话，提醒您谨慎接听。</p>
+              <p>2.什么是名称展示？</p>
+              <p>答：拨打号码时，显示“某公司/店铺的名称”。例如：“北京泰迪熊移动科技有限公司”或“泰迪熊”。</p>
+              <p>3.什么是标记展示?</p>
+              <p>答：拨打号码时，显示“被多少人标记为某个内容”。例如：“被20人标记为广告推销”。</p>
+              <p>4.为什么拨打号码时，显示“某公司/店铺的名称”。例如：“北京泰迪熊移动科技有限公司”或“泰迪熊”?</p>
+              <p>答： 这是泰迪熊移动基于号码大数据为企业提供的移动端品牌展示服务。</p>
+              <p>5、假如我的号码被标记了，例如：“快递送餐/广告推销”,数据由泰迪熊移动提供，需要如何处理？</p>
+              <p>答：号码标识问题可进入泰迪熊移动官网：<a href="https://www.teddymobile.cn">https://www.teddymobile.cn</a>进行处理;具体步骤:官网首页--号码标识--号码申诉--个人/企业提交申诉（座机号码需要加区号）。</p>
+              <p>6、号码申诉是否收费?</p>
+              <p>答：通过泰迪熊移动进行号码申诉，不收取任何费用。</p>
+              <p>7、号码申诉提交后，处理时效是多久？</p>
+              <p>答：收到您的申诉后，我们的工作人员会在3-5个工作日内处理完成。</p>
+              <p>8、我的号码申诉已成功，为什么号码还有展示？</p>
+              <p>答：您收到申诉成功的短信通知后，需要3-5个工作日的同步时间。</p>
+              <p>9、号码标记申诉失败，需如何处理？</p>
+              <p>答：申诉回复的短信，会告知您申诉失败的原因。请您根据驳回原因进行修正，并重新申请。 </p>
             </div>
           </div>
         </div>

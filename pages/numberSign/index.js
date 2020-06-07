@@ -10,13 +10,13 @@ export default class NumberSign extends Component {
     return (
       <>
         <Head>
-          <title>号码认证、号码申诉</title>
+          <title>泰迪熊移动—号码认证|申诉|平台|查询|标记</title>
           <meta name="keywords" content="企业号码认证,标记取消,号码识别" />
           <meta name="description" content="通话时显示专属商企名片、 商企名片将进入中国庞大黄页库。 超过4亿级用户终端宣传显示。若您的号码变更或被错误显示，请号码所有人提交申诉。"/>
         </Head>
         <div className="banner">
           <div className="banner__text w">
-            认证通道
+            号码标识
           </div>
         </div>
         <div className="w">
