@@ -208,15 +208,13 @@ export default class NumberComplainCompany extends Component {
     if(this.checkPhone(contactPhone)){
       companyErrors['contactPhone'] = {}
       this.setState({
-        companyErrors
+        companyErrors,
+        codeDisabled:true
       })
       const {data} = await axios.post(`/api/sms/send`, {
         phone:contactPhone
       })
       if(data.code == 200) {
-        this.setState({
-          codeDisabled:true
-        })
         let sec = 60
         this.timer = setInterval(()=>{
           if(--sec > 0){

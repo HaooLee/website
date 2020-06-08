@@ -138,13 +138,13 @@ export default class NumberComplainPersonal extends Component {
     const {companyErrors} = this.state
     const {phone} = this.companyValues
     if(this.checkPhone(phone)){
+      this.setState({
+        codeDisabled:true
+      })
       const {data} = await axios.post(`/api/sms/send`, {
         phone
       })
       if(data.code == 200) {
-        this.setState({
-          codeDisabled:true
-        })
         let sec = 60
         this.timer = setInterval(()=>{
           if(--sec > 0){
