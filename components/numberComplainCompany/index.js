@@ -432,8 +432,8 @@ export default class NumberComplainCompany extends Component {
                     {companyErrors['contactOther']?.err && <span className={'errMsg'}>{companyErrors['contactOther'].msg}</span>}
                   </div>
                 </div>
-                <div className="form__item" onClick={this.companyFormSubmit.bind(this, 'company')}>
-                  <div className={`form__item__btn`}>确认提交</div>
+                <div className="form__item" >
+                  <div className={`form__item__btn`} onClick={this.companyFormSubmit.bind(this, 'company')}>确认提交</div>
                 </div>
               <NotificationSystem ref={this.notificationSystem} />
               </div>
