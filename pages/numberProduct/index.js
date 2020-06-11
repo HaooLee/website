@@ -16,49 +16,49 @@ export default class NumberProduct extends Component {
     this.state = {
       problems: [
         {
-          src: 'http://img.teddymobile.cn/www/images/numberProduct/icon-saoraodianhua.png',
+          src: 'https://img.teddymobile.cn/www/images/numberProduct/icon-saoraodianhua.png',
           title: ['骚扰电话','不胜其烦']
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/numberProduct/icon-qiyedianhua.png',
+          src: 'https://img.teddymobile.cn/www/images/numberProduct/icon-qiyedianhua.png',
           title: ['企业电话','频频被拒接']
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/numberProduct/icon-biaoji.png',
+          src: 'https://img.teddymobile.cn/www/images/numberProduct/icon-biaoji.png',
           title: ['电话号码','被恶意标注']
         }
       ],
       coreList: [
         {
-          src: 'http://img.teddymobile.cn/www/images/numberProduct/icon-jingzhunshibie.png',
+          src: 'https://img.teddymobile.cn/www/images/numberProduct/icon-jingzhunshibie.png',
           title: '准确识别陌生电话来源，保障用户手机安全',
-          coreSrc: 'http://img.teddymobile.cn/www/images/numberProduct/core1.png',
-          activeIcon: 'http://img.teddymobile.cn/www/images/numberProduct/icon-jingzhunshibie-active.png',
+          coreSrc: 'https://img.teddymobile.cn/www/images/numberProduct/core1.png',
+          activeIcon: 'https://img.teddymobile.cn/www/images/numberProduct/icon-jingzhunshibie-active.png',
           matchTitle: '识别陌生来电'
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/numberProduct/icon-renzhengyonghu.png',
+          src: 'https://img.teddymobile.cn/www/images/numberProduct/icon-renzhengyonghu.png',
           title: '为企业提供号码认证服务，进行有效品牌展示',
-          coreSrc: 'http://img.teddymobile.cn/www/images/numberProduct/core2.png',
-          activeIcon: 'http://img.teddymobile.cn/www/images/numberProduct/icon-renzhengyonghu-active.png',
+          coreSrc: 'https://img.teddymobile.cn/www/images/numberProduct/core2.png',
+          activeIcon: 'https://img.teddymobile.cn/www/images/numberProduct/icon-renzhengyonghu-active.png',
           matchTitle: '企业号码认证'
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/numberProduct/icon-xunihaoma.png',
+          src: 'https://img.teddymobile.cn/www/images/numberProduct/icon-xunihaoma.png',
           title: '支持400、虚拟号段、个人号码',
-          coreSrc: 'http://img.teddymobile.cn/www/images/numberProduct/core3.png',
-          activeIcon: 'http://img.teddymobile.cn/www/images/numberProduct/icon-xunihaoma-active.png',
+          coreSrc: 'https://img.teddymobile.cn/www/images/numberProduct/core3.png',
+          activeIcon: 'https://img.teddymobile.cn/www/images/numberProduct/icon-xunihaoma-active.png',
           matchTitle: '支持多种号段'
         }
       ],
       products: [
         {
-          src: 'http://img.teddymobile.cn/www/images/numberProduct/icon-fugai.png',
+          src: 'https://img.teddymobile.cn/www/images/numberProduct/icon-fugai.png',
           title: '用户覆盖广',
           desc: '日均请求量高达47亿次，用户覆盖广'
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/numberProduct/icon-shibie.png',
+          src: 'https://img.teddymobile.cn/www/images/numberProduct/icon-shibie.png',
           title: '识别精准',
           desc: <div>
             <p>采用实时大数据挖掘技术，每日更新7000万</p>
@@ -66,7 +66,7 @@ export default class NumberProduct extends Component {
           </div>
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/numberProduct/icon-zhunquelvgao.png',
+          src: 'https://img.teddymobile.cn/www/images/numberProduct/icon-zhunquelvgao.png',
           title: '准确率高',
           desc: <div>
             <p>多维度的校验数据，准确率达到了 99.9%</p>
@@ -86,7 +86,7 @@ export default class NumberProduct extends Component {
           <meta name="description" content="泰迪熊移动号码识别日均请求量高达47亿次，采用实时大数据挖掘技术，每日更新7000万号码数据，使用机器学习算法分析号码行为，多维度的校验数据，可准确识别陌生电话来源，保障用户手机安全并可为企业提供号码认证服务，进行有效品牌展示。"/>
 
         </Head>
-        <ProductBanner customClassName={'number-banner'} title={'号码认证'} desc={'来电接的安心，去电不被拒绝'} src={'http://img.teddymobile.cn/www/images/numberProduct/banner.png'}></ProductBanner>
+        <ProductBanner customClassName={'number-banner'} title={'号码认证'} desc={'来电接的安心，去电不被拒绝'} src={'https://img.teddymobile.cn/www/images/numberProduct/banner.png'}></ProductBanner>
         <SectionCard title={'你的通话通常会遇到的问题'} bgc={'#FFFFFF'}>
           <div className="problem-wrap">
             <ProblemItem customClassName={'number-problem'} problems={problems}></ProblemItem>
@@ -111,11 +111,11 @@ export default class NumberProduct extends Component {
             </div>
             <div className="tab-content__right clearfix">
               <div className="tab-content__right__item">
-                <img src="http://img.teddymobile.cn/www/images/numberProduct/apply.png" />
+                <img src="https://img.teddymobile.cn/www/images/numberProduct/apply.png" />
                 {/* <p>其他样例</p> */}
               </div>
               {/* <div className="tab-content__right__item">
-                <img src="http://img.teddymobile.cn/www/images/numberProduct/apply-phone2.png" />
+                <img src="https://img.teddymobile.cn/www/images/numberProduct/apply-phone2.png" />
                 <p>卡片</p>
               </div> */}
             </div>
