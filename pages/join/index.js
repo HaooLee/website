@@ -131,6 +131,10 @@ export default class Join extends Component {
                             <p className="work-require">应职要求：</p>
                             <p className="work-require-content">{item.require}</p>
                           </div>
+                          <div>
+                            <p className="work-require">联系方式：</p>
+                            <p className="work-require-content">{item.contact}</p>
+                          </div>
                         </div>
                       </div>
                     }
@@ -150,6 +154,10 @@ export default class Join extends Component {
                           <div>
                             <p className="work-require">应职要求：</p>
                             <p className="work-require-content">{item.require}</p>
+                          </div>
+                          <div>
+                            <p className="work-require">联系方式：</p>
+                            <p className="work-require-content">{item.contact}</p>
                           </div>
                         </div>
                       </div>

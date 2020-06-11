@@ -13,33 +13,33 @@ export default class DspProduct extends Component {
       coreList: [
         {
           title: '平台：科技+负能广告投放管理',
-          src: 'http://img.teddymobile.cn/www/images/dspProduct/icon-pingtai.png',
-          activeIcon: 'http://img.teddymobile.cn/www/images/dspProduct/icon-pingtai.png',
-          coreSrc: 'http://img.teddymobile.cn/www/images/quickAppProduct/phone.png'
+          src: 'https://img.teddymobile.cn/www/images/dspProduct/icon-pingtai.png',
+          activeIcon: 'https://img.teddymobile.cn/www/images/dspProduct/icon-pingtai.png',
+          coreSrc: 'https://img.teddymobile.cn/www/images/quickAppProduct/phone.png'
         },
         {
           title: '效果：以人为核心的全域场景覆盖',
-          src: 'http://img.teddymobile.cn/www/images/dspProduct/icon-xiaoguo.png',
-          activeIcon: 'http://img.teddymobile.cn/www/images/dspProduct/icon-xiaoguo.png',
-          coreSrc: 'http://img.teddymobile.cn/www/images/quickAppProduct/phone.png'
+          src: 'https://img.teddymobile.cn/www/images/dspProduct/icon-xiaoguo.png',
+          activeIcon: 'https://img.teddymobile.cn/www/images/dspProduct/icon-xiaoguo.png',
+          coreSrc: 'https://img.teddymobile.cn/www/images/quickAppProduct/phone.png'
         },
         {
           title: '资源：合作市场主流厂商，覆盖用户7亿',
-          src: 'http://img.teddymobile.cn/www/images/dspProduct/icon-changshang.png',
-          activeIcon: 'http://img.teddymobile.cn/www/images/dspProduct/icon-changshang.png',
-          coreSrc: 'http://img.teddymobile.cn/www/images/quickAppProduct/phone.png'
+          src: 'https://img.teddymobile.cn/www/images/dspProduct/icon-changshang.png',
+          activeIcon: 'https://img.teddymobile.cn/www/images/dspProduct/icon-changshang.png',
+          coreSrc: 'https://img.teddymobile.cn/www/images/quickAppProduct/phone.png'
         }
       ],
       products: [
         {
           title: '产品优势',
           desc: 'DMP数据整合服、DSP流量交易服务',
-          src: 'http://img.teddymobile.cn/www/images/dspProduct/icon-chanpin.png'
+          src: 'https://img.teddymobile.cn/www/images/dspProduct/icon-chanpin.png'
         },
         {
           title: '资源优势',
           desc: 'TOP级媒体资源 、头部广告位资源',
-          src: 'http://img.teddymobile.cn/www/images/dspProduct/icon-ziyuan.png'
+          src: 'https://img.teddymobile.cn/www/images/dspProduct/icon-ziyuan.png'
         },
         {
           title: '服务优势',

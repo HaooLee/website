@@ -66,7 +66,7 @@ export default class Footer extends React.Component {
              <div className="company-info clearfix">
                <ul className="info">
                  <li>
-                   <img src="http://img.teddymobile.cn/www/images/qr.png" alt=""/>
+                   <img src="https://img.teddymobile.cn/www/images/qr.png" alt=""/>
                  </li>
                  <li>
                    客服电话：400-680-6000
