@@ -14,14 +14,14 @@ import React from "react";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <img className={className} onClick={onClick} style={{width:18,height:30}} src="http://img.teddymobile.cn/www/images/right.png"/>
+    <img className={className} onClick={onClick} style={{width:18,height:30}} src="https://img.teddymobile.cn/www/images/right.png"/>
   )
 }
 
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <img className={className} onClick={onClick} style={{width:18,height:30}} src="http://img.teddymobile.cn/www/images/left.png"/>
+    <img className={className} onClick={onClick} style={{width:18,height:30}} src="https://img.teddymobile.cn/www/images/left.png"/>
   )
 }
 
@@ -32,12 +32,12 @@ export default class About extends Component {
     this.state = {
       addressList: [
         {
-          src: 'http://img.teddymobile.cn/www/images/about/icon-beijing.png',
+          src: 'https://img.teddymobile.cn/www/images/about/icon-beijing.png',
           name: '北京 | 总部',
           address: '北京市朝阳区酒仙桥南路5号院'
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/about/icon-shenzheng.png',
+          src: 'https://img.teddymobile.cn/www/images/about/icon-shenzheng.png',
           name: '深圳',
           address: '深圳市南山区学府路216号田厦金牛广场B座'
         },
@@ -47,7 +47,7 @@ export default class About extends Component {
           address: '浙江省杭州拱墅区远洋国际B座'
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/about/icon-shanghai.png',
+          src: 'https://img.teddymobile.cn/www/images/about/icon-shanghai.png',
           name: '上海',
           address: '上海市浦东区环科路515号1号楼'
         },
@@ -55,13 +55,13 @@ export default class About extends Component {
       ],
       contactList: [
         {
-          src: 'http://img.teddymobile.cn/www/images/about/icon-jishu.png',
+          src: 'https://img.teddymobile.cn/www/images/about/icon-jishu.png',
           name: '技术及问题反馈',
           email: '邮箱：kefu@teddymobile.cn',
           phone: ''
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/about/icon-shangwu.png',
+          src: 'https://img.teddymobile.cn/www/images/about/icon-shangwu.png',
           name: '商务合作',
           email: '邮箱：bd@teddymobile.cn',
           phone: ''
@@ -71,77 +71,77 @@ export default class About extends Component {
       {
         title: '使命',
         desc: '智能连接人与服务',
-        src: 'http://img.teddymobile.cn/www/images/dspProduct/icon-chanpin.png'
+        src: 'https://img.teddymobile.cn/www/images/dspProduct/icon-chanpin.png'
       },
       {
         title: '愿景',
         desc: '服务世界大多数人',
-        src: 'http://img.teddymobile.cn/www/images/dspProduct/icon-ziyuan.png'
+        src: 'https://img.teddymobile.cn/www/images/dspProduct/icon-ziyuan.png'
       },
       {
         title: '价值观',
         desc: '客户第一、团队合作、激情、敬业',
-        src: 'http://img.teddymobile.cn/www/images/dspProduct/icon-fuwu.png'
+        src: 'https://img.teddymobile.cn/www/images/dspProduct/icon-fuwu.png'
       }
     ],
       honorList: [
         {
-          src: 'http://img.teddymobile.cn/www/images/about/获“2016年度极最具潜力大数据和智能化服务商”.jpg',
+          src: 'https://img.teddymobile.cn/www/images/about/获“2016年度极最具潜力大数据和智能化服务商”.jpg',
           time: '2016年',
           title: '获 "2016年度极最具潜力大数据和智能化服务商"'
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/about/获“2016年度最具技术领导力人物”奖.jpg',
+          src: 'https://img.teddymobile.cn/www/images/about/获“2016年度最具技术领导力人物”奖.jpg',
           time: '2016年',
           title: '获"2016年度最具技术领导力人物"奖'
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/about/获“2017创业黑马企业级服务成长组TOP20“.jpg',
+          src: 'https://img.teddymobile.cn/www/images/about/获“2017创业黑马企业级服务成长组TOP20“.jpg',
           time: '2017年',
           title: '获"2017创业黑马企业级服务成长组TOP20"'
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/about/获“2017年中国年度创新成长企业100强”.jpg',
+          src: 'https://img.teddymobile.cn/www/images/about/获“2017年中国年度创新成长企业100强”.jpg',
           time: '2017年',
           title: '获"2017年中国年度创新成长企业100强"'
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/about/获“2017手机天鹅奖年度最佳终端解决方案奖”.jpg',
+          src: 'https://img.teddymobile.cn/www/images/about/获“2017手机天鹅奖年度最佳终端解决方案奖”.jpg',
           time: '2017年',
           title: '获"2017手机天鹅奖年度最佳终端解决方案奖"'
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/about/获”2017商业影响力人工智能领域 最具创新企业TOP5.jpg',
+          src: 'https://img.teddymobile.cn/www/images/about/获”2017商业影响力人工智能领域 最具创新企业TOP5.jpg',
           time: '2017年',
           title: '获"2017商业影响力人工智能领域 最具创新企业TOP5"'
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/about/获”2017年全球商业创新大赛技术营销类 铜奖“.jpg',
+          src: 'https://img.teddymobile.cn/www/images/about/获”2017年全球商业创新大赛技术营销类 铜奖“.jpg',
           time: '2017年',
           title: '获"2017年全球商业创新大赛技术营销类 铜奖"'
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/about/获”2017-2018年度码号卫士奖“.jpg',
+          src: 'https://img.teddymobile.cn/www/images/about/获”2017-2018年度码号卫士奖“.jpg',
           time: '2017年',
           title: '获"2017-2018年度码号卫士奖"'
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/about/获“2018中国大数据准独角兽“.jpg',
+          src: 'https://img.teddymobile.cn/www/images/about/获“2018中国大数据准独角兽“.jpg',
           time: '2018年',
           title: '获"2017年中国年度创新成长企业100强"'
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/about/获“2018中国智能企业服务年度创新力企业“.jpg',
+          src: 'https://img.teddymobile.cn/www/images/about/获“2018中国智能企业服务年度创新力企业“.jpg',
           time: '2018年',
           title: '获"2018中国智能企业服务年度创新力企业"'
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/about/获“2018最具商业价值创业公司“.jpg',
+          src: 'https://img.teddymobile.cn/www/images/about/获“2018最具商业价值创业公司“.jpg',
           time: '2018年',
           title: '获"2018最具商业价值创业公司"'
         },
         {
-          src: 'http://img.teddymobile.cn/www/images/about/获“2018金比特 最佳智能营销平台&效果案例标杆奖”.jpg',
+          src: 'https://img.teddymobile.cn/www/images/about/获“2018金比特 最佳智能营销平台&效果案例标杆奖”.jpg',
           time: '2018年',
           title: '获"2018金比特 最佳智能营销平台&效果案例标杆奖"'
         },

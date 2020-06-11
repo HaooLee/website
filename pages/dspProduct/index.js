@@ -44,25 +44,25 @@ export default class DspProduct extends Component {
         {
           title: '服务优势',
           desc: '数据化服务能力、程序化平台运营、 场景化流量覆盖、目标化运营增长',
-          src: 'http://img.teddymobile.cn/www/images/dspProduct/icon-fuwu.png'
+          src: 'https://img.teddymobile.cn/www/images/dspProduct/icon-fuwu.png'
         }
       ],
       problems: [
         {
           title: '提高转化率',
-          src: 'http://img.teddymobile.cn/www/images/dspProduct/icon-zhuanhua.png'
+          src: 'https://img.teddymobile.cn/www/images/dspProduct/icon-zhuanhua.png'
         },
         {
           title: '提高品牌认知 ',
-          src: 'http://img.teddymobile.cn/www/images/dspProduct/icon-pinpai.png'
+          src: 'https://img.teddymobile.cn/www/images/dspProduct/icon-pinpai.png'
         },
         {
           title: '提升关注度',
-          src: 'http://img.teddymobile.cn/www/images/dspProduct/icon-guanzhun.png'
+          src: 'https://img.teddymobile.cn/www/images/dspProduct/icon-guanzhun.png'
         },
         {
           title: '提升接触度',
-          src: 'http://img.teddymobile.cn/www/images/dspProduct/icon-jiechu.png'
+          src: 'https://img.teddymobile.cn/www/images/dspProduct/icon-jiechu.png'
         }
       ]
     }
@@ -74,19 +74,19 @@ export default class DspProduct extends Component {
         <ProductBanner
           title={'全域场景增量营销平台'}
           desc={'提供全场景人群覆盖、优质丰富的媒体资源、 最具创意的呈现形式，以及一站式、全流程的投放及优化服务。'}
-          src={'http://img.teddymobile.cn/www/images/dspProduct/banner.png'}
+          src={'https://img.teddymobile.cn/www/images/dspProduct/banner.png'}
           customClassName={'dsp-banner'}
         ></ProductBanner>
         <SectionCard title={'平台介绍'} bgc={"#fff"} >
           <div className="intro">
-            <img src="http://img.teddymobile.cn/www/images/dspProduct/intro.png" />
+            <img src="https://img.teddymobile.cn/www/images/dspProduct/intro.png" />
           </div>
         </SectionCard>
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
           <div className="w dsp-card-wrap" id="core-content">
             <div className="dsp-card">
               <div className="dsp-card__img">
-                <img src="http://img.teddymobile.cn/www/images/dspProduct/科技@2x.png" alt=""/>
+                <img src="https://img.teddymobile.cn/www/images/dspProduct/科技@2x.png" alt=""/>
               </div>
               <div>
                 <p className="title">平台</p>
@@ -95,7 +95,7 @@ export default class DspProduct extends Component {
             </div>
              <div className="dsp-card">
               <div className="dsp-card__img">
-                <img src="http://img.teddymobile.cn/www/images/dspProduct/用户覆盖@2x.png" alt=""/>
+                <img src="https://img.teddymobile.cn/www/images/dspProduct/用户覆盖@2x.png" alt=""/>
               </div>
               <div>
                 <p className="title">效果</p>
@@ -104,7 +104,7 @@ export default class DspProduct extends Component {
             </div>
              <div className="dsp-card">
               <div className="dsp-card__img">
-                <img src="http://img.teddymobile.cn/www/images/dspProduct/icon-changshang@2x.png" alt=""/>
+                <img src="https://img.teddymobile.cn/www/images/dspProduct/icon-changshang@2x.png" alt=""/>
               </div>
               <div>
                 <p className="title">资源</p>
