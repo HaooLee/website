@@ -29,7 +29,7 @@ server.router(/.*/, (req, res) => {
 
 
 app.prepare().then(() => {
-  server.listen(3008, err => {
+  server.listen(3000, err => {
     if (err) throw err
     console.log(`> Ready on http://localhost:3008; App mode: ${process.env.NODE_ENV}`)
   })
