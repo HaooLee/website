@@ -175,7 +175,7 @@ export default class NumberComplainCompany extends Component {
       Object.entries(this.companyValues).forEach((item, index) => {
         params.append(item[0], item[1])
       })
-      const {data} = await axios.post( `/api/company/numberComplain`, params)
+      const {data} = await axios.post( `/api/company/numberComplain2`, params)
       const notification = this.notificationSystem.current
 
       if (data.code == 200) {
