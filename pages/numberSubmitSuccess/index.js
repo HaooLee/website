@@ -7,7 +7,7 @@ export default class SubmitSuccess extends Component {
       <>
         <div className="w">
           <div className="submit-success">
-            <div className="submit-success__img-wrap"><img className="submit-success__img" src="http://img.teddymobile.cn/www/images/numberSign/icon-submit.png" /></div>
+            <div className="submit-success__img-wrap"><img className="submit-success__img" src="https://img.teddymobile.cn/www/images/numberSign/icon-submit.png" /></div>
             <p className="submit-success__text">号码认证信息提交成功。</p>
             <p className="submit-success__feedback">我们会尽快安排工作人员与您联系，为您提供号码认证服务。</p>
             <a className="submit-success__back">返回号码标识</a>

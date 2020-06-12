@@ -75,7 +75,7 @@ export default class NewsDetail extends Component {
           <div className="news__detail">
             <p className="news__detail__title">{current.news_title}</p>
             <div className="news__detail__company">
-              <img src="http://img.teddymobile.cn/www/images/news/logo.png" />
+              <img src="https://img.teddymobile.cn/www/images/news/logo.png" />
               <span>泰迪熊移动资讯 | {current.news_time?.replace(/\s[\x00-\xff]*/g,'')} </span>
             </div>
             <div className={'pagination clearfix'}>

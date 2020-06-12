@@ -11,11 +11,11 @@ export default class Banner extends React.Component {
     super(props)
     this.state.banners = [
       {
-        src: 'http://img.teddymobile.cn/www/images/banner1.png',
+        src: 'https://img.teddymobile.cn/www/images/banner1.png',
         color: '#E94846'
       },
       {
-        src: 'http://img.teddymobile.cn/www/images/banner1.png',
+        src: 'https://img.teddymobile.cn/www/images/banner1.png',
         color: '#E94846'
       }
     ]

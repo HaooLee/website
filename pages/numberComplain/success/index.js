@@ -14,7 +14,7 @@ export default class Success extends React.Component {
         <div className={'success-wrap'}>
           <img src="/static/images/success.png" alt=""/>
           <p className={'title'}>号码申诉提交成功。</p>
-          <p className={'desc'}>号码申诉提交成功，请耐心等待3-7个工作日的审核时间。审核结果将以短信告知，请您注意查收。</p>
+          <p className={'desc'}>号码申诉提交成功，请耐心等待3-5个工作日的审核时间。审核结果将以短信告知，请您注意查收。</p>
 
         </div>
         <style jsx>

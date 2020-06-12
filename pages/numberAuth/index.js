@@ -219,8 +219,8 @@ export default class NumberAuth extends Component {
                     </div>
                   } */}
                 </div>
-                <div className="form__item" onClick={this.formSubmit}>
-                  <div className="form__item__btn">确认提交</div>
+                <div className="form__item" >
+                  <div className="form__item__btn" onClick={this.formSubmit}>确认提交</div>
                 </div>
               </div>}
             </div>

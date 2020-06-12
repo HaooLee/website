@@ -12,14 +12,14 @@ import React from "react";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <img className={className} onClick={onClick} style={{width:18,height:30}} src="http://img.teddymobile.cn/www/images/right.png"/>
+    <img className={className} onClick={onClick} style={{width:18,height:30}} src="https://img.teddymobile.cn/www/images/right.png"/>
   )
 }
 
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <img className={className} onClick={onClick} style={{width:18,height:30}} src="http://img.teddymobile.cn/www/images/left.png"/>
+    <img className={className} onClick={onClick} style={{width:18,height:30}} src="https://img.teddymobile.cn/www/images/left.png"/>
   )
 }
 
@@ -57,8 +57,8 @@ export default withRouter(class Solution extends Component {
       solutions: {
         'bank': {
           images: [
-            'http://img.teddymobile.cn/www/images/solution/bank1.png',
-            'http://img.teddymobile.cn/www/images/solution/bank2.png'
+            'https://img.teddymobile.cn/www/images/solution/bank1.png',
+            'https://img.teddymobile.cn/www/images/solution/bank2.png'
           ],
           industryDesc: <span>依托泰迪熊移动自研核心技术产品，赋能银行/保险业，升级传统短信，如为金融企业提供品牌认证、短信菜单等功能，助推金融机构提高普惠金融效率。</span>,
           worthDesc: <div className="solution-desc__content">
@@ -70,8 +70,8 @@ export default withRouter(class Solution extends Component {
         },
         'operator': {
           images: [
-            'http://img.teddymobile.cn/www/images/solution/operator1.png',
-            'http://img.teddymobile.cn/www/images/solution/operator2.png'
+            'https://img.teddymobile.cn/www/images/solution/operator1.png',
+            'https://img.teddymobile.cn/www/images/solution/operator2.png'
           ],
           industryDesc: <span>泰迪熊移动自研智能短信产品，通过短信卡片功能打破70个字符限制，为运营商提供用户服务赋能，降低用户阅读成本，提升用户体验。</span>,
           worthDesc: <div className="solution-desc__content">
@@ -83,8 +83,8 @@ export default withRouter(class Solution extends Component {
         },
         'net': {
           images: [
-            'http://img.teddymobile.cn/www/images/solution/net1.png',
-            'http://img.teddymobile.cn/www/images/solution/net2.png'
+            'https://img.teddymobile.cn/www/images/solution/net1.png',
+            'https://img.teddymobile.cn/www/images/solution/net2.png'
           ],
           industryDesc: <span>提升互联网企业短信推广效率，支持一键调起H5、APP、快应用，一键链接企业与用户。<br />&nbsp;</span>,
           worthDesc: <div className="solution-desc__content">
@@ -95,8 +95,8 @@ export default withRouter(class Solution extends Component {
         },
         'new-retail': {
           images: [
-            'http://img.teddymobile.cn/www/images/solution/new-retail1.png',
-            'http://img.teddymobile.cn/www/images/solution/new-retail2.png'
+            'https://img.teddymobile.cn/www/images/solution/new-retail1.png',
+            'https://img.teddymobile.cn/www/images/solution/new-retail2.png'
           ],
           industryDesc: <span>赋能新零售企业，打通线上线下营销，在传统短信的基础上进行升级，为新零售企业提供线上营销渠道，同时通过场景营销，助力新零售企业线下营销。</span>,
           worthDesc: <div className="solution-desc__content">
@@ -107,8 +107,8 @@ export default withRouter(class Solution extends Component {
         },
         'FMCG': {
           images: [
-            'http://img.teddymobile.cn/www/images/solution/FMCG1.png',
-            'http://img.teddymobile.cn/www/images/solution/FMCG2.png'
+            'https://img.teddymobile.cn/www/images/solution/FMCG1.png',
+            'https://img.teddymobile.cn/www/images/solution/FMCG2.png'
           ],
           industryDesc: <span>通过泰迪熊移动自研产品技术，赋能快消品行业，为快消品行业提供高效粉丝维护及用户需求收集渠道，一键链接企业与用户。<br />&nbsp;</span>,
           worthDesc: <div className="solution-desc__content">
@@ -119,8 +119,8 @@ export default withRouter(class Solution extends Component {
         },
         'e-commerce': {
           images: [
-            'http://img.teddymobile.cn/www/images/solution/e-commerce1.png',
-            'http://img.teddymobile.cn/www/images/solution/e-commerce2.png'
+            'https://img.teddymobile.cn/www/images/solution/e-commerce1.png',
+            'https://img.teddymobile.cn/www/images/solution/e-commerce2.png'
           ],
           industryDesc: <span>赋能电商行业短信营销，打破传统短信字数限制的同时，降低电商企业营销短信拦截率，专业的技术运营团队实时响应，保障客户服务质量。</span>,
           worthDesc: <div className="solution-desc__content">
@@ -132,15 +132,15 @@ export default withRouter(class Solution extends Component {
       },
       activeType: 'bank',
       partnerImages: [
-        ['http://img.teddymobile.cn/www/images/solution/partner/招商信诺备份@2x.png'],
-        ['http://img.teddymobile.cn/www/images/solution/partner/中国联通@2x.png'],
-        ['http://img.teddymobile.cn/www/images/solution/partner/中国移动@2x.png'],
-        ['http://img.teddymobile.cn/www/images/solution/partner/中移互联网@2x.png'],
-        ['http://img.teddymobile.cn/www/images/solution/partner/中国电信@2x.png', 'http://img.teddymobile.cn/www/images/solution/partner/21CN@2x.png'],
-        ['http://img.teddymobile.cn/www/images/solution/partner/编组@2x.png'],
-        ['http://img.teddymobile.cn/www/images/solution/partner/位图@2x.png'],
-        ['http://img.teddymobile.cn/www/images/solution/partner/携程@2x.png'],
-        ['http://img.teddymobile.cn/www/images/solution/partner/度小满@2x.png']
+        ['https://img.teddymobile.cn/www/images/solution/partner/招商信诺备份@2x.png'],
+        ['https://img.teddymobile.cn/www/images/solution/partner/中国联通@2x.png'],
+        ['https://img.teddymobile.cn/www/images/solution/partner/中国移动@2x.png'],
+        ['https://img.teddymobile.cn/www/images/solution/partner/中移互联网@2x.png'],
+        ['https://img.teddymobile.cn/www/images/solution/partner/中国电信@2x.png', 'https://img.teddymobile.cn/www/images/solution/partner/21CN@2x.png'],
+        ['https://img.teddymobile.cn/www/images/solution/partner/编组@2x.png'],
+        ['https://img.teddymobile.cn/www/images/solution/partner/位图@2x.png'],
+        ['https://img.teddymobile.cn/www/images/solution/partner/携程@2x.png'],
+        ['https://img.teddymobile.cn/www/images/solution/partner/度小满@2x.png']
       ]
     }
 
@@ -222,14 +222,14 @@ export default withRouter(class Solution extends Component {
                       <ul className="info__list">
                         <li className="info__list__item">
                           <div className="info__list__item__img">
-                            <img src="http://img.teddymobile.cn/www/images/solution/icon-hangyefuneng.png" />
+                            <img src="https://img.teddymobile.cn/www/images/solution/icon-hangyefuneng.png" />
                             <span>行业赋能</span>
                           </div>
                           <p className="info__list__item__desc">{solutions[item.type] && solutions[item.type]['industryDesc']}</p>
                         </li>
                         <li className="info__list__item">
                           <div className="info__list__item__img">
-                            <img src="http://img.teddymobile.cn/www/images/solution/icon-jiazhidian.png" />
+                            <img src="https://img.teddymobile.cn/www/images/solution/icon-jiazhidian.png" />
                             <span>价值点</span>
                           </div>
                           <div className="info__list__item__desc">{solutions[item.type] && solutions[item.type]['worthDesc']}</div>

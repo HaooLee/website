@@ -113,7 +113,7 @@ export default class NumberComplainPersonal extends Component {
       Object.entries(this.companyValues).forEach((item, index) => {
         params.append(item[0], item[1])
       })
-      const {data} = await axios.post(`/api/single/numberComplain` , params)
+      const {data} = await axios.post(`/api/single/numberComplain2` , params)
       const notification = this.notificationSystem.current
 
       if (data.code == 200) {
@@ -138,13 +138,13 @@ export default class NumberComplainPersonal extends Component {
     const {companyErrors} = this.state
     const {phone} = this.companyValues
     if(this.checkPhone(phone)){
-      const {data} = await axios.post(`/api/sms/send`, {
+      this.setState({
+        codeDisabled:true
+      })
+      const {data} = await axios.post(`/api/sms/send2`, {
         phone
       })
       if(data.code == 200) {
-        this.setState({
-          codeDisabled:true
-        })
         let sec = 60
         this.timer = setInterval(()=>{
           if(--sec > 0){
@@ -173,7 +173,7 @@ export default class NumberComplainPersonal extends Component {
     const {code, phone} = this.companyValues
     let codeMark = false
     if(code && this.checkPhone(phone)) {
-      const {data} = await axios.post('/api/sms/verify', {code, phone})
+      const {data} = await axios.post('/api/sms/verify2', {code, phone})
       if(data.code == 200) {
         companyErrors['code'] = {}
         codeMark = true
@@ -261,8 +261,8 @@ export default class NumberComplainPersonal extends Component {
                     {companyErrors['code']?.err && <span className={'errMsg'}>{companyErrors['code'].msg}</span>}
                   </div>
                 </div>
-                <div className="form__item" onClick={this.companyFormSubmit}>
-                  <div className="form__item__btn">确认提交</div>
+                <div className="form__item" >
+                  <div className="form__item__btn" onClick={this.companyFormSubmit}>确认提交</div>
                 </div>
               </div>
 

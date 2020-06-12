@@ -14,7 +14,7 @@ export default class Auth extends Component {
       coreList: [
         {
           title: '准确识别陌生电话来源，保障用户手机安全',
-          src: 'http://img.teddymobile.cn/www/images/dspProduct/icon-pingtai.png',
+          src: 'https://img.teddymobile.cn/www/images/dspProduct/icon-pingtai.png',
           imgStyle: {
             width: '52px',
             height: '34px',
@@ -23,7 +23,7 @@ export default class Auth extends Component {
         },
         {
           title: '为企业提供号码认证服务，进行有效品牌展示',
-          src: 'http://img.teddymobile.cn/www/images/dspProduct/icon-xiaoguo.png',
+          src: 'https://img.teddymobile.cn/www/images/dspProduct/icon-xiaoguo.png',
           imgStyle: {
             width: '39px',
             height: '39px'
@@ -31,7 +31,7 @@ export default class Auth extends Component {
         },
         {
           title: '支持400、虚拟号段、个人号码',
-          src: 'http://img.teddymobile.cn/www/images/dspProduct/icon-changshang.png',
+          src: 'https://img.teddymobile.cn/www/images/dspProduct/icon-changshang.png',
           imgStyle: {
             width: '37px',
             height: '33px'
@@ -42,31 +42,31 @@ export default class Auth extends Component {
         {
           title: '用户覆盖广',
           desc: '日均请求量高达47亿次，用户覆盖广。',
-          src: 'http://img.teddymobile.cn/www/images/auth/icon-fugai@2x.png'
+          src: 'https://img.teddymobile.cn/www/images/auth/icon-fugai@2x.png'
         },
         {
           title: '识别精准',
           desc: '采用实时大数据挖掘技术，每日更新 7000万号码数据，识别精准。',
-          src: 'http://img.teddymobile.cn/www/images/auth/icon-shibie@2x.png'
+          src: 'https://img.teddymobile.cn/www/images/auth/icon-shibie@2x.png'
         },
         {
           title: '服务优势',
           desc: '多维度的校验数据，准确率达到了 99.9%的超高水平。',
-          src: 'http://img.teddymobile.cn/www/images/auth/icon-zhunquelvgao@2x.png'
+          src: 'https://img.teddymobile.cn/www/images/auth/icon-zhunquelvgao@2x.png'
         }
       ],
       problems: [
         {
           title: '骚扰电话不胜其烦',
-          src: 'http://img.teddymobile.cn/www/images/auth/saoraodianhua.png'
+          src: 'https://img.teddymobile.cn/www/images/auth/saoraodianhua.png'
         },
         {
           title: '企业电话频频被拒接 ',
-          src: 'http://img.teddymobile.cn/www/images/auth/icon-qiyedianhua@2x.png'
+          src: 'https://img.teddymobile.cn/www/images/auth/icon-qiyedianhua@2x.png'
         },
         {
           title: '号码被恶意标注',
-          src: 'http://img.teddymobile.cn/www/images/auth/icon-biaoji@2x.png'
+          src: 'https://img.teddymobile.cn/www/images/auth/icon-biaoji@2x.png'
         }
       ]
     }
@@ -78,7 +78,7 @@ export default class Auth extends Component {
         <ProductBanner
           title={'号码认证'}
           desc={'来电接的安心，去电不被拒绝'}
-          src={'http://img.teddymobile.cn/www/images/auth/banner.png'}
+          src={'https://img.teddymobile.cn/www/images/auth/banner.png'}
           imgCustomStyle={{
             width: '397px',
             height: '383px'
@@ -90,7 +90,7 @@ export default class Auth extends Component {
         <SectionCard title={'核心功能'} bgc={"#F8FAFF"} >
           <div className="core-content-wrap">
             <CoreContent
-              src={'http://img.teddymobile.cn/www/images/quickAppProduct/phone.png'}
+              src={'https://img.teddymobile.cn/www/images/quickAppProduct/phone.png'}
               coreList={coreList}
               customStyle={{'marginBottom': '75px'}}
               imgCustomStyle={{width: '296px', height: '600px', marginRight: '133px'}}
@@ -107,11 +107,11 @@ export default class Auth extends Component {
             </div>
             <div className="tab-content__right clearfix">
               <div className="tab-content__right__item">
-                <img src="http://img.teddymobile.cn/www/images/auth/auth-phone.png" />
+                <img src="https://img.teddymobile.cn/www/images/auth/auth-phone.png" />
                 <p>其他样例</p>
               </div>
               <div className="tab-content__right__item">
-                <img src="http://img.teddymobile.cn/www/images/auth/auth-phone-2.png" />
+                <img src="https://img.teddymobile.cn/www/images/auth/auth-phone-2.png" />
                 <p>企业认证</p>
               </div>
             </div>

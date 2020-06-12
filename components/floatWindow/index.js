@@ -21,7 +21,8 @@ export default class FloatWindow extends react.Component {
     // visible: false,
     options: [
       "医疗健康", "机械设备", "软件游戏", "教育培训", "商务服务", "装修装饰", "生活用品", "生活服务", "交通类", "电子电工", "化工及材料", "家用电器", "农林牧渔", "旅游及票务", "服装鞋帽", "休闲娱乐", "安全安保", "食品餐饮", "节能环保", "金融服务", "IT产品", "化妆品", "房地产", "通信服务", "办公文教", "图书音像", "母婴用品", "铃声短信", "彩票", "电子商务", "社交", "招聘", "资讯", "分类信息", "其他"],
-    errors:{}
+    errors:{},
+    pending:false,
   }
   notificationSystem = React.createRef()
   values = {}
@@ -74,15 +75,45 @@ export default class FloatWindow extends react.Component {
       Object.entries(this.values).forEach((item, index) => {
         params.append(item[0], item[1])
       })
-      const {data} = await axios.post(`/api/mail/send `, params)
       const notification = this.notificationSystem.current
-      const { dispatch } = this.props
-      dispatch({type:'FLOAT_WINDOW_HIDE'})
-      notification.addNotification({
-        title: '提示',
-        message: '提交成功',
-        level: 'success'
-      })
+      try{
+        this.setState({
+          pending:true
+        })
+        const {data} = await axios.post(`/api/mail/send `, params)
+        if(data.code == 200){
+          const { dispatch } = this.props
+          dispatch({type:'FLOAT_WINDOW_HIDE'})
+          this.setState({
+            pending:false
+          })
+          notification.addNotification({
+            title: '提示',
+            message: '提交成功',
+            level: 'success'
+          })
+        }else {
+          this.setState({
+            pending:false
+          })
+          notification.addNotification({
+            title: '提示',
+            message: data.msg,
+            level: 'error'
+          })
+        }
+
+      }catch (e) {
+        this.setState({
+          pending:false
+        })
+        notification.addNotification({
+          title: '提示',
+          message: '网络异常,请检查您的网络',
+          level: 'error'
+        })
+      }
+
     }
   }
 
@@ -95,7 +126,7 @@ export default class FloatWindow extends react.Component {
   }
   render() {
 
-    const { options, errors} = this.state
+    const { options, errors,pending} = this.state
     const {visible} = this.props
     return (
       <>
@@ -172,8 +203,8 @@ export default class FloatWindow extends react.Component {
 
               </div>
             </div>
-            <button className={'submit'} onClick={this.onSubmit}>
-              确认提交
+            <button className={'submit'} onClick={this.onSubmit} disabled={pending}>
+              {pending?'提交中...':'确认提交'}
             </button>
           </div>
         </Modal>
