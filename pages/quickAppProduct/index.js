@@ -151,8 +151,8 @@ export default class QuickAppProduct extends React.Component {
         src: 'https://img.teddymobile.cn/www/images/quickAppProduct/厂商专属推荐.png',
         name: '厂商专属推荐',
         desc: <div className="apply-desc__content">
-          <p>小米专属，福利来袭，即点即得</p>
-          <p>小米专属流量推荐位“小米福利社” ，长期为泰迪熊移动优质快应用开放，目前已经为屈臣氏为主的多家客户进行曝光推广，效果超出预期</p>
+          <p>专属福利来袭，即点即得</p>
+          <p>厂商专属流量推荐位 ，长期为泰迪熊移动优质快应用开放，目前已经为多家客户进行曝光推广，效果超出预期</p>
         </div>
       },
       'sms': {
