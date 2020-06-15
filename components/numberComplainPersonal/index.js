@@ -207,7 +207,7 @@ export default class NumberComplainPersonal extends Component {
       return
     }
     try {
-      const {data:{code}} = await axios.post('/api/phone/check', {phone})
+      const {data:{code}} = await axios.post('/api/phone/check2', {phone})
       if(code == 200){
         companyErrors['phone'] = {}
         this.setState({
