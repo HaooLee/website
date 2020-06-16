@@ -175,7 +175,7 @@ export default class NumberComplainCompany extends Component {
       Object.entries(this.companyValues).forEach((item, index) => {
         params.append(item[0], item[1])
       })
-      const {data} = await axios.post( `/api/company/numberComplain2`, params)
+      const {data} = await axios.post( `/api/company/numberComplain`, params)
       const notification = this.notificationSystem.current
 
       if (data.code == 200) {
@@ -211,7 +211,7 @@ export default class NumberComplainCompany extends Component {
         companyErrors,
         codeDisabled:true
       })
-      const {data} = await axios.post(`/api/sms/send2`, {
+      const {data} = await axios.post(`/api/sms/send`, {
         phone:contactPhone
       })
       if(data.code == 200) {
@@ -323,7 +323,7 @@ export default class NumberComplainCompany extends Component {
     const {code, contactPhone} = this.companyValues
     let codeMark = false
     if(code && this.checkPhone(contactPhone)) {
-      const {data} = await axios.post('/api/sms/verify2', {code, phone:contactPhone})
+      const {data} = await axios.post('/api/sms/verify', {code, phone:contactPhone})
       if(data.code == 200) {
         companyErrors['code'] = {}
         codeMark = true
