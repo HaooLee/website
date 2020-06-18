@@ -29,6 +29,7 @@ export default class NumberComplainCompany extends Component {
       codeDisabled:false,
       phoneMark:false,
       codeMark:false,
+      phoneValue:''
     }
   }
 
@@ -150,8 +151,12 @@ export default class NumberComplainCompany extends Component {
         codeMark:false
       })
     }
-    const val = ev.currentTarget.value
-    this.companyValues[type] = val
+    if(type = 'phone'){
+      this.companyValues[type] = this.state.phoneValue
+    }else {
+      const val = ev.currentTarget.value
+      this.companyValues[type] = val
+    }
   }
   companyFormSubmit = async (type) => {
     const {codeMark,phoneMark,companyErrors} = this.state
@@ -175,7 +180,7 @@ export default class NumberComplainCompany extends Component {
       Object.entries(this.companyValues).forEach((item, index) => {
         params.append(item[0], item[1])
       })
-      const {data} = await axios.post( `/api/company/numberComplain2`, params)
+      const {data} = await axios.post( `/api/company/numberComplain`, params)
       const notification = this.notificationSystem.current
 
       if (data.code == 200) {
@@ -211,7 +216,7 @@ export default class NumberComplainCompany extends Component {
         companyErrors,
         codeDisabled:true
       })
-      const {data} = await axios.post(`/api/sms/send2`, {
+      const {data} = await axios.post(`/api/sms/send`, {
         phone:contactPhone
       })
       if(data.code == 200) {
@@ -323,7 +328,7 @@ export default class NumberComplainCompany extends Component {
     const {code, contactPhone} = this.companyValues
     let codeMark = false
     if(code && this.checkPhone(contactPhone)) {
-      const {data} = await axios.post('/api/sms/verify2', {code, phone:contactPhone})
+      const {data} = await axios.post('/api/sms/verify', {code, phone:contactPhone})
       if(data.code == 200) {
         companyErrors['code'] = {}
         codeMark = true
@@ -336,15 +341,21 @@ export default class NumberComplainCompany extends Component {
       })
     }
   }
+
+  handlePhoneValueChange = (e)=>{
+    this.setState({
+      phoneValue:e.target.value.replace(/[^\d]/g,'')
+    })
+  }
   render() {
-    const {headers, activeType, fileContent, companyErrors,codeDisabled, codeText} = this.state
+    const {headers, activeType, fileContent, companyErrors,codeDisabled, codeText,phoneValue} = this.state
     return (
       <>
             <div className="form">
                 <div className="form__item form__item--required">
                   <div className="form__item__label">申诉号码</div>
                   <div className="form__item__input">
-                    <input placeholder="输入号码，如果是座机号请加上区号" onBlur={this.phoneMarkCheck} onChange={this.companyFormChange.bind(this, 'phone')} type="text" />
+                    <input placeholder="输入号码，如果是座机号请加上区号" value={phoneValue} onInput={this.handlePhoneValueChange} onBlur={this.phoneMarkCheck} onChange={this.companyFormChange.bind(this, 'phone')} type="text" />
                     {companyErrors['phone']?.err && <span className={'errMsg'}>{companyErrors['phone'].msg}</span>}
                   </div>
                 </div>
@@ -367,7 +378,7 @@ export default class NumberComplainCompany extends Component {
                   <div className="form__item__label">添加证明</div>
                   <div className="form__item__input form__item__input--v">
                     <div className="form__item__input__item">
-                      <input placeholder="身份证正面照" type="text" disabled />
+                      <input placeholder="企业营业执照" type="text" disabled />
                       <div className="upload">
                         <img src="https://img.teddymobile.cn/www/images/numberSign/upload-icon.png" />
                         <input className="file"  onChange={this.fileChange.bind(this, 'idCard')} type="file" id="idCard"/>
