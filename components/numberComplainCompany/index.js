@@ -106,23 +106,7 @@ export default class NumberComplainCompany extends Component {
     this.setState({
       fileContent
     })
-    // const params = new FormData()
-    // params.append('source', files[0])
-    // const {data} = await axios.post(`/api/file/upload`, params)
-    // const notification = this.notificationSystem.current
-    // if(data.code == 200) {
-    //   notification.addNotification({
-    //     title: '提示',
-    //     message: '上传成功',
-    //     level: 'success'
-    //   })
-    // } else {
-    //   notification.addNotification({
-    //     title: '提示',
-    //     message: '上传失败',
-    //     level: 'error'
-    //   })
-    // }
+
     if(type === 'idCard') {
       this.companyValues.file1 = files[0]
       companyErrors['file1'] = {}
@@ -145,20 +129,27 @@ export default class NumberComplainCompany extends Component {
       })
     }
   }
-  companyFormChange = (type, ev) => {
+  companyFormChange (type, ev) {
+
+    if(type == 'phone'){
+      const val = ev.currentTarget.value.replace(/[^\d]/g,'')
+      this.companyValues[type] = val
+      this.setState({
+        phoneValue:val
+      })
+
+    }else {
+      const val = ev.currentTarget.value
+      this.companyValues[type] = val
+    }
+
     if(type == 'contactPhone'){
       this.setState({
         codeMark:false
       })
     }
-    if(type = 'phone'){
-      this.companyValues[type] = this.state.phoneValue
-    }else {
-      const val = ev.currentTarget.value
-      this.companyValues[type] = val
-    }
   }
-  companyFormSubmit = async (type) => {
+  companyFormSubmit = async () => {
     const {codeMark,phoneMark,companyErrors} = this.state
     if(!phoneMark) {
       companyErrors['phone'] = {err:true,msg:'该号码为空或无需提交申诉'}
@@ -202,7 +193,7 @@ export default class NumberComplainCompany extends Component {
     return /^1[3456789]\d{9}$/.test(phone)
   }
   checkTel(tel){
-    return /^0\d{9,11}/g.test(tel)
+    return /\d{9,13}/g.test(tel)
   }
 
 
@@ -272,6 +263,7 @@ export default class NumberComplainCompany extends Component {
   phoneMarkCheck = async () => {
     const {companyErrors} = this.state
     const {phone} = this.companyValues
+    // console.log(phone,'---',this.companyValues)
     if(!phone){
       companyErrors['phone'] ={}
       this.setState({
@@ -355,21 +347,21 @@ export default class NumberComplainCompany extends Component {
                 <div className="form__item form__item--required">
                   <div className="form__item__label">申诉号码</div>
                   <div className="form__item__input">
-                    <input placeholder="输入号码，如果是座机号请加上区号" value={phoneValue} onInput={this.handlePhoneValueChange} onBlur={this.phoneMarkCheck} onChange={this.companyFormChange.bind(this, 'phone')} type="text" />
+                    <input placeholder="输入号码，如果是座机号请加上区号" value={phoneValue}  onBlur={this.phoneMarkCheck} onChange={ e=> this.companyFormChange( 'phone',e)} type="text" />
                     {companyErrors['phone']?.err && <span className={'errMsg'}>{companyErrors['phone'].msg}</span>}
                   </div>
                 </div>
                  <div className="form__item form__item--required">
                   <div className="form__item__label">申诉人手机号</div>
                   <div className="form__item__input">
-                    <input placeholder="请留下您最常用的手机号，以便我们及时联系并申诉" onBlur={this.checkContactPhone}  onChange={this.companyFormChange.bind(this, 'contactPhone')} type="text" />
+                    <input placeholder="请留下您最常用的手机号，以便我们及时联系并申诉" onBlur={this.checkContactPhone}  onChange={ e=> this.companyFormChange('contactPhone',e)} type="text" />
                     {companyErrors['contactPhone']?.err && <span className={'errMsg'}>{companyErrors['contactPhone'].msg}</span>}
                   </div>
                 </div>
                 <div className="form__item form__item--required">
                   <div className="form__item__label">验证码</div>
                   <div className="form__item__input">
-                    <input placeholder="请输入您的手机验证码" type="text" onChange={this.companyFormChange.bind(this, 'code')} onBlur={this.smsVerify} />
+                    <input placeholder="请输入您的手机验证码" type="text" onChange={ e => this.companyFormChange('code',e)} onBlur={this.smsVerify} />
                     <button className="form__item__input__code" onClick={this.getCode} disabled={codeDisabled}>{codeText}</button>
                     {companyErrors['code']?.err && <span className={'errMsg'}>{companyErrors['code'].msg}</span>}
                   </div>
@@ -381,7 +373,7 @@ export default class NumberComplainCompany extends Component {
                       <input placeholder="企业营业执照" type="text" disabled />
                       <div className="upload">
                         <img src="https://img.teddymobile.cn/www/images/numberSign/upload-icon.png" />
-                        <input className="file"  onChange={this.fileChange.bind(this, 'idCard')} type="file" id="idCard"/>
+                        <input className="file"  onChange={ e => this.fileChange('idCard',e)} type="file" id="idCard"/>
                         <label htmlFor="idCard">选择文件</label>
                         {companyErrors['file1']?.err && <span className={'errMsg'}>{companyErrors['file1'].msg}</span>}
                       </div>
@@ -393,7 +385,7 @@ export default class NumberComplainCompany extends Component {
                       <input placeholder="号码归属证明" type="text" disabled />
                       <div className="upload">
                         <img src="https://img.teddymobile.cn/www/images/numberSign/upload-icon.png" />
-                        <input className="file" onChange={this.fileChange.bind(this, 'numCard')} type="file" id="numCard"/>
+                        <input className="file" onChange={ e=> this.fileChange('numCard',e)} type="file" id="numCard"/>
                         <label htmlFor="numCard">选择文件</label>
                         {companyErrors['file2']?.err && <span className={'errMsg'}>{companyErrors['file2'].msg}</span>}
                       </div>
@@ -405,7 +397,7 @@ export default class NumberComplainCompany extends Component {
                       <input placeholder="其他证明" type="text" disabled />
                       <div className="upload">
                         <img src="https://img.teddymobile.cn/www/images/numberSign/upload-icon.png" />
-                        <input className="file" onChange={this.fileChange.bind(this, 'otherCard')} type="file" id="otherCard"/>
+                        <input className="file" onChange={e => this.fileChange('otherCard',e)} type="file" id="otherCard"/>
                         <label htmlFor="otherCard">选择文件</label>
                         {companyErrors['file3']?.err && <span className={'errMsg'}>{companyErrors['file3'].msg}</span>}
                       </div>
@@ -418,14 +410,14 @@ export default class NumberComplainCompany extends Component {
                 <div className="form__item form__item--no-margin form__item--required">
                   <div className="form__item__label">申诉企业全称</div>
                   <div className="form__item__input">
-                    <input placeholder="请输入您的企业全称" type="text" onChange={this.companyFormChange.bind(this, 'name')} />
+                    <input placeholder="请输入您的企业全称" type="text" onChange={ e => this.companyFormChange( 'name',e)} />
                     {companyErrors['name']?.err && <span className={'errMsg'}>{companyErrors['name'].msg}</span>}
                   </div>
                 </div>
                 <div className="form__item form__item--required">
                   <div className="form__item__label">申诉原因</div>
                   <div className="form__item__input">
-                    <input placeholder="请说明您的申诉原因" type="text" onChange={this.companyFormChange.bind(this, 'reason')} />
+                    <input placeholder="请说明您的申诉原因" type="text" onChange={e => this.companyFormChange( 'reason',e)} />
                     {companyErrors['reason']?.err && <span className={'errMsg'}>{companyErrors['reason'].msg}</span>}
                   </div>
                 </div>
@@ -439,12 +431,12 @@ export default class NumberComplainCompany extends Component {
                 <div className="form__item form__item--required">
                   <div className="form__item__label">联系邮箱/QQ</div>
                   <div className="form__item__input">
-                    <input placeholder="请留下您的联系邮箱及QQ" type="text" onChange={this.companyFormChange.bind(this, 'contactOther')} />
+                    <input placeholder="请留下您的联系邮箱及QQ" type="text" onChange={ e => this.companyFormChange( 'contactOther',e)} />
                     {companyErrors['contactOther']?.err && <span className={'errMsg'}>{companyErrors['contactOther'].msg}</span>}
                   </div>
                 </div>
                 <div className="form__item" >
-                  <div className={`form__item__btn`} onClick={this.companyFormSubmit.bind(this, 'company')}>确认提交</div>
+                  <div className={`form__item__btn`} onClick={this.companyFormSubmit}>确认提交</div>
                 </div>
               <NotificationSystem ref={this.notificationSystem} />
               </div>

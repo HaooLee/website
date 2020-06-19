@@ -1,5 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
+import Router from 'next/router'
+
 
 
 export default class Illustrate extends React.Component {
@@ -25,6 +27,7 @@ export default class Illustrate extends React.Component {
           <p className={'indent-point'}>运营商开具的号码归属证明，如：开户过户单/缴费记录单/业务受理单/话费详单等</p>
           <p>注意：号码归属证明必须包含证明开具日期，电话号码、机主姓名/公司名称并加盖清晰的运营商公章</p>
           <p>4.请确保资料清晰完整，真实有效并严格按照上述要求发送申诉，否则将不予受理</p>
+          <div className={'back'} onClick={()=>{Router.back()}}>返回</div>
         </div>
         <style jsx>
           {
@@ -65,6 +68,21 @@ export default class Illustrate extends React.Component {
                       }
                     }
 
+                  }
+                  .back{
+                   width: 100px;
+                    height: 40px;
+                    border-radius: 5px;
+                    margin: 30px auto;
+                    background-color: #0189d3;
+                    color: #fff;
+                    text-align: center;
+                    line-height: 40px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    &:hover {
+                      opacity:.8;
+                    }
                   }
 
 

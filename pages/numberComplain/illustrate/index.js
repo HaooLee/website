@@ -1,5 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
+import Router from 'next/router'
+
 
 
 export default class Illustrate extends React.Component {
@@ -31,7 +33,9 @@ export default class Illustrate extends React.Component {
           <p>答：您收到申诉成功的短信通知后，需要3-5个工作日的同步时间。</p>
           <p>9、号码标记申诉失败，需如何处理？</p>
           <p>答：申诉回复的短信，会告知您申诉失败的原因。请您根据驳回原因进行修正，并重新申请。 </p>
+          <div className={'back'} onClick={()=>{Router.back()}}>返回</div>
         </div>
+
         <style jsx>
           {
             `
@@ -54,6 +58,21 @@ export default class Illustrate extends React.Component {
                     p:nth-child(odd){
                       font-weight: bold;
 
+                    }
+                  }
+                  .back{
+                   width: 100px;
+                    height: 40px;
+                    border-radius: 5px;
+                    margin: 30px auto;
+                    background-color: #0189d3;
+                    color: #fff;
+                    text-align: center;
+                    line-height: 40px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    &:hover {
+                      opacity:.8;
                     }
                   }
 
