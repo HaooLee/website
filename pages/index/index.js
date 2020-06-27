@@ -140,11 +140,11 @@ export default class Index extends React.Component {
           <meta name="description" content="泰迪熊移动以智能连接人与服务为使命，专注于提供基于大数据和场景的智能服务。公司以智能短信、号码识别、5G场景消息、快应用等产品为主导，致力于成为客户信赖的智慧通讯服务提供商。"/>
         </Head>
         <Banner />
-        <section style={{backgroundColor:'#f7f7f7'}}>
-          <div className="w">
-            <ViewBox />
-          </div>
-        </section>
+        {/*<section style={{backgroundColor:'#f7f7f7'}}>*/}
+          {/*<div className="w">*/}
+            {/*<ViewBox />*/}
+          {/*</div>*/}
+        {/*</section>*/}
         <section className="feature-left">
           <div className="w feature-content">
             <div className="feature-image">

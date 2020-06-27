@@ -1,5 +1,5 @@
 .carousel{
-  background: url(https://img.teddymobile.cn/www/images/left-bottom-tech.png) left bottom/395px 505px no-repeat,url(https://img.teddymobile.cn/www/images/right-top-tech.png) right top/contain no-repeat;
+  background:url(https://img.teddymobile.cn/www/images/left-bottom-tech.png) left bottom/395px 505px no-repeat,url(https://img.teddymobile.cn/www/images/right-top-tech.png) right top/contain no-repeat;
   background-color: #355EA6;
   .banner-wrap{
     height: 640px;
@@ -27,38 +27,10 @@
       margin-right: 10px;
     }
     .buttons{
-      margin-top: 30px;
-      a{
-        position: relative;
-        overflow: hidden;
-        display: inline-block;
-        width:158px;
-        height:54px;
-        border-radius:27px;
-        font-size:24px;
-        font-family:Source Han Sans CN;
-        font-weight:bold;
-        text-align: center;
-        line-height: 54px;
-        text-decoration: none;
+      img{
+        float: right;
       }
 
-      a:before{
-        position: absolute;
-        background-color: #fff;
-        content: '.';
-        height: 100%;
-        width: 6px;
-        left: -20px;
-        top: 0px;
-        font-size: 0px;
-        transform: skew(-20deg, 0);
-        transition: all .2s ease-in-out;
-      }
-
-      a:hover:before{
-        left: 120%;
-      }
 
       .watch-video {
         background-color: #fff;
@@ -84,13 +56,158 @@
     bottom: 10px;
   }
 }
+.service-center {
+    h2 {
+      position: relative;
+      font-size: 30px;
+      margin-top: 89px;
+      padding-bottom: 20px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 36px;
+      font-family: Source Han Sans CN;
+      font-weight: bold;
+      color: #333333;
+    }
+    .en-title {
+        font-size: 24px;
+        font-family: "SourceHanSansCN";
+        color: rgb(111, 111, 111);
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+   .content {
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     .item {
+       cursor: pointer;
+       margin-bottom: 10px;
+       .play {
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+         img {
+           width: 100%;
+         }
+        .mask {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          &:before {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            transform: scale(3);
+            transition: all .1s linear;
+          }
+          &:after{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-30%,-50%) scale(0);
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 40px 0px 40px 50px;
+            border-color: transparent transparent transparent #fff;
+            transition: all .1s linear;
+          }
+        }
+       }
+       .title {
+         font-size: 26.667px;
+         margin: 25px 0;
+       }
+       .desc{
+           font-size: 18px;
+           color: rgb(93, 93, 93);
+           line-height: 1.571;
+           text-align: left;
+       }
+
+       &:hover {
+         .title,.desc {
+           color: rgb(54, 94, 166);
+         }
+         .play {
+           .mask{
+             background-color: rgba(0,0,0,.6);
+             &:before{
+               transform: scale(1);
+             }
+             &:after {
+               transform: translate(-30%,-50%) scale(1);
+             }
+
+           }
+
+         }
+       }
+
+     }
+   }
+
+  a{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 20px auto 40px;
+    width:158px;
+    cursor: pointer;
+    height:54px;
+    border-radius:27px;
+    border: 2px solid gray;
+    font-size:24px;
+    font-family:Source Han Sans CN;
+    font-weight:bold;
+    text-align: center;
+    line-height: 54px;
+    text-decoration: none;
+  }
+
+  a:before{
+    position: absolute;
+    background-color: gray;
+    content: '.';
+    height: 100%;
+    width: 6px;
+    left: -20px;
+    top: 0px;
+    font-size: 0px;
+    transform: skew(-20deg, 0);
+    transition: all .2s ease-in-out;
+  }
+
+  a:hover:before{
+    left: 120%;
+  }
+
+
+}
 
 @import '../../pages/var.less';
 
 @media screen and (max-width: @MATCH_WIDTH) {
   .carousel {
+    background-size: 38%,70%;
     .banner-wrap {
-      height: 7.6rem;
+      height: 8.6rem;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -108,15 +225,46 @@
         // margin-bottom: 0.1rem;
       }
       .buttons {
-        a {
-          width: 2.64rem;
-          height: 0.69rem;
-          box-sizing: border-box;
-          line-height: 0.69rem;
-          font-size: 14px;
+        img {
+          display: block;
+          margin: auto;
+          float: none;
+          width: 60%;
         }
+
       }
     }
+  }
+
+  .service-center {
+    h2 {
+      font-size: 20px;
+      margin-top: 1rem;
+    }
+    .en-title {
+      font-size: 16px;
+    }
+    .content {
+      justify-content: space-around;
+      .item {
+        width: 45%;
+        .title {
+          font-size: 18px;
+          margin: 10px 0;
+        }
+        .desc{
+          font-size: 12px;
+        }
+      }
+
+    }
+    a {
+      width: 2.64rem;
+      height: 0.89rem;
+      line-height: 0.89rem;
+      font-size: 13px;
+    }
+
   }
 
 }
