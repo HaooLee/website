@@ -44,20 +44,9 @@ export default class Banner extends React.Component {
   }
 
   handleShowVideo = (index)=> {
-    if(index == 1){
-      Router.push({
-        pathname:'/scenicProduct'
-      })
-    }else if(index == 3){
-      Router.push({
-        pathname:'/numberProduct'
-      })
-    }else {
       this.setState({
         videoVisibleIndex:index,
       })
-    }
-
   }
 
   render() {
@@ -110,47 +99,63 @@ export default class Banner extends React.Component {
               <h2>服务中心</h2>
               <p className={'en-title'}>SERVICE CENTER</p>
               <div className={'content'}>
-                <div className={'item'} onClick={e => this.handleShowVideo(0)}>
-                  <div className={'play'}>
+                <div className={'item'} >
+                  <div className={'play'} onClick={e => this.handleShowVideo(0)}>
                     <img src="/static/images/index/11.png" alt=""/>
                     <div className={'mask'}></div>
                   </div>
-                  <p className={'title'}>智能短信</p>
-                  <p className={'desc'}>传统文本短信升级</p>
-                  <p className={'desc'}>企业认证增加用户信任度</p>
-                  <p className={'desc'}>短信内容卡片化，美观方便阅读</p>
-                  <p className={'desc'}>短信菜单、场景按钮，直达业务页</p>
-                  <p className={'desc'}>快速提供企业服务</p>
+                  <Link href={'/intelligenceSms'}>
+                    <div className={'text-wrap'}>
+                      <p className={'title'}>智能短信</p>
+                      <p className={'desc'}>传统文本短信升级</p>
+                      <p className={'desc'}>企业认证增加用户信任度</p>
+                      <p className={'desc'}>短信内容卡片化，美观方便阅读</p>
+                      <p className={'desc'}>短信菜单、场景按钮，直达业务页</p>
+                      <p className={'desc'}>快速提供企业服务</p>
+                    </div>
+                  </Link>
                 </div>
-                <div className={'item'} onClick={e => this.handleShowVideo(1)}>
-                  <div className={'play'}>
+                <div className={'item'}>
+                  <div className={'play'}  onClick={e => this.handleShowVideo(1)}>
                     <img src="/static/images/index/22.png" alt=""/>
                     <div className={'mask'}></div>
                   </div>
-                  <p className={'title'}>5G场景消息</p>
-                  <p className={'desc'}>千人千面的智慧场景消息服务</p>
-                  <p className={'desc'}>支持下发多种富媒体消息</p>
-                  <p className={'desc'}>提供Chatbot能力与用户快速互动</p>
+                  <Link href={'/scenicProduct'}>
+                    <div className={'text-wrap'}>
+                      <p className={'title'}>5G场景消息</p>
+                      <p className={'desc'}>千人千面的智慧场景消息服务</p>
+                      <p className={'desc'}>支持下发多种富媒体消息</p>
+                      <p className={'desc'}>提供Chatbot能力与用户快速互动</p>
+                    </div>
+                  </Link>
                 </div>
-                <div className={'item'} onClick={e => this.handleShowVideo(2)}>
-                  <div className={'play'}>
+                <div className={'item'}>
+                  <div className={'play'}  onClick={e => this.handleShowVideo(2)}>
                     <img src="/static/images/index/33.png" alt=""/>
                     <div className={'mask'}></div>
                   </div>
-                  <p className={'title'}>快应用</p>
-                  <p className={'desc'}>无需下载安装，即点即用</p>
-                  <p className={'desc'}>享受原生应用的性能体验</p>
+                  <Link href={'/quickAppProduct'}>
+                    <div className={'text-wrap'}>
+                      <p className={'title'}>快应用</p>
+                      <p className={'desc'}>无需下载安装，即点即用</p>
+                      <p className={'desc'}>享受原生应用的性能体验</p>
+                    </div>
+                  </Link>
                 </div>
-                <div className={'item'} onClick={e => this.handleShowVideo(3)}>
-                  <div className={'play'}>
+                <div className={'item'}>
+                  <div className={'play'}  onClick={e => this.handleShowVideo(3)}>
                     <img src="/static/images/index/44.png" alt=""/>
                     <div className={'mask'}></div>
                   </div>
-                  <p className={'title'}>号码认证</p>
-                  <p className={'desc'}>企业号码有效认证</p>
-                  <p className={'desc'}>提高品牌曝光</p>
-                  <p className={'desc'}>准确识别陌生电话</p>
-                  <p className={'desc'}>来电接的安心，去电不被拒绝</p>
+                  <Link href={'/numberProduct'}>
+                    <div className={'text-wrap'}>
+                      <p className={'title'}>号码认证</p>
+                      <p className={'desc'}>企业号码有效认证</p>
+                      <p className={'desc'}>提高品牌曝光</p>
+                      <p className={'desc'}>准确识别陌生电话</p>
+                      <p className={'desc'}>来电接的安心，去电不被拒绝</p>
+                    </div>
+                  </Link>
                 </div>
               </div>
               <a onClick={this.showModal} className="more">马上合作</a>
