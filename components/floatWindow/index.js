@@ -39,7 +39,6 @@ export default class FloatWindow extends react.Component {
     city:[{required:true,msg:'所属城市不能为空'}],
     trade:[{required:true,msg:'行业不能为空'}],
     product:[{required:true,msg:'行业不能为空'}],
-
   }
 
   validate = (data, rules) =>{
@@ -48,12 +47,12 @@ export default class FloatWindow extends react.Component {
         item[1].forEach((i)=>{
           if(i.required){
             if(!data[item[0]]) {
-              // throw new Error(i.message)
               const {errors} = this.state
               errors[item[0]] = {err:true,msg:i.msg}
               this.setState({
                 errors
               })
+              throw new Error(i.message)
             }else {
               const {errors} = this.state
               errors[item[0]] = {err:false}
@@ -184,7 +183,6 @@ export default class FloatWindow extends react.Component {
                 <input placeholder="填写所属城市" className={errors['city']?.err ? 'err' :''} onChange={e=>this.formChange.call(this, 'city',e.target.value)}
                        type="text"/>
                 {errors['city']?.err && <span className={'errMsg'}>{errors['city'].msg}</span>}
-
               </div>
             </div>
             <div className="form__item form__item--required">
@@ -201,6 +199,13 @@ export default class FloatWindow extends react.Component {
                 <CheckBoxGroup onChange={this.formChange.bind(this, 'product')} options={['智能短信','号码认证', '5G场景消息','快应用']} />
                 {errors['product']?.err && <span className={'errMsg'}>{errors['product'].msg}</span>}
 
+              </div>
+            </div>
+            <div className="form__item">
+              <div className="form__item__label">备注</div>
+              <div className="form__item__input">
+                <input placeholder="备注" className={errors['remark']?.err ? 'err' :''} maxLength="255" onChange={e=>this.formChange.call(this, 'remark',e.target.value)}
+                       type="text"/>
               </div>
             </div>
             <button className={'submit'} onClick={this.onSubmit} disabled={pending}>
