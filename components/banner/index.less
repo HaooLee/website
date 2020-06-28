@@ -129,6 +129,17 @@
             transition: all .1s linear;
           }
         }
+         &:hover {
+             .mask{
+               background-color: rgba(0,0,0,.6);
+               &:before{
+                 transform: scale(1);
+               }
+               &:after {
+                 transform: translate(-30%,-50%) scale(1);
+               }
+             }
+         }
        }
        .title {
          font-size: 26.667px;
@@ -141,24 +152,12 @@
            text-align: left;
        }
 
-       &:hover {
-         .title,.desc {
-           color: rgb(54, 94, 166);
-         }
-         .play {
-           .mask{
-             background-color: rgba(0,0,0,.6);
-             &:before{
-               transform: scale(1);
-             }
-             &:after {
-               transform: translate(-30%,-50%) scale(1);
-             }
-
+         .text-wrap:hover {
+           .title,.desc {
+             color: rgb(54, 94, 166);
            }
-
          }
-       }
+
 
      }
    }
