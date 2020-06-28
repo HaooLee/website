@@ -5,6 +5,8 @@ import TextTransform from '@/components/textTransform'
 import Link from 'next/link'
 import {connect} from "react-redux";
 import ShowVideo from '@/components/showVideo'
+import Router from 'next/router'
+
 
 
 @connect(({floatWindowVisible})=>({visible:floatWindowVisible}))
@@ -42,9 +44,20 @@ export default class Banner extends React.Component {
   }
 
   handleShowVideo = (index)=> {
-    this.setState({
-      videoVisibleIndex:index,
-    })
+    if(index == 1){
+      Router.push({
+        pathname:'/scenicProduct'
+      })
+    }else if(index == 3){
+      Router.push({
+        pathname:'/numberProduct'
+      })
+    }else {
+      this.setState({
+        videoVisibleIndex:index,
+      })
+    }
+
   }
 
   render() {

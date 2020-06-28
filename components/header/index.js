@@ -3,8 +3,6 @@ import styles from './index.less'
 import Link from 'next/link'
 import Scroller from '@/components/Scroller'
 
-import Router from 'next/router'
-
 export default class Header extends React.Component {
 
 
