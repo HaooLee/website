@@ -134,7 +134,7 @@ export default class FloatWindow extends react.Component {
           <dl>
             <dd className="consult">
               <a>客服热线</a>
-              <div className="floating_left"><span>400-680-6000</span></div>
+              <div className="floating_left"><span>400-825-3666</span></div>
             </dd>
             <dd className="words">
               <a onClick={() => this.showModal()} id="partnership_mask_show" rel="nofollow">合作加盟</a>

@@ -69,7 +69,7 @@ export default class Footer extends React.Component {
                    <img src="https://img.teddymobile.cn/www/images/qr.png" alt=""/>
                  </li>
                  <li>
-                   客服电话：400-680-6000
+                   客服电话：400-825-3666
                  </li>
                  <li>
                    客服邮箱：kefu@teddymobile.cn
