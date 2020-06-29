@@ -146,20 +146,6 @@ export default class Agent extends Component {
           typeName: '号码认证'
         },
         {
-          src: 'https://img.teddymobile.cn/www/images/agent/国都.png',
-          name: '国都',
-          desc: '北京国都互联科技有限公司注册于北京市中关村高新科技产业实验园区，注册资金1000万元，公司致力于成为国内最具影响力的移动通讯服务商之一',
-          types: [
-            <Link href={'/numberProduct'}>
-              <a style={{color: '#355EA6'}}>号码认证</a>
-            </Link>,
-            <Link href={'/intelligenceSms'}>
-              <a style={{color: '#355EA6'}}>智能短信</a>
-            </Link>
-          ],
-          typeName: '号码认证、智能短信'
-        },
-        {
           src: 'https://img.teddymobile.cn/www/images/agent/联动优势.png',
           name: '联动优势',
           desc: '联动优势是一家互联网高新技术企业，成立于2003年，面向金融机构和产业经济提供综合性金融科技服务，助力政府机构推进科技监管与智慧政务建设',
