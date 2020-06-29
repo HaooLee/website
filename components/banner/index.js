@@ -44,9 +44,19 @@ export default class Banner extends React.Component {
   }
 
   handleShowVideo = (index)=> {
+    if(index == 1){
+      Router.push({
+        pathname:'/scenicProduct'
+      })
+    }else if(index == 3){
+      Router.push({
+        pathname:'/numberProduct'
+      })
+    }else {
       this.setState({
         videoVisibleIndex:index,
       })
+    }
   }
 
   render() {
