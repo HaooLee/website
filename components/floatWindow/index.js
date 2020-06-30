@@ -20,7 +20,24 @@ export default class FloatWindow extends react.Component {
   state = {
     // visible: false,
     options: [
-      "医疗健康", "机械设备", "软件游戏", "教育培训", "商务服务", "装修装饰", "生活用品", "生活服务", "交通类", "电子电工", "化工及材料", "家用电器", "农林牧渔", "旅游及票务", "服装鞋帽", "休闲娱乐", "安全安保", "食品餐饮", "节能环保", "金融服务", "IT产品", "化妆品", "房地产", "通信服务", "办公文教", "图书音像", "母婴用品", "铃声短信", "彩票", "电子商务", "社交", "招聘", "资讯", "分类信息", "其他"],
+      "医疗健康",
+      "机械设备",
+      "软件游戏",
+      "教育培训",
+      "商务服务",
+      "装修装饰",
+      "生活用品",
+      "生活服务",
+      "交通类",
+      "电子电工",
+      "化工及材料",
+      "家用电器",
+      "农林牧渔",
+      "旅游及票务",
+      "服装鞋帽",
+      "休闲娱乐",
+      "安全安保", "食品餐饮", "节能环保", "金融服务", "IT产品", "化妆品", "房地产", "通信服务", "办公文教", "图书音像", "母婴用品", "铃声短信", "彩票", "电子商务", "社交", "招聘", "资讯", "分类信息",
+      "其他"].map((i,idx)=>({label:i, value:idx})),
     errors:{},
     pending:false,
   }
@@ -38,7 +55,7 @@ export default class FloatWindow extends react.Component {
     contactPhone:[{required:true,msg:'联系电话不能为空'}],
     city:[{required:true,msg:'所属城市不能为空'}],
     trade:[{required:true,msg:'行业不能为空'}],
-    product:[{required:true,msg:'行业不能为空'}],
+    product:[{required:true,msg:'产品选项不能为空'}],
   }
 
   validate = (data, rules) =>{
@@ -68,7 +85,7 @@ export default class FloatWindow extends react.Component {
   }
 
   onSubmit = async () => {
-
+    console.log(this.values)
     if(this.validate(this.values, this.rules)){
       let params = new FormData()
       Object.entries(this.values).forEach((item, index) => {
@@ -79,7 +96,7 @@ export default class FloatWindow extends react.Component {
         this.setState({
           pending:true
         })
-        const {data} = await axios.post(`/api/mail/send `, params)
+        const {data} = await axios.post(`/api/mail/send2 `, params)
         if(data.code == 200){
           const { dispatch } = this.props
           dispatch({type:'FLOAT_WINDOW_HIDE'})
@@ -149,7 +166,7 @@ export default class FloatWindow extends react.Component {
             <div className="form__item form__item--required">
               <div className="form__item__label">合作模式</div>
               <div className="form__item__input">
-                <RadioGroup options={['商业合作','代理加盟']} defaultValue={0} onChange={this.formChange.bind(this, 'mode')}></RadioGroup>
+                <RadioGroup options={['商业合作','代理加盟']} defaultValue={0} onChange={(_,value)=>{this.formChange( 'mode',value + 1)}}></RadioGroup>
                 {errors['mode']?.err && <span className={'errMsg'}>{errors['mode'].msg}</span>}
 
               </div>
@@ -188,7 +205,7 @@ export default class FloatWindow extends react.Component {
             <div className="form__item form__item--required">
               <div className="form__item__label">行业</div>
               <div className="form__item__input">
-                <Select placeholder={"请选择行业类别"} options={options} className={errors['trade']?.err ? 'err' :''} onChange={this.formChange.bind(this, 'trade')}/>
+                <Select placeholder={"请选择行业类别"} options={options} className={errors['trade']?.err ? 'err' :''} onChange={value =>{this.formChange( 'trade',value + 1)}}/>
                 {errors['trade']?.err && <span className={'errMsg'}>{errors['trade'].msg}</span>}
 
               </div>
@@ -196,7 +213,7 @@ export default class FloatWindow extends react.Component {
             <div className="form__item form__item--required">
               <div className="form__item__label">产品选项</div>
               <div className="form__item__input">
-                <CheckBoxGroup onChange={this.formChange.bind(this, 'product')} options={['智能短信','号码认证', '5G场景消息','快应用']} />
+                <CheckBoxGroup onChange={this.formChange.bind(this, 'product')} options={[{label:'智能短信',value:1001},{label:'号码认证',value:1002},{label:'5G场景消息',value:1003},{label:'快应用',value:1004}]} />
                 {errors['product']?.err && <span className={'errMsg'}>{errors['product'].msg}</span>}
 
               </div>
