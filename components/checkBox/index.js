@@ -48,13 +48,20 @@ export default class CheckBox extends React.Component {
 
 CheckBox.Group = (props)=>{
     const { options = [],onChange = ()=>{} } = props
-  const [selection,setSelection] = useState([])
+    const optRes = options.map(i =>{
+      if(typeof i === 'string'){
+        return {label:i,value:i}
+      }else {
+        return i
+      }
+    })
+    const [selection,setSelection] = useState([])
     const handleChange = (idx, checked) =>{
       if(checked){
-        selection.push(options[idx])
+        selection.push(optRes[idx].value)
         setSelection(selection)
       }else {
-        setSelection(selection.filter(i=> i !== options[idx]))
+        setSelection(selection.filter(i=> i !== optRes[idx].value))
       }
       onChange(selection)
     }
@@ -62,8 +69,8 @@ CheckBox.Group = (props)=>{
     return (
       <>
         {
-          options.map((i,idx)=>{
-            return <CheckBox key={idx} checked={selection.includes(i)} onChange={handleChange.bind(this,idx)}>{i}</CheckBox>
+          optRes.map((i,idx)=>{
+            return <CheckBox key={idx} checked={selection.some(item => item === i.value)} onChange={handleChange.bind(this,idx)}>{i.label}</CheckBox>
           })
         }
       </>

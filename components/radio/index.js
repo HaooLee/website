@@ -49,9 +49,9 @@ export default class Radio extends React.Component {
 Radio.Group = (props)=>{
     const { options = [],onChange = ()=>{} } = props
     const [currentChecked,setCurrentChecked] = useState(props.defaultValue)
-    onChange(options[currentChecked])
+    onChange(options[currentChecked],currentChecked)
     const handleChange = (idx) =>{
-      onChange(options[idx])
+      onChange(options[idx],idx)
       setCurrentChecked(idx)
     }
 
