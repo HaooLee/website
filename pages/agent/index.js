@@ -145,31 +145,31 @@ export default class Agent extends Component {
           ],
           typeName: '号码认证'
         },
-        {
-          src: 'https://img.teddymobile.cn/www/images/agent/联动优势.png',
-          name: '联动优势',
-          desc: '联动优势是一家互联网高新技术企业，成立于2003年，面向金融机构和产业经济提供综合性金融科技服务，助力政府机构推进科技监管与智慧政务建设',
-          types: [
-            <Link href={'/intelligenceSms'}>
-              <a style={{color: '#355EA6'}}>智能短信</a>
-            </Link>,
-            <Link href={'/numberProduct'}>
-              <a style={{color: '#355EA6'}}>号码认证</a>
-            </Link>
-          ],
-          typeName: '号码认证'
-        },
-        {
-          src: 'https://img.teddymobile.cn/www/images/agent/中天嘉华.png',
-          name: '中天嘉华',
-          desc: '中天嘉华信息技术有限公司（简称：嘉华信息）致力于通过大型联络中心（呼叫中心）、软件系统、数据挖掘技术等优势为中国保险、银行等大型金融企业，提供全面深入的金融产品营销服务解决方案',
-          types: [
-            <Link href={'/numberProduct'}>
-              <a style={{color: '#355EA6'}}>号码认证</a>
-            </Link>
-          ],
-          typeName: '号码认证'
-        }
+        // {
+        //   src: 'https://img.teddymobile.cn/www/images/agent/联动优势.png',
+        //   name: '联动优势',
+        //   desc: '联动优势是一家互联网高新技术企业，成立于2003年，面向金融机构和产业经济提供综合性金融科技服务，助力政府机构推进科技监管与智慧政务建设',
+        //   types: [
+        //     <Link href={'/intelligenceSms'}>
+        //       <a style={{color: '#355EA6'}}>智能短信</a>
+        //     </Link>,
+        //     <Link href={'/numberProduct'}>
+        //       <a style={{color: '#355EA6'}}>号码认证</a>
+        //     </Link>
+        //   ],
+        //   typeName: '号码认证'
+        // },
+        // {
+        //   src: 'https://img.teddymobile.cn/www/images/agent/中天嘉华.png',
+        //   name: '中天嘉华',
+        //   desc: '中天嘉华信息技术有限公司（简称：嘉华信息）致力于通过大型联络中心（呼叫中心）、软件系统、数据挖掘技术等优势为中国保险、银行等大型金融企业，提供全面深入的金融产品营销服务解决方案',
+        //   types: [
+        //     <Link href={'/numberProduct'}>
+        //       <a style={{color: '#355EA6'}}>号码认证</a>
+        //     </Link>
+        //   ],
+        //   typeName: '号码认证'
+        // }
       ]
     }
   }
@@ -184,7 +184,7 @@ export default class Agent extends Component {
       infinite: true,
       speed: 500,
       slidesToShow: 2,
-      slidesToScroll: 2,
+      // slidesToScroll: 2,
       // dotsClass:'slick-dots teddy-dots',
       autoplay: true,
       nextArrow: <SampleNextArrow />,
