@@ -96,7 +96,7 @@ export default class FloatWindow extends react.Component {
         this.setState({
           pending:true
         })
-        const {data} = await axios.post(`/api/mail/send2 `, params)
+        const {data} = await axios.post(`/api/mail/send `, params)
         if(data.code == 200){
           const { dispatch } = this.props
           dispatch({type:'FLOAT_WINDOW_HIDE'})
