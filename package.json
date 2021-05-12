@@ -34,7 +34,7 @@
     "redux-form": "^8.3.5",
     "redux-thunk": "^2.3.0",
     "styled-jsx-plugin-less": "^0.0.1-alpha.2",
-    "swiper": "^5.3.6"
+    "swiper": "^6.5.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.5.5",
